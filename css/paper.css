@@ -67,13 +67,14 @@
 .section{
   font-size: 21px; 
   line-height: 30px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-family: LatexBold;
 }
 .subsection{
   font-size: 18px; 
   line-height: 24px;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-family: LatexBold;
 }
@@ -85,14 +86,22 @@
 }
 .references{
   font-size: 14px; 
-  padding-left: 2rem;
+  padding-left: 1rem;
   text-indent: 0px;
+  text-align: justify;
+  counter-reset:li; /* Initiate a counter */
+  list-style:none; /* Disable the normal item numbering */
 }
-.submission_date{
+.references li:before{
+  content:'['counter(li)']'; /* Use the counter as content */
+  counter-increment:li; /* Increment the counter by 1 */
+  /*list-style-type: decimal;*/
+}
+.submission-date{
   font-size: 14px; 
   text-align: center;
 }
-.submission_date:before{
+.submission-date:before{
   content: "Submission date: ";
 }
 /* ************************************************************************** */
