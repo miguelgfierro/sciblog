@@ -43,15 +43,26 @@
 .abstract{
   text-align: justify;
   font-size: 14px;
+  margin-bottom:0.5rem;
 }
 .abstract:before{
-  content: "Abstract—";
+  content: "Abstract— ";
   font-family: LatexBoldItalic;
+}
+.keywords{
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom:0.5rem;
+}
+.keywords:before{
+  content: "Keywords: ";
+  font-family: LatexItalic;
 }
 .author{
   font-size: 16px; 
   line-height: 21px;
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 .section{
   font-size: 21px; 
@@ -73,10 +84,16 @@
   margin-bottom: 0.5rem;
 }
 .references{
-
+  font-size: 14px; 
+  padding-left: 2rem;
+  text-indent: 0px;
 }
 .submission_date{
-
+  font-size: 14px; 
+  text-align: center;
+}
+.submission_date:before{
+  content: "Submission date: ";
 }
 /* ************************************************************************** */
 /* Basic styles*/
