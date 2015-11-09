@@ -1,0 +1,61 @@
+/* ************************************************************************** */
+/*
+* Paper V1.0
+*
+* This css can be use to give your webpage the appearance of a scientific paper
+* written in Latex.
+*
+* Copyright 2015, Miguel González-Fierro
+* Twitter: @miguelgfierro
+* http://www.miguelgfierro.com
+*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+/* ************************************************************************** */
+/* Fonts */
+@font-face {
+    font-family: Latex;
+    src: url(../font/cmunrm.woff);
+}
+@font-face {
+    font-family: LatexBold;
+    src: url(../font/cmunbx.woff);
+}
+@font-face {
+    font-family: LatexItalic;
+    src: url(../font/cmunti.woff);
+}
+@font-face {
+    font-family: LatexBoldItalic;
+    src: url(../font/cmunbi.woff);
+}
+/* ************************************************************************** */
+/* Classes from Latex */
+.title{
+
+}
+.abstract{
+
+}
+.author{
+
+}
+.section{
+
+}
+.subsection{
+
+}
+.subsubsection{
+
+}
+.references{
+
+}
+.submission_date{
+
+}
+/* ************************************************************************** */
+
+

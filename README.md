@@ -1,1 +1,1 @@
-A blog of a student looking for knoWledge 
+A blog with the appearance of a scientific paper written in Latex.
