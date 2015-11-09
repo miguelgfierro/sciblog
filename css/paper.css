@@ -107,7 +107,7 @@
 /* ************************************************************************** */
 /* Basic styles*/
 body {
-  background: #aaa;
+  background: #e9e8ed url("../img/gradient_texture10.jpg") repeat-x scroll 0px 0px;
   color: #100;
   font-family: Latex, Georgia, serif;
 }
