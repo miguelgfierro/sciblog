@@ -33,13 +33,25 @@
 /* ************************************************************************** */
 /* Classes from Latex */
 .title{
-
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 35px; 
+  line-height: 40px; 
+  text-align: center;
+  margin: 9rem 0 0.5rem 0.5rem;
 }
 .abstract{
-
+  text-align: justify;
+  font-size: 14px;
+}
+.abstract:before{
+  content: "Abstract—";
+  font-family: LatexBoldItalic;
 }
 .author{
-
+  font-size: 16px; 
+  line-height: 21px;
+  text-align: center;
 }
 .section{
 
@@ -57,5 +69,18 @@
 
 }
 /* ************************************************************************** */
-
+/* Basic styles*/
+body {
+  background: #aaa;
+  color: #100;
+  font-family: Latex, Georgia, serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Latex, Georgia, serif;
+}
+i{font-family: LatexItalic;}
+bi{font-family: LatexBoldItalic;}
+strong{
+font-family: LatexBold;
+}
 

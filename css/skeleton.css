@@ -2,11 +2,7 @@
 
 
 
-body {
-  background: #777 url(../images/background.jpg);
-  color: #100;
-  font-family: Latex, Georgia, serif;
-}
+
 
 p {
   -webkit-hyphens: auto;
@@ -32,9 +28,7 @@ p.no-indent {
   box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: Latex, Georgia, serif;
-}
+
 
 h1,h2{
   text-transform: capitalize;
@@ -46,13 +40,7 @@ h4, h5 {
   font-family: LatexBold, Georgia, serif;
 }
 
-/*i { font-style: italic; }*/
-i{font-family: LatexItalic;}
-bi{font-family: LatexBoldItalic;}
-strong{
-font-family: LatexBold;
-color: #111;
-}
+
 
 .content {
   position: relative;
