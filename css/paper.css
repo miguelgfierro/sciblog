@@ -111,3 +111,31 @@ strong{font-family: LatexBold;}
 .container .columns.six{
   margin-top: 1rem;
 }
+p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  text-align: justify;
+  font-size: 16px;
+  text-indent: 30px;
+  margin: 0px;
+}
+p.no-indent {
+  text-indent: 0px;
+}
+p.item {
+  padding-left: 2rem;
+  text-indent: 0px;
+}
+p.item:before {
+  content: '•';
+  font-size: 14px;
+  position: relative;
+  bottom: 2px;
+}
+p.wrap:before {
+  content: '';
+}
+p.wrap {
+  text-indent: 0px;
+}
