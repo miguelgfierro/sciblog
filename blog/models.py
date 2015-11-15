@@ -9,7 +9,7 @@ class Blog(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
     body = models.TextField()
     #pub_date = models.DateField('Date published',db_index=True, auto_now_add=True)
-    pub_date = models.DateTimeField('Date published')
+    pub_date = models.DateField('Date published')
     category = models.ForeignKey('blog.Category')
 
     def __unicode__(self):
@@ -18,6 +18,7 @@ class Blog(models.Model):
     @permalink
     def get_absolute_url(self):
         return ('view_blog_post', None, { 'slug': self.slug })
+
 
     def was_published_recently(self):
         return self.pub_date >= timezone.now().date() - datetime.timedelta(days=7)
