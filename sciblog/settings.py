@@ -25,6 +25,8 @@ SECRET_KEY = 'l=d+#_or*(%727-b08wu@@9x)yaoaw$q11vbwtkemukx=h@xy!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+TEMPLATE_DEBUG = True
+
 ALLOWED_HOSTS = []
 
 
@@ -37,7 +39,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
+    'django.contrib.admindocs',
+    'django.contrib.sites',
+    #'south',
     'blog',
 )
 
@@ -53,6 +57,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.cache.UpdateCacheMiddleware', #added later
     'django.middleware.common.CommonMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.media',
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
 )
 
 ROOT_URLCONF = 'sciblog.urls'
@@ -72,6 +82,8 @@ TEMPLATES = [
         },
     },
 ]
+#TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
 
 WSGI_APPLICATION = 'sciblog.wsgi.application'
 
