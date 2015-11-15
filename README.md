@@ -10,4 +10,5 @@ NOTE: django version must be 1.7. To see your django version:
 
 	$ pip list
 To downgrade your django version:
+	
 	$ pip install -U "django<1.8"
