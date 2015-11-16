@@ -1,13 +1,6 @@
 from django.contrib import admin
 from blog.models import Blog, Category
 
-'''class BlogAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,               {'fields': ['title']}),
-        ('Date information', {'fields': ['pub_date']}),
-    ]
-admin.site.register(Blog, BlogAdmin)
-'''
 class BlogAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['title']}),
