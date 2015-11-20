@@ -3,9 +3,10 @@ from blog.models import Blog, Category
 
 class BlogAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['title']}),
-        ('Date information', {'fields': ['pub_date']}),
-        ('Text', {'fields': ['body']}),
+        (None,               	{'fields': ['title']}),
+        ('Category', 			{'fields':['category']}),
+        ('Date information', 	{'fields': ['pub_date']}),
+        ('Text', 				{'fields': ['body']}),
     ]
     list_display = ('title', 'pub_date', 'was_published_recently')
     list_filter = ['pub_date']
