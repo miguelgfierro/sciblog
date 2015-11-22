@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+
+
+    {% block content %}
+        <div class="post col-md-12">
+        <h1>{{ object.title }}</h1>
+        <h3>{{ object.pub_date }}</h3>
+        {{ object.body }}
+        </div>
+        {% if object.category %}
+        <div class="col-md-12">
+        <a href="{{ object.category.get_absolute_url }}"><span class="label label-primary">{{ object.category.title }}</span></a>
+        </div>
+        {% endif %}
+
+
+        <div class="col-md-12">
+        <h4>Comments</h4>
+        <div class="fb-comments" data-href="http://{{ object.site }}{{ object.get_absolute_url }}" data-width="470" data-num-posts="10"></div>
+        </div>
+        </div>
+
+    {% endblock %}

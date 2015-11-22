@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+
+
+    {% block content %}
+        {% if object_list %}
+            {% for post in object_list %}
+            <div class="post col-md-12">
+            <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+            <h3>{{ post.pub_date }}</h3>
+            {{ post.body }}
+            </div>
+            {% if post.category %}
+            <div class="col-md-12">
+            <a href="{{ post.category.get_absolute_url }}"><span class="label label-primary">{{ post.category.title }}</span></a>
+            </div>
+            {% endif %}
+
+            {% endfor %}
+        {% else %}
+            <p>No posts found</p>
+        {% endif %}
+
+        <ul class="pager">
+        {% if page_obj.has_previous %}
+        <li class="previous"><a href="/{{ page_obj.previous_page_number }}/">Previous Page</a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li class="next"><a href="/{{ page_obj.next_page_number }}/">Next Page</a></li>
+        {% endif %}
+        </ul>
+
+    {% endblock %}

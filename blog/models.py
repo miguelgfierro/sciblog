@@ -3,22 +3,46 @@ import datetime
 from django.utils import timezone
 from django.db.models import permalink
 from django.template.defaultfilters import slugify
+from django.core.urlresolvers import reverse
+from django.contrib.auth.models import User
+from django.contrib.sites.models import Site
+from django.core.cache import cache
+from django.db.models.signals import post_save
 
-class Blog(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
-    body = models.TextField()
-    #pub_date = models.DateField('Date published',db_index=True, auto_now_add=True)
-    pub_date = models.DateField('Date published')
-    category = models.ForeignKey('blog.Category')
+
+class Category(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True, blank=True,editable=False)
 
     def __unicode__(self):
         return '%s' % self.title
 
-    @permalink
+    #@permalink
     def get_absolute_url(self):
-        return ('view_blog_post', None, { 'slug': self.slug })
+        return "/category/%s/" % (self.slug)
 
+    def save(self):
+        self.slug = slugify(self.title)
+        super(Category,self).save()
+
+    class Meta:
+        verbose_name_plural = 'categories'
+
+class Post(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
+    body = models.TextField()
+    pub_date = models.DateField('Date published')
+    category = models.ForeignKey(Category, blank=True, null=True)
+    author = models.ForeignKey(User, blank=True, null=True)
+    site = models.ForeignKey(Site, blank=True, null=True)
+
+    def __unicode__(self):
+        return '%s' % self.title
+
+    #@permalink
+    def get_absolute_url(self):
+        return "/%s/%s/" % (self.pub_date.year, self.slug)
 
     def was_published_recently(self):
         return self.pub_date >= timezone.now().date() - datetime.timedelta(days=7)
@@ -28,15 +52,16 @@ class Blog(models.Model):
 
     def save(self):
         self.slug = slugify(self.title)
-        super(Blog,self).save()
+        super(Post,self).save()
 
-class Category(models.Model):
-    title = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
+    class Meta:
+        ordering = ["-pub_date"]
 
-    def __unicode__(self):
-        return '%s' % self.title
+'''
+# Define signals
+def new_post(sender, instance, created, **kwargs):
+    cache.clear()
 
-    @permalink
-    def get_absolute_url(self):
-        return ('view_blog_category', None, { 'title': self.title })
+# Set up signals
+post_save.connect(new_post, sender=Post)
+'''

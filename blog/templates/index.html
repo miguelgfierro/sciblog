@@ -6,7 +6,8 @@
     {% if categories %}
         <ul>
         {% for category in categories %}
-            <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+            <!--<li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>-->
+            <li>{{ category.title }}</li>
         {% endfor %}
         </ul>
     {% else %}
@@ -17,7 +18,9 @@
     {% if posts %}
         <ul>
             {% for post in posts %}
-            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+            <!--<li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>-->
+            <li>{{ post.title }}</li>
+            <p>{{ post.body }}</p>
         {% endfor %}
         </ul>
     {% else %}

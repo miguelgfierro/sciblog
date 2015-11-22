@@ -37,7 +37,13 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
+    'django.contrib.syndication',
+    'django.contrib.sitemaps',
 )
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -83,7 +89,10 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+# Template directory
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
+'''
 TEMPLATE_LOADERS = (
     ('django.template.loaders.cached.Loader', (
         'django.template.loaders.app_directories.Loader',
@@ -91,3 +100,4 @@ TEMPLATE_LOADERS = (
     )),
 )
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+'''
