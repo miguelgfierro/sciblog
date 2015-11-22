@@ -17,9 +17,8 @@ class Category(models.Model):
     def __unicode__(self):
         return '%s' % self.title
 
-    #@permalink
     def get_absolute_url(self):
-        return "/category/%s/" % (self.slug)
+        return "/blog/category/%s/" % (self.slug)
 
     def save(self):
         self.slug = slugify(self.title)
@@ -40,9 +39,8 @@ class Post(models.Model):
     def __unicode__(self):
         return '%s' % self.title
 
-    #@permalink
     def get_absolute_url(self):
-        return "/%s/%s/" % (self.pub_date.year, self.slug)
+        return "/blog/%s/%s/" % (self.pub_date.year, self.slug)
 
     def was_published_recently(self):
         return self.pub_date >= timezone.now().date() - datetime.timedelta(days=7)
@@ -57,11 +55,3 @@ class Post(models.Model):
     class Meta:
         ordering = ["-pub_date"]
 
-'''
-# Define signals
-def new_post(sender, instance, created, **kwargs):
-    cache.clear()
-
-# Set up signals
-post_save.connect(new_post, sender=Post)
-'''
