@@ -31,7 +31,8 @@ class Blog(models.Model):
         super(Blog,self).save()
 
 class Category(models.Model):
-    title = models.CharField(max_length=100, db_index=True)
+    title = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
 
     def __unicode__(self):
         return '%s' % self.title
