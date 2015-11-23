@@ -9,6 +9,7 @@ class PostAdmin(admin.ModelAdmin):
         ('Abstract',			{'fields': ['abstract']}),
         ('Text', 				{'fields': ['body']}),
         ('Site', 				{'fields': ['site']}),#TODO: remove this and take it automatically
+        ('Image', 				{'fields': ['image']}),
     ]
     list_display = ('title', 'pub_date', 'was_published_recently')
     list_filter = ['pub_date']

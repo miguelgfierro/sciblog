@@ -9,6 +9,9 @@ from django.contrib.sites.models import Site
 from django.core.cache import cache
 from django.db.models.signals import post_save
 import markdown2
+from time import time
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
 
 class Category(models.Model):
     title = models.CharField(max_length=100, unique=True)
@@ -27,6 +30,10 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
+def generate_filename(instance, filename):
+    ext = filename.split('.')[-1]
+    year = datetime.datetime.now().year
+    return str(year) + '/' + str(int(time())) + '.' + ext
 
 
 class Post(models.Model):
@@ -39,6 +46,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, blank=True, null=True)
     author = models.ForeignKey(User, blank=True, null=True)
     site = models.ForeignKey(Site, blank=True, null=True)
+    image = models.ImageField(upload_to=generate_filename, blank=True, null=True)
 
     def __unicode__(self):
         return '%s' % self.title
@@ -59,4 +67,10 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-pub_date"]
+
+@receiver(post_delete, sender=Post)
+def stuff_post_delete_handler(sender, **kwargs):
+        Post = kwargs['instance']
+        storage, path = Post.image.storage, Post.image.path
+        storage.delete(path)
 

@@ -3,7 +3,8 @@ from django.conf.urls import patterns, url
 from blog import views
 from blog.models import Post
 from django.views.generic import ListView, DetailView
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = patterns('',
@@ -26,7 +27,7 @@ urlpatterns = patterns('',
         ),
         name='post'
         ),
-)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 #urlpatterns = []

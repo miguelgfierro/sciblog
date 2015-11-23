@@ -12,11 +12,14 @@
         </div>
         {% endif %}
 
+        {% if post.image %}
+            <p><img src="img/{{ post.image }}" width="200"/></p>
+        {% endif %}
 
         <div class="col-md-12">
         <h4>Comments</h4>
         <div class="fb-comments" data-href="http://{{ object.site }}{{ object.get_absolute_url }}" data-width="470" data-num-posts="10"></div>
         </div>
-        </div>
+
 
     {% endblock %}
