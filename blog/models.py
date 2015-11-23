@@ -27,9 +27,6 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
-class Section(models.Model):
-    title = models.CharField(max_length=200)
-    body = models.TextField()
 
 
 class Post(models.Model):
@@ -40,7 +37,6 @@ class Post(models.Model):
     category = models.ForeignKey(Category, blank=True, null=True)
     author = models.ForeignKey(User, blank=True, null=True)
     site = models.ForeignKey(Site, blank=True, null=True)
-    section = models.ManyToManyField(Section)
 
     def __unicode__(self):
         return '%s' % self.title
