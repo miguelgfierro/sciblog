@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     #url(r'^Post/category/(?P<slug>[^\.]+).html',views.view_category,name='view_Post_category'),
     #url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^(?P<slug>[-\w]+)/$',views.PostView.as_view(),name='view_post'),
-    url(r'^(?P<pk>\d+)/category/$',views.CategoryView.as_view(),name='view_Post_category'),
+    url(r'^(?P<pk>\d+)/category/$',views.CategoryView.as_view(),name='view_blog_category'),
     # Index
     url(r'^(?P<page>\d+)?/?$', ListView.as_view(
         model=Post,
