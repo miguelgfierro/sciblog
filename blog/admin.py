@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Post, Category
+from blog.models import Post, Category, Section
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -8,6 +8,7 @@ class PostAdmin(admin.ModelAdmin):
         ('Date information', 	{'fields': ['pub_date']}),
         ('Text', 				{'fields': ['body']}),
         ('Site', 				{'fields': ['site']}),#TODO: remove this and take it automatically
+        ('Section', 			{'fields': ['section']}),
     ]
     list_display = ('title', 'pub_date', 'was_published_recently')
     list_filter = ['pub_date']
@@ -19,3 +20,4 @@ class PostAdmin(admin.ModelAdmin):
 
 admin.site.register(Post,PostAdmin)
 admin.site.register(Category)
+admin.site.register(Section)
