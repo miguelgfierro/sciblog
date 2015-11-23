@@ -6,6 +6,7 @@ class PostAdmin(admin.ModelAdmin):
         (None,               	{'fields': ['title']}),
         ('Category', 			{'fields':['category']}),
         ('Date information', 	{'fields': ['pub_date']}),
+        ('Abstract',			{'fields': ['abstract']}),
         ('Text', 				{'fields': ['body']}),
         ('Site', 				{'fields': ['site']}),#TODO: remove this and take it automatically
     ]

@@ -32,6 +32,7 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
+    abstract = models.TextField(blank=True)
     body = models.TextField()
     body_html = models.TextField(editable=False, blank=True, null=True)
     pub_date = models.DateField('Date published')
