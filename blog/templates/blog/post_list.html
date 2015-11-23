@@ -1,13 +1,12 @@
 {% extends "blog/base.html" %}
 
-
     {% block content %}
         {% if object_list %}
             {% for post in object_list %}
             <div class="post col-md-12">
             <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
             <h3>{{ post.pub_date }}</h3>
-            {{ post.body }}
+            {{ post.body_html|safe }}
             </div>
             {% if post.category %}
             <div class="col-md-12">

@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.sites.models import Site
 from django.core.cache import cache
 from django.db.models.signals import post_save
-
+import markdown2
 
 class Category(models.Model):
     title = models.CharField(max_length=100, unique=True)
@@ -33,6 +33,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
     body = models.TextField()
+    body_html = models.TextField(editable=False, blank=True, null=True)
     pub_date = models.DateField('Date published')
     category = models.ForeignKey(Category, blank=True, null=True)
     author = models.ForeignKey(User, blank=True, null=True)
@@ -52,6 +53,7 @@ class Post(models.Model):
 
     def save(self):
         self.slug = slugify(self.title)
+        self.body_html = markdown2.markdown(self.body, extras=['fenced-code-blocks'])
         super(Post,self).save()
 
     class Meta:
