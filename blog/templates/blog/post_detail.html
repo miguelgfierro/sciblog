@@ -37,7 +37,14 @@
 
     <div class="row">
         <div class="two columns">&nbsp;</div>
-        {{ object.body_html|safe}}
+        <div class="six columns content">
+            {{ object.body_page1_col1_html|safe}}
+        </div>
+        {% if object.body_page1_col2 %}
+            <div class="six columns content">
+                {{ object.body_page1_col2_html|safe}}
+            </div>
+        {% endif %}
         <div class="two columns">&nbsp;</div>
     </div>
 </div>
