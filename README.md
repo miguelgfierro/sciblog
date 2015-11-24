@@ -1,10 +1,10 @@
 A Post with the appearance of a scientific Latex paper.
 ==================
 
-We need to install django, django-toolbelt and South:
+We need to install several libreries:
 
 	$ apt-get install -y libpq-dev python-dev
-	$ pip install django django-toolbelt south
+	$ pip install django django-debug-toolbar markdown2
 
 NOTE: django version must be 1.7. To see your django version:
 
