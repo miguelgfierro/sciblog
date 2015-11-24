@@ -6,21 +6,23 @@
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
 <html lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <title>Sciblog - A blog with the appearance of a scientific Latex paper</title>
-  <meta name="description" content="SciPost - A Post with the appearance of a scientific paper written in Latex">
+  <meta name="description" content="Sciblog - A blog with the appearance of a scientific paper written in Latex">
   <meta name="author" content="Miguel González-Fierro">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="staticfiles/css/base.css">
-  <link rel="stylesheet" href="staticfiles/css/skeleton.css">
-  <link rel="stylesheet" href="staticfiles/css/layout.css">
-  <link rel="stylesheet" href="staticfiles/css/paper.css">
-  <!--<script src="staticfiles/js/ga.js" async="" type="text/javascript"></script>
-  <script src="staticfiles/js/jquery.js"></script>
-  <script src="staticfiles/js/layout.js"></script>-->
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/skeleton.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/layout.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/paper.css' %}">
+  <!--<script src="js/ga.js" async="" type="text/javascript"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/layout.js"></script>-->
 </head>
 <body>
   <div class="container">
@@ -90,7 +92,9 @@ The author would like to thank José Ignacio Fernández, CTO of Traity, in which
 </div>
 
 
-      
+        {% block content %}
+
+        {% endblock %}
       
       
       
