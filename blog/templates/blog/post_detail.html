@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<!-- Page one -->
 <div class="container">
     <div class="row">
         <div class="three columns">&nbsp;</div>
@@ -47,6 +48,22 @@
     </div>
 </div>
 
+<!-- Page two -->
+{% if object.body_page2_col1 %}
+<div class="container">
+    <div class="row">
+        <div class="two columns">&nbsp;</div>
+        <div class="six columns content">
+            {{ object.body_page2_col1_html|safe}}
+        </div>
+        <div class="six columns content">
+            {{ object.body_page2_col2_html|safe}}
+        </div>
+        <div class="two columns">&nbsp;</div>
+    </div>
+</div>
+
+{% endif %}
 
 
 
