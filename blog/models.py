@@ -19,7 +19,7 @@ class Post(models.Model):
     abstract = models.TextField(blank=True)
     pub_date = models.DateField('Date published')
     keywords = models.CharField(max_length=100, blank=True)
-    author = models.CharField(max_length=100, blank=True, null=True)
+    authors = models.CharField(max_length=100, blank=True, null=True)
     site = models.ForeignKey(Site, blank=True, null=True)
     image = models.ImageField(upload_to=generate_filename, blank=True, null=True)
     image_caption = models.CharField(max_length=200, blank=True)

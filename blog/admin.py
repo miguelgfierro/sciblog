@@ -5,7 +5,7 @@ class PostAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               	{'fields': ['title']}),
         ('Keywords', 			{'fields':['keywords']}),
-        ('Author(s)', 			{'fields':['author']}),
+        ('Author(s)', 			{'fields':['authors']}),
         ('Date information', 	{'fields': ['pub_date']}),
         ('Abstract',			{'fields': ['abstract']}),
         ('Site', 				{'fields': ['site']}),#TODO: remove this and take it automatically

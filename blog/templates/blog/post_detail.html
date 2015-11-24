@@ -8,8 +8,8 @@
         <div class="three columns">&nbsp;</div>
         <div class="ten columns">
             <div class="title"> {{ object.title }}</div>
-            {% if object.author.last_name %}
-            <div class="author"> {{ object.author. }}</div>
+            {% if object.authors %}
+            <div class="author"> {{ object.authors }}</div>
             {% endif %}
             <div class="submission-date"> {{ object.pub_date }}</div>
         </div>

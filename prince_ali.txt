@@ -13,6 +13,9 @@ As it is well known Prince Ali Ababwa is the richest human being in the whole wo
 Site:
 localhost:8000/blog
 --------------------------------------------------------------------------------
+Image caption:
+Prince Ali Ababwa showing his awesome muscles
+--------------------------------------------------------------------------------
 Body page 1 column 1: 
 <div class="section" style="margin-top:0px"> Introduction</div>
 
@@ -168,11 +171,9 @@ You ain't never had a friend like me
 
 <p>Prince Ali Ababwa is the best. Everyone else sucks. Since you are not him, it means that you suck!!</p>
 
-<div class="section">References</div>
-<div class="references">
-<li> Information about how mighty is Prince Ali Ababwa  <a href="https://www.youtube.com/watch?v=aEryAoLfnAA">(youtube video)</a></li>
-<li> General information about Ali <a href="https://en.wikipedia.org/wiki/Aladdin_%28Disney_character%29">(wikipedia)</a></li>
-</div>
+<div class="section">More Information</div>
+<p class="item"> Information about how mighty is Prince Ali Ababwa  <a href="https://www.youtube.com/watch?v=aEryAoLfnAA">(youtube video)</a></p>
+<p class="item"> General information about Ali <a href="https://en.wikipedia.org/wiki/Aladdin_%28Disney_character%29">(wikipedia)</a></p>
 </div>
 
 
