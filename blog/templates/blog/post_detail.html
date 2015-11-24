@@ -9,7 +9,7 @@
         <div class="ten columns">
             <div class="title"> {{ object.title }}</div>
             {% if object.author.last_name %}
-            <div class="author"> {{ object.author.first_name }} {{ object.author.last_name }}</div>
+            <div class="author"> {{ object.author. }}</div>
             {% endif %}
             <div class="submission-date"> {{ object.pub_date }}</div>
         </div>
@@ -26,11 +26,11 @@
     </div>
     {% endif %}
 
-    {% if object.category %}
+    {% if object.keywords %}
     <div class="row" style="margin-bottom:10px">
         <div class="four columns">&nbsp;</div>
         <div class="eight columns">
-            <div class="keywords">{{ object.category.title }}</div>
+            <div class="keywords">{{ object.keywords }}</div>
         </div>
         <div class="four columns">&nbsp;</div>
     </div>

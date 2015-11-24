@@ -1,34 +1,12 @@
 from django.db import models
 import datetime
 from django.utils import timezone
-from django.db.models import permalink
 from django.template.defaultfilters import slugify
-from django.core.urlresolvers import reverse
-from django.contrib.auth.models import User
 from django.contrib.sites.models import Site
-from django.core.cache import cache
-from django.db.models.signals import post_save
 import markdown2
 from time import time
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
-
-class Category(models.Model):
-    title = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=100, unique=True, blank=True,editable=False)
-
-    def __unicode__(self):
-        return '%s' % self.title
-
-    def get_absolute_url(self):
-        return "/blog/category/%s/" % (self.slug)
-
-    def save(self):
-        self.slug = slugify(self.title)
-        super(Category,self).save()
-
-    class Meta:
-        verbose_name_plural = 'categories'
 
 def generate_filename(instance, filename):
     ext = filename.split('.')[-1]
@@ -40,8 +18,8 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
     abstract = models.TextField(blank=True)
     pub_date = models.DateField('Date published')
-    category = models.ForeignKey(Category, blank=True, null=True)
-    author = models.ForeignKey(User, blank=True, null=True)
+    keywords = models.CharField(max_length=100, blank=True)
+    author = models.CharField(max_length=100, blank=True, null=True)
     site = models.ForeignKey(Site, blank=True, null=True)
     image = models.ImageField(upload_to=generate_filename, blank=True, null=True)
     image_caption = models.CharField(max_length=200, blank=True)

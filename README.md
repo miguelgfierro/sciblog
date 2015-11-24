@@ -14,46 +14,37 @@ To downgrade your django version:
 	$ pip install -U "django<1.8"
 
 
-
+Install the project
 ==================================================
-        <div class="six columns content">
-<div class="section" style="margin-top:0px"> Introduction</div>
-<p class="no-indent">
-A scientific paper usually consist on 4 or more big sections: introduction, content, conclusions and references.
-</p>
-<p>
-The introduction initially states the problem the scientist wants to address and introduces relevant information to the reader. Usually inside the introduction, or separated as a new section, the scientist summarizes the related work or state of the art. After the state of the art the scientist gives a brief explanation to the technique he or she proposes and what is the <i>contribution</i> to science or the new discovery made. This brief explanation introduces the next section: the content.
-</p>
-<div class="section"> Content of the Paper</div>
-<p>
-The content of the paper can be divided into one or several sections or subsections, each of them addressing a part of the scientific discovery.
-</p>
-<div class="subsection"> Contributions to Science</div>
-<p>
-There is a common feature to all scientific papers ever published, they all have a contribution to science. It can be a great contribution like
-</p>
-</div>
-<div class="six columns content">
-<p class="no-indent">
-Einstein's relativity [1] or a small one like Fierro PhD thesis [2]. However all of them make a step further in the path of science.
-</p>
-<p>
- The numbers inside the square brackets are called the references, which has a different section located always at the end of the document. The references are very important in science since it helps us to cite other authors and relate our work to theirs.
-</p>
-<div class="section"> Conclusions and Future Work</div>
-<p>
-The conclusions summarize the main aspects of the paper. Sometimes here can be included the future developments the researcher wants to perform. It may also include the acknowledgements.
-</p>
-<p>
-The author would like to thank José Ignacio Fernández, CTO of Traity, in which code and idea is based this Post [3].
-</p>
-<div class="section">References</div>
-<div class="references">
-<li> A. Einstein and A.H. Taub, "The Meaning of Relativity", <i>American Journal of Physics</i>, vol. 18, num. 3, pp. 403-404, 1950.
-</li>
-<li> M. González-Fierro, "Humanoid Robot Control of Complex Postural Tasks Based on Learning From Demonstrations", PhD. Thesis, 2014.
-</li>
-<li> J.I. Fernández, "A Scientific Paper Approach to a Personal Web Page", <a href="http://jose.sh/">http://jose.sh/</a>
-</li>
-</div>
-</div>
+The first step is to generate the database. In the projects folder:
+  
+	$ python manage.py syncdb  
+Django will ask you to create a superuser. You have to put the username and password. The email is optional. 
+This will generate a file called db.sqlite3 which is the database where all the blog content is stored.
+
+After that you have to make what is called a migration, to create the tables in your database. To do that:
+	
+	$ python manage.py makemigrations
+	$ python manage.py migrate
+
+In another terminal you have to run django server:
+
+	$ python manage.py runserver  
+
+In a browser put the link: http://localhost:8000/admin
+
+The panel will ask you to put username and password. Once you are in django dashboard you can start to add content to
+your blog.
+
+Add your first content to the blog
+==================================================
+
+Press add in Post to add your first post. Go to file latex_blog.txt and start to fill up all the fields. For the first
+post we will leave the image, the image caption, page 2 column 1 and page 2 column 2 empty.
+
+You will see that your blog is working properly going to the url: http://localhost:8000/blog/
+
+The post can be accessed here: http://localhost:8000/blog/2015/a-blog-with-the-appearance-of-a-scientific-paper-in-latex/
+
+Now take the file prince_ali.txt and add a second post. This time you'll have to fill all fields. The image you have to use
+is in img/prince_ali.jpg

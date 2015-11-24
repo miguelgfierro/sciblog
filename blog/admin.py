@@ -1,10 +1,11 @@
 from django.contrib import admin
-from blog.models import Post, Category
+from blog.models import Post
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               	{'fields': ['title']}),
-        ('Category', 			{'fields':['category']}),
+        ('Keywords', 			{'fields':['keywords']}),
+        ('Author(s)', 			{'fields':['author']}),
         ('Date information', 	{'fields': ['pub_date']}),
         ('Abstract',			{'fields': ['abstract']}),
         ('Site', 				{'fields': ['site']}),#TODO: remove this and take it automatically
@@ -25,4 +26,3 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Post,PostAdmin)
-admin.site.register(Category)
