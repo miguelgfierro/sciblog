@@ -49,7 +49,7 @@ class Post(models.Model):
     #Paper of maximum 2 pages (1 mandatory + 1 optional)
     body_page1_col1 = models.TextField()
     body_page1_col1_html = models.TextField(editable=False, blank=True, null=True)
-    body_page1_col2 = models.TextField(blank=True)
+    body_page1_col2 = models.TextField()
     body_page1_col2_html = models.TextField(editable=False, blank=True, null=True)
     body_page2_col1 = models.TextField(blank=True)
     body_page2_col1_html = models.TextField(editable=False, blank=True, null=True)
