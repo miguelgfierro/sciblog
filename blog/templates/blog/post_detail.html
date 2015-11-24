@@ -1,26 +1,54 @@
 {% extends "blog/post_base.html" %}
 
-    {% block content %}
-        <div class="post col-md-12">
-        <h1>{{ object.title }}</h1>
-        <h3>{{ object.pub_date }}</h3>
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="three columns">&nbsp;</div>
+        <div class="ten columns">
+            <div class="title"> {{ object.title }}</div>
+            {% if object.author.last_name %}
+            <div class="author"> {{ object.author.first_name }} {{ object.author.last_name }}</div>
+            {% endif %}
+            <div class="submission-date"> {{ object.pub_date }}</div>
+        </div>
+        <div class="three columns">&nbsp;</div>
+    </div>
+
+    {% if object.abstract %}
+    <div class="row" style="margin-bottom:10px">
+        <div class="four columns">&nbsp;</div>
+        <div class="eight columns">
+            <div class="abstract"> {{ object.abstract }}</div>
+        </div>
+        <div class="four columns">&nbsp;</div>
+    </div>
+    {% endif %}
+
+    {% if object.category %}
+    <div class="row" style="margin-bottom:10px">
+        <div class="four columns">&nbsp;</div>
+        <div class="eight columns">
+            <div class="keywords">{{ object.category.title }}</div>
+        </div>
+        <div class="four columns">&nbsp;</div>
+    </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="two columns">&nbsp;</div>
         {{ object.body_html|safe}}
-        </div>
-        {% if object.category %}
-        <div class="col-md-12">
-        <a href="{{ object.category.get_absolute_url }}"><span class="label label-primary">{{ object.category.title }}</span></a>
-        </div>
-        {% endif %}
-
-        {% if post.image %}
-            <!--<p><img src="http://localhost:8000/blog{{ post.image.url }}" width="200"/></p>-->
-            <p><img src="http://{{ object.site }}{{ post.image.url }}" width="200"/></p>
-        {% endif %}
-
-        <div class="col-md-12">
-        <h4>Comments</h4>
-        <div class="fb-comments" data-href="http://{{ object.site }}{{ object.get_absolute_url }}" data-width="470" data-num-posts="10"></div>
-        </div>
+        <div class="two columns">&nbsp;</div>
+    </div>
+</div>
 
 
-    {% endblock %}
+
+
+{% if post.image %}
+<!--<p><img src="http://localhost:8000/blog{{ post.image.url }}" width="200"/></p>-->
+<p><img src="http://{{ object.site }}{{ post.image.url }}" width="200"/></p>
+{% endif %}
+
+
+{% endblock %}
