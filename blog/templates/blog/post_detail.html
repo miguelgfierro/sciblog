@@ -13,7 +13,8 @@
         {% endif %}
 
         {% if post.image %}
-            <p><img src="img/{{ post.image }}" width="200"/></p>
+            <!--<p><img src="http://localhost:8000/blog{{ post.image.url }}" width="200"/></p>-->
+            <p><img src="http://{{ object.site }}{{ post.image.url }}" width="200"/></p>
         {% endif %}
 
         <div class="col-md-12">

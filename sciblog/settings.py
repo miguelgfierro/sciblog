@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.syndication',
     'django.contrib.sitemaps',
+    'debug_toolbar',
 )
 
 SITE_ID = 1
@@ -53,7 +54,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
+
+#list of IPs able to see the toolbar
+INTERNAL_IPS=('127.0.0.1',)
 
 ROOT_URLCONF = 'sciblog.urls'
 
@@ -91,7 +96,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = 'http://localhost:8000/img/'
+MEDIA_URL = '/img/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
