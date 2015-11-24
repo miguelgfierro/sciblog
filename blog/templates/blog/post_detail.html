@@ -42,6 +42,12 @@
             {{ object.body_page1_col1_html|safe}}
         </div>
         <div class="six columns content">
+            {% if object.image %}
+            <div class="image">
+                <img src="http://{{ object.site }}{{ object.image.url }}" />
+                <div class="image_caption">{{ object.image_caption }}</div>
+            </div>
+            {% endif %}
             {{ object.body_page1_col2_html|safe}}
         </div>
         <div class="two columns">&nbsp;</div>
@@ -67,10 +73,7 @@
 
 
 
-{% if post.image %}
-<!--<p><img src="http://localhost:8000/blog{{ post.image.url }}" width="200"/></p>-->
-<p><img src="http://{{ object.site }}{{ post.image.url }}" width="200"/></p>
-{% endif %}
+
 
 
 {% endblock %}

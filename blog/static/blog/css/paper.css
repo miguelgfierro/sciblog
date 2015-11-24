@@ -65,6 +65,13 @@
   text-align: center;
   margin-bottom: 0.5rem;
 }
+.submission-date{
+  font-size: 14px;
+  text-align: center;
+}
+.submission-date:before{
+  content: "Submission date: ";
+}
 .section{
   font-size: 21px; 
   line-height: 30px;
@@ -85,6 +92,20 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.image{
+  text-align: center;
+}
+.image img{
+  width:200px;
+}
+.image .image_caption{
+  font-size: 14px;
+  margin-bottom:0.5rem;
+}
+.image .image_caption:before{
+  content: "Fig: ";
+  font-family: LatexBoldItalic;
+}
 .references{
   font-size: 14px; 
   padding-left: 1rem;
@@ -98,13 +119,7 @@
   counter-increment:li; /* Increment the counter by 1 */
   /*list-style-type: decimal;*/
 }
-.submission-date{
-  font-size: 14px; 
-  text-align: center;
-}
-.submission-date:before{
-  content: "Submission date: ";
-}
+
 /* ************************************************************************** */
 /* Basic styles*/
 body {

@@ -35,7 +35,6 @@ def generate_filename(instance, filename):
     year = datetime.datetime.now().year
     return str(year) + '/' + str(int(time())) + '.' + ext
 
-
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
@@ -45,6 +44,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, blank=True, null=True)
     site = models.ForeignKey(Site, blank=True, null=True)
     image = models.ImageField(upload_to=generate_filename, blank=True, null=True)
+    image_caption = models.CharField(max_length=200, blank=True)
 
     #Paper of maximum 2 pages (1 mandatory + 1 optional)
     body_page1_col1 = models.TextField()
