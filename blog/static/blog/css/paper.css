@@ -167,3 +167,9 @@ p.wrap {
 .container{
   height:1133px;
 }
+.container_list{
+  margin: 2rem auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: auto;
+}
