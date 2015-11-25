@@ -177,3 +177,36 @@ p.wrap {
   padding-bottom: 1rem;
   height: auto;
 }
+
+.container-footer{
+  position: relative;
+  width: 960px;
+  text-align: center;
+  background: #FAFAFA none repeat scroll 0% 0%;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-bottom: 0rem;
+  margin-left: auto;
+  padding-top: 2rem;
+  padding-right: 0rem;
+  padding-bottom: 2rem;
+  padding-left: 0rem;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer, .push {
+height: 4em;
+}
+
+.pager{
+  font-size: 18px;
+}
+.pager a, a:visited{
+  text-decoration:none;
+}
