@@ -25,11 +25,38 @@
   <script src="js/layout.js"></script>-->
 </head>
 <body>
-
+    <div class="wrapper">
   {% block content %}
 
   {% endblock %}
+    <div class="push"></div>
+    </div>
 
+
+    <div class="footer container-footer">
+
+      <!-- Pages -->
+      {% if page_obj.paginator %}
+        <div class="pager">
+        {% if page_obj.has_previous %}
+            <a href="/blog/{{ page_obj.previous_page_number }}">«</a>
+        {% endif %}
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        {% if page_obj.has_next %}
+            <a href="/blog/{{ page_obj.next_page_number }}">»</a>
+        {% endif %}
+          <hr>
+        </div>
+      {% endif %}
+
+      <a href="#">Twitter</a> •
+      <a href="#">Linkedin</a> •
+      <a href="#">About</a>
+      <br>
+      Proudly designed by Miguel González-Fierro and his robot -
+      <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
+
+    </div>
   
   <!-- scripts -->
   <script type="text/javascript">

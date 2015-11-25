@@ -192,21 +192,29 @@ p.wrap {
   padding-right: 0rem;
   padding-bottom: 2rem;
   padding-left: 0rem;
+  font-size: 14px;
 }
-
+.container-footer a, a:visited{
+  text-decoration:none;
+  padding: 0rem 2rem;
+}
 .wrapper {
 min-height: 100%;
 height: auto !important;
 height: 100%;
-margin: 0 auto -4em;
+margin: 0 auto -4rem;
 }
 .footer, .push {
-height: 4em;
+height: 4rem;
 }
-
 .pager{
   font-size: 18px;
 }
-.pager a, a:visited{
-  text-decoration:none;
+.pager hr{
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin: 1rem auto;
 }

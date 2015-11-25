@@ -1,7 +1,6 @@
 {% extends "blog/post_base.html" %}
 
     {% block content %}
-    <div class="wrapper">
         {% if object_list %}
             {% for object in object_list %}
             <div class="container container-list">
@@ -36,29 +35,6 @@
             </div>
         {% endif %}
 
-        <div class="push"></div>
-        </div>
 
-
-        <div class="footer container-footer">
-               <!-- <div class="row">
-                    <div class="four columns">&nbsp;</div>
-                    <div class="eight columns">-->
-
-        <!-- Pages -->
-        <ul class="pager">
-        {% if page_obj.has_previous %}
-            <a href="/blog/{{ page_obj.previous_page_number }}">«</a>
-        {% endif %}
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-        {% if page_obj.has_next %}
-            <a href="/blog/{{ page_obj.next_page_number }}">»</a>
-        {% endif %}
-        </ul>
-
-              <!--      </div>
-                    <div class="four columns">&nbsp;</div>
-            </div>-->
-        </div>
 
     {% endblock %}
