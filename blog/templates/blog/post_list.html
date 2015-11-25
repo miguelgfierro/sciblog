@@ -3,19 +3,27 @@
     {% block content %}
         {% if object_list %}
             {% for object in object_list %}
-            <div class="container container_list">
+            <div class="container container-list">
                 <div class="row">
                     <div class="two columns">&nbsp;</div>
                     <div class="twelve columns">
                         <div class="title" style="margin-top: 3rem"><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></div>
-                        <div class="submission-date"> {{ object.pub_date }}</div>
-                        {% if object.abstract %}
+                        <div class="submission-date-list"> {{ object.pub_date }}</div>
+                        <!--{% if object.abstract %}
                             <div class="abstract"> {{ object.abstract }}</div>
-                        {% endif %}
-
+                        {% endif %}-->
                     </div>
                     <div class="two columns">&nbsp;</div>
                 </div>
+                {% if object.abstract %}
+                        <div class="row" style="margin-bottom:10px">
+                            <div class="four columns">&nbsp;</div>
+                            <div class="eight columns">
+                                <div class="abstract"> {{ object.abstract }}</div>
+                            </div>
+                            <div class="four columns">&nbsp;</div>
+                        </div>
+                {% endif %}
             </div>
             {% endfor %}
         {% else %}

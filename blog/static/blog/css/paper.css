@@ -72,6 +72,10 @@
 .submission-date:before{
   content: "Submission date: ";
 }
+.submission-date-list{
+  font-size: 14px;
+  text-align: center;
+}
 .section{
   font-size: 21px; 
   line-height: 30px;
@@ -98,7 +102,7 @@
 .image img{
   width:300px;
 }
-.image .image_caption{
+.image .image-caption{
   font-size: 14px;
   margin-bottom:0.5rem;
 }
@@ -167,7 +171,7 @@ p.wrap {
 .container{
   height:1133px;
 }
-.container_list{
+.container-list{
   margin: 2rem auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
