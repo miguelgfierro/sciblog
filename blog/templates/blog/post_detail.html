@@ -69,8 +69,8 @@ FB.ui({
                 <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}">
                     <img src="{{ object.site }}/blog/img/linkedin_circle_black-32.png" width="32px" alt="">
                 </a>
-                {% end %}
-            <a class="social-icons"  href="#">
+                {% endif %}
+            <a class="social-icons"  href="https://plus.google.com/share?url={{ object.site }}{{ object.get_absolute_url }}">
                 <img src="{{ object.site }}/blog/img/googleplus_circle_black-32.png" width="32px" alt="">
             </a>
             </div>
