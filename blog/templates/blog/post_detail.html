@@ -58,12 +58,18 @@ FB.ui({
             <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href={{ object.site }}{{ object.get_absolute_url }}&redirect_uri={{ object.site }}">
                 <img src="{{ object.site }}/blog/img/facebook_circle_black-32.png" width="32px" alt="">
             </a>
-            <a class="social-icons"  href="#">
+            <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}&via=miguelgfierro">
                 <img src="{{ object.site }}/blog/img/twitter_circle_black-32.png" width="32px" alt="">
             </a>
-            <a class="social-icons"  href="#">
-                <img src="{{ object.site }}/blog/img/linkedin_circle_black-32b.png" width="32px" alt="">
-            </a>
+                {% if object.abstract %}
+                <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
+                    <img src="{{ object.site }}/blog/img/linkedin_circle_black-32.png" width="32px" alt="">
+                </a>
+                {% else %}
+                <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}">
+                    <img src="{{ object.site }}/blog/img/linkedin_circle_black-32.png" width="32px" alt="">
+                </a>
+                {% end %}
             <a class="social-icons"  href="#">
                 <img src="{{ object.site }}/blog/img/googleplus_circle_black-32.png" width="32px" alt="">
             </a>
