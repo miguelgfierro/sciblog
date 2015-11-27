@@ -39,7 +39,7 @@
   font-size: 35px; 
   line-height: 40px; 
   text-align: center;
-  margin: 9rem 0 0.5rem 0.5rem;
+  margin: 6rem 0 0.5rem 0.5rem;
 }
 .abstract{
   text-align: justify;
@@ -170,6 +170,7 @@ p.wrap {
 }
 .container{
   height:1133px;
+  padding-top:2rem;
 }
 .container-list{
   margin: 2rem auto;
@@ -217,4 +218,9 @@ margin: 0 auto -4rem;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
   margin: 1rem auto;
+}
+.social-icons{
+  text-align:right;
+  text-decoration:none;
+  padding: 0rem 0.5rem;
 }

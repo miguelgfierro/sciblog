@@ -1,9 +1,75 @@
 {% extends "blog/post_base.html" %}
 
+{% block headers %}
+
+    <!-- Open tag for Facebook -->
+    <meta property="fb:app_id"      content="556883141128364"/>
+    <meta property="og:url"         content="{{ object.site }}{{ object.get_absolute_url }}" />
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content="{{ object.title }}" />
+    {% if object.abstract %}
+    <meta property="og:description" content="{{ object.abstract }}" />
+    {% endif %}
+    {% if object.image %}
+    <meta property="og:image"       content="{{ object.site }}/blog{{ object.image.url }}" />
+    {% else %}
+    <meta property="og:image"       content="{{ object.site }}/blog/img/hoaphumanoid.png" />
+    {% endif %}
+
+{% endblock %}
+
+
 {% block content %}
+
+
+<!--Facebook share dialog script -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '556883141128364',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+FB.ui({
+  method: 'share_open_graph',
+  action_type: 'og.likes',
+  action_properties: JSON.stringify({
+      object:'{{ object.site }}{{ object.get_absolute_url }}',
+  })
+}, function(response){});
+</script>
+
 
 <!-- Page one -->
 <div class="container">
+            <!-- Social buttons -->
+        <div class="row">
+            <div class="four columns">&nbsp;</div>
+            <div class="eight columns">&nbsp;</div>
+            <div class="four columns">
+            <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href={{ object.site }}{{ object.get_absolute_url }}&redirect_uri={{ object.site }}">
+                <img src="{{ object.site }}/blog/img/facebook_circle_black-32.png" width="32px" alt="">
+            </a>
+            <a class="social-icons"  href="#">
+                <img src="{{ object.site }}/blog/img/twitter_circle_black-32.png" width="32px" alt="">
+            </a>
+            <a class="social-icons"  href="#">
+                <img src="{{ object.site }}/blog/img/linkedin_circle_black-32.png" width="32px" alt="">
+            </a>
+            <a class="social-icons"  href="#">
+                <img src="{{ object.site }}/blog/img/googleplus_circle_black-32.png" width="32px" alt="">
+            </a>
+            </div>
+        </div>
+
     <div class="row">
         <div class="three columns">&nbsp;</div>
         <div class="ten columns">
@@ -44,7 +110,7 @@
         <div class="six columns content">
             {% if object.image %}
             <div class="image">
-                <img src="http://{{ object.site }}{{ object.image.url }}" />
+                <img src="{{ object.site }}/blog{{ object.image.url }}" />
                 <div class="image-caption">{{ object.image_caption }}</div>
             </div>
             {% endif %}
