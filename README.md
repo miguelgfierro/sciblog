@@ -1,9 +1,9 @@
 A Post with the appearance of a scientific Latex paper.
 ==================
 
-We need to install several libreries:
+We need to install several libraries:
 
-	$ apt-get install -y libpq-dev python-dev
+	$ apt-get install -y python-dev libpq-dev python-pip git apache2
 	$ pip install django django-debug-toolbar markdown2
 
 NOTE: django version must be 1.7. To see your django version:
