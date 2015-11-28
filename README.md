@@ -1,4 +1,4 @@
-A Post with the appearance of a scientific Latex paper.
+A blog with the appearance of a scientific Latex paper.
 ==================
 
 We need to install several libraries:
