@@ -7,11 +7,17 @@ Prince Ali Ababwa; The best; The mighty; Prince Ali the Awesome
 Authors:
 The Genie of the lamp
 --------------------------------------------------------------------------------
+Date published:
+Today
+--------------------------------------------------------------------------------
 Abstract:
 As it is well known Prince Ali Ababwa is the richest human being in the whole world. He has seventy-five golden camels, fifty-three purple peacocks and a zoo. He's got ninety-five white Persian monkeys. He's got slaves, he's got servants and flunkies. He has sixty elephants, llamas galore, bears and lions, a brass band and more. He has forty fakirs, his cooks and bakers and birds that warble on key!
 --------------------------------------------------------------------------------
 Site:
-localhost:8000/blog
+http://localhost:8000/blog
+--------------------------------------------------------------------------------
+Image:
+press browse and add the image: img/prince_ali.jpg
 --------------------------------------------------------------------------------
 Image caption:
 Prince Ali Ababwa showing his awesome muscles

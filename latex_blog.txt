@@ -7,12 +7,15 @@ Blog; Latex; Paper
 Authors:
 Miguel González-Fierro
 --------------------------------------------------------------------------------
+Date published:
+Today
+--------------------------------------------------------------------------------
 Abstract:
 This blog intents to imitate the design of a scientific paper written in Latex. The idea is to not only use the beautiful Latex design and typography, but also to organize each post like a scientific research paper. In this post we will explain the basics of how to write a scientific paper and how to use the css classes to make it look like a latex document.
 
 --------------------------------------------------------------------------------
 Site:
-localhost:8000/blog
+http://localhost:8000/blog
 --------------------------------------------------------------------------------
 Body page 1 column 1: 
 <div class="section" style="margin-top:0px"> Introduction</div>

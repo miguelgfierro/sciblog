@@ -6,13 +6,9 @@ We need to install several libraries:
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2
 	$ pip install django django-debug-toolbar markdown2
 
-NOTE: django version must be 1.7. To see your django version:
+NOTE: django version must be 1.7 or 1.8. To see your django version:
 
 	$ pip list
-To downgrade your django version:
-	
-	$ pip install -U "django<1.8"
-
 
 Install the project
 ==================================================
@@ -30,8 +26,14 @@ After that you have to make what is called a migration, to create the tables in 
 In another terminal you have to run django server:
 
 	$ python manage.py runserver  
+	
+In a browser put the link: http://localhost:8000/admin/
 
-In a browser put the link: http://localhost:8000/admin
+To run the django server in a server VPS with IP:111.111.111.111
+
+	$ python manage.py runserver 111.111.111.111:8000 
+
+In a browser put the link: http://111.111.111.111:8000/admin/
 
 The panel will ask you to put username and password. Once you are in django dashboard you can start to add content to
 your blog.
