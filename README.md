@@ -3,7 +3,7 @@ A blog with the appearance of a scientific Latex paper.
 
 We need to install several libraries:
 
-	$ apt-get install -y python-dev libpq-dev python-pip git apache2
+	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
 	$ pip install django django-debug-toolbar markdown2
 
 NOTE: django version must be 1.7 or 1.8. To see your django version:
