@@ -41,6 +41,13 @@
   text-align: center;
   margin: 6rem 0 0.5rem 0.5rem;
 }
+.title a,a:visited{
+  text-decoration:none;
+  color:#000;
+}
+.title a:hover{
+  text-decoration:underline;
+}
 .abstract{
   text-align: justify;
   font-size: 14px;

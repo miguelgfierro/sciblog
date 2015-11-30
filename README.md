@@ -10,7 +10,7 @@ NOTE: django version must be 1.7 or 1.8. To see your django version:
 
 	$ pip list
 
-Install the project
+Install the project in localhost
 ==================================================
 The first step is to generate the database. In the projects folder:
   
@@ -29,14 +29,37 @@ In another terminal you have to run django server:
 	
 In a browser put the link: http://localhost:8000/admin/
 
-To run the django server in a server VPS with IP:111.111.111.111
-
-	$ python manage.py runserver 111.111.111.111:8000 
-
-In a browser put the link: http://111.111.111.111:8000/admin/
-
 The panel will ask you to put username and password. Once you are in django dashboard you can start to add content to
 your blog.
+
+Install the project in a Ubuntu VPS server
+==================================================
+
+First make sure that you have installed git, apache2 and libapache2-mod-wsgi as explained before. 
+
+	$ cd /var/www
+	$ git clone https://github.com/hoaphumanoid/sciblog.git
+	$ cd sciblog
+	$ python manage.py syncdb  
+	$ python manage.py makemigrations
+	$ python manage.py migrate
+
+Set the correct permissions:
+
+	$ chown www-data:www-data /var/www/sciblog
+	$ chown www-data:www-data /var/www/sciblog/db.sqlite3	
+
+Configure apache (in sciblog.conf change miguelgfierro.com for your url):
+
+	$ cp sciblog.conf /etc/apache2/sites-available/
+	$ a2ensite sciblog.conf
+	$ service apache2 restart
+	
+Run django server:
+	
+	$ python manage.py runserver 0.0.0.0:8000
+	
+
 
 Add your first content to the blog
 ==================================================
