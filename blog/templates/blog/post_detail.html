@@ -1,5 +1,9 @@
 {% extends "blog/post_base.html" %}
 
+{% block title %}
+        {{ object.title }}
+{% endblock %}
+
 {% block headers %}
 
     <!-- Open tag for Facebook -->
@@ -11,9 +15,9 @@
     <meta property="og:description" content="{{ object.abstract }}" />
     {% endif %}
     {% if object.image %}
-    <meta property="og:image"       content="{{ object.site }}/blog{{ object.image.url }}" />
+    <meta property="og:image"       content="{{ object.site }}{{ object.image.url }}" />
     {% else %}
-    <meta property="og:image"       content="{{ object.site }}/blog/img/hoaphumanoid.png" />
+    <meta property="og:image"       content="{{ object.site }}/img/hoaphumanoid.png" />
     {% endif %}
 
 {% endblock %}
@@ -56,22 +60,22 @@ FB.ui({
             <div class="eight columns">&nbsp;</div>
             <div class="four columns">
             <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href={{ object.site }}{{ object.get_absolute_url }}&redirect_uri={{ object.site }}">
-                <img src="{{ object.site }}/blog/img/facebook_circle_black-32.png" width="32px" alt="">
+                <img src="{{ object.site }}/img/facebook_circle_black-32.png" width="32px" alt="">
             </a>
             <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}&via=miguelgfierro">
-                <img src="{{ object.site }}/blog/img/twitter_circle_black-32.png" width="32px" alt="">
+                <img src="{{ object.site }}/img/twitter_circle_black-32.png" width="32px" alt="">
             </a>
                 {% if object.abstract %}
                 <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
-                    <img src="{{ object.site }}/blog/img/linkedin_circle_black-32.png" width="32px" alt="">
+                    <img src="{{ object.site }}/img/linkedin_circle_black-32.png" width="32px" alt="">
                 </a>
                 {% else %}
                 <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}">
-                    <img src="{{ object.site }}/blog/img/linkedin_circle_black-32.png" width="32px" alt="">
+                    <img src="{{ object.site }}/img/linkedin_circle_black-32.png" width="32px" alt="">
                 </a>
                 {% endif %}
             <a class="social-icons"  href="https://plus.google.com/share?url={{ object.site }}{{ object.get_absolute_url }}">
-                <img src="{{ object.site }}/blog/img/googleplus_circle_black-32.png" width="32px" alt="">
+                <img src="{{ object.site }}/img/googleplus_circle_black-32.png" width="32px" alt="">
             </a>
             </div>
         </div>
@@ -116,7 +120,7 @@ FB.ui({
         <div class="six columns content">
             {% if object.image %}
             <div class="image">
-                <img src="{{ object.site }}/blog{{ object.image.url }}" />
+                <img src="{{ object.site }}{{ object.image.url }}" />
                 <div class="image-caption">{{ object.image_caption }}</div>
             </div>
             {% endif %}

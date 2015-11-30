@@ -105,8 +105,7 @@ STATIC_URL = '/static/'
 # Template directory
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
-#Social sharing settings. Fist log on https://www.addthis.com and get an ID
-# code from https://github.com/rwanyoike/django-addthis
+
 
 
 

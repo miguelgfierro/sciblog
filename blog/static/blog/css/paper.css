@@ -106,7 +106,7 @@
   font-size: 14px;
   margin-bottom:0.5rem;
 }
-.image .image_caption:before{
+.image .image-caption:before{
   content: "Fig: ";
   font-family: LatexBoldItalic;
 }
