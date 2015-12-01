@@ -47,7 +47,8 @@ First make sure that you have installed git, apache2 and libapache2-mod-wsgi as 
 Set the correct permissions:
 
 	$ chown www-data:www-data /var/www/sciblog
-	$ chown www-data:www-data /var/www/sciblog/db.sqlite3	
+	$ chown www-data:www-data /var/www/sciblog/db.sqlite3
+	$ chown www-data:www-data /var/www/sciblog/img	
 
 Configure apache (in sciblog.conf change miguelgfierro.com for your url):
 
