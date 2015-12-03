@@ -3,7 +3,7 @@ from blog.models import Post
 from django.views.generic import ListView, DetailView
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.http import HttpResponse
 
 urlpatterns = patterns('',
     # Index
@@ -19,6 +19,8 @@ urlpatterns = patterns('',
         ),
         name='post'
         ),
+    #robots.txt
+    url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /admin/", content_type="text/plain")),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
