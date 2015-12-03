@@ -178,6 +178,7 @@ p.wrap {
 .container{
   height:1133px;
   padding-top:2rem;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .container-list{
   margin: 2rem auto;
@@ -191,7 +192,7 @@ p.wrap {
   width: 960px;
   text-align: center;
   background: #FAFAFA none repeat scroll 0% 0%;
-  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
   margin-top: 2rem;
   margin-right: auto;
   margin-bottom: 0rem;
