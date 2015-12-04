@@ -23,18 +23,11 @@ urlpatterns = patterns('',
         ),
     #robots.txt
     url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /admin/", content_type="text/plain")),
-    #404
-    url(r'^404/$', django.views.defaults.page_not_found ),
 )
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-'''elif getattr(settings, 'FORCE_SERVE_STATIC', False):
-    settings.DEBUG = True
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    settings.DEBUG = False
-'''
+
 
 
 

@@ -16,23 +16,23 @@
   <meta name="author" content="Miguel González-Fierro">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="icon" href="{{ object.site }}/img/favicon.ico">
-  <link rel="apple-touch-icon" href="{{ object.site }}/img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ object.site }}/img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ object.site }}/img/apple-touch-icon-114x114.png">
+  {% load staticfiles %}
+  <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
+  <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}" >
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'blog/img/apple-touch-icon-72x72.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'blog/img/apple-touch-icon-114x114.png' %}">
 
   {% block headers %}
   <!-- Add headers in the child templates -->
   {% endblock %}
 
-  {% load staticfiles %}
   <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/layout.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.css' %}">
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   <!--<script src="{% static 'blog/js/ga.js' %}" async="" type="text/javascript"></script>
   <script src="{% static 'blog/js/jquery.js' %}"></script>
   <script src="{% static 'blog/js/layout.js' %}"></script>-->
