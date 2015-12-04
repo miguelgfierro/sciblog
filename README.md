@@ -23,7 +23,7 @@ After that you have to make what is called a migration, to create the tables in 
 	$ python manage.py makemigrations
 	$ python manage.py migrate
 
-In another terminal you have to run django server:
+In another terminal you have to run django development server:
 
 	$ python manage.py runserver  
 	
@@ -31,6 +31,8 @@ In a browser put the link: http://localhost:8000/admin/
 
 The panel will ask you to put username and password. Once you are in django dashboard you can start to add content to
 your blog.
+
+When you are in localhost you have to set DEBUG = True in sciblog/settings.py. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
 
 Install the project in a Ubuntu VPS server
 ==================================================
@@ -56,10 +58,7 @@ Configure apache (in sciblog.conf change miguelgfierro.com for your url):
 	$ a2ensite sciblog.conf
 	$ service apache2 restart
 	
-Run django server:
-	
-	$ python manage.py runserver 0.0.0.0:8000
-	
+When you are in production you have to set DEBUG = False in sciblog/settings.py
 
 
 Add your first content to the blog
@@ -68,7 +67,7 @@ Add your first content to the blog
 Press add in Post to add your first post. Go to file latex_blog.txt and start to fill up all the fields. For the first
 post we will leave the image, the image caption, page 2 column 1 and page 2 column 2 empty.
 
-You will see that your blog is working properly going to the url: http://localhost:8000/blog/ (note: make sure you put the slash at the end)
+You will see that your blog is working properly going to the url: http://localhost:8000/ (note: make sure you put the slash at the end)
 
 The post can be accessed here: http://localhost:8000/blog/2015/a-blog-with-the-appearance-of-a-scientific-paper-in-latex/
 
