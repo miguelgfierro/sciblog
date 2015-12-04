@@ -67,7 +67,7 @@ Add your first content to the blog
 Press add in Post to add your first post. Go to file latex_blog.txt and start to fill up all the fields. For the first
 post we will leave the image, the image caption, page 2 column 1 and page 2 column 2 empty.
 
-You will see that your blog is working properly going to the url: http://localhost:8000/ (note: make sure you put the slash at the end)
+You will see that your blog is working properly going to the url: http://localhost:8000
 
 The post can be accessed here: http://localhost:8000/blog/2015/a-blog-with-the-appearance-of-a-scientific-paper-in-latex/
 
