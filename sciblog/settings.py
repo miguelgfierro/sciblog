@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '7@ug(w91q62^z^vf3fcs$95+@&18m8vj#+of03q5#058axfd_8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['www.miguelgfierro.com','miguelgfierro.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','www.miguelgfierro.com','miguelgfierro.com']
 
 
 # Application definition
@@ -44,7 +44,7 @@ INSTALLED_APPS = (
     'debug_toolbar',
 )
 
-SITE_ID = 1
+SITE_ID = 2
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -55,6 +55,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',#to add the toolbar
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
 )
 
 #list of IPs able to see the toolbar
@@ -101,6 +107,9 @@ MEDIA_URL = '/img/'
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'blog','static'),
+)
 
 # Template directory
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
