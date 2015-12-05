@@ -33,9 +33,30 @@
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-  <!--<script src="{% static 'blog/js/ga.js' %}" async="" type="text/javascript"></script>
-  <script src="{% static 'blog/js/jquery.js' %}"></script>
-  <script src="{% static 'blog/js/layout.js' %}"></script>-->
+  <!-- scripts Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-70996723-1', 'auto');
+    ga('send', 'pageview');
+    //ga(‘set’, ‘&uid’, {{USER_ID}});
+  </script>
+    <!-- SEO: add link to social networks -->
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name" : "miguelgfierro",
+    "url" : "https://miguelgfierro.com",
+    "sameAs" : [
+      "https://twitter.com/miguelgfierro",
+      "https://plus.google.com/+MiguelGonzalezFierro",
+      "https://es.linkedin.com/in/miguelgfierro"
+    ]
+  }
+  </script>
 
 </head>
 <body>
@@ -74,34 +95,9 @@
       <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
 
     </div>
-  
-  <!-- scripts Google Analytics -->
-  <script>
-    //Layout.render("#contents");
 
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-70996723-1', 'auto');
-    ga('send', 'pageview');
-    //ga(‘set’, ‘&uid’, {{USER_ID}});
 
-  </script>
-  <!-- SEO: add link to social networks -->
-  <script type="application/ld+json">
-  {
-    "@context" : "http://schema.org",
-    "@type" : "Blog",
-    "name" : "miguelgfierro",
-    "url" : "https://miguelgfierro.com",
-    "sameAs" : [
-      "https://twitter.com/miguelgfierro",
-      "https://plus.google.com/+MiguelGonzalezFierro",
-      "https://es.linkedin.com/in/miguelgfierro"
-    ]
-  }
-  </script>
+
 
 
 
