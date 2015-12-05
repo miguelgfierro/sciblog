@@ -33,7 +33,15 @@
 }
 /* ************************************************************************** */
 /* Classes from Latex */
-.title{
+h1,h2,h3,h4,h5,h6{
+  font-family: Latex, Georgia, serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: inherit;
+}
+h1.title{
   text-transform: capitalize;
   font-variant: small-caps;
   font-size: 35px; 
@@ -41,30 +49,30 @@
   text-align: center;
   margin: 6rem 0 0.5rem 0.5rem;
 }
-.title a,a:visited{
+h1.title a,a:visited{
   text-decoration:none;
   color:#000;
 }
-.title a:hover{
+h1.title a:hover{
   text-decoration:underline;
 }
-.abstract{
+h2.keywords{
   text-align: justify;
   font-size: 14px;
   margin-bottom:0.5rem;
 }
-.abstract:before{
-  content: "Abstract— ";
-  font-family: LatexBoldItalic;
-}
-.keywords{
-  text-align: justify;
-  font-size: 14px;
-  margin-bottom:0.5rem;
-}
-.keywords:before{
+h2.keywords:before{
   content: "Keywords: ";
   font-family: LatexItalic;
+}
+h3.abstract{
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom:0.5rem;
+}
+h3.abstract:before{
+  content: "Abstract— ";
+  font-family: LatexBoldItalic;
 }
 .author{
   font-size: 16px; 
@@ -136,9 +144,6 @@
 body {
   background: #e9e8ed url("../img/gradient_texture10.jpg") repeat-x scroll 0px 0px;
   color: #100;
-  font-family: Latex, Georgia, serif;
-}
-h1,h2,h3,h4,h5,h6{
   font-family: Latex, Georgia, serif;
 }
 i{font-family: LatexItalic;}
