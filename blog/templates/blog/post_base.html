@@ -12,7 +12,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <title>{% block title %} {% endblock %}</title>
-  <meta name="description" content="Sciblog - A blog designed like a scientific Latex paper">
+  <meta name="description" content="Sciblog - A blog designed like a scientific Latex paper. Posts are about  technological business, startups, science, artificial intelligence, robotics and machine learning.">
   <meta name="author" content="Miguel González-Fierro">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -75,7 +75,7 @@
 
     </div>
   
-  <!-- scripts -->
+  <!-- scripts Google Analytics -->
   <script>
     //Layout.render("#contents");
 
@@ -85,10 +85,23 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-70996723-1', 'auto');
     ga('send', 'pageview');
-    //ga(‘set’, ‘&uid’, {{USER_ID}}); // Establezca el ID de usuario mediante el user_id con el que haya iniciado sesión.
+    //ga(‘set’, ‘&uid’, {{USER_ID}});
 
   </script>
-
+  <!-- SEO: add link to social networks -->
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name" : "miguelgfierro",
+    "url" : "https://miguelgfierro.com",
+    "sameAs" : [
+      "https://twitter.com/miguelgfierro",
+      "https://plus.google.com/+MiguelGonzalezFierro",
+      "https://es.linkedin.com/in/miguelgfierro"
+    ]
+  }
+  </script>
 
 
 
