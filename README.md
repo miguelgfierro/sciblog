@@ -58,21 +58,26 @@ Configure apache (in sciblog.conf change miguelgfierro.com for your url):
 	$ a2ensite sciblog.conf
 	$ service apache2 restart
 	
-When you are in production you have to set DEBUG = False in sciblog/settings.py
-
-
 Add your first content to the blog
 ==================================================
 
 Press add in Post to add your first post. Go to file latex_blog.txt and start to fill up all the fields. For the first
 post we will leave the image, the image caption, page 2 column 1 and page 2 column 2 empty.
 
-You will see that your blog is working properly going to the url: http://localhost:8000
+You will see that your blog is working properly going to the url: localhost:8000 (in production you'll have to add something like miguelgfierro.com without http://)
 
 The post can be accessed here: http://localhost:8000/blog/2015/a-blog-with-the-appearance-of-a-scientific-paper-in-latex/
 
 Now take the file prince_ali.txt and add a second post. This time you'll have to fill all fields. The image you have to use
 is in img/prince_ali.jpg
+
+Notes to manage the blog in the production environment
+==================================================
+
+When you are in production you have to set DEBUG = False in sciblog/settings.py.
+
+Also the first time you enter in your admin console (http://miguelgfierro.com/admin/) you have to go to sites and EDIT the default site, which is example.com. Change it for the name of your site without http:// (my case would be miguelgfierro.com).
+This will set the first entry in the database to your site, which is related to the variable SITE_ID = 1 in sciblog/settings.py. You can see the number of the site in http://miguelgfierro.com/admin/sites/site/1/. If you add another site then it will have a different number in the database, so for everything to work you have to change the variable SITE_ID. In my experience it is better if you don't touch anything, I messed up the database several times :-)
 
 
 
