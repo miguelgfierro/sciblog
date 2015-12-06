@@ -9,16 +9,16 @@
 
     <!-- Open tag for Facebook. Add here your app_id -->
     <meta property="fb:app_id"      content="556883141128364"/>
-    <meta property="og:url"         content="{{ object.site }}{{ object.get_absolute_url }}" />
+    <meta property="og:url"         content="http://{{ object.site }}{{ object.get_absolute_url }}" />
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content="{{ object.title }}" />
     {% if object.abstract %}
     <meta property="og:description" content="{{ object.abstract }}" />
     {% endif %}
     {% if object.image %}
-    <meta property="og:image"       content="{{ object.site }}{{ object.image.url }}" />
+    <meta property="og:image"       content="http://{{ object.site }}{{ object.image.url }}" />
     {% else %}
-    <meta property="og:image"       content="{{ object.site }}/img/hoaphumanoid.png" />
+    <meta property="og:image"       content="http://{{ object.site }}/img/hoaphumanoid.png" />
     {% endif %}
 
 {% endblock %}
@@ -61,23 +61,23 @@ FB.ui({
             <div class="eight columns">&nbsp;</div>
             <div class="four columns">
             <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href={{ object.site }}{{ object.get_absolute_url }}&redirect_uri={{ object.site }}">
-                <img src="{% static 'blog//img/facebook_circle_black-32.png' %}" width="32px" alt="">
+                <img src="{% static 'blog/img/facebook_circle_black-32.png' %}" width="32px" alt="">
             </a>
             <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}&via=miguelgfierro">
-                <img src="{% static 'blog//img/twitter_circle_black-32.png' %}" width="32px" alt="">
+                <img src="{% static 'blog/img/twitter_circle_black-32.png' %}" width="32px" alt="">
             </a>
                 {% if object.abstract %}
                 <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
-                    <img src="{% static 'blog//img/linkedin_circle_black-32.png' %}" width="32px" alt="">
+                    <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
                 </a>
                 {% else %}
                 <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={{ object.site }}{{ object.get_absolute_url }}">
-                    <img src="{% static 'blog//img/linkedin_circle_black-32.png' %}" width="32px" alt="">
+                    <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
 
                 </a>
                 {% endif %}
             <a class="social-icons"  href="https://plus.google.com/share?url={{ object.site }}{{ object.get_absolute_url }}">
-                <img src="{% static 'blog//img/googleplus_circle_black-32.png' %}" width="32px" alt="">
+                <img src="{% static 'blog/img/googleplus_circle_black-32.png' %}" width="32px" alt="">
 
             </a>
             </div>
@@ -123,7 +123,7 @@ FB.ui({
         <div class="six columns content">
             {% if object.image %}
             <div class="image">
-                <img src="{{ object.site }}{{ object.image.url }}" />
+                <img src="http://{{ object.site }}{{ object.image.url }}" />
                 <div class="image-caption">{{ object.image_caption }}</div>
             </div>
             {% endif %}
