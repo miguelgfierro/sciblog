@@ -4,8 +4,14 @@ from django.views.generic import ListView, DetailView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
-import django.conf.urls
-import django.views.defaults
+from django.contrib.sitemaps.views import sitemap
+from blog.sitemap import PostSitemap, FlatpageSitemap
+
+# Define sitemaps
+sitemaps = {
+    'posts': PostSitemap,
+    'pages': FlatpageSitemap
+}
 
 urlpatterns = patterns('',
     # Index
@@ -23,6 +29,8 @@ urlpatterns = patterns('',
         ),
     #robots.txt
     url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /admin/", content_type="text/plain")),
+    #sitemap
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
 )
 
 if settings.DEBUG:
