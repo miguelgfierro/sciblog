@@ -16,7 +16,7 @@ def generate_filename(instance, filename):
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
-    abstract = models.TextField(blank=True)
+    abstract = models.TextField('Abstract (300-400 characters)',blank=True)
     pub_date = models.DateField('Date published')
     keywords = models.CharField(max_length=100, blank=True)
     authors = models.CharField(max_length=100, blank=True, null=True)
@@ -25,13 +25,13 @@ class Post(models.Model):
     image_caption = models.CharField(max_length=200, blank=True)
 
     #Paper of maximum 2 pages (1 mandatory + 1 optional)
-    body_page1_col1 = models.TextField()
+    body_page1_col1 = models.TextField('Body 1,1 (1000-1200 characters)')
     body_page1_col1_html = models.TextField(editable=False, blank=True, null=True)
-    body_page1_col2 = models.TextField()
+    body_page1_col2 = models.TextField('Body 1,2 (600-700 characters)')
     body_page1_col2_html = models.TextField(editable=False, blank=True, null=True)
-    body_page2_col1 = models.TextField(blank=True)
+    body_page2_col1 = models.TextField('Body 2,1 (2100-2200 characters)', blank=True)
     body_page2_col1_html = models.TextField(editable=False, blank=True, null=True)
-    body_page2_col2 = models.TextField(blank=True)
+    body_page2_col2 = models.TextField('Body 2,2 (2100-2200 characters)', blank=True)
     body_page2_col2_html = models.TextField(editable=False, blank=True, null=True)
 
     def __unicode__(self):
