@@ -1,0 +1,28 @@
+<div class="six columns content">
+<div class="section">Welcome to my blog</div>
+<p>Hello, I'm Miguel and this is my blog. Here you will find articles related to startups, technical business, artificial intelligence, machine learning and robotics.</p>
+
+<div class="section">Activities</div>
+<p>I'm currently the CEO and founder of Samsamia Technologies. We created a visual search engine for fashion items that allows to find products using images instead of words. Our API provides visual search capabilities that boost the conversion of any e-commerce. For more information, visit our web <a href="http://www.samsamia.com">www.samsamia.com</a></p>
+<br>
+<p> Before that I was founder of the Robotics Society of Universidad Carlos III where we develop different projects related to UAVs, mobile robots, small humanoids competitions and 3D printers. The Robotics Society is open to anyone who wants to learn robotics. If you are interested, visit us in our wiki <a href="http://asrob.uc3m.es/">asrob.uc3m.es</a></p>
+<br>
+<p> I worked as a robotics scientist at Universidad Carlos III of Madrid (UC3M) and King's College London (KCL). This is my page from <a href="http://roboticslab.uc3m.es/roboticslab/people/m-gonzalez-fierro">UC3M</a> and this my page from <a href="http://thrish.org/additional-researchers/miguel-gonzalez-fierro">KCL</a>.
+
+</div>
+
+<div class="six columns content">
+
+<div class="section">Research</div>
+<p>My lines of research are machine learning, computer vision, kinematic and dynamic control of humanoid robots, human-robot interaction, learning from demonstration and reinforcement learning. I mostly worked with the humanoid HOAP-3. This is my <a href="https://www.youtube.com/user/ciruselvirus/videos">youtube channel</a> where you can find videos of some of the experiments in my research.</p>
+
+<div class="section">Education</div>
+<p class="item"> Ph.D. in Humanoid Robotics and Machine Learning (2014). Here you can find my <a href="http://miguelgfierro.com/docs/gonzalez-fierro2014thesis.pdf">thesis</a>. </p>
+<p class="item"> M.Sc. in Robotics and Automation (2009).</p>
+<p class="item"> Industrial Engineering, specialized in Electric Engineering (2008).</p>
+
+<div class="section">Contact</div>
+<p>If you want to contact me, you can send an email to my artificial intelligence: <a href="mailto:hoaphumanoid@gmail.com">HOAP</a>. He is neither very artificial nor very intelligent yet, but don't worry I'm working on it.</p>
+<br>
+<p class="no-indent">Cheers!</p>
+</div>

@@ -1,0 +1,38 @@
+{% extends "blog/post_base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+        {{ flatpage.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="three columns">&nbsp;</div>
+        <div class="ten columns">
+            <h1 class="title" style="padding-bottom:1rem;padding-top:4.5rem;"> {{ flatpage.title }}</h1>
+            <div class="image">
+                <img src="{% static 'blog/img/author.png' %}" style="width: 200px;" >
+                <div class="image-caption">This is the face of {{ flatpage.title }}. <br>He also has a body, although it is
+                    not pictured here.</div>
+            </div>
+        </div>
+        <div class="three columns">&nbsp;</div>
+    </div>
+
+    <div class="row">
+        <div class="two columns">&nbsp;</div>
+        <!-- Add text with this format in flatpage content -->
+        <!--<div class="six columns content">
+            <p>Text first column</p>
+        </div>
+        <div class="six columns content">
+            <p>Text second column</p>
+        </div>-->
+        {{ flatpage.content }}
+        <div class="two columns">&nbsp;</div>
+    </div>
+</div>
+
+{% endblock %}
