@@ -61,15 +61,22 @@ Configure apache (in sciblog.conf change miguelgfierro.com for your url):
 Add your first content to the blog
 ==================================================
 
-Press add in Post to add your first post. Go to file latex_blog.txt and start to fill up all the fields. For the first
+Press add in Post to add your first post. Go to file content/latex_blog.txt and start to fill up all the fields. For the first
 post we will leave the image, the image caption, page 2 column 1 and page 2 column 2 empty.
 
 You will see that your blog is working properly going to the url: localhost:8000 (in production you'll have to add something like miguelgfierro.com without http://)
 
 The post can be accessed here: http://localhost:8000/blog/2015/a-blog-with-the-appearance-of-a-scientific-paper-in-latex/
 
-Now take the file prince_ali.txt and add a second post. This time you'll have to fill all fields. The image you have to use
+Now take the file content/prince_ali.txt and add a second post. This time you'll have to fill all fields. The image you have to use
 is in img/prince_ali.jpg
+
+Create the about page
+==================================================
+
+Go to the admin console and add your first flat page. A flat page is a static html code. 
+
+In Flat pages press add. In url put /about/ (don't forget / in both sides). In title put your name, in sites put your site and in content paste the file content/about.txt. It will render a beautifull about page. 
 
 Notes to manage the blog in the production environment
 ==================================================
