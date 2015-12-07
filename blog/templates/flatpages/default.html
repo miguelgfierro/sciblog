@@ -5,13 +5,70 @@
         {{ flatpage.title }}
 {% endblock %}
 
+{% block headers %}
+
+    <!-- Open tag for Facebook. Add here your app_id -->
+    <meta property="fb:app_id"      content="556883141128364"/>
+    <meta property="og:url"         content="http://miguelgfierro.com/about/" />
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content="{{ flatpage.title }}" />
+    <meta property="og:image"       content="http://miguelgfierro.com/static/blog/img/author.png" />
+
+{% endblock %}
+
 {% block content %}
 
+<!--Facebook share dialog script -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '556883141128364',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+FB.ui({
+  method: 'share_open_graph',
+  action_type: 'og.likes',
+  action_properties: JSON.stringify({
+      object:'http://miguelgfierro.com/about/',
+  })
+}, function(response){});
+</script>
+
 <div class="container">
+
+    <!-- Social buttons -->
+    <div class="row">
+        <div class="four columns">&nbsp;</div>
+        <div class="eight columns">&nbsp;</div>
+        <div class="four columns">
+        <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href=http://miguelgfierro.com/about/&redirect_uri=http://miguelgfierro.com/">
+            <img src="{% static 'blog/img/facebook_circle_black-32.png' %}" width="32px" alt="">
+        </a>
+        <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ flatpage.title }}&url=http://miguelgfierro.com/about/&via=miguelgfierro">
+            <img src="{% static 'blog/img/twitter_circle_black-32.png' %}" width="32px" alt="">
+        </a>
+        <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ flatpage.title }}&url=http://miguelgfierro.com/about/">
+            <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
+        </a>
+        <a class="social-icons"  href="https://plus.google.com/share?url=http://miguelgfierro.com/about/">
+            <img src="{% static 'blog/img/googleplus_circle_black-32.png' %}" width="32px" alt="">
+        </a>
+        </div>
+    </div>
+
     <div class="row">
         <div class="three columns">&nbsp;</div>
         <div class="ten columns">
-            <h1 class="title" style="padding-bottom:1rem;padding-top:4.5rem;"> {{ flatpage.title }}</h1>
+            <h1 class="title" style="padding-bottom:1rem;padding-top:1.5rem;"> {{ flatpage.title }}</h1>
             <div class="image">
                 <img src="{% static 'blog/img/author.png' %}" style="width: 200px;" >
                 <div class="image-caption">This is the face of {{ flatpage.title }}. <br>He also has a body, although it is

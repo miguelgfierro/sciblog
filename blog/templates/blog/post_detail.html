@@ -55,33 +55,33 @@ FB.ui({
 
 <!-- Page one -->
 <div class="container">
-            <!-- Social buttons -->
-        <div class="row">
-            <div class="four columns">&nbsp;</div>
-            <div class="eight columns">&nbsp;</div>
-            <div class="four columns">
-            <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href=http://{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}">
-                <img src="{% static 'blog/img/facebook_circle_black-32.png' %}" width="32px" alt="">
+    <!-- Social buttons -->
+    <div class="row">
+        <div class="four columns">&nbsp;</div>
+        <div class="eight columns">&nbsp;</div>
+        <div class="four columns">
+        <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href=http://{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}">
+            <img src="{% static 'blog/img/facebook_circle_black-32.png' %}" width="32px" alt="">
+        </a>
+        <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&via=miguelgfierro">
+            <img src="{% static 'blog/img/twitter_circle_black-32.png' %}" width="32px" alt="">
+        </a>
+            {% if object.abstract %}
+            <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
+                <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
             </a>
-            <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&via=miguelgfierro">
-                <img src="{% static 'blog/img/twitter_circle_black-32.png' %}" width="32px" alt="">
-            </a>
-                {% if object.abstract %}
-                <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
-                    <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
-                </a>
-                {% else %}
-                <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}">
-                    <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
-
-                </a>
-                {% endif %}
-            <a class="social-icons"  href="https://plus.google.com/share?url=http://{{ object.site }}{{ object.get_absolute_url }}">
-                <img src="{% static 'blog/img/googleplus_circle_black-32.png' %}" width="32px" alt="">
+            {% else %}
+            <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}">
+                <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
 
             </a>
-            </div>
+            {% endif %}
+        <a class="social-icons"  href="https://plus.google.com/share?url=http://{{ object.site }}{{ object.get_absolute_url }}">
+            <img src="{% static 'blog/img/googleplus_circle_black-32.png' %}" width="32px" alt="">
+
+        </a>
         </div>
+    </div>
 
     <div class="row">
         <div class="three columns">&nbsp;</div>
