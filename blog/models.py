@@ -16,7 +16,7 @@ def generate_filename(instance, filename):
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
-    abstract = models.TextField('Abstract (300-400 characters)',blank=True)
+    abstract = models.TextField('Abstract (300-400 characters)')
     pub_date = models.DateField('Date published')
     keywords = models.CharField(max_length=100, blank=True)
     authors = models.CharField(max_length=100, blank=True, null=True)
