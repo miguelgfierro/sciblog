@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 from django.http import HttpResponse
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemap import PostSitemap, FlatpageSitemap
-from blog.views import PostsFeed
+from blog.views import PostsFeed, getSearchResults
 
 # Define sitemaps
 sitemaps = {
@@ -21,6 +21,8 @@ urlpatterns = patterns('',
     url(r'^blog/(?P<pub_date__year>\d{4})/(?P<slug>[a-zA-Z0-9-]+)/?$', DetailView.as_view(model=Post,),name='post'),
     # Post RSS feed
     url(r'^feed/posts/$', PostsFeed()),
+    # Search posts
+    url(r'^search', getSearchResults, name='search'),
     #robots.txt
     url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /admin/", content_type="text/plain")),
     #sitemap
