@@ -1,5 +1,6 @@
 {% extends "blog/post_base.html" %}
 {% load staticfiles %}
+{% load current_site %}
 
 {% block title %}
         {{ flatpage.title }}
@@ -9,7 +10,7 @@
 
     <!-- Open tag for Facebook. Add here your app_id -->
     <meta property="fb:app_id"      content="556883141128364"/>
-    <meta property="og:url"         content="http://miguelgfierro.com/about/" />
+    <meta property="og:url"         content="http://{% current_site %}{{ flatpage.url }}" />
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content="{{ flatpage.title }}" />
     <meta property="og:image"       content="http://miguelgfierro.com/static/blog/img/author.png" />
@@ -38,7 +39,7 @@ FB.ui({
   method: 'share_open_graph',
   action_type: 'og.likes',
   action_properties: JSON.stringify({
-      object:'http://miguelgfierro.com/about/',
+      object:'http://{% current_site %}{{ flatpage.url }}',
   })
 }, function(response){});
 </script>
@@ -50,16 +51,16 @@ FB.ui({
         <div class="four columns">&nbsp;</div>
         <div class="eight columns">&nbsp;</div>
         <div class="four columns">
-        <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href=http://miguelgfierro.com/about/&redirect_uri=http://miguelgfierro.com/">
+        <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href=http://{% current_site %}{{ flatpage.url }}&redirect_uri=http://{% current_site %}{{ flatpage.url }}">
             <img src="{% static 'blog/img/facebook_circle_black-32.png' %}" width="32px" alt="">
         </a>
-        <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ flatpage.title }}&url=http://miguelgfierro.com/about/&via=miguelgfierro">
+        <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ flatpage.title }}&url=http://{% current_site %}{{ flatpage.url }}&via=miguelgfierro">
             <img src="{% static 'blog/img/twitter_circle_black-32.png' %}" width="32px" alt="">
         </a>
-        <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ flatpage.title }}&url=http://miguelgfierro.com/about/">
+        <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ flatpage.title }}&url=http://{% current_site %}{{ flatpage.url }}">
             <img src="{% static 'blog/img/linkedin_circle_black-32.png' %}" width="32px" alt="">
         </a>
-        <a class="social-icons"  href="https://plus.google.com/share?url=http://miguelgfierro.com/about/">
+        <a class="social-icons"  href="https://plus.google.com/share?url=http://{% current_site %}{{ flatpage.url }}">
             <img src="{% static 'blog/img/googleplus_circle_black-32.png' %}" width="32px" alt="">
         </a>
         </div>

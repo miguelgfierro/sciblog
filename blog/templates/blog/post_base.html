@@ -17,6 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   {% load staticfiles %}
+  {% load current_site %}
+
   <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
   <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}" >
   <link rel="apple-touch-icon" sizes="72x72" href="{% static 'blog/img/apple-touch-icon-72x72.png' %}">
@@ -89,7 +91,7 @@
 
       <a href="https://twitter.com/miguelgfierro">Twitter</a> •
       <a href="https://es.linkedin.com/in/miguelgfierro">Linkedin</a> •
-      <a href="http://miguelgfierro.com/about/">About</a>
+      <a href="http://{% current_site %}/about/">About</a>
       <br>
       Proudly designed by Miguel González-Fierro and his robot -
       <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
