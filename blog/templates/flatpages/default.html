@@ -1,6 +1,7 @@
 {% extends "blog/post_base.html" %}
 {% load staticfiles %}
 {% load current_site %}
+{% load social %}
 
 {% block title %}
         {{ flatpage.title }}
@@ -9,7 +10,7 @@
 {% block headers %}
 
     <!-- Open tag for Facebook. Add here your app_id -->
-    <meta property="fb:app_id"      content="556883141128364"/>
+    <meta property="fb:app_id"      content="{% facebook_id %}"/>
     <meta property="og:url"         content="http://{% current_site %}{{ flatpage.url }}" />
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content="{{ flatpage.title }}" />
@@ -23,7 +24,7 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '556883141128364',
+      appId      : '{% facebook_id %}',
       xfbml      : true,
       version    : 'v2.5'
     });
@@ -51,10 +52,10 @@ FB.ui({
         <div class="four columns">&nbsp;</div>
         <div class="eight columns">&nbsp;</div>
         <div class="four columns">
-        <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id=556883141128364&display=popup&href=http://{% current_site %}{{ flatpage.url }}&redirect_uri=http://{% current_site %}{{ flatpage.url }}">
+        <a class="social-icons"  href="https://www.facebook.com/dialog/share?app_id={% facebook_id %}&display=popup&href=http://{% current_site %}{{ flatpage.url }}&redirect_uri=http://{% current_site %}{{ flatpage.url }}">
             <img src="{% static 'blog/img/facebook_circle_black-32.png' %}" width="32px" alt="">
         </a>
-        <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ flatpage.title }}&url=http://{% current_site %}{{ flatpage.url }}&via=miguelgfierro">
+        <a class="social-icons"  href="https://twitter.com/intent/tweet?text={{ flatpage.title }}&url=http://{% current_site %}{{ flatpage.url }}&via={% twitter_handle %}">
             <img src="{% static 'blog/img/twitter_circle_black-32.png' %}" width="32px" alt="">
         </a>
         <a class="social-icons"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ flatpage.title }}&url=http://{% current_site %}{{ flatpage.url }}">

@@ -116,6 +116,13 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 
-
-
+# Social Networks
+FACEBOOK_ID = '556883141128364' #for Facebook tracking
+FACEBOOK_URL = ''
+TWITTER_URL = 'https://twitter.com/miguelgfierro'
+TWITTER_HANDLE = 'miguelgfierro'
+LINKEDIN_URL = 'https://es.linkedin.com/in/miguelgfierro'
+GOOGLE_PLUS_URL = 'https://plus.google.com/+MiguelGonzalezFierro'
+PINTEREST_URL = ''
+INSTAGRAM_URL = ''
 
