@@ -11,6 +11,7 @@ def current_site():
         current_site = Site.objects.get_current()
         print 'site=', current_site.domain
     except:
-        return "Problem when accessing object"
+        print 'ERROR: Problem when accessing object'
+        return ""
 
     return current_site.domain

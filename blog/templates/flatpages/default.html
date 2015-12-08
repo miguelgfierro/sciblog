@@ -13,7 +13,7 @@
     <meta property="og:url"         content="http://{% current_site %}{{ flatpage.url }}" />
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content="{{ flatpage.title }}" />
-    <meta property="og:image"       content="http://miguelgfierro.com/static/blog/img/author.png" />
+    <meta property="og:image"       content="http://{% current_site %}{% static 'blog/img/author.png' %}" />
 
 {% endblock %}
 

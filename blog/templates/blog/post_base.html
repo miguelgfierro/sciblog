@@ -16,8 +16,11 @@
   <meta name="author" content="Miguel González-Fierro">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <!-- Load template tags -->
   {% load staticfiles %}
   {% load current_site %}
+  {% load flatpages %}
+  {% get_flatpages '/about/' as about_pages %} <!-- gets about page, it returns a list so we need to iterate -->
 
   <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
   <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}" >
@@ -25,6 +28,8 @@
   <link rel="apple-touch-icon" sizes="114x114" href="{% static 'blog/img/apple-touch-icon-114x114.png' %}">
 
   {% block headers %}
+
+
   <!-- Add headers in the child templates -->
   {% endblock %}
 
@@ -64,9 +69,12 @@
 <body>
 
     <div class="wrapper">
+
   {% block content %}
 
+
   {% endblock %}
+
     <div class="push"></div>
     </div>
 
@@ -91,7 +99,9 @@
 
       <a href="https://twitter.com/miguelgfierro">Twitter</a> •
       <a href="https://es.linkedin.com/in/miguelgfierro">Linkedin</a> •
-      <a href="http://{% current_site %}/about/">About</a>
+        {% for aboutp in about_pages %}
+          <a href="http://{% current_site %}{{ aboutp.url }}">About</a>
+        {% endfor%}
       <br>
       Proudly designed by Miguel González-Fierro and his robot -
       <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
