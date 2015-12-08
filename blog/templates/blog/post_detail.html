@@ -56,7 +56,7 @@ FB.ui({
 
 
 <!-- Page one -->
-<div class="container">
+<div itemscope itemtype="http://schema.org/Article" class="container">
     <!-- Social buttons -->
     <div class="row">
         <div class="four columns">&nbsp;</div>
@@ -88,9 +88,11 @@ FB.ui({
     <div class="row">
         <div class="three columns">&nbsp;</div>
         <div class="ten columns">
-            <h1 class="title"> {{ object.title }}</h1>
+            <h1 itemprop="name" class="title"> {{ object.title }}</h1>
             {% if object.authors %}
-            <div class="author"> {{ object.authors }}</div>
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <div itemprop="name" class="author"> {{ object.authors }}</div>
+            </span>
             {% endif %}
             <div class="submission-date"> {{ object.pub_date }}</div>
         </div>
@@ -125,7 +127,7 @@ FB.ui({
         <div class="six columns content">
             {% if object.image %}
             <div class="image">
-                <img src="http://{{ object.site }}{{ object.image.url }}" />
+                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}" />
                 <div class="image-caption">{{ object.image_caption }}</div>
             </div>
             {% endif %}
