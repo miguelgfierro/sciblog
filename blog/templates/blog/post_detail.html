@@ -24,6 +24,8 @@
     <meta property="og:image"       content="http://{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
     {% endif %}
 
+    <meta itemprop="url"            content="http://{{ object.site }}{{ object.get_absolute_url }}"/>
+
 {% endblock %}
 
 
