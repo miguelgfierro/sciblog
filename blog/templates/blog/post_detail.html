@@ -19,14 +19,13 @@
     {% if object.image %}
     <meta property="og:image"       content="http://{{ object.site }}{{ object.image.url }}" />
     {% else %}
-    <meta property="og:image"       content="http://{{ object.site }}/img/hoaphumanoid.png" />
+    <meta property="og:image"       content="http://{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
     {% endif %}
 
 {% endblock %}
 
 
 {% block content %}
-
 
 <!--Facebook share dialog script -->
 <script>

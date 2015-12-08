@@ -31,7 +31,6 @@
 
   {% block headers %}
 
-
   <!-- Add headers in the child templates -->
   {% endblock %}
 
@@ -39,9 +38,6 @@
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/layout.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.css' %}">
-
-
-  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>-->
 
   <!-- scripts Google Analytics -->
   <script>
@@ -51,7 +47,6 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', '{% ga_tracking_id %}', 'auto');
     ga('send', 'pageview');
-    //ga(‘set’, ‘&uid’, {{USER_ID}});
   </script>
     <!-- SEO: add link to social networks -->
   <script type="application/ld+json">
@@ -110,11 +105,6 @@
       <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
 
     </div>
-
-
-
-
-
 
 </body>
 </html>
