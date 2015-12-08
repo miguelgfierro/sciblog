@@ -5,7 +5,7 @@ register = template.Library()
 @register.simple_tag
 def current_site():
     """
-        Returns the url for the current site.
+        Returns the url for the current site defined by SITE_ID in sciblog/settings.py
     """
     try:
         current_site = Site.objects.get_current()
