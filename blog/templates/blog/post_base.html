@@ -22,6 +22,7 @@
   {% load flatpages %}
   {% get_flatpages '/about/' as about_pages %} <!-- gets about page, it returns a list so we need to iterate -->
   {% load social %}
+  {% load analytics %}
 
   <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
   <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}" >
@@ -48,7 +49,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-70996723-1', 'auto');
+    ga('create', '{% ga_tracking_id %}', 'auto');
     ga('send', 'pageview');
     //ga(‘set’, ‘&uid’, {{USER_ID}});
   </script>
