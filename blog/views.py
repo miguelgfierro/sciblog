@@ -32,14 +32,14 @@ class PostsFeed(Feed):
 
 def getSearchResults(request):
     """
-    Search for a post by title or abstract
+    Search for a post by title or abstract. To search http://example.com/search?q=title
     """
     # Get the query data
     query = request.GET.get('q', '')
     page = request.GET.get('page', 1)
 
     # Query the database
-    results = Post.objects.filter(Q(abstract__icontains=query) | Q(title__icontains=query))
+    results = Post.objects.filter(Q(title__icontains=query) | Q(abstract__icontains=query))
 
     # Add pagination
     pages = Paginator(results, 5)
@@ -51,7 +51,7 @@ def getSearchResults(request):
         returned_page = pages.page(pages.num_pages)
 
     # Display the search results
-    return render_to_response('blog/search_post_list.html',
+    return render_to_response('blog/post_list.html',
                               {'page_obj': returned_page,
                                'object_list': returned_page.object_list,
                                'search': query})

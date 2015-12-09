@@ -15,7 +15,7 @@ This blog intents to imitate the design of a scientific paper written in Latex. 
 
 --------------------------------------------------------------------------------
 Site:
-http://localhost:8000
+localhost:8000
 --------------------------------------------------------------------------------
 Body page 1 column 1: 
 <div class="section" style="margin-top:0px"> Introduction</div>

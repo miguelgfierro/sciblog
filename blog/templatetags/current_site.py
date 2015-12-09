@@ -9,7 +9,6 @@ def current_site():
     """
     try:
         current_site = Site.objects.get_current()
-        print 'site=', current_site.domain
     except:
         print 'ERROR: Problem when accessing object'
         return ""
