@@ -8,3 +8,4 @@ db.sqlite3
 blog/migrations/
 img/20*/
 img/19*/
+.idea/

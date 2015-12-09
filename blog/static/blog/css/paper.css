@@ -241,3 +241,45 @@ margin: 0 auto -4rem;
 .social-icons:hover{
   opacity: 1;
 }
+.navigation-bar{
+  /*border-bottom: 1px solid rgba(0, 0, 0, 0.15);*/
+  height: 46px;
+  position: relative;
+  width: 100%;
+  background: #000 none repeat scroll 0% 0%;
+}
+.navigation-bar-container{
+  width:960px;
+  text-align: center;
+  margin: 0px auto;
+  overflow: hidden;
+  color:#FFF;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  text-align: center;
+}
+.navigation-bar-home{
+  background-image: url("../img/hoap_small.png");
+  display:block;
+  height: 46px;
+  width: 130px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  float:left;
+}
+.navigation-bar-home-text{
+  float:left;
+  padding-top: 11px;
+  padding-left: 65px;
+}
+.navigation-bar-item{
+  height: 46px;
+  width: 70px;
+  position:relative;
+  float:left;
+}
+.navigation-bar-item-text{
+  float:left;
+  padding-top: 11px;
+  padding-left: 15px;
+}
