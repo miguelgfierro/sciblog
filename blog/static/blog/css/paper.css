@@ -44,8 +44,8 @@ h1,h2,h3,h4,h5,h6{
 h1.title{
   text-transform: capitalize;
   font-variant: small-caps;
-  font-size: 35px; 
-  line-height: 40px; 
+  font-size: 35px;
+  line-height: 40px;
   text-align: center;
   margin: 6rem 0 0.5rem 0.5rem;
 }
@@ -75,7 +75,7 @@ h3.abstract:before{
   font-family: LatexBoldItalic;
 }
 .author{
-  font-size: 16px; 
+  font-size: 16px;
   line-height: 21px;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -92,21 +92,21 @@ h3.abstract:before{
   text-align: center;
 }
 .section{
-  font-size: 21px; 
+  font-size: 21px;
   line-height: 30px;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-family: LatexBold;
 }
 .subsection{
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 24px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-family: LatexBold;
 }
 .subsubsection{
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 21px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -126,7 +126,7 @@ h3.abstract:before{
   font-family: LatexBoldItalic;
 }
 .references{
-  font-size: 14px; 
+  font-size: 14px;
   padding-left: 1rem;
   text-indent: 0px;
   text-align: justify;
@@ -250,10 +250,10 @@ margin: 0 auto -4rem;
 }
 .navigation-bar-container{
   width:960px;
+  height: 46px;
   text-align: center;
   margin: 0px auto;
   overflow: hidden;
-  color:#FFF;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size:16px;
   text-align: center;
@@ -261,25 +261,45 @@ margin: 0 auto -4rem;
 .navigation-bar-home{
   background-image: url("../img/hoap_small.png");
   display:block;
-  height: 46px;
-  width: 130px;
   background-position: left top;
   background-repeat: no-repeat;
   float:left;
+  margin-bottom: 5px;
+  height: 46px;
 }
 .navigation-bar-home-text{
   float:left;
+  width: 50px;
   padding-top: 11px;
   padding-left: 65px;
+  padding-bottom: 10px;
+}
+a.navigation-bar-home-text{
+  color:#FFF;
+  text-decoration:none;
+}
+a:hover.navigation-bar-home-text{
+  border-bottom: 5px solid #FFF;
+  transition: all 0.15s ease-in-out 0s;
 }
 .navigation-bar-item{
   height: 46px;
-  width: 70px;
+  width: 90px;
   position:relative;
   float:left;
 }
 .navigation-bar-item-text{
   float:left;
   padding-top: 11px;
-  padding-left: 15px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-right: 23px;
+}
+a.navigation-bar-item-text{
+  color:#FFF;
+  text-decoration:none;
+}
+a:hover.navigation-bar-item-text{
+  border-bottom: 5px solid #FFF;
+  transition: all 0.15s ease-in-out 0s;
 }
