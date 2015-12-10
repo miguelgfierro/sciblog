@@ -81,7 +81,10 @@
         <a class="navigation-bar-item-text" href="http://{% current_site %}{{ aboutp.url }}">About</a>
       {% endfor%}
     </div>
-
+    <form action="/search" method="GET" class="navigation-bar-search">
+      <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q"></input>
+      <button type="submit" class="navigation-bar-search-icon"></button>
+    </form>
   </div>
 </div>
 

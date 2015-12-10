@@ -313,9 +313,18 @@ float:left;
   margin-bottom: 0px;
   padding-bottom: 5px;
 }
-.navigation-bar-search-icon{
+button.navigation-bar-search-icon{
   background-image: url("../img/icon_search.png");
   background-position: right top;
   background-repeat: no-repeat;
+  border:none;
+  background-color:inherit;
   cursor:pointer;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  right: 0px;
+  top:0px;
+  position: absolute;
+
 }
