@@ -125,6 +125,7 @@ LINKEDIN_URL = 'https://es.linkedin.com/in/miguelgfierro'
 GOOGLE_PLUS_URL = 'https://plus.google.com/+MiguelGonzalezFierro'
 PINTEREST_URL = ''
 INSTAGRAM_URL = ''
+RSS_URL = 'http://feeds.feedburner.com/miguelgfierro'
 
 # Google Analytics
 GA_TRACKING_ID = 'UA-70996723-1'

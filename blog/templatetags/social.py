@@ -43,3 +43,7 @@ def pinterest_url():
 @register.simple_tag
 def instagram_url():
     return scisettings.INSTAGRAM_URL
+
+@register.simple_tag
+def rss_url():
+    return scisettings.RSS_URL
