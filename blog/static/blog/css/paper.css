@@ -47,7 +47,7 @@ h1.title{
   font-size: 35px;
   line-height: 40px;
   text-align: center;
-  margin: 6rem 0 0.5rem 0.5rem;
+  margin: 1rem 0 0.5rem 0.5rem;
 }
 h1.title a,a:visited{
   text-decoration:none;
@@ -233,13 +233,57 @@ margin: 0 auto -4rem;
   margin: 1rem auto;
 }
 .social-icons{
-  text-align:right;
+  text-align:center;
   text-decoration:none;
-  padding: 0rem 0.5rem;
-  opacity: 0.7;
+  margin-top:5rem;
+  overflow: hidden;
 }
-.social-icons:hover{
-  opacity: 1;
+.social-icons img{
+  margin-top:5rem;
+}
+.social-icons-fb{
+  width: 32px;
+  height: 32px;
+  background: url(../img/facebook_circle_black_color-32.png) no-repeat top;
+  display: block;
+  float:left;
+  margin-right:4px;
+}
+.social-icons-fb:hover{
+  background-position: bottom;
+}
+.social-icons-tw{
+  width: 32px;
+  height: 32px;
+  background: url(../img/twitter_circle_black_color-32.png) no-repeat top;
+  display: block;
+  float:left;
+  margin-right:4px;
+}
+.social-icons-tw:hover{
+  background-position: bottom;
+}
+.social-icons-gp{
+  width: 32px;
+  height: 32px;
+  background: url(../img/googleplus_circle_black_color-32.png) no-repeat top;
+  display: block;
+  float:left;
+  margin-right:4px;
+}
+.social-icons-gp:hover{
+  background-position: bottom;
+}
+.social-icons-lk{
+  width: 32px;
+  height: 32px;
+  background: url(../img/linkedin_circle_black_color-32.png) no-repeat top;
+  display: block;
+  float:left;
+  margin-right:4px;
+}
+.social-icons-lk:hover{
+  background-position: bottom;
 }
 .navigation-bar{
   height: 46px;
@@ -326,5 +370,9 @@ button.navigation-bar-search-icon{
   right: 0px;
   top:0px;
   position: absolute;
-
 }
+.navigation-bar-social{
+  float:right;
+  margin-top: 7px;
+}
+
