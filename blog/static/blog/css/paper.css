@@ -243,6 +243,7 @@ margin: 0 auto -4rem;
   display: block;
   float:left;
   margin-right:4px;
+  margin-left: 4px;
 }
 .social-icons-fb:hover{
   background-position: bottom;
@@ -319,7 +320,6 @@ a.navigation-bar-home-text{
 }
 a:hover.navigation-bar-home-text{
   border-bottom: 5px solid #FFF;
-  /*transition: all 0.15s ease-in-out 0s;*/
 }
 .navigation-bar-item{
   height: 46px;
