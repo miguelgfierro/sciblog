@@ -233,16 +233,11 @@ margin: 0 auto -4rem;
   margin: 1rem auto;
 }
 .social-icons{
-  text-align:center;
-  text-decoration:none;
   margin-top:5rem;
   overflow: hidden;
 }
-.social-icons img{
-  margin-top:5rem;
-}
 .social-icons-fb{
-  width: 32px;
+  width: 25%;
   height: 32px;
   background: url(../img/facebook_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -253,7 +248,7 @@ margin: 0 auto -4rem;
   background-position: bottom;
 }
 .social-icons-tw{
-  width: 32px;
+  width: 20%;
   height: 32px;
   background: url(../img/twitter_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -264,7 +259,7 @@ margin: 0 auto -4rem;
   background-position: bottom;
 }
 .social-icons-gp{
-  width: 32px;
+  width: 20%;
   height: 32px;
   background: url(../img/googleplus_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -275,7 +270,7 @@ margin: 0 auto -4rem;
   background-position: bottom;
 }
 .social-icons-lk{
-  width: 32px;
+  width: 25%;
   height: 32px;
   background: url(../img/linkedin_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -303,7 +298,7 @@ margin: 0 auto -4rem;
   text-align: center;
 }
 .navigation-bar-home{
-  background-image: url("../img/hoap_small.png");
+  background-image: url("../img/hoap_front_small.png");
   display:block;
   background-position: left top;
   background-repeat: no-repeat;
