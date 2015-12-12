@@ -23,7 +23,6 @@
   {% get_flatpages '/about/' as about_pages %} <!-- gets about page, it returns a list so we need to iterate -->
   {% load social %}
   {% load analytics %}
-  {% load utils_sciblog %}
 
   <link rel="canonical" href="http://{% current_site %}">
   <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
@@ -36,9 +35,7 @@
   <!-- Add headers in the child templates -->
   {% endblock %}
 
-  <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.css' %}">
-  <link rel="stylesheet" href="{% static 'blog/css/layout.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.css' %}">
 
   <!-- scripts Google Analytics (do not track localhost when debugging) -->

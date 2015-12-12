@@ -7,8 +7,8 @@
 *
 * Copyright 2015, Miguel Gonzalez-Fierro
 * Twitter: @miguelgfierro
-* http://www.miguelgfierro.com
 * Github: https://github.com/hoaphumanoid/
+* Blog: http://www.miguelgfierro.com
 *
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
@@ -30,6 +30,41 @@
 @font-face {
     font-family: LatexBoldItalic;
     src: url(../font/cmunbi.woff);
+}
+/* ************************************************************************** */
+/* Initial styles*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+		background: #fff;
+		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #444;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+ }
+a, a:visited {
+    color: #333;
+    text-decoration: underline;
+    outline: 0px none;
+}
+input[type="text"], input[type="password"], input[type="email"], textarea, select {
+    border: 1px solid #CCC;
+    padding: 6px 4px;
+    outline: medium none;
+    border-radius: 2px;
+    font: 13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #777;
+    margin: 0px 0px 20px;
+    width: 210px;
+    max-width: 100%;
+    display: block;
+    background: #FFF none repeat scroll 0% 0%;
 }
 /* ************************************************************************** */
 /* Classes from Latex */
@@ -140,7 +175,7 @@ h3.abstract:before{
 }
 
 /* ************************************************************************** */
-/* Basic styles*/
+/* Blog styles*/
 body {
   background: #e9e8ed url("../img/gradient_texture10.jpg") repeat-x scroll 0px 0px;
   color: #100;
@@ -191,7 +226,6 @@ p.wrap {
   padding-bottom: 1rem;
   height: auto;
 }
-
 .container-footer{
   position: relative;
   width: 960px;
@@ -370,4 +404,5 @@ button.navigation-bar-search-icon{
   float:right;
   margin-top: 7px;
 }
+
 
