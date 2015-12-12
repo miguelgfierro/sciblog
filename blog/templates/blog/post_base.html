@@ -23,6 +23,7 @@
   {% get_flatpages '/about/' as about_pages %} <!-- gets about page, it returns a list so we need to iterate -->
   {% load social %}
   {% load analytics %}
+  {% load utils_sciblog %}
 
   <link rel="canonical" href="http://{% current_site %}">
   <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
@@ -40,7 +41,8 @@
   <link rel="stylesheet" href="{% static 'blog/css/layout.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.css' %}">
 
-  <!-- scripts Google Analytics -->
+  <!-- scripts Google Analytics (do not track localhost when debugging) -->
+  {% if not debug %}
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -49,7 +51,9 @@
     ga('create', '{% ga_tracking_id %}', 'auto');
     ga('send', 'pageview');
   </script>
-    <!-- SEO: add link to social networks -->
+  {% endif %}
+
+  <!-- SEO: add link to social networks -->
   <script type="application/ld+json">
   {
     "@context" : "http://schema.org",
