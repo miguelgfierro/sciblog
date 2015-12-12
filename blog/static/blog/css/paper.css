@@ -271,7 +271,7 @@ margin: 0 auto -4rem;
   overflow: hidden;
 }
 .social-icons-fb{
-  width: 25%;
+  width: 17%;
   height: 32px;
   background: url(../img/facebook_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -283,7 +283,7 @@ margin: 0 auto -4rem;
   background-position: bottom;
 }
 .social-icons-tw{
-  width: 20%;
+  width: 17%;
   height: 32px;
   background: url(../img/twitter_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -294,7 +294,7 @@ margin: 0 auto -4rem;
   background-position: bottom;
 }
 .social-icons-gp{
-  width: 20%;
+  width: 17%;
   height: 32px;
   background: url(../img/googleplus_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -305,7 +305,7 @@ margin: 0 auto -4rem;
   background-position: bottom;
 }
 .social-icons-lk{
-  width: 25%;
+  width: 17%;
   height: 32px;
   background: url(../img/linkedin_circle_black_color-32.png) no-repeat top;
   display: block;
@@ -313,6 +313,17 @@ margin: 0 auto -4rem;
   margin-right:4px;
 }
 .social-icons-lk:hover{
+  background-position: bottom;
+}
+.social-icons-email{
+  width: 17%;
+  height: 32px;
+  background: url(../img/email_circle_black_color-32.png) no-repeat top;
+  display: block;
+  float:left;
+  margin-right:4px;
+}
+.social-icons-email:hover{
   background-position: bottom;
 }
 .navigation-bar{
