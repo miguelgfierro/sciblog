@@ -83,19 +83,19 @@
       {% endfor%}
     </div>
     <form action="/search" method="GET" class="navigation-bar-search">
-      <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q"></input>
+      <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
       <button type="submit" class="navigation-bar-search-icon"></button>
     </form>
     <div class="navigation-bar-social">
       <a href="{% twitter_url %}" title="Twitter">
         <!-- here I put the icon of 46 but it's rendered to 32 on purpose. SEO is worse but UX is better -->
-        <img src="{% static 'blog/img/twitter_square_color-46.png' %}" width="32px" alt="">
+        <img src="{% static 'blog/img/twitter_square_color-46.png' %}" width="32px" alt="Twitter icon">
       </a>
       <a href="{% linkedin_url %}" title="Linkedin">
-        <img src="{% static 'blog/img/linkedin_square_color-46.png' %}" width="32px" alt="">
+        <img src="{% static 'blog/img/linkedin_square_color-46.png' %}" width="32px" alt="Linkedin icon">
       </a>
       <a href="{% rss_url %}" title="RSS">
-        <img src="{% static 'blog/img/rss_square_color-46.png' %}" width="32px" alt="RSS">
+        <img src="{% static 'blog/img/rss_square_color-46.png' %}" width="32px" alt="RSS icon">
       </a>
     </div>
   </div>
