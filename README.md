@@ -56,6 +56,7 @@ Configure apache (in sciblog.conf change miguelgfierro.com for your url):
 
 	$ cp sciblog.conf /etc/apache2/sites-available/
 	$ a2ensite sciblog.conf
+	$ a2enmod expires
 	$ service apache2 restart
 	
 Add your first content to the blog
