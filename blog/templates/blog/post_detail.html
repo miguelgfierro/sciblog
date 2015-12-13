@@ -128,7 +128,7 @@ FB.ui({
         <div class="six columns content">
             {% if object.image %}
             <div class="image">
-                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="300px"/>
+                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="300px"alt="{{ object.image_caption }}"/>
                 <div class="image-caption">{{ object.image_caption }}</div>
             </div>
             {% endif %}
