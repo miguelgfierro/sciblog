@@ -25,6 +25,16 @@
     {% endif %}
     <meta itemprop="url"            content="http://{{ object.site }}{{ object.get_absolute_url }}"/>
 
+    <!-- Script MathJax to add latex code to the page -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+            tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+            TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+            messageStyle: "none"
+        });
+    </script>
+
 {% endblock %}
 
 
@@ -154,7 +164,6 @@ FB.ui({
 </div>
 
 {% endif %}
-
 
 
 

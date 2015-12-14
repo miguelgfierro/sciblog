@@ -30,13 +30,12 @@
   <link rel="apple-touch-icon" sizes="72x72" href="{% static 'blog/img/apple-touch-icon-72x72.png' %}">
   <link rel="apple-touch-icon" sizes="114x114" href="{% static 'blog/img/apple-touch-icon-114x114.png' %}">
 
-  {% block headers %}
-
-  <!-- Add headers in the child templates -->
-  {% endblock %}
-
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.css' %}">
+
+  {% block headers %}
+  <!-- Add headers in the child templates -->
+  {% endblock %}
 
   <!-- scripts Google Analytics (do not track localhost when debugging) -->
   {% if not debug %}
@@ -64,8 +63,6 @@
     ]
   }
   </script>
-
-
 
 
 </head>

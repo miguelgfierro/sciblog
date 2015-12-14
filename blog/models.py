@@ -7,6 +7,7 @@ import markdown2
 from time import time
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
+from libs.markdown2Mathjax.lib.markdown2Mathjax import sanitizeInput, reconstructMath
 
 def generate_filename(instance, filename):
     ext = filename.split('.')[-1]
@@ -48,10 +49,20 @@ class Post(models.Model):
 
     def save(self):
         self.slug = slugify(self.title)
-        self.body_page1_col1_html = markdown2.markdown(self.body_page1_col1, extras=['fenced-code-blocks'])
-        self.body_page1_col2_html = markdown2.markdown(self.body_page1_col2, extras=['fenced-code-blocks'])
-        self.body_page2_col1_html = markdown2.markdown(self.body_page2_col1, extras=['fenced-code-blocks'])
-        self.body_page2_col2_html = markdown2.markdown(self.body_page2_col2, extras=['fenced-code-blocks'])
+
+        temp11 = sanitizeInput(self.body_page1_col1)
+        markdown11 = markdown2.markdown(temp11[0], extras=['fenced-code-blocks'])
+        self.body_page1_col1_html = reconstructMath(markdown11, temp11[1])
+        temp12 = sanitizeInput(self.body_page1_col2)
+        markdown12 = markdown2.markdown(temp12[0], extras=['fenced-code-blocks'])
+        self.body_page1_col2_html = reconstructMath(markdown12, temp12[1])
+        temp21 = sanitizeInput(self.body_page2_col1)
+        markdown21 = markdown2.markdown(temp21[0], extras=['fenced-code-blocks'])
+        self.body_page2_col1_html = reconstructMath(markdown21, temp21[1])
+        temp22 = sanitizeInput(self.body_page2_col2)
+        markdown22 = markdown2.markdown(temp22[0], extras=['fenced-code-blocks'])
+        self.body_page2_col2_html = reconstructMath(markdown22, temp22[1])
+
         super(Post,self).save()
 
     class Meta:
