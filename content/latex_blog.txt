@@ -36,7 +36,7 @@ There is a common feature to all scientific papers ever published, they all have
 --------------------------------------------------------------------------------
 Body page 1 column 2:
 <p class="no-indent">
-Einstein's relativity [1] or a small one like Fierro PhD thesis [2]. However all of them make a step further in the path of science.
+Einstein's equation $E = mc^2$ [1] or a small one like Fierro PhD thesis [2]. However all of them make a step further in the path of science.
 </p>
 <p>
  The numbers inside the square brackets are called the references, which has a different section located always at the end of the document. The references are very important in science since it helps us to cite other authors and relate our work to theirs.
