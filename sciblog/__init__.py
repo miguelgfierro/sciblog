@@ -1,6 +1,6 @@
 
 __title__ = 'Sciblog - A blog designed like a scientific Latex paper'
-__version__ = '1.4'
+__version__ = '1.5'
 __author__ = 'Miguel Gonzalez-Fierro'
 __license__ = 'MIT license'
 __copyright__ = 'Copyright 2015-2016 Miguel Gonzalez-Fierro'

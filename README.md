@@ -9,6 +9,7 @@ Blog developed in django with the same appearance of a research paper written in
 * Share in social networks
 * RSS feed
 * Post search 
+* Blog optimized for SEO
 
 Installation
 ==================
