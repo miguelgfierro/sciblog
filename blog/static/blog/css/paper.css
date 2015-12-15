@@ -133,6 +133,9 @@ h3.abstract:before{
   margin-bottom: 0.5rem;
   font-family: LatexBold;
 }
+.section .no-margin-top{
+  margin-top: 1rem;
+}
 .subsection{
   font-size: 18px;
   line-height: 24px;
