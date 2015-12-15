@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.syndication',
     'django.contrib.sitemaps',
     'debug_toolbar',
+    'libs.django-disqus.disqus',
 )
 
 SITE_ID = 1
@@ -113,6 +114,9 @@ STATICFILES_DIRS = (
 # Template directory
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
+# Disqus configuration (for managing comments)
+DISQUS_API_KEY = 'a4b0vyjnp1sE5hYt8GP7blDgoe1Y0ohfY4gNoWh8JpZCSyGvVN41JOrhpPgREWeZ'
+DISQUS_WEBSITE_SHORTNAME = 'miguelgfierro.com'
 
 # Social Networks
 FACEBOOK_ID = '556883141128364' #for Facebook tracking

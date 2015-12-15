@@ -3,6 +3,11 @@
 {% load social %}
 {% load analytics %}
 {% load current_site %}
+{% load disqus_tags %}
+{% set_disqus_url object.get_absolute_url %}
+{% set_disqus_title object.title %}
+{% disqus_dev %}
+{% set_disqus_developer 1 %}
 
 {% block title %}
         {{ object.title }}
@@ -39,6 +44,11 @@
             });
         </script>
     {% endif %}
+
+    <!-- only active when DEBUG=True
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>-->
 
 {% endblock %}
 
@@ -171,7 +181,8 @@ FB.ui({
 {% endif %}
 
 
-
+<!-- disqus comments -->
+{% disqus_show_comments %}
 
 
 {% endblock %}
