@@ -134,7 +134,7 @@ h3.abstract:before{
   font-family: LatexBold;
 }
 .section .no-margin-top{
-  margin-top: 1rem;
+  margin-top: 0;
 }
 .subsection{
   font-size: 18px;
