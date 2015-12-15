@@ -229,13 +229,36 @@ p.wrap {
   padding-bottom: 1rem;
   height: auto;
 }
+.container-comments{
+  position: relative;
+  width: 960px;
+  height: auto;
+  text-align: center;
+  background: #FAFAFA none repeat scroll 0% 0%;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  padding-top: 2rem;
+  padding-right: 0rem;
+  padding-bottom: 1rem;
+  padding-left: 0rem;
+  font-size: 14px;
+  font-family: Latex, Georgia, serif;
+}
+.row-comments{
+  margin-bottom: 20px;
+  padding-left:8rem;
+  padding-right:8rem;
+}
 .container-footer{
   position: relative;
   width: 960px;
   text-align: center;
   background: #FAFAFA none repeat scroll 0% 0%;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-right: auto;
   margin-bottom: 0rem;
   margin-left: auto;

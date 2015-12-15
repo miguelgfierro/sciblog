@@ -115,8 +115,9 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Disqus configuration (for managing comments)
+# To install disqus http://django-disqus.readthedocs.org/en/latest/index.html
 DISQUS_API_KEY = 'a4b0vyjnp1sE5hYt8GP7blDgoe1Y0ohfY4gNoWh8JpZCSyGvVN41JOrhpPgREWeZ'
-DISQUS_WEBSITE_SHORTNAME = 'miguelgfierro.com'
+DISQUS_WEBSITE_SHORTNAME = 'miguelgfierro'
 
 # Social Networks
 FACEBOOK_ID = '556883141128364' #for Facebook tracking

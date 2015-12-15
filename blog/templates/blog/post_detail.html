@@ -182,7 +182,10 @@ FB.ui({
 
 
 <!-- disqus comments -->
-{% disqus_show_comments %}
-
+<div class="container-comments">
+    <div class="row-comments">
+        {% disqus_show_comments %}
+    </div>
+</div>
 
 {% endblock %}
