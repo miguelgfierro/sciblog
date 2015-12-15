@@ -15,15 +15,17 @@ def generate_filename(instance, filename):
     return str(year) + '/' + str(int(time())) + '.' + ext
 
 class Post(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True, blank=True,editable=False)
-    abstract = models.TextField('Abstract (300-400 characters)')
+    title = models.CharField(max_length=67, unique=True)
+    slug = models.SlugField(max_length=100, unique=True, blank=True,editable=False)
+    meta_description = models.CharField('Meta description for SEO', max_length=155)
+    abstract = models.TextField('Abstract (300-500 characters)',max_length=500)
     pub_date = models.DateField('Date published')
     keywords = models.CharField(max_length=100, blank=True)
     authors = models.CharField(max_length=100, blank=True, null=True)
     site = models.ForeignKey(Site, blank=True, null=True)
     image = models.ImageField(upload_to=generate_filename, blank=True, null=True)
     image_caption = models.CharField(max_length=200, blank=True)
+    has_latex_formula = models.BooleanField(default=False)
 
     #Paper of maximum 2 pages (1 mandatory + 1 optional)
     body_page1_col1 = models.TextField('Body 1,1 (1000-1200 characters)')

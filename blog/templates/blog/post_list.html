@@ -4,6 +4,11 @@
     Sciblog - A blog designed like a scientific Latex paper
 {% endblock %}
 
+{% block headers %}
+  <meta name="description" content="Sciblog - A blog designed like a scientific Latex paper. Posts are about business, startups, science, artificial intelligence and machine learning.">
+  <meta name="author" content="Miguel González-Fierro">
+{% endblock %}
+
 {% block content %}
     {% if object_list %}
         {% for object in object_list %}
