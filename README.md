@@ -1,4 +1,16 @@
-A blog with the appearance of a scientific Latex paper.
+Sciblog: A blog with the appearance of a scientific Latex paper.
+==================
+
+Blog developed in django with the same appearance of a research paper written in Latex.
+
+* CSS and Latex fonts integrated
+* Add posts in two columns like a paper
+* Add formulas with latex notation ( formulas between $ $ for inline and between $$ $$ for new line)
+* Share in social networks
+* RSS feed
+* Post search 
+
+Installation
 ==================
 
 We need to install several libraries:
@@ -6,11 +18,9 @@ We need to install several libraries:
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
 	$ pip install django django-debug-toolbar markdown2
 
-NOTE: django version must be 1.7 or 1.8. To see your django version:
+NOTE: django version must be 1.7 or 1.8. 
 
-	$ pip list
-
-Install the project in localhost
+Set up the project in localhost
 ==================================================
 The first step is to generate the database. In the projects folder:
   
@@ -34,7 +44,7 @@ your blog.
 
 When you are in localhost you have to set DEBUG = True in sciblog/settings.py. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
 
-Install the project in a Ubuntu VPS server
+Set up the project in a Ubuntu VPS server
 ==================================================
 
 First make sure that you have installed git, apache2 and libapache2-mod-wsgi as explained before. 
