@@ -133,9 +133,6 @@ h3.abstract:before{
   margin-bottom: 0.5rem;
   font-family: LatexBold;
 }
-.section .no-margin-top{
-  margin-top: 0;
-}
 .subsection{
   font-size: 18px;
   line-height: 24px;
@@ -217,6 +214,9 @@ p.wrap:before {
 }
 p.wrap {
   text-indent: 0px;
+}
+.no-margin-top{
+  margin-top: 0;
 }
 .container{
   height:1133px;
