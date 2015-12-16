@@ -4,12 +4,15 @@ Sciblog: A blog with the appearance of a scientific Latex paper.
 Blog developed in django with the same appearance of a research paper written in Latex.
 
 * CSS and Latex fonts integrated
-* Add posts in two columns like a paper
-* Add formulas with latex notation ( formulas between $ $ for inline and between $$ $$ for new line)
+* Posts are presented in two columns like a paper
+* Formulas can be added with latex notation ( formulas between $ $ for inline and between $$ $$ for new line)
 * Share in social networks
 * RSS feed
 * Post search 
 * Blog optimized for SEO
+* Comments with disqus
+
+Example of sciblog: [http://miguelgfierro.com](http://miguelgfierro.com)
 
 Installation
 ==================
@@ -99,5 +102,6 @@ When you are in production you have to set DEBUG = False in sciblog/settings.py.
 Also the first time you enter in your admin console (http://miguelgfierro.com/admin/) you have to go to sites and EDIT the default site, which is example.com. Change it for the name of your site without http:// (my case would be miguelgfierro.com).
 This will set the first entry in the database to your site, which is related to the variable SITE_ID = 1 in sciblog/settings.py. You can see the number of the site in http://miguelgfierro.com/admin/sites/site/1/. If you add another site then it will have a different number in the database, so for everything to work you have to change the variable SITE_ID. In my experience it is better if you don't touch anything, I messed up the database several times :-)
 
-
-
+Additional comments
+==================================================
+To work with disqus comments you have to get your DISQUS_API_KEY and DISQUS_WEBSITE_SHORTNAME. They can be obtained [https://disqus.com/api/applications/](here). 
