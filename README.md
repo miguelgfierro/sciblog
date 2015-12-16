@@ -82,7 +82,7 @@ You will see that your blog is working properly going to the url: localhost:8000
 The post can be accessed here: http://localhost:8000/blog/2015/a-blog-with-the-appearance-of-a-scientific-paper-in-latex/
 
 Now take the file content/prince_ali.txt and add a second post. This time you'll have to fill all fields. The image you have to use
-is in img/prince_ali.jpg
+is in img/prince_ali.jpg (add images of width of 300px).
 
 Create the about page
 ==================================================
