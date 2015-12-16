@@ -12,7 +12,7 @@ Blog developed in django with the same appearance of a research paper written in
 * Blog optimized for SEO
 * Comments with disqus
 
-Example of sciblog: [http://miguelgfierro.com]
+Example of sciblog: http://miguelgfierro.com
 
 Installation
 ==================
@@ -104,4 +104,4 @@ This will set the first entry in the database to your site, which is related to 
 
 Additional comments
 ==================================================
-To work with disqus comments you have to get your DISQUS_API_KEY and DISQUS_WEBSITE_SHORTNAME. They can be obtained [https://disqus.com/api/applications/]. 
+To work with disqus comments you have to get your DISQUS_API_KEY and DISQUS_WEBSITE_SHORTNAME. They can be obtained https://disqus.com/api/applications/ 
