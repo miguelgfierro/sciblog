@@ -273,10 +273,10 @@ p.wrap {
   padding: 0rem 2rem;
 }
 .wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -4rem;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4rem;
 }
 .footer, .push {
   height: 4rem;
@@ -394,7 +394,7 @@ a:hover.navigation-bar-home-text{
 }
 .navigation-bar-item{
   height: 46px;
-  width: 90px;
+  width: auto;
   position:relative;
   float:left;
 }
@@ -441,5 +441,10 @@ button.navigation-bar-search-icon{
   float:right;
   margin-top: 7px;
 }
-
+.float-right{
+  float:right;
+}
+.float-left{
+  float-left;
+}
 
