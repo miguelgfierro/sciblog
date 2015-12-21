@@ -45,11 +45,6 @@
         </script>
     {% endif %}
 
-    <!-- only active when DEBUG=True
-    <script type="text/javascript">
-        var disqus_developer = 1; // this would set it to developer mode
-    </script>-->
-
 {% endblock %}
 
 
@@ -181,11 +176,32 @@ FB.ui({
 {% endif %}
 
 
-<!-- disqus comments -->
+<!-- Page js -->
+<div id="hidden_body" style="display: none">{{ object.body_page1_col2_html|safe }}</div>
+
+<script type="text/javascript" src="{% static 'blog/js/layout.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+    //Layout.render("#contents");
+    var hidden_body = document.getElementById("hidden_body").innerHTML;
+    var html =
+    "<div class='container'>" +
+      "<div class='row'>" +
+        "<div class='two columns'>&nbsp;</div>" +
+        "<div class='six columns content'><div style='margin-bottom: 1rem;'>" + hidden_body + "</div></div>" +
+        "<div class='six columns content'><div style='margin-bottom: 1rem;'>&nbsp;</div></div>" +
+        "<div class='two columns'>&nbsp;</div>" +
+      "</div>" +
+    "</div>";
+    document.write(html);
+</script>
+
+
+<!-- disqus comments
 <div class="container-comments">
     <div class="row-comments">
         {% disqus_show_comments %}
     </div>
-</div>
+</div>-->
 
 {% endblock %}
