@@ -50,7 +50,7 @@
 
 {% block content %}
 
-<!--Facebook share dialog script -->
+<!--Facebook share dialog script
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -73,12 +73,12 @@ FB.ui({
       object:'http://{{ object.site }}{{ object.get_absolute_url }}',
   })
 }, function(response){});
-</script>
+</script>-->
 
 
-<!-- Page one -->
-<div itemscope itemtype="http://schema.org/Article" class="container">
-    <!-- Social buttons -->
+<!-- Page one
+<div itemscope itemtype="http://schema.org/Article" class="container">-->
+    <!-- Social buttons
     <div class="row">
         <div class="six columns">&nbsp;</div>
         <div class="four columns">
@@ -100,7 +100,6 @@ FB.ui({
                 <a class="social-icons-email"  href="mailto:?subject={{ object.title }}&body=Check out this article I read on Sciblog: http://{{ object.site }}{{ object.get_absolute_url }}">
                 </a>
                 </center>
-
             </div>
         </div>
         <div class="six columns">&nbsp;</div>
@@ -156,9 +155,9 @@ FB.ui({
         </div>
         <div class="two columns">&nbsp;</div>
     </div>
-</div>
+</div>-->
 
-<!-- Page two -->
+<!-- Page two
 {% if object.body_page2_col1 %}
 <div class="container">
     <div class="row">
@@ -173,27 +172,34 @@ FB.ui({
     </div>
 </div>
 
-{% endif %}
+{% endif %}-->
 
 
 <!-- Page js -->
-<div id="hidden_body" style="display: none">{{ object.body_page1_col2_html|safe }}</div>
 
-<script type="text/javascript" src="{% static 'blog/js/layout.js' %}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="{% static 'blog/js/jquery.columnizer.js' %}" type="text/javascript" charset="utf-8"></script>
+	<script>
+
+	</script>
+
+
+
 <script type="text/javascript">
-    //Layout.render("#contents");
-    var hidden_body = document.getElementById("hidden_body").innerHTML;
+    /*var hidden_body = document.getElementById("hidden_body").innerHTML;
     var html =
     "<div class='container'>" +
       "<div class='row'>" +
         "<div class='two columns'>&nbsp;</div>" +
-        "<div class='six columns content'><div style='margin-bottom: 1rem;'>" + hidden_body + "</div></div>" +
-        "<div class='six columns content'><div style='margin-bottom: 1rem;'>&nbsp;</div></div>" +
+        "<div class='twelve columns content'>" + hidden_body + "</div>" +
         "<div class='two columns'>&nbsp;</div>" +
       "</div>" +
     "</div>";
-    document.write(html);
+    //document.write(html);
+    $(function(){
+    $('#hidden_body').columnize({ columns: 2 });
+    });*/
 </script>
 
 

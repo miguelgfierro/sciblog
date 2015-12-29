@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '7@ug(w91q62^z^vf3fcs$95+@&18m8vj#+of03q5#058axfd_8'
 
 # Set DEBUG = False in production. Set DEBUG = True in localhost development
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.syndication',
     'django.contrib.sitemaps',
     'debug_toolbar',
-    'libs.django-disqus.disqus',
+    'libs.django-disqus.disqus', # for comments
+    'libs.misaka', #similar to markdown2 but faster
 )
 
 SITE_ID = 1

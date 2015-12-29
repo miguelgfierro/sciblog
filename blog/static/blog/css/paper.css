@@ -34,37 +34,37 @@
 /* ************************************************************************** */
 /* Initial styles*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0px;
-    padding: 0px;
-    border: 0px none;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border: 0px none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 body {
-		background: #fff;
-		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #444;
-		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-		-webkit-text-size-adjust: 100%;
+  background: #fff;
+  font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
  }
 a, a:visited {
-    color: #333;
-    text-decoration: underline;
-    outline: 0px none;
+  color: #333;
+  text-decoration: underline;
+  outline: 0px none;
 }
 input[type="text"], input[type="password"], input[type="email"], textarea, select {
-    border: 1px solid #CCC;
-    padding: 6px 4px;
-    outline: medium none;
-    border-radius: 2px;
-    font: 13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #777;
-    margin: 0px 0px 20px;
-    width: 210px;
-    max-width: 100%;
-    display: block;
-    background: #FFF none repeat scroll 0% 0%;
+  border: 1px solid #CCC;
+  padding: 6px 4px;
+  outline: medium none;
+  border-radius: 2px;
+  font: 13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #777;
+  margin: 0px 0px 20px;
+  width: 210px;
+  max-width: 100%;
+  display: block;
+  background: #FFF none repeat scroll 0% 0%;
 }
 /* ************************************************************************** */
 /* Classes from Latex */
@@ -173,7 +173,6 @@ h3.abstract:before{
   counter-increment:li; /* Increment the counter by 1 */
   /*list-style-type: decimal;*/
 }
-
 /* ************************************************************************** */
 /* Blog styles*/
 body {
@@ -220,7 +219,7 @@ p.wrap {
 }
 .container{
   height:1133px;
-  padding-top:2rem;
+  /*padding-top:2rem;*/
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .container-list{
