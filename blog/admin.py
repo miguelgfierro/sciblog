@@ -9,9 +9,12 @@ class PostAdmin(admin.ModelAdmin):
         ('Author(s)', 			{'fields':['authors']}),
         ('Date information', 	{'fields': ['pub_date']}),
         ('Abstract',			{'fields': ['abstract']}),
-        ('Site', 				{'fields': ['site']}),#TODO: remove this and take it automatically
+        ('Site', 				{'fields': ['site']}),
         ('Image', 				{'fields': ['image']}),
         ('Image caption',		{'fields': ['image_caption']}),
+        ('Image second', 		{'fields': ['image_second']}),
+        ('Image caption second',{'fields': ['image_caption_second']}),
+        ('Youtube link',        {'fields': ['youtube_link']}),
         ('Post with formulas',	{'fields': ['has_latex_formula']}),
         ('Page 1 column 1', 	{'fields': ['body_page1_col1']}),
         ('Page 1 column 2',		{'fields': ['body_page1_col2']}),

@@ -3,6 +3,7 @@
 {% load social %}
 {% load analytics %}
 {% load current_site %}
+{% load youtube_embed %}
 {% load disqus_tags %}
 {% set_disqus_url object.get_absolute_url %}
 {% set_disqus_title object.title %}
@@ -125,7 +126,6 @@ FB.ui({
         <div class="three columns">&nbsp;</div>
     </div>
 
-    {% if object.abstract %}
     <div class="row" style="margin-bottom:10px">
         <div class="four columns">&nbsp;</div>
         <div class="eight columns">
@@ -133,7 +133,6 @@ FB.ui({
         </div>
         <div class="four columns">&nbsp;</div>
     </div>
-    {% endif %}
 
     {% if object.keywords %}
     <div class="row" style="margin-bottom:10px">
@@ -153,8 +152,10 @@ FB.ui({
         <div class="six columns content">
             {% if object.image %}
             <div class="image">
-                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="300px" alt="{{ object.image_caption }}"/>
-                <div class="image-caption">{{ object.image_caption }}</div>
+                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="340px" alt="{{ object.image_caption }}"/>
+                {% if object.image_caption %}
+                    <div class="image-caption">{{ object.image_caption }}</div>
+                {% endif %}
             </div>
             {% endif %}
             {{ object.body_page1_col2_html|safe}}
@@ -169,10 +170,21 @@ FB.ui({
     <div class="row">
         <div class="two columns">&nbsp;</div>
         <div class="six columns content">
+            {% if object.image_second %}
+            <div class="image">
+                <img itemprop="image" src="http://{{ object.site }}{{ object.image_second.url }}"  width="340px" alt="{{ object.image_caption_second }}"/>
+                {% if object.image_caption_second %}
+                    <div class="image-caption">{{ object.image_caption_second }}</div>
+                {% endif %}
+            </div>
+            {% endif %}
             {{ object.body_page2_col1_html|safe}}
         </div>
         <div class="six columns content">
             {{ object.body_page2_col2_html|safe}}
+            {% if object.youtube_link %}
+                <iframe class="embed-video" width="340" height="191" style="margin: 1rem 0;" src="{{ object.youtube_link|youtube_embed|safe  }}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
         </div>
         <div class="two columns">&nbsp;</div>
     </div>

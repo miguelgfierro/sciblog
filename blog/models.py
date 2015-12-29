@@ -25,6 +25,9 @@ class Post(models.Model):
     site = models.ForeignKey(Site, blank=True, null=True)
     image = models.ImageField(upload_to=generate_filename, blank=True, null=True)
     image_caption = models.CharField(max_length=200, blank=True)
+    image_second = models.ImageField(upload_to=generate_filename, blank=True, null=True)
+    image_caption_second = models.CharField(max_length=200, blank=True)
+    youtube_link = models.URLField(blank=True)
     has_latex_formula = models.BooleanField(default=False)
 
     #Paper of maximum 2 pages (1 mandatory + 1 optional)
