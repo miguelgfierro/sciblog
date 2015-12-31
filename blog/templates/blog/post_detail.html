@@ -50,7 +50,7 @@
 
 {% block content %}
 
-<!--Facebook share dialog script
+<!--Facebook share dialog script -->
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -73,12 +73,12 @@ FB.ui({
       object:'http://{{ object.site }}{{ object.get_absolute_url }}',
   })
 }, function(response){});
-</script>-->
+</script>
 
 
-<!-- Page one
-<div itemscope itemtype="http://schema.org/Article" class="container">-->
-    <!-- Social buttons
+<!-- Page one -->
+<div itemscope itemtype="http://schema.org/Article" class="container">
+    <!-- Social buttons -->
     <div class="row">
         <div class="six columns">&nbsp;</div>
         <div class="four columns">
@@ -119,7 +119,6 @@ FB.ui({
         <div class="three columns">&nbsp;</div>
     </div>
 
-    {% if object.abstract %}
     <div class="row" style="margin-bottom:10px">
         <div class="four columns">&nbsp;</div>
         <div class="eight columns">
@@ -127,7 +126,6 @@ FB.ui({
         </div>
         <div class="four columns">&nbsp;</div>
     </div>
-    {% endif %}
 
     {% if object.keywords %}
     <div class="row" style="margin-bottom:10px">
@@ -155,7 +153,7 @@ FB.ui({
         </div>
         <div class="two columns">&nbsp;</div>
     </div>
-</div>-->
+</div>
 
 <!-- Page two
 {% if object.body_page2_col1 %}
@@ -177,26 +175,23 @@ FB.ui({
 
 <!-- Page js -->
 <style type="text/css">
-.page{ width: 612px; height: 792px; border: 1px solid black; margin: 20px; position: relative; }
-.page .content .column{ text-align:justify; font-size: 10pt; }
-.page .content .column blockquote{ border-left: 2px solid #999999; background: #DEDEDE; padding: 10px; margin: 4px 20px; clear: both; }
-.page .content .column img{ float: left; margin: 10px; }
-.page .content .column p{ padding: 0 10px; margin: 10px 0; }
-.page .content .column h1{ padding: 0 10px; }
-.page .header{ text-align: center; font-size: 18pt; font-family: helvetica, arial; padding: 20px 0 0; }
-.page .header hr, .page .footer hr{ width: 400px; }
-.page .footer{ text-align: center; }
-.page .footer span{ position: absolute; bottom: 10px; right: 10px; }
+.container .content .column{ text-align:justify; font-size: 10pt; }
+.container .content .column blockquote{ border-left: 2px solid #999999; background: #DEDEDE; padding: 10px; margin: 4px 20px; clear: both; }
+.container .content .column img{ float: left; margin: 10px; }
+.container .content .column p{ padding: 0 10px; margin: 10px 0; }
+.container .content .column h1{ padding: 0 10px; }
+.container .header{ text-align: center; font-size: 18pt; font-family: helvetica, arial; padding: 20px 0 0; }
+.container .header hr, .container .footer hr{ width: 400px; }
+.container .footer{ text-align: center; }
+.container .footer span{ position: absolute; bottom: 10px; right: 10px; }
 .page_template{ display: none; }
-
-.enclosure {border:1px dashed black}
 </style>
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="{% static 'blog/js/jquery.columnizer.js' %}" type="text/javascript" charset="utf-8"></script>
 	<script>
 		$(function(){
-			var content_height = 652;	// the height of the content, discluding the header/footer
+			var content_height = 900;	// the height of the content, discluding the header/footer
 			var page = 1;				// the beginning page number to show in the footer
 			function buildNewsletter(){
 			    var content_lenght = $('#newsletterContent').contents().length
@@ -204,17 +199,17 @@ FB.ui({
 				    console.log("$('#newsletterContent').contents().length = ", content_lenght)
 					// when we need to add a new page, use a jq object for a template
 					// or use a long HTML string, whatever your preference
-					$page = $(".page_template:first").clone().addClass("page").css("display", "block");
+					$page = $(".page_template:first").clone().addClass("container").css("display", "block");
 
 					// fun stuff, like adding page numbers to the footer
-					$page.find(".footer span").append(page);
+					//$page.find(".footer span").append(page);
 					$("body").append($page);
 					page++;
 
 					// here is the columnizer magic
 					$('#newsletterContent').columnize({
 						columns: 2,
-						target: ".page:last .content",
+						target: ".container:last .content",
 						overflow: {
 							height: content_height,
 							id: "#newsletterContent",
@@ -229,14 +224,14 @@ FB.ui({
 				    console.log("$('#newsletterContent').contents().length <= 0")
 				}
 			}
-			setTimeout(buildNewsletter, 3000);
+			setTimeout(buildNewsletter, 0);
 		});
 	</script>
 
 <div class="page_template">
 	<div class='header'>This is a header<hr></div>
 	<div class='content'></div>
-	<div class='footer'><hr><span>Page: </span>This is the footer.</div>
+	<div class='footer'><hr>This is the footer.</div>
 </div>
 <div id="newsletterContent">
 		<h1>Lorem ipsum ne justo</h1>
@@ -281,11 +276,11 @@ FB.ui({
 </script>
 
 
-<!-- disqus comments
+<!-- disqus comments -->
 <div class="container-comments">
     <div class="row-comments">
         {% disqus_show_comments %}
     </div>
-</div>-->
+</div>
 
 {% endblock %}
