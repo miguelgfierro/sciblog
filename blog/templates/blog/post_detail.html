@@ -76,102 +76,6 @@ FB.ui({
 </script>
 
 
-<!-- Page one -->
-<div itemscope itemtype="http://schema.org/Article" class="container">
-    <!-- Social buttons -->
-    <div class="row">
-        <div class="six columns">&nbsp;</div>
-        <div class="four columns">
-            <div class="social-icons">
-            <center>
-                <a class="social-icons-fb"  href="https://www.facebook.com/dialog/share?app_id={% facebook_id %}&display=popup&href=http://{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
-                <a class="social-icons-tw"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&via={% twitter_handle %}">
-                </a>
-                <a class="social-icons-gp"  href="https://plus.google.com/share?url=http://{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
-                {% if object.abstract %}
-                <a class="social-icons-lk"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
-                </a>
-                {% else %}
-                <a class="social-icons-lk"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
-                {% endif %}
-                <a class="social-icons-email"  href="mailto:?subject={{ object.title }}&body=Check out this article I read on Sciblog: http://{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
-                </center>
-            </div>
-        </div>
-        <div class="six columns">&nbsp;</div>
-    </div>
-
-    <div class="row">
-        <div class="three columns">&nbsp;</div>
-        <div class="ten columns">
-            <h1 itemprop="name" class="title"> {{ object.title }}</h1>
-            {% if object.authors %}
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <div itemprop="name" class="author"> {{ object.authors }}</div>
-            </span>
-            {% endif %}
-            <div class="submission-date"> {{ object.pub_date }}</div>
-        </div>
-        <div class="three columns">&nbsp;</div>
-    </div>
-
-    <div class="row" style="margin-bottom:10px">
-        <div class="four columns">&nbsp;</div>
-        <div class="eight columns">
-            <h3 class="abstract"> {{ object.abstract }}</h3>
-        </div>
-        <div class="four columns">&nbsp;</div>
-    </div>
-
-    {% if object.keywords %}
-    <div class="row" style="margin-bottom:10px">
-        <div class="four columns">&nbsp;</div>
-        <div class="eight columns">
-            <h2 class="keywords">{{ object.keywords }}</h2>
-        </div>
-        <div class="four columns">&nbsp;</div>
-    </div>
-    {% endif %}
-
-    <div class="row">
-        <div class="two columns">&nbsp;</div>
-        <div class="six columns content">
-            {{ object.body_page1_col1_html|safe}}
-        </div>
-        <div class="six columns content">
-            {% if object.image %}
-            <div class="image">
-                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="300px" alt="{{ object.image_caption }}"/>
-                <div class="image-caption">{{ object.image_caption }}</div>
-            </div>
-            {% endif %}
-            {{ object.body_page1_col2_html|safe}}
-        </div>
-        <div class="two columns">&nbsp;</div>
-    </div>
-</div>
-
-<!-- Page two
-{% if object.body_page2_col1 %}
-<div class="container">
-    <div class="row">
-        <div class="two columns">&nbsp;</div>
-        <div class="six columns content">
-            {{ object.body_page2_col1_html|safe}}
-        </div>
-        <div class="six columns content">
-            {{ object.body_page2_col2_html|safe}}
-        </div>
-        <div class="two columns">&nbsp;</div>
-    </div>
-</div>
-
-{% endif %}-->
-
 
 <!-- Page js -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -211,7 +115,9 @@ FB.ui({
 					});
 				}
 				else{
-				    console.log("$('#blogContent').contents().length <= 0")
+				    console.log("$('#blogContent').contents().length <= 0");
+				    $("body").append($(".container-comments"));
+				    $("body").append($(".footer"));
 				}
 			}
 			setTimeout(buildNewsletter, 0);
@@ -303,31 +209,26 @@ FB.ui({
         {{ object.body_page1_col2_html|safe}}
         {{ object.body_page2_col1_html|safe}}
         {{ object.body_page2_col2_html|safe}}
-
 </div>
-
-<script type="text/javascript">
-    /*var hidden_body = document.getElementById("hidden_body").innerHTML;
-    var html =
-    "<div class='container'>" +
-      "<div class='row'>" +
-        "<div class='two columns'>&nbsp;</div>" +
-        "<div class='twelve columns content'>" + hidden_body + "</div>" +
-        "<div class='two columns'>&nbsp;</div>" +
-      "</div>" +
-    "</div>";
-    //document.write(html);
-    $(function(){
-    $('#hidden_body').columnize({ columns: 2 });
-    });*/
-</script>
-
 
 <!-- disqus comments -->
 <div class="container-comments">
     <div class="row-comments">
         {% disqus_show_comments %}
     </div>
+</div>
+
+<!-- footer -->
+<div class="footer container-footer" style="padding: 2rem 0rem 0.5rem;">
+        <a href="{% twitter_url %}">Twitter</a> •
+        <a href="{% linkedin_url %}">Linkedin</a> •
+        <a href="{% rss_url %}">RSS</a> •
+        {% for aboutp in about_pages %}
+          <a href="http://{% current_site %}{{ aboutp.url }}">About</a>
+        {% endfor%}
+      <br>
+      Proudly designed by Miguel González-Fierro and his robot -
+      <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
 </div>
 
 {% endblock %}
