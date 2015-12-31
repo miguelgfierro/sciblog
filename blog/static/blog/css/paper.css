@@ -183,9 +183,9 @@ body {
 i{font-family: LatexItalic;}
 bi{font-family: LatexBoldItalic;}
 strong{font-family: LatexBold;}
-.container .columns.six{
+/*.container .columns.six{
   margin-top: 1rem;
-}
+}*/
 p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -219,7 +219,7 @@ p.wrap {
 }
 .container{
   height:1133px;
-  /*padding-top:2rem;*/
+  padding-top:4rem;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .container-list{
@@ -446,4 +446,5 @@ button.navigation-bar-search-icon{
 .float-left{
   float-left;
 }
+
 
