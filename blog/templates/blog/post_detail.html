@@ -3,7 +3,6 @@
 {% load social %}
 {% load analytics %}
 {% load current_site %}
-{% load youtube_embed %}
 {% load disqus_tags %}
 {% set_disqus_url object.get_absolute_url %}
 {% set_disqus_title object.title %}
@@ -120,6 +119,7 @@ FB.ui({
         <div class="three columns">&nbsp;</div>
     </div>
 
+    {% if object.abstract %}
     <div class="row" style="margin-bottom:10px">
         <div class="four columns">&nbsp;</div>
         <div class="eight columns">
@@ -127,6 +127,7 @@ FB.ui({
         </div>
         <div class="four columns">&nbsp;</div>
     </div>
+    {% endif %}
 
     {% if object.keywords %}
     <div class="row" style="margin-bottom:10px">
@@ -146,10 +147,8 @@ FB.ui({
         <div class="six columns content">
             {% if object.image %}
             <div class="image">
-                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="340px" alt="{{ object.image_caption }}"/>
-                {% if object.image_caption %}
-                    <div class="image-caption">{{ object.image_caption }}</div>
-                {% endif %}
+                <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="300px" alt="{{ object.image_caption }}"/>
+                <div class="image-caption">{{ object.image_caption }}</div>
             </div>
             {% endif %}
             {{ object.body_page1_col2_html|safe}}
@@ -164,21 +163,10 @@ FB.ui({
     <div class="row">
         <div class="two columns">&nbsp;</div>
         <div class="six columns content">
-            {% if object.image_second %}
-            <div class="image">
-                <img itemprop="image" src="http://{{ object.site }}{{ object.image_second.url }}"  width="340px" alt="{{ object.image_caption_second }}"/>
-                {% if object.image_caption_second %}
-                    <div class="image-caption">{{ object.image_caption_second }}</div>
-                {% endif %}
-            </div>
-            {% endif %}
             {{ object.body_page2_col1_html|safe}}
         </div>
         <div class="six columns content">
             {{ object.body_page2_col2_html|safe}}
-            {% if object.youtube_link %}
-                <iframe class="embed-video" width="340" height="191" style="margin: 1rem 0;" src="{{ object.youtube_link|youtube_embed|safe  }}" frameborder="0" allowfullscreen></iframe>
-            {% endif %}
         </div>
         <div class="two columns">&nbsp;</div>
     </div>
@@ -188,15 +176,93 @@ FB.ui({
 
 
 <!-- Page js -->
+<style type="text/css">
+.page{ width: 612px; height: 792px; border: 1px solid black; margin: 20px; position: relative; }
+.page .content .column{ text-align:justify; font-size: 10pt; }
+.page .content .column blockquote{ border-left: 2px solid #999999; background: #DEDEDE; padding: 10px; margin: 4px 20px; clear: both; }
+.page .content .column img{ float: left; margin: 10px; }
+.page .content .column p{ padding: 0 10px; margin: 10px 0; }
+.page .content .column h1{ padding: 0 10px; }
+.page .header{ text-align: center; font-size: 18pt; font-family: helvetica, arial; padding: 20px 0 0; }
+.page .header hr, .page .footer hr{ width: 400px; }
+.page .footer{ text-align: center; }
+.page .footer span{ position: absolute; bottom: 10px; right: 10px; }
+.page_template{ display: none; }
 
+.enclosure {border:1px dashed black}
+</style>
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="{% static 'blog/js/jquery.columnizer.js' %}" type="text/javascript" charset="utf-8"></script>
 	<script>
+		$(function(){
+			var content_height = 652;	// the height of the content, discluding the header/footer
+			var page = 1;				// the beginning page number to show in the footer
+			function buildNewsletter(){
+			    var content_lenght = $('#newsletterContent').contents().length
+				if($('#newsletterContent').contents().length > 0){
+				    console.log("$('#newsletterContent').contents().length = ", content_lenght)
+					// when we need to add a new page, use a jq object for a template
+					// or use a long HTML string, whatever your preference
+					$page = $(".page_template:first").clone().addClass("page").css("display", "block");
 
+					// fun stuff, like adding page numbers to the footer
+					$page.find(".footer span").append(page);
+					$("body").append($page);
+					page++;
+
+					// here is the columnizer magic
+					$('#newsletterContent').columnize({
+						columns: 2,
+						target: ".page:last .content",
+						overflow: {
+							height: content_height,
+							id: "#newsletterContent",
+							doneFunc: function(){
+								console.log("done with page",page-1);
+								buildNewsletter();
+							}
+						}
+					});
+				}
+				else{
+				    console.log("$('#newsletterContent').contents().length <= 0")
+				}
+			}
+			setTimeout(buildNewsletter, 3000);
+		});
 	</script>
 
-
+<div class="page_template">
+	<div class='header'>This is a header<hr></div>
+	<div class='content'></div>
+	<div class='footer'><hr><span>Page: </span>This is the footer.</div>
+</div>
+<div id="newsletterContent">
+		<h1>Lorem ipsum ne justo</h1>
+		<p>Bonorum has. His ut cibo quas tantas, vis ut probo adhuc definiebas, has at meis debet vulputate. No sed velit essent suavitate, in pro decore ceteros temporibus, usu in odio offendit theophrastus. Mel labore indoctum cu, ad soleat admodum delicatissimi sed, mei viris tritani ullamcorper eu. Ut vim simul aperiam.</p>
+		<p>Blandit insolens constituto vix an. Has diam wisi in, <a href='javascript:;'>eum unum</a> repudiare no. Sit at virtute rationibus, qui vitae explicari cu. Vim ne singulis voluptatum, sed puto accusata salutandi ei. Ad mel civibus adversarium.</p>
+		<blockquote><p>Ius mutat commune expetendis in. Nam et quas sensibus reprimique, vix no erat soluta suavitate. At mel eius dictas latine. Corrumpit inciderint reformidans sed no, no usu omnis utinam noluisse.</p></blockquote>
+		<p>Probo debet quaestio an eos, no mel assum iracundia delicatissimi, rebum facete utroque sed ex. Eu melius invidunt <img src='painting3.jpg'> repudiandae vix, eu paulo reformidans deterruisset duo, solum voluptaria efficiantur ea mel. Qui summo zzril alienum et. Eu est ferri iuvaret, mazim epicurei sententiae ut cum, modo reque intellegat ex vix. Vim eu tibique accusamus, quot electram at qui.</p>
+		<p>Eu eleifend repudiandae has. Mea eu ridens aliquam. Nisl <a href='javascript:;'>aeque sit ut</a>, posse dolor utinam cum in. Ad timeam sapientem eos, et eripuit inermis nam. Eos integre voluptaria ne, iriure concludaturque ut eum.</p>
+		<p>Sit et, an ius nihil apeirian. Eu posse tempor iuvaret cum. No diam dolor sea, postea mnesarchum ne ius, vel no utinam ignota dolores. Malis suscipit accusamus his ne, utinam <a href='javascript:;'>assentior prodesset</a> ea eam, facer partem antiopam et cum.</p>
+		<p>Vis erant intellegat in. Soleat legere no ius, usu ex laoreet molestie. Sit eu sint inermis. Ea zzril scribentur pro.</p>
+		<h1>Tempor essent appetere</h1>
+		<p>Ius mutat commune expetendis in. Nam et quas sensibus reprimique, vix no erat soluta suavitate. At mel eius dictas latine. Corrumpit inciderint reformidans sed no, no usu omnis utinam noluisse.</p>
+		<p>Sit et, an ius nihil apeirian. Eu posse tempor iuvaret cum. No diam dolor sea, postea mnesarchum ne ius, vel no utinam <a href='javascript:;'>ignota dolores</a>. Malis suscipit accusamus his ne, utinam assentior prodesset ea eam, facer partem antiopam et cum.</p>
+		<p class='dontsplit'>Blandit insolens constituto vix an. Has diam wisi in, eum unum repudiare no. Sit at virtute rationibus, qui vitae explicari cu. Vim ne singulis voluptatum, sed puto accusata salutandi ei. Ad mel civibus adversarium.</p>
+		<p>Per ne solum vivendo, fabulas dolorem vivendo in pro. Nec duis ignota cotidieque no, an per possit nostrum. Pro detraxit definitionem eu. Vivendo officiis no nam, eu has reque maiestatis percipitur, dolore reprimique accommodare cum ad. No utinam voluptua oportere pri, augue sonet dicant ei sea.</p>
+		<p>Probo debet quaestio an eos, no mel assum iracundia delicatissimi, rebum facete utroque sed ex. Eu melius invidunt repudiandae vix, eu paulo <a href='javascript:;'>reformidans</a> deterruisset duo, solum voluptaria efficiantur ea mel. Qui summo zzril alienum et. Eu est ferri iuvaret, mazim epicurei sententiae ut cum, modo reque intellegat ex vix. Vim eu tibique accusamus, quot electram at qui.</p>
+		<p>Ex iisque eleifend periculis has. Sit aeterno virtute partiendo ei, eam nonumy bonorum adolescens ad. Ut nec suas vocent ornatus, cetero legendos constituam mea ea, pri cu delenit iracundia. Mundi decore nec te.</p>
+		<h1>Soleat civibus in pri</h1>
+		<p>In petentium erroribus percipitur per. Takimata accommodare ius ut, eam no postulant urbanitas. Qui ei tantas consectetuer, quis dictas euripidis duo ei. Quaeque democritum concludaturque <img src='painting4.jpg'>  has ne.</p>
+		<blockquote class='dontsplit'><p>Ius mutat commune expetendis in. Nam et quas sensibus reprimique, vix no erat soluta suavitate. At mel <a href='javascript:;'>eius dictas</a> latine. Corrumpit inciderint reformidans sed no, no usu omnis utinam noluisse.</p></blockquote>
+		<p>Blandit insolens constituto vix an. Has diam wisi in, eum unum repudiare no. Sit at virtute rationibus, qui vitae explicari cu. Vim ne singulis voluptatum, sed puto accusata salutandi ei. Ad mel civibus adversarium.</p>
+		<p>Ius mutat commune expetendis in. Nam et quas sensibus reprimique, vix no erat soluta suavitate. At mel eius dictas latine. Corrumpit inciderint reformidans sed no, no usu omnis utinam noluisse.</p>
+		<p>Sit et, an ius nihil apeirian. Eu posse tempor iuvaret cum. No diam dolor sea, postea mnesarchum ne ius, vel no utinam ignota dolores. Malis suscipit accusamus his ne, utinam assentior prodesset ea eam, facer partem antiopam et cum.</p>
+		<p>Per ne solum vivendo, fabulas dolorem vivendo in pro. Nec duis ignota cotidieque no, an per possit nostrum. Pro <a href='javascript:;'>detraxit</a> definitionem eu. Vivendo officiis no nam, eu has reque maiestatis percipitur, dolore reprimique accommodare cum ad. No utinam voluptua oportere pri, augue sonet dicant ei sea.</p>
+		<p>Sit et, an ius nihil apeirian. Eu posse tempor iuvaret cum. No diam dolor sea, postea mnesarchum ne ius, vel no utinam ignota dolores. Malis suscipit accusamus his ne, utinam assentior prodesset ea eam, facer partem antiopam et cum.</p>
+</div>
 
 <script type="text/javascript">
     /*var hidden_body = document.getElementById("hidden_body").innerHTML;
