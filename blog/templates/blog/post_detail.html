@@ -96,10 +96,8 @@ FB.ui({
 					    content_height = 1150;
 					    $page = $(".page_template:first").clone().addClass("texto").css("display", "block");
 					}
-
 					$("body").append($page);
 					page++;
-
 					// here is the columnizer magic
 					$('#blogContent').columnize({
 						columns: 2,
@@ -118,9 +116,10 @@ FB.ui({
 				    console.log("$('#blogContent').contents().length <= 0");
 				    $("body").append($(".container-comments"));
 				    $("body").append($(".footer"));
+				    console.log("Page building finished");
 				}
 			}
-			setTimeout(buildNewsletter, 0);
+			buildNewsletter();
 		});
 	</script>
 
