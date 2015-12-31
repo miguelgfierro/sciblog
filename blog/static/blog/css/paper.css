@@ -183,14 +183,10 @@ body {
 i{font-family: LatexItalic;}
 bi{font-family: LatexBoldItalic;}
 strong{font-family: LatexBold;}
-/*.container .columns.six{
-  margin-top: 1rem;
-}*/
 p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-  text-align: justify;
   font-size: 16px;
   text-indent: 30px;
   margin: 0px;
@@ -218,6 +214,7 @@ p.wrap {
   margin-top: 0;
 }
 .container{
+  text-align: justify;
   height:1133px;
   padding-top:4rem;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
