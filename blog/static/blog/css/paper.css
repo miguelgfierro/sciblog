@@ -16,20 +16,20 @@
 /* ************************************************************************** */
 /* Fonts */
 @font-face {
-    font-family: Latex;
-    src: url(../font/cmunrm.woff);
+  font-family: Latex;
+  src: url(../font/cmunrm.woff);
 }
 @font-face {
-    font-family: LatexBold;
-    src: url(../font/cmunbx.woff);
+  font-family: LatexBold;
+  src: url(../font/cmunbx.woff);
 }
 @font-face {
-    font-family: LatexItalic;
-    src: url(../font/cmunti.woff);
+  font-family: LatexItalic;
+  src: url(../font/cmunti.woff);
 }
 @font-face {
-    font-family: LatexBoldItalic;
-    src: url(../font/cmunbi.woff);
+  font-family: LatexBoldItalic;
+  src: url(../font/cmunbi.woff);
 }
 /* ************************************************************************** */
 /* Initial styles*/
@@ -159,8 +159,12 @@ h3.abstract:before{
   font-size: 14px;
   margin-bottom:0.5rem;
 }
-.image .image-caption:before{
-  content: "Fig: ";
+.image .fig1:before{
+  content: "Fig. 1: ";
+  font-family: LatexBoldItalic;
+}
+.image .fig2:before{
+  content: "Fig. 2: ";
   font-family: LatexBoldItalic;
 }
 .references{
@@ -183,9 +187,15 @@ body {
   color: #100;
   font-family: Latex, Georgia, serif;
 }
-i{font-family: LatexItalic;}
-bi{font-family: LatexBoldItalic;}
-strong{font-family: LatexBold;}
+i{
+  font-family: LatexItalic;
+}
+bi{
+  font-family: LatexBoldItalic;
+}
+strong{
+  font-family: LatexBold;
+}
 p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -449,5 +459,24 @@ button.navigation-bar-search-icon{
 .page_template{
   display: none;
 }
-
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 0.8em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-family: LatexItalic;
+  font-size: 16px;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
 
