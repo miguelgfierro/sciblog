@@ -16,37 +16,37 @@
 /* ************************************************************************** */
 /* Fonts */
 @font-face {
-    font-family: Latex;
-    src: url(../font/cmunrm.woff);
+  font-family: Latex;
+  src: url(../font/cmunrm.woff);
 }
 @font-face {
-    font-family: LatexBold;
-    src: url(../font/cmunbx.woff);
+  font-family: LatexBold;
+  src: url(../font/cmunbx.woff);
 }
 @font-face {
-    font-family: LatexItalic;
-    src: url(../font/cmunti.woff);
+  font-family: LatexItalic;
+  src: url(../font/cmunti.woff);
 }
 @font-face {
-    font-family: LatexBoldItalic;
-    src: url(../font/cmunbi.woff);
+  font-family: LatexBoldItalic;
+  src: url(../font/cmunbi.woff);
 }
 /* ************************************************************************** */
 /* Initial styles*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0px;
-    padding: 0px;
-    border: 0px none;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border: 0px none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 body {
-		background: #fff;
-		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #444;
-		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-		-webkit-text-size-adjust: 100%;
+  background: #fff;
+  font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
  }
 a, a:visited {
     color: #333;
@@ -454,5 +454,24 @@ button.navigation-bar-search-icon{
 .float-left{
   float-left;
 }
-
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 0.8em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-family: LatexItalic;
+  font-size: 16px;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
 
