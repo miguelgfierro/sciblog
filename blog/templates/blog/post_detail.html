@@ -154,7 +154,7 @@ FB.ui({
             <div class="image">
                 <img itemprop="image" src="http://{{ object.site }}{{ object.image.url }}"  width="340px" alt="{{ object.image_caption }}"/>
                 {% if object.image_caption %}
-                    <div class="image-caption">{{ object.image_caption }}</div>
+                    <div class="image-caption fig1">{{ object.image_caption }}</div>
                 {% endif %}
             </div>
             {% endif %}
@@ -174,7 +174,7 @@ FB.ui({
             <div class="image">
                 <img itemprop="image" src="http://{{ object.site }}{{ object.image_second.url }}"  width="340px" alt="{{ object.image_caption_second }}"/>
                 {% if object.image_caption_second %}
-                    <div class="image-caption">{{ object.image_caption_second }}</div>
+                    <div class="image-caption fig2">{{ object.image_caption_second }}</div>
                 {% endif %}
             </div>
             {% endif %}

@@ -156,8 +156,12 @@ h3.abstract:before{
   font-size: 14px;
   margin-bottom:0.5rem;
 }
-.image .image-caption:before{
-  content: "Fig: ";
+.image .fig1:before{
+  content: "Fig. 1: ";
+  font-family: LatexBoldItalic;
+}
+.image .fig2:before{
+  content: "Fig. 2: ";
   font-family: LatexBoldItalic;
 }
 .references{
@@ -181,12 +185,15 @@ body {
   color: #100;
   font-family: Latex, Georgia, serif;
 }
-i{font-family: LatexItalic;}
-bi{font-family: LatexBoldItalic;}
-strong{font-family: LatexBold;}
-/*.container .columns.six{
-  margin-top: 1rem;
-}*/
+i{
+  font-family: LatexItalic;
+}
+bi{
+  font-family: LatexBoldItalic;
+}
+strong{
+  font-family: LatexBold;
+}
 p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
