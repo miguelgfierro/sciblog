@@ -20,7 +20,7 @@ Installation
 We need to install several libraries:
 
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
-	$ pip install django django-debug-toolbar markdown2
+	$ pip install django  markdown2
 
 NOTE: django version must be 1.7 or 1.8. 
 

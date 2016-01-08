@@ -1,13 +1,16 @@
-from django.db import models
 import datetime
+from time import time
+
+from django.db import models
 from django.utils import timezone
 from django.template.defaultfilters import slugify
 from django.contrib.sites.models import Site
 import markdown2
-from time import time
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
+from libs.ckeditor_uploader.fields import RichTextUploadingField
 from libs.markdown2Mathjax.lib.markdown2Mathjax import sanitizeInput, reconstructMath
+
 
 def generate_filename(instance, filename):
     ext = filename.split('.')[-1]
@@ -29,6 +32,8 @@ class Post(models.Model):
     image_caption_second = models.CharField(max_length=200, blank=True)
     youtube_link = models.URLField(blank=True)
     has_latex_formula = models.BooleanField(default=False)
+
+    content = RichTextUploadingField(blank=True, null=True)
 
     #Paper of maximum 2 pages (1 mandatory + 1 optional)
     body_page1_col1 = models.TextField('Body 1,1 (1000-1200 characters)')

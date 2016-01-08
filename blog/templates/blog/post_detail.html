@@ -204,10 +204,11 @@ FB.ui({
 </div>
 
 <div id="blogContent">
-        {{ object.body_page1_col1_html|safe}}
+        <!--{{ object.body_page1_col1_html|safe}}
         {{ object.body_page1_col2_html|safe}}
         {{ object.body_page2_col1_html|safe}}
-        {{ object.body_page2_col2_html|safe}}
+        {{ object.body_page2_col2_html|safe}}-->
+        {{ object.content|safe }}
 </div>
 
 <!-- disqus comments -->
@@ -229,5 +230,8 @@ FB.ui({
       Proudly designed by Miguel González-Fierro and his robot -
       <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
 </div>
+
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
 
 {% endblock %}

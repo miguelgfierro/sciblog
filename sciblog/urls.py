@@ -10,4 +10,5 @@ urlpatterns = patterns('',
     url(r'^', include('blog.urls', namespace="blog")),
     # Flat pages
     url(r'', include('django.contrib.flatpages.urls')),
+    url(r'^ckeditor/', include('libs.ckeditor_uploader.urls')),
 )

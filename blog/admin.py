@@ -20,6 +20,7 @@ class PostAdmin(admin.ModelAdmin):
         ('Page 1 column 2',		{'fields': ['body_page1_col2']}),
         ('Page 2 column 1',		{'fields': ['body_page2_col1']}),
         ('Page 2 column 2',		{'fields': ['body_page2_col2']}),
+        ('Contenxt',    		{'fields': ['content']}),
     ]
     list_display = ('title', 'pub_date', 'was_published_recently')
     list_filter = ['pub_date']
