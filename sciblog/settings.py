@@ -134,7 +134,7 @@ RSS_URL = 'http://feeds.feedburner.com/miguelgfierro'
 GA_TRACKING_ID = 'UA-70996723-1'
 
 # Ckeditor
-CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+#CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 CKEDITOR_UPLOAD_PATH = "/upload/"
 CKEDITOR_CONFIGS = {
     'default': {
@@ -164,7 +164,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
             {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
             {'name': 'about', 'items': ['About']},
-            {'name': 'mathjax', 'items': ['MathJax']},
+            {'name': 'mathjax', 'items': ['Bold','Bold','MathJax']},
             '/',  # put this to force next toolbar on new line
             {'name': 'youcustomtools', 'items': [
                 # put the name of your editor.ui.addButton here
@@ -180,24 +180,30 @@ CKEDITOR_CONFIGS = {
         # 'filebrowserWindowHeight': 725,
         # 'filebrowserWindowWidth': 940,
         # 'toolbarCanCollapse': True,
-        'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+        #'mathJaxClass':'math-tex', #no effect in mathjax
+        #'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+        'mathJaxLib': STATIC_URL + 'blog/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
         'tabSpaces': 4,
-        'extraPlugins': ','.join(
-            [
-                # you extra plugins here
-                'div',
-                'autolink',
-                'autoembed',
-                'embedsemantic',
-                'autogrow',
-                # 'devtools',
-                'widget',
-                'lineutils',
-                'clipboard',
-                'dialog',
-                'dialogui',
-                'elementspath',
-                'mathjax'
-            ]),
+        'extraPlugins': 'button,toolbar,codesnippet,about,stylescombo,richcombo,floatpanel,panel,button,listblock,dialog,dialogui,htmlwriter,removeformat,horizontalrule,widget,lineutils,mathjax,div,fakeobjects,iframe,image2,justify,blockquote,indent,indentlist,indentblock',
+#        'extraPlugins': ','.join(
+#            [
+#                # you extra plugins here
+#                'div',
+#                'autolink',
+#                'autoembed',
+#                'embedsemantic',
+#                'autogrow',
+#                # 'devtools',
+#                'widget',
+#                'lineutils',
+#                'clipboard',
+#                'dialog',
+#                'dialogui',
+#                'elementspath',
+#                'codesnippet',#no effect in mathjax
+#                'codesnippetgeshi', #no effect in mathjax
+#                'mathjax'
+#            ]),
     }
 }
+

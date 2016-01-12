@@ -32,7 +32,12 @@
           $($(this).data('external-plugin-resources')).each(function(){
               CKEDITOR.plugins.addExternal(this[0], this[1], this[2]);
           });
-          CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
+          //CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
+          CKEDITOR.replace( $(this).attr('id'), {
+			extraPlugins: 'mathjax',
+			mathJaxLib: 'http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+			height: 320
+		} );
         }
       });
     }
