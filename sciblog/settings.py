@@ -140,7 +140,8 @@ CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
         'toolbar_Basic': [
-            ['Source', '-', 'Bold', 'Italic']
+            #['Source', '-', 'Bold', 'Italic']
+            ['Source', '-', 'Bold', 'Italic','MathJax']
         ],
         'toolbar_YouCustomToolbarConfig': [
             {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
@@ -173,7 +174,7 @@ CKEDITOR_CONFIGS = {
 
             ]},
         ],
-        'toolbar': 'YouCustomToolbarConfig',  # put selected toolbar config here
+        'toolbar': 'Basic',  # put selected toolbar config here
         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
         # 'height': 291,
         # 'width': '100%',
@@ -181,10 +182,11 @@ CKEDITOR_CONFIGS = {
         # 'filebrowserWindowWidth': 940,
         # 'toolbarCanCollapse': True,
         #'mathJaxClass':'math-tex', #no effect in mathjax
-        #'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
-        'mathJaxLib': STATIC_URL + 'blog/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
+        'extraPlugins': 'mathjax',
+        'mathJaxLib': 'http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
+        #'mathJaxLib': STATIC_URL + 'blog/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
         'tabSpaces': 4,
-        'extraPlugins': 'button,toolbar,codesnippet,about,stylescombo,richcombo,floatpanel,panel,button,listblock,dialog,dialogui,htmlwriter,removeformat,horizontalrule,widget,lineutils,mathjax,div,fakeobjects,iframe,image2,justify,blockquote,indent,indentlist,indentblock',
+        #'extraPlugins': 'button,toolbar,codesnippet,about,stylescombo,richcombo,floatpanel,panel,button,listblock,dialog,dialogui,htmlwriter,removeformat,horizontalrule,widget,lineutils,mathjax,div,fakeobjects,iframe,image2,justify,blockquote,indent,indentlist,indentblock',
 #        'extraPlugins': ','.join(
 #            [
 #                # you extra plugins here

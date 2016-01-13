@@ -32,12 +32,40 @@
           $($(this).data('external-plugin-resources')).each(function(){
               CKEDITOR.plugins.addExternal(this[0], this[1], this[2]);
           });
+          console.log("$(this).attr('id')=",$(this).attr('id'));
+          console.log("$(this).data('config')=",$(this).data('config'));
           //CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
           CKEDITOR.replace( $(this).attr('id'), {
-			extraPlugins: 'mathjax',
-			mathJaxLib: 'http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
-			height: 320
+			extraPlugins: 'embed,autoembed,image2,mathjax',
+			height: 500,
+			//MATHJAX
+			mathJaxLib: 'http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
+
+			//FILE UPLOADER
+			// Configure your file manager integration. This example uses CKFinder 3 for PHP.
+			/*filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+			filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+			filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+			filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'*/
+
+			// EMBEDED CONTENT
+			// The following options are not necessary and are used here for presentation purposes only.
+			// They configure the Styles drop-down list and widgets to use classes.
+			stylesSet: [
+				{ name: 'Narrow image', type: 'widget', widget: 'image', attributes: { 'class': 'image-narrow' } },
+				{ name: 'Wide image', type: 'widget', widget: 'image', attributes: { 'class': 'image-wide' } },
+				{ name: 'Narrow media', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-narrow' } },
+				{ name: 'Centered media', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-align-center' } }
+			],
+			// Load the default contents.css file plus customizations for this sample.
+			contentsCss: [ CKEDITOR.basePath + 'contents.css', 'http://sdk.ckeditor.com/samples/assets/css/widgetstyles.css' ],
+			// Configure the Enhanced Image plugin to use classes instead of styles and to disable the
+			// resizer (because image size is controlled by widget styles or the image takes maximum
+			// 100% of the editor width).
+			image2_alignClasses: [ 'image-align-left', 'image-align-center', 'image-align-right' ],
+			image2_disableResizer: true
 		} );
+
         }
       });
     }
