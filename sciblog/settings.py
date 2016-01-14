@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import django
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -135,7 +136,7 @@ GA_TRACKING_ID = 'UA-70996723-1'
 
 # Ckeditor
 #CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-CKEDITOR_UPLOAD_PATH = "/upload/"
+CKEDITOR_UPLOAD_PATH = "/img/upload/"
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
@@ -174,7 +175,7 @@ CKEDITOR_CONFIGS = {
 
             ]},
         ],
-        'toolbar': 'Basic',  # put selected toolbar config here
+        'toolbar': 'YouCustomToolbarConfig',  # put selected toolbar config here
         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
         # 'height': 291,
         # 'width': '100%',

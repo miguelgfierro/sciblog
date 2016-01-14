@@ -34,19 +34,17 @@
           });
           console.log("$(this).attr('id')=",$(this).attr('id'));
           console.log("$(this).data('config')=",$(this).data('config'));
-          //CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
-          CKEDITOR.replace( $(this).attr('id'), {
-			extraPlugins: 'embed,autoembed,image2,mathjax',
+          CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
+          /*CKEDITOR.replace( $(this).attr('id'), {
+			extraPlugins: 'embed,autoembed,image,image2,mathjax,uploadimage,uploadwidget,filetools,widget,clipboard,notification,notificationaggregator,button,toolbar,codesnippet',
+
 			height: 500,
 			//MATHJAX
 			mathJaxLib: 'http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
 
 			//FILE UPLOADER
-			// Configure your file manager integration. This example uses CKFinder 3 for PHP.
-			/*filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-			filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
-			filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-			filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'*/
+			filebrowserBrowseUrl: '/ckeditor/browser/',
+            filebrowserUploadUrl: '/ckeditor/uploader/',
 
 			// EMBEDED CONTENT
 			// The following options are not necessary and are used here for presentation purposes only.
@@ -64,7 +62,7 @@
 			// 100% of the editor width).
 			image2_alignClasses: [ 'image-align-left', 'image-align-center', 'image-align-right' ],
 			image2_disableResizer: true
-		} );
+		} );*/
 
         }
       });
