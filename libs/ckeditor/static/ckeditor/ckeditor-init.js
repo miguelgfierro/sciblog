@@ -34,8 +34,8 @@
           });
           console.log("$(this).attr('id')=",$(this).attr('id'));
           console.log("$(this).data('config')=",$(this).data('config'));
-          CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
-          /*CKEDITOR.replace( $(this).attr('id'), {
+          //CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
+          CKEDITOR.replace( $(this).attr('id'), {
 			extraPlugins: 'embed,autoembed,image,image2,mathjax,uploadimage,uploadwidget,filetools,widget,clipboard,notification,notificationaggregator,button,toolbar,codesnippet',
 
 			height: 500,
@@ -44,7 +44,7 @@
 
 			//FILE UPLOADER
 			filebrowserBrowseUrl: '/ckeditor/browser/',
-            filebrowserUploadUrl: '/ckeditor/uploader/',
+            filebrowserUploadUrl: '/ckeditor/upload/',
 
 			// EMBEDED CONTENT
 			// The following options are not necessary and are used here for presentation purposes only.
@@ -62,7 +62,7 @@
 			// 100% of the editor width).
 			image2_alignClasses: [ 'image-align-left', 'image-align-center', 'image-align-right' ],
 			image2_disableResizer: true
-		} );*/
+		} );
 
         }
       });
