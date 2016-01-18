@@ -170,7 +170,7 @@ h6{
   content: "Fig. 2: ";
   font-family: LatexBoldItalic;
 }
-.references{
+ol{
   font-size: 14px;
   padding-left: 1rem;
   text-indent: 0px;
@@ -178,10 +178,9 @@ h6{
   counter-reset:li; /* Initiate a counter */
   list-style:none; /* Disable the normal item numbering */
 }
-.references li:before{
-  content:'['counter(li)']'; /* Use the counter as content */
+ol li:before{
+  content:'['counter(li)'] '; /* Use the counter as content */
   counter-increment:li; /* Increment the counter by 1 */
-  /*list-style-type: decimal;*/
 }
 /* ************************************************************************** */
 /* Blog styles*/
