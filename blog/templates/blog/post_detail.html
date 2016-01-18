@@ -157,11 +157,9 @@ FB.ui({
         <div class="three columns">&nbsp;</div>
         <div class="ten columns">
             <h1 itemprop="name" class="title"> {{ object.title }}</h1>
-            {% if object.authors %}
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <div itemprop="name" class="author"> {{ object.authors }}</div>
             </span>
-            {% endif %}
             <div class="submission-date"> {{ object.pub_date }}</div>
         </div>
         <div class="three columns">&nbsp;</div>
