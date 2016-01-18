@@ -37,13 +37,19 @@
           //CKEDITOR.replace($(this).attr('id'), $(this).data('config'));
           CKEDITOR.replace( $(this).attr('id'), {
 			extraPlugins: 'embed,autoembed,image,image2,mathjax,uploadimage,uploadwidget,filetools,widget,clipboard,notification,notificationaggregator,button,toolbar,codesnippet',
-
 			height: 500,
+
+			// Format (I removed h1,h2,h3 because they are already included in the template)
+			format_tags: 'p;h4;h5;h6;div',
+			format_h4 : { element: 'h4', attributes: { 'class': 'section' } },
+			format_h5 : { element: 'h5', attributes: { 'class': 'subsection' } },
+			format_h6 : { element: 'h6', attributes: { 'class': 'subsubsection' } },
+
 			//MATHJAX
 			mathJaxLib: 'http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
 
 			//FILE UPLOADER
-			filebrowserBrowseUrl: '/ckeditor/browser/',
+			filebrowserBrowseUrl: '/ckeditor/browse/',
             filebrowserUploadUrl: '/ckeditor/upload/',
 
 			// EMBEDED CONTENT

@@ -126,7 +126,8 @@ h3.abstract:before{
   font-size: 14px;
   text-align: center;
 }
-.section{
+/*.section{*/
+h4{
   font-size: 21px;
   line-height: 30px;
   margin-top: 1rem;
@@ -134,7 +135,8 @@ h3.abstract:before{
   font-family: LatexBold;
   padding: 0 1rem;
 }
-.subsection{
+/*.subsection{*/
+h5{
   font-size: 18px;
   line-height: 24px;
   margin-top: 0.5rem;
@@ -142,7 +144,8 @@ h3.abstract:before{
   font-family: LatexBold;
   padding: 0 1rem;
 }
-.subsubsection{
+/*.subsubsection{*/
+h6{
   font-size: 18px;
   line-height: 21px;
   margin-top: 0.5rem;
