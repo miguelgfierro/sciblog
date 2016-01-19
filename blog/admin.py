@@ -10,16 +10,7 @@ class PostAdmin(admin.ModelAdmin):
         ('Date information', 	{'fields': ['pub_date']}),
         ('Abstract',			{'fields': ['abstract']}),
         ('Site', 				{'fields': ['site']}),
-        ('Image', 				{'fields': ['image']}),
-        ('Image caption',		{'fields': ['image_caption']}),
-        ('Image second', 		{'fields': ['image_second']}),
-        ('Image caption second',{'fields': ['image_caption_second']}),
-        ('Youtube link',        {'fields': ['youtube_link']}),
-        ('Post with formulas',	{'fields': ['has_latex_formula']}),
-        ('Page 1 column 1', 	{'fields': ['body_page1_col1']}),
-        ('Page 1 column 2',		{'fields': ['body_page1_col2']}),
-        ('Page 2 column 1',		{'fields': ['body_page2_col1']}),
-        ('Page 2 column 2',		{'fields': ['body_page2_col2']}),
+        ('Post with formulas',	{'fields': ['has_latex_formula']}),#if true, mathjax.js is included in template (better for SEO)
         ('Content',     		{'fields': ['content']}),
     ]
     list_display = ('title', 'pub_date', 'was_published_recently')

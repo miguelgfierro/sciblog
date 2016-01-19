@@ -5,12 +5,13 @@ Blog developed in django with the same appearance of a research paper written in
 
 * CSS and Latex fonts integrated
 * Posts are presented in two columns like a paper
-* Formulas can be added with latex notation ( formulas between $ $ for inline and between $$ $$ for new line)
+* Formulas can be added with latex notation 
 * Share in social networks
 * RSS feed
 * Post search 
 * Blog optimized for SEO
 * Comments with disqus
+* Easy writing with Ckeditor
 
 Example of sciblog: http://miguelgfierro.com
 
@@ -20,7 +21,7 @@ Installation
 We need to install several libraries:
 
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
-	$ pip install django  markdown2
+	$ pip install django 
 
 NOTE: django version must be 1.7 or 1.8. 
 
@@ -30,7 +31,7 @@ The first step is to generate the database. In the projects folder:
   
 	$ python manage.py syncdb  
 Django will ask you to create a superuser. You have to put the username and password. The email is optional. 
-This will generate a file called db.sqlite3 which is the database where all the blog content is stored.
+This will generate a file called `db.sqlite3` which is the database where all the blog content is stored.
 
 After that you have to make what is called a migration, to create the tables in your database. To do that:
 	
@@ -77,22 +78,17 @@ Configure apache (in sciblog.conf change miguelgfierro.com for your url):
 Add your first content to the blog
 ==================================================
 
-Press add in Post to add your first post. Go to file content/latex_blog.txt and start to fill up all the fields. For the first
-post we will leave the image, the image caption, page 2 column 1 and page 2 column 2 empty.
+Press add in Post to add your first post. You can add different sections, images and formulas. If you use a formula please select the flag `Post with Latex formula`. This will load the js necessary to render the Latex code. If the flag is not activated then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
 
-You will see that your blog is working properly going to the url: localhost:8000 (in production you'll have to add something like miguelgfierro.com without http://)
+You will see that your blog is working properly going to the url: http://localhost:8000 (in production you'll have to add something like http://miguelgfierro.com)
 
-The post can be accessed here: http://localhost:8000/blog/2015/a-blog-with-the-appearance-of-a-scientific-paper-in-latex/
-
-Now take the file content/prince_ali.txt and add a second post. This time you'll have to fill all fields. The image you have to use
-is in img/prince_ali.jpg (add images of width of 300px).
 
 Create the about page
 ==================================================
 
 Go to the admin console and add your first flat page. A flat page is a static html code. 
 
-In Flat pages press add. In url put /about/ (don't forget / in both sides). In title put your name, in sites put your site and in content paste the file content/about.txt. It will render a beautifull about page. 
+In Flat pages press add. In url put /about/ (don't forget / in both sides). In title put your name, in sites put your site and in content put whatever you want. 
 
 Notes to manage the blog in the production environment
 ==================================================
@@ -105,3 +101,5 @@ This will set the first entry in the database to your site, which is related to 
 Additional comments
 ==================================================
 To work with disqus comments you have to get your DISQUS_API_KEY and DISQUS_WEBSITE_SHORTNAME. They can be obtained https://disqus.com/api/applications/ 
+
+If you want to thank me, please do it. You can write a poem emphasizing my wonderful qualities or get a tattoo with my amazing face (here you will find my [face](http://miguelgfierro.com/about/)). I also accept cash. You can send an email to my personal assistant hoaphumanoid@gmail.com. 

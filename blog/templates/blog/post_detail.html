@@ -76,8 +76,7 @@ FB.ui({
 </script>
 
 
-
-<!-- Page js -->
+<!-- Page columnizer -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="{% static 'blog/js/jquery.columnizer.js' %}" type="text/javascript" charset="utf-8"></script>
 	<script>
@@ -202,10 +201,6 @@ FB.ui({
 </div>
 
 <div id="blogContent">
-        <!--{{ object.body_page1_col1_html|safe}}
-        {{ object.body_page1_col2_html|safe}}
-        {{ object.body_page2_col1_html|safe}}
-        {{ object.body_page2_col2_html|safe}}-->
         {{ object.content|safe }}
 </div>
 
