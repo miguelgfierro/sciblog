@@ -42,7 +42,7 @@ In another terminal you have to run django development server:
 
 	$ python manage.py runserver  
 	
-In a browser put the link: http://localhost:8000/admin/
+In a browser put the link: [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
 The panel will ask you to put username and password. Once you are in django dashboard you can start to add content to
 your blog.
@@ -80,7 +80,7 @@ Add your first content to the blog
 
 Press add in Post to add your first post. You can add different sections, images and formulas. If you use a formula please select the flag `Post with Latex formula`. This will load the js necessary to render the Latex code. If the flag is not activated then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
 
-You will see that your blog is working properly going to the url: http://localhost:8000 (in production you'll have to add something like http://miguelgfierro.com)
+You will see that your blog is working properly going to the url: [http://localhost:8000](http://localhost:8000) (in production you'll have to add something like http://miguelgfierro.com)
 
 
 Create the about page
@@ -88,15 +88,15 @@ Create the about page
 
 Go to the admin console and add your first flat page. A flat page is a static html code. 
 
-In Flat pages press add. In url put /about/ (don't forget / in both sides). In title put your name, in sites put your site and in content put whatever you want. 
+In Flat pages press add. In url put `/about/` (don't forget / in both sides). In title put your name, in sites put your site and in content put whatever you want. 
 
 Notes to manage the blog in the production environment
 ==================================================
 
-When you are in production you have to set DEBUG = False in sciblog/settings.py.
+When you are in production you have to set DEBUG = False in `sciblog/settings.py`.
 
-Also the first time you enter in your admin console (http://miguelgfierro.com/admin/) you have to go to sites and EDIT the default site, which is example.com. Change it for the name of your site without http:// (my case would be miguelgfierro.com).
-This will set the first entry in the database to your site, which is related to the variable SITE_ID = 1 in sciblog/settings.py. You can see the number of the site in http://miguelgfierro.com/admin/sites/site/1/. If you add another site then it will have a different number in the database, so for everything to work you have to change the variable SITE_ID. In my experience it is better if you don't touch anything, I messed up the database several times :-)
+Also the first time you enter in your admin console (http://miguelgfierro.com/admin/) you have to go to sites and EDIT the default site, which is example.com. Change it for the name of your site without `http://` (my case would be miguelgfierro.com).
+This will set the first entry in the database to your site, which is related to the variable SITE_ID = 1 in `sciblog/settings.py`. You can see the number of the site in http://miguelgfierro.com/admin/sites/site/1/. If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable SITE_ID. In my experience it is better if you don't touch anything :-)
 
 Additional comments
 ==================================================
