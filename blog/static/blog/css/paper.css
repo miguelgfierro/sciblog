@@ -155,20 +155,9 @@ h6{
 .image{
   text-align: center;
 }
-.image img{
-  width:300px;
-}
 .image .image-caption{
   font-size: 14px;
   margin-bottom:0.5rem;
-}
-.image .fig1:before{
-  content: "Fig. 1: ";
-  font-family: LatexBoldItalic;
-}
-.image .fig2:before{
-  content: "Fig. 2: ";
-  font-family: LatexBoldItalic;
 }
 ol{
   font-size: 14px;
@@ -465,20 +454,9 @@ blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 0.8em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  padding: 0.1rem 0.5rem;
   font-family: LatexItalic;
   font-size: 16px;
 }
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
+
 
