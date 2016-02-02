@@ -35,7 +35,8 @@
 
     <!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
     {% if object.has_latex_formula %}
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <!--<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+	    <script src="{% static 'blog/js/MathJax/MathJax.js' %}?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>
         <script>
             MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
                 tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
@@ -77,8 +78,9 @@ FB.ui({
 
 
 <!-- Page columnizer -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="{% static 'blog/js/jquery.columnizer.js' %}" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+	<script src="{% static 'blog/js/jquery.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'blog/js/jquery.columnizer.min.js' %}" type="text/javascript" charset="utf-8"></script>
 	<script>
 		$(function(){
 			var content_height;
@@ -223,8 +225,5 @@ FB.ui({
       Proudly designed by Miguel González-Fierro and his robot -
       <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
 </div>
-
-<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
-<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
 
 {% endblock %}

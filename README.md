@@ -1,11 +1,11 @@
-Sciblog: A blog with the appearance of a scientific Latex paper.
+Sciblog: A blog with the appearance of a scientific paper.
 ==================
 
-Blog developed in django with the same appearance of a research paper written in Latex.
+Blog developed in django with the same appearance of a research paper written in [Latex](https://en.wikipedia.org/wiki/LaTeX).
 
 * CSS and Latex fonts integrated
 * Posts are presented in two columns like a paper
-* Formulas can be added with latex notation 
+* Formulas can be added with Latex notation 
 * Share in social networks
 * RSS feed
 * Post search 
@@ -48,6 +48,8 @@ The panel will ask you to put username and password. Once you are in django dash
 your blog.
 
 When you are in localhost you have to set DEBUG = True in sciblog/settings.py. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
+
+To work with disqus comments you have to get your DISQUS_API_KEY and DISQUS_WEBSITE_SHORTNAME. They can be obtained https://disqus.com/api/applications/ 
 
 Set up the project in a Ubuntu VPS server
 ==================================================
@@ -98,8 +100,19 @@ When you are in production you have to set DEBUG = False in `sciblog/settings.py
 Also the first time you enter in your admin console (http://miguelgfierro.com/admin/) you have to go to sites and EDIT the default site, which is example.com. Change it for the name of your site without `http://` (my case would be miguelgfierro.com).
 This will set the first entry in the database to your site, which is related to the variable SITE_ID = 1 in `sciblog/settings.py`. You can see the number of the site in http://miguelgfierro.com/admin/sites/site/1/. If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable SITE_ID. In my experience it is better if you don't touch anything :-)
 
+Speed up page with PageSpeedModule (optional)
+==================================================
+
+You can use [PageSpeedModule](https://developers.google.com/speed/pagespeed/module/) to speed up your page. 
+ 
+First you need to install and configure the libraries in your VPS server. Mine is 64bits so this is my example:
+
+    $ wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb
+    $ dpkg -i mod-pagespeed-*.deb
+	$ service apache2 restart
+    
+
 Additional comments
 ==================================================
-To work with disqus comments you have to get your DISQUS_API_KEY and DISQUS_WEBSITE_SHORTNAME. They can be obtained https://disqus.com/api/applications/ 
 
 If you want to thank me, please do it. You can write a poem emphasizing my wonderful qualities or get a tattoo with my amazing face (here you will find my [face](http://miguelgfierro.com/about/)). I also accept cash. You can send an email to my personal assistant hoaphumanoid@gmail.com. 
