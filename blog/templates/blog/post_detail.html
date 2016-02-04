@@ -19,19 +19,19 @@
     <meta name="author" content="{{ object.authors }}">
 
     <!-- Open tag for Facebook. Add here your app_id -->
-    <meta property="fb:app_id"      content="{% facebook_id %}"/>
-    <meta property="og:url"         content="http://{{ object.site }}{{ object.get_absolute_url }}" />
-    <meta property="og:type"        content="article" />
-    <meta property="og:title"       content="{{ object.title }}" />
+    <meta property="fb:app_id"              content="{% facebook_id %}"/>
+    <meta property="og:url"                 content="http://{{ object.site }}{{ object.get_absolute_url }}" />
+    <meta property="og:type"                content="article" />
+    <meta property="og:title"               content="{{ object.title }}" />
     {% if object.abstract %}
-    <meta property="og:description" content="{{ object.abstract }}" />
+    <meta property="og:description"         content="{{ object.abstract }}" />
     {% endif %}
     {% if object.image %}
-    <meta property="og:image"       content="http://{{ object.site }}{{ object.image.url }}" />
+    <meta property="og:image"               content="http://{{ object.site }}{{ object.image.url }}" />
     {% else %}
-    <meta property="og:image"       content="http://{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
+    <meta property="og:image"               content="http://{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
     {% endif %}
-    <meta itemprop="url"            content="http://{{ object.site }}{{ object.get_absolute_url }}"/>
+    <span itemscope><meta itemprop="url"    content="http://{{ object.site }}{{ object.get_absolute_url }}"/></span>
 
     <!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
     {% if object.has_latex_formula %}
@@ -132,7 +132,6 @@ FB.ui({
         <div class="six columns">&nbsp;</div>
         <div class="four columns">
             <div class="social-icons">
-            <center>
                 <a class="social-icons-fb"  href="https://www.facebook.com/dialog/share?app_id={% facebook_id %}&display=popup&href=http://{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}{{ object.get_absolute_url }}">
                 </a>
                 <a class="social-icons-tw"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&via={% twitter_handle %}">
@@ -148,7 +147,6 @@ FB.ui({
                 {% endif %}
                 <a class="social-icons-email"  href="mailto:?subject={{ object.title }}&body=Check out this article I read on Sciblog: http://{{ object.site }}{{ object.get_absolute_url }}">
                 </a>
-                </center>
             </div>
         </div>
         <div class="six columns">&nbsp;</div>
@@ -158,9 +156,9 @@ FB.ui({
         <div class="three columns">&nbsp;</div>
         <div class="ten columns">
             <h1 itemprop="name" class="title"> {{ object.title }}</h1>
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <div itemprop="name" class="author"> {{ object.authors }}</div>
-            </span>
+            <div itemscope itemtype="http://schema.org/Person">
+            <div itemprop="author" class="author"> {{ object.authors }}</div>
+            </div>
             <div class="submission-date"> {{ object.pub_date }}</div>
         </div>
         <div class="three columns">&nbsp;</div>
