@@ -195,25 +195,20 @@
     overflow: hidden;
     visibility: hidden;
     width: 0;
-    height: 0
+    height: 0;
 }
 
 .row:after,
 .clearfix:after {
     clear: both
 }
-.row,
-.clearfix {
-    zoom: 1
-}
-
 .clear {
     clear: both;
     display: block;
     overflow: hidden;
     visibility: hidden;
     width: 0;
-    height: 0
+    height: 0;
 }
 .container {
     margin: 3rem auto;
