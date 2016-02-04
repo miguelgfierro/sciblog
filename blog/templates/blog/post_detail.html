@@ -31,7 +31,6 @@
     {% else %}
     <meta property="og:image"               content="http://{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
     {% endif %}
-    <span itemscope><meta itemprop="url"    content="http://{{ object.site }}{{ object.get_absolute_url }}"/></span>
 
     <!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
     {% if object.has_latex_formula %}
