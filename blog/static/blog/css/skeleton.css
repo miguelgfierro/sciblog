@@ -202,7 +202,6 @@
 .clearfix:after {
     clear: both
 }
-
 .row,
 .clearfix {
     zoom: 1
@@ -216,14 +215,11 @@
     width: 0;
     height: 0
 }
-
 .container {
     margin: 3rem auto;
     background: #fafafa;
     padding-top: 5rem;
     padding-bottom: 7rem;
-    -moz-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
