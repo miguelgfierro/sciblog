@@ -107,8 +107,8 @@ You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and 
  
 This is how my web looks like in terms of speed using [gtmetrix](https://gtmetrix.com):
 
-![Speed rank](img/pagespeed1.png "Speed rank")
-![Speed stats](img/pagespeed2.png "Speed stats")
+![Speed rank](img/pagespeed1.png "Performance scores")
+![Speed stats](img/pagespeed2.png "Page details")
  
 Additional comments
 ==================================================
