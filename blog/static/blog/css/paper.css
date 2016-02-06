@@ -417,6 +417,20 @@ button.navigation-bar-search-icon{
   float:right;
   margin-top: 7px;
 }
+.navigation-bar-social img{
+  object-fit: none;
+  width: 32px;
+  height: 32px;
+}
+.twitter_icon{
+  object-position: 0 0;
+}
+.linkedin_icon{
+  object-position: -32px 0;
+}
+.rss_icon{
+  object-position: -64px 0;
+}
 .float-right{
   float:right;
 }
