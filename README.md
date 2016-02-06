@@ -100,18 +100,16 @@ When you are in production you have to set DEBUG = False in `sciblog/settings.py
 Also the first time you enter in your admin console (http://miguelgfierro.com/admin/) you have to go to sites and EDIT the default site, which is example.com. Change it for the name of your site without `http://` (my case would be miguelgfierro.com).
 This will set the first entry in the database to your site, which is related to the variable SITE_ID = 1 in `sciblog/settings.py`. You can see the number of the site in http://miguelgfierro.com/admin/sites/site/1/. If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable SITE_ID. In my experience it is better if you don't touch anything :-)
 
-Speed up page with PageSpeedModule (optional)
+Speed up page with Cloudflare (optional)
 ==================================================
 
-You can use [PageSpeedModule](https://developers.google.com/speed/pagespeed/module/) to speed up your page. 
+You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS.
  
-First you need to install and configure the libraries in your VPS server. Mine is 64bits so this is my example:
+This is how my web looks like in terms of speed using [gtmetrix](https://gtmetrix.com):
 
-    $ wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb
-    $ dpkg -i mod-pagespeed-*.deb
-	$ service apache2 restart
-    
-
+[Speed rank](img/pagespeed1.png "Speed rank")
+[Speed stats](img/pagespeed2.png "Speed stats")
+ 
 Additional comments
 ==================================================
 
