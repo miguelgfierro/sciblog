@@ -12,6 +12,8 @@ Blog developed in django with the same appearance of a research paper written in
 * Blog optimized for SEO
 * Comments with disqus
 * Easy writing with Ckeditor
+* (Optional) Web optimization with CloudFlare
+* (Optional) Instalation of free SSL certificate
 
 Example of sciblog: http://miguelgfierro.com
 
@@ -107,6 +109,22 @@ You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and 
 
 ![Speed rank](img/pagespeed1.png "Performance scores")
 ![Speed stats](img/pagespeed2.png "Page details")
+ 
+Secure page with SSL certificate (optional)
+==================================================
+
+You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). google prioritizes pages with SSL security so https has became a key element for SEO.
+
+The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/howitworks/). In the file sciblog.conf you have the configuration to activate the SSL. Also it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com. 
+
+	$ git clone https://github.com/letsencrypt/letsencrypt
+	$ cd letsencrypt
+	$ ./letsencrypt-auto --help
+	$ ./letsencrypt-auto --apache
+    $ a2enmod ssl
+    $ service apache2 restart
+
+NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
  
 Additional comments
 ==================================================
