@@ -82,15 +82,9 @@
       <button type="submit" class="navigation-bar-search-icon"></button>
     </form>
     <div class="navigation-bar-social">
-      <a href="{% twitter_url %}" title="Twitter">
-        <img class="twitter_icon" src="{% static 'blog/img/sprites_social_square.png' %}" width="32" height="32" alt="Twitter icon">
-      </a>
-      <a href="{% linkedin_url %}" title="Linkedin">
-        <img class="linkedin_icon" src="{% static 'blog/img/sprites_social_square.png' %}" width="32" height="32" alt="Linkedin icon">
-      </a>
-      <a href="{% rss_url %}" title="RSS">
-        <img class="rss_icon" src="{% static 'blog/img/sprites_social_square.png' %}" width="32" height="32" alt="RSS icon">
-      </a>
+      <a class="nav-rss-icon" href="{% rss_url %}" title="RSS"></a>
+      <a class="nav-linkedin-icon" href="{% linkedin_url %}" title="Linkedin"></a>
+      <a class="nav-twitter-icon" href="{% twitter_url %}" title="Twitter"></a>
     </div>
     <div class="navigation-bar-item float-right">
       <a class="navigation-bar-item-text"  href="https://feedburner.google.com/fb/a/mailverify?uri=miguelgfierro&amp;loc=en_US"  target="_blank">Subscribe</a>

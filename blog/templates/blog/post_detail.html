@@ -23,14 +23,8 @@
     <meta property="og:url"                 content="http://{{ object.site }}{{ object.get_absolute_url }}" />
     <meta property="og:type"                content="article" />
     <meta property="og:title"               content="{{ object.title }}" />
-    {% if object.abstract %}
     <meta property="og:description"         content="{{ object.abstract }}" />
-    {% endif %}
-    {% if object.image %}
-    <meta property="og:image"               content="http://{{ object.site }}{{ object.image.url }}" />
-    {% else %}
     <meta property="og:image"               content="http://{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
-    {% endif %}
 
     <!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
     {% if object.has_latex_formula %}
@@ -137,13 +131,8 @@ FB.ui({
                 </a>
                 <a class="social-icons-gp"  href="https://plus.google.com/share?url=http://{{ object.site }}{{ object.get_absolute_url }}">
                 </a>
-                {% if object.abstract %}
                 <a class="social-icons-lk"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
                 </a>
-                {% else %}
-                <a class="social-icons-lk"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url=http://{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
-                {% endif %}
                 <a class="social-icons-email"  href="mailto:?subject={{ object.title }}&body=Check out this article I read on Sciblog: http://{{ object.site }}{{ object.get_absolute_url }}">
                 </a>
             </div>

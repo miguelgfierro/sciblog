@@ -414,22 +414,26 @@ button.navigation-bar-search-icon{
   position: absolute;
 }
 .navigation-bar-social{
+  position:relative;
   float:right;
+}
+.nav-twitter-icon, .nav-linkedin-icon, .nav-rss-icon{
+  float:right;
+  margin-left: 4px;
+  display: block;
   margin-top: 7px;
-}
-.navigation-bar-social img{
-  object-fit: none;
-  width: 32px;
   height: 32px;
+  width: 32px;
 }
-.twitter_icon{
-  object-position: 0 0;
+.nav-twitter-icon{
+  margin-left:0;
+  background: url(../img/sprites_social_square.png) 0 0;
 }
-.linkedin_icon{
-  object-position: -32px 0;
+.nav-linkedin-icon{
+  background: url(../img/sprites_social_square.png) -32px 0;
 }
-.rss_icon{
-  object-position: -64px 0;
+.nav-rss-icon{
+  background: url(../img/sprites_social_square.png) -64px 0;
 }
 .float-right{
   float:right;
