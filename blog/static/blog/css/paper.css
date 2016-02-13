@@ -176,7 +176,7 @@ body {
   color: #100;
   font-family: Latex, Georgia, serif;
 }
-i{
+i,em{
   font-family: LatexItalic;
 }
 bi{
