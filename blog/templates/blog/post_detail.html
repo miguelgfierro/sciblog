@@ -65,7 +65,7 @@ FB.ui({
   method: 'share_open_graph',
   action_type: 'og.likes',
   action_properties: JSON.stringify({
-      object:'http://{{ object.site }}{{ object.get_absolute_url }}',
+      object:'{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}',
   })
 }, function(response){});
 </script>

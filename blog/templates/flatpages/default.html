@@ -1,55 +1,22 @@
 {% extends "blog/post_base.html" %}
 {% load staticfiles %}
 {% load current_site %}
-{% load social %}
 
 {% block title %}
-        {{ flatpage.title }}
+    {{ flatpage.title }}
 {% endblock %}
 
 {% block headers %}
     <!-- meta tags -->
     <meta name="description" content="About Miguel González-Fierro: activities, research, education and contact.">
     <meta name="author" content="Miguel González-Fierro">
-
-    <!-- Open tag for Facebook. Add here your app_id -->
-    <meta property="fb:app_id"      content="{% facebook_id %}"/>
-    <meta property="og:url"         content="http://{% current_site %}{{ flatpage.url }}" />
-    <meta property="og:type"        content="article" />
-    <meta property="og:title"       content="{{ flatpage.title }}" />
-    <meta property="og:image"       content="http://{% current_site %}{% static 'blog/img/author.png' %}" />
+    <link rel="canonical" href="{% http_or_https %}{% current_site %}{{ flatpage.url }}">
 
 {% endblock %}
 
 {% block content %}
 
-<!--Facebook share dialog script -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '{% facebook_id %}',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-FB.ui({
-  method: 'share_open_graph',
-  action_type: 'og.likes',
-  action_properties: JSON.stringify({
-      object:'http://{% current_site %}{{ flatpage.url }}',
-  })
-}, function(response){});
-</script>
-
 <div class="container">
-
     <div class="row">
         <div class="three columns">&nbsp;</div>
         <div class="ten columns">
