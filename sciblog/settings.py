@@ -122,6 +122,10 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 DISQUS_API_KEY = 'a4b0vyjnp1sE5hYt8GP7blDgoe1Y0ohfY4gNoWh8JpZCSyGvVN41JOrhpPgREWeZ'
 DISQUS_WEBSITE_SHORTNAME = 'miguelgfierro'
 
+# Http protocol with (https://) or without SSL (http://)
+# NOTE: You need to have a SSL certificate installed before setting this flag to True
+HTTPS = True
+
 # Social Networks
 FACEBOOK_ID = '556883141128364' #for Facebook tracking
 FACEBOOK_URL = ''

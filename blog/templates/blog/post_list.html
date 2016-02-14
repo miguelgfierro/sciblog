@@ -9,6 +9,7 @@
 {% block headers %}
   <meta name="description" content="Sciblog - A blog designed like a scientific paper. Posts are about business, startups, science, artificial intelligence and machine learning.">
   <meta name="author" content="Miguel González-Fierro">
+  <link rel="canonical" href="{% http_or_https %}{% current_site %}">
 {% endblock %}
 
 {% block content %}
@@ -63,7 +64,7 @@
         <a href="{% linkedin_url %}">Linkedin</a> •
         <a href="{% rss_url %}">RSS</a> •
         {% for aboutp in about_pages %}
-          <a href="http://{% current_site %}{{ aboutp.url }}">About</a>
+          <a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a>
         {% endfor%}
       <br>
       Proudly designed by Miguel González-Fierro and his robot -
