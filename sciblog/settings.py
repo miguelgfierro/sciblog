@@ -116,6 +116,13 @@ STATICFILES_DIRS = (
 
 # Template directory
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+MOBILE_TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates', 'mobile'),
+)
+DESKTOP_TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates', 'desktop'),
+)
+
 
 # Disqus configuration (for managing comments)
 # To install disqus http://django-disqus.readthedocs.org/en/latest/index.html
