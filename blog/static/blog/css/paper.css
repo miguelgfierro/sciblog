@@ -157,6 +157,12 @@ h6{
   font-size: 14px;
   margin-bottom:0.5rem;
 }
+ul{
+  font-size: 16px;
+  padding-left: 2rem;
+  margin: 10px 0;
+  text-indent: 0px;
+}
 ol{
   font-size: 14px;
   padding-left: 1rem;
