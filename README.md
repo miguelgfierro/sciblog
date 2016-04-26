@@ -110,7 +110,7 @@ In order to debug with a mobile phone first you need to set `DEBUG = True` in `s
 	 
 Then you need to know the IP of your computer. In Linux and Mac the command is `ifconfig`, in Windows is `ipconfig`. Then, to access your computer's server from a mobile phone, you have to open a browser in the phone and put the IP you just get. Let's assume the IP in my computer is 192.168.1.5, then you put in your mobile browser:
 	 
-	$ http://192.168.1.5:8000 
+	http://192.168.1.5:8000 
 
 
 Speed up page with Cloudflare (optional)
