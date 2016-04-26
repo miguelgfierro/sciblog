@@ -11,8 +11,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>{% block title %} {% endblock %}</title>
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
 
   <!-- Load template tags -->
   {% load staticfiles %}
@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" sizes="114x114" href="{% static 'blog/img/apple-touch-icon-114x114.png' %}">
 
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.min.css' %}">
-  <link rel="stylesheet" href="{% static 'blog/css/paper.min.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/paper_mobile.min.css' %}">
 
   {% block headers %}
   <!-- Add headers in the child templates -->
@@ -52,7 +52,7 @@
     "@context" : "http://schema.org",
     "@type" : "Blog",
     "name" : "miguelgfierro",
-    "url" : "http://{% current_site %}",
+    "url" : "{% http_or_https %}{% current_site %}",
     "sameAs" : [
       "{% twitter_url %}",
       "{% google_plus_url %}",

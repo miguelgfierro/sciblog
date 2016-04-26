@@ -52,7 +52,7 @@
     "@context" : "http://schema.org",
     "@type" : "Blog",
     "name" : "miguelgfierro",
-    "url" : "http://{% current_site %}",
+    "url" : "{% http_or_https %}{% current_site %}",
     "sameAs" : [
       "{% twitter_url %}",
       "{% google_plus_url %}",

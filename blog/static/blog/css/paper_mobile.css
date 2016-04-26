@@ -1,0 +1,465 @@
+/* ************************************************************************** */
+/*
+* paper.css
+*
+* This css can be use to give your webpage the appearance of a scientific paper
+* written in Latex.
+*
+* Copyright 2015, Miguel Gonzalez-Fierro
+* Twitter: @miguelgfierro
+* Github: https://github.com/hoaphumanoid/
+* Blog: http://www.miguelgfierro.com
+*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+/* ************************************************************************** */
+/* Fonts */
+@font-face {
+  font-family: Latex;
+  src: url(../font/cmunrm.woff);
+}
+@font-face {
+  font-family: LatexBold;
+  src: url(../font/cmunbx.woff);
+}
+@font-face {
+  font-family: LatexItalic;
+  src: url(../font/cmunti.woff);
+}
+@font-face {
+  font-family: LatexBoldItalic;
+  src: url(../font/cmunbi.woff);
+}
+/* ************************************************************************** */
+/* Initial styles*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0px;
+  padding: 0px;
+  border: 0px none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  background: #fff;
+  font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+}
+a, a:visited {
+  color: #333;
+  text-decoration: underline;
+  outline: 0px none;
+}
+input[type="text"], input[type="password"], input[type="email"], textarea, select {
+  border: 1px solid #CCC;
+  padding: 6px 4px;
+  outline: medium none;
+  border-radius: 2px;
+  font: 13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #777;
+  margin: 0px 0px 20px;
+  width: 210px;
+  max-width: 100%;
+  display: block;
+  background: #FFF none repeat scroll 0% 0%;
+}
+/* ************************************************************************** */
+/* Classes from Latex */
+h1,h2,h3,h4,h5,h6{
+  font-family: Latex, Georgia, serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: inherit;
+}
+h1.title{
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 35px;
+  line-height: 40px;
+  text-align: center;
+  margin: 1rem 0 0.5rem 0.5rem;
+}
+h1.title a,a:visited{
+  text-decoration:none;
+  color:#000;
+}
+h1.title a:hover{
+  text-decoration:underline;
+}
+h2.keywords{
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom:0.5rem;
+}
+h2.keywords:before{
+  content: "Keywords: ";
+  font-family: LatexItalic;
+}
+h3.abstract{
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom:0.5rem;
+}
+h3.abstract:before{
+  content: "Abstract— ";
+  font-family: LatexBoldItalic;
+}
+.author{
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.submission-date{
+  font-size: 14px;
+  text-align: center;
+}
+.submission-date:before{
+  content: "Submission date: ";
+}
+.submission-date-list{
+  font-size: 14px;
+  text-align: center;
+}
+/*.section{*/
+h4{
+  font-size: 21px;
+  line-height: 30px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: LatexBold;
+  padding: 0 1rem;
+}
+/*.subsection{*/
+h5{
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: LatexBold;
+  padding: 0 1rem;
+}
+/*.subsubsection{*/
+h6{
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+.image{
+  text-align: center;
+}
+.image .image-caption{
+  font-size: 14px;
+  margin-bottom:0.5rem;
+}
+ul{
+  font-size: 16px;
+  padding-left: 2rem;
+  margin: 10px 0;
+  text-indent: 0px;
+}
+ol{
+  font-size: 14px;
+  padding-left: 1rem;
+  text-indent: 0px;
+  text-align: justify;
+  counter-reset:li; /* Initiate a counter */
+  list-style:none; /* Disable the normal item numbering */
+}
+ol li:before{
+  content:'['counter(li)'] '; /* Use the counter as content */
+  counter-increment:li; /* Increment the counter by 1 */
+}
+/* ************************************************************************** */
+/* Blog styles*/
+body {
+  background: #e9e8ed url("../img/gradient_texture10.jpg") repeat-x scroll 0px 0px;
+  color: #100;
+  font-family: Latex, Georgia, serif;
+}
+i,em{
+  font-family: LatexItalic;
+}
+bi{
+  font-family: LatexBoldItalic;
+}
+strong{
+  font-family: LatexBold;
+}
+p {
+  hyphens: auto;
+  font-size: 16px;
+  padding: 0 1rem;
+  margin: 10px 0;
+}
+p.item {
+  padding-left: 2rem;
+  text-indent: 0px;
+}
+p.item:before {
+  content: '•';
+  font-size: 14px;
+  position: relative;
+  bottom: 2px;
+}
+p.wrap:before {
+  content: '';
+}
+p.wrap {
+  text-indent: 0px;
+}
+.no-margin-top{
+  margin-top: 0;
+}
+.container{
+  text-align: justify;
+  height:1133px;
+  padding-top:4rem;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.container-list{
+  margin: 2rem auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: auto;
+}
+.container-comments{
+  position: relative;
+  width: 960px;
+  height: auto;
+  text-align: center;
+  background: #FAFAFA none repeat scroll 0% 0%;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  padding-top: 2rem;
+  padding-right: 0rem;
+  padding-bottom: 1rem;
+  padding-left: 0rem;
+  font-size: 14px;
+  font-family: Latex, Georgia, serif;
+}
+.row-comments{
+  margin-bottom: 20px;
+  padding-left:8rem;
+  padding-right:8rem;
+}
+.container-footer{
+  position: relative;
+  width: 960px;
+  text-align: center;
+  background: #FAFAFA none repeat scroll 0% 0%;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-bottom: 0rem;
+  margin-left: auto;
+  padding-top: 2rem;
+  padding-right: 0rem;
+  padding-bottom: 3rem;
+  padding-left: 0rem;
+  font-size: 14px;
+}
+.container-footer a, a:visited{
+  text-decoration:none;
+  padding: 0rem 2rem;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4rem;
+}
+.footer, .push {
+  height: 4rem;
+}
+.pager{
+  font-size: 18px;
+}
+.pager hr{
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin: 1rem auto;
+}
+.social-icons{
+  margin-top:5rem;
+  margin-left:1.8rem;
+  overflow: hidden;
+}
+.social-icons-fb, .social-icons-tw, .social-icons-gp, .social-icons-lk, .social-icons-email{
+  display: block;
+  float:left;
+  margin-right:4px;
+  height: 32px;
+  width: 32px;
+}
+.social-icons-fb{
+  background: url(../img/sprites_social_circle.png) 0 0;
+  margin-left: 4px;
+}
+.social-icons-fb:hover{
+  background: url(../img/sprites_social_circle.png) 0 -32px;
+}
+.social-icons-tw{
+  background: url(../img/sprites_social_circle.png) -32px 0;
+}
+.social-icons-tw:hover{
+  background: url(../img/sprites_social_circle.png) -32px -32px;
+}
+.social-icons-gp{
+  background: url(../img/sprites_social_circle.png) -64px 0;
+}
+.social-icons-gp:hover{
+  background: url(../img/sprites_social_circle.png) -64px -32px;
+}
+.social-icons-lk{
+  background: url(../img/sprites_social_circle.png) -96px 0;
+}
+.social-icons-lk:hover{
+  background: url(../img/sprites_social_circle.png) -96px -32px;
+}
+.social-icons-email{
+  background: url(../img/sprites_social_circle.png) -128px 0;
+}
+.social-icons-email:hover{
+  background: url(../img/sprites_social_circle.png) -128px -32px;
+}
+.navigation-bar{
+  height: 46px;
+  position: relative;
+  width: 100%;
+  background: #000 none repeat scroll 0% 0%;
+  min-width: 960px;
+}
+.navigation-bar-container{
+  width:960px;
+  height: 46px;
+  text-align: center;
+  margin: 0px auto;
+  overflow: hidden;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  text-align: center;
+}
+.navigation-bar-home{
+  background-image: url("../img/hoap_front_small.png");
+  display:block;
+  background-position: left top;
+  background-repeat: no-repeat;
+  float:left;
+  margin-bottom: 5px;
+  height: 46px;
+}
+.navigation-bar-home-text{
+  float:left;
+  width: 50px;
+  padding-top: 11px;
+  padding-left: 65px;
+  padding-bottom: 10px;
+}
+a.navigation-bar-home-text{
+  color:#FFF;
+  text-decoration:none;
+}
+a:hover.navigation-bar-home-text{
+  border-bottom: 5px solid #FFF;
+}
+.navigation-bar-item{
+  height: 46px;
+  width: auto;
+  position:relative;
+  float:left;
+}
+.navigation-bar-item-text{
+  float:left;
+  padding-top: 11px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-right: 23px;
+}
+a.navigation-bar-item-text{
+  color:#FFF;
+  text-decoration:none;
+}
+a:hover.navigation-bar-item-text{
+  border-bottom: 5px solid #FFF;
+}
+.navigation-bar-search{
+  float: left;
+  position: relative;
+}
+input.navigation-bar-search-input{
+float:left;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 7px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+button.navigation-bar-search-icon{
+  background-image: url("../img/icon_search.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border:none;
+  background-color:inherit;
+  cursor:pointer;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  right: 0px;
+  top:0px;
+  position: absolute;
+}
+.navigation-bar-social{
+  position:relative;
+  float:right;
+}
+.nav-twitter-icon, .nav-linkedin-icon, .nav-rss-icon{
+  float:right;
+  margin-left: 4px;
+  display: block;
+  margin-top: 7px;
+  height: 32px;
+  width: 32px;
+}
+.nav-twitter-icon{
+  margin-left:0;
+  background: url(../img/sprites_social_square.png) 0 0;
+}
+.nav-linkedin-icon{
+  background: url(../img/sprites_social_square.png) -32px 0;
+}
+.nav-rss-icon{
+  background: url(../img/sprites_social_square.png) -64px 0;
+}
+.float-right{
+  float:right;
+}
+.float-left{
+  float-left;
+}
+.page_title{
+  display: none;
+}
+.page_template{
+  display: none;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 0.8em 10px;
+  padding: 0.1rem 0.5rem;
+  font-family: LatexItalic;
+  font-size: 16px;
+}
+
+
