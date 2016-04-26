@@ -7,12 +7,9 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
+import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-import django
-import tempfile
-
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -58,6 +55,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'blog.middleware.MobileTemplatesMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -115,12 +113,15 @@ STATICFILES_DIRS = (
 )
 
 # Template directory
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+#TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'blog', 'templates'),
+)
 MOBILE_TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates', 'mobile'),
+    os.path.join(BASE_DIR, 'blog', 'templates', 'mobile'),
 )
 DESKTOP_TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates', 'desktop'),
+    os.path.join(BASE_DIR, 'blog', 'templates', 'desktop'),
 )
 
 

@@ -1,0 +1,56 @@
+{% extends "blog/post_base.html" %}
+{% load current_site %}
+{% load social %}
+
+{% block title %}
+    Sciblog - A blog designed like a scientific paper
+{% endblock %}
+
+{% block headers %}
+  <meta name="description" content="Sciblog - A blog designed like a scientific paper. Posts are about business, startups, science, artificial intelligence and machine learning.">
+  <meta name="author" content="Miguel González-Fierro">
+  <link rel="canonical" href="{% http_or_https %}{% current_site %}">
+{% endblock %}
+
+{% block content %}
+    {% if object_list %}
+        {% for object in object_list %}
+        <div class="container container-list">
+            <div class="row">
+                <div class="two columns">&nbsp;</div>
+                <div class="twelve columns">
+                    <h1 class="title" style="margin-top: 3rem"><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h1>
+                    <div class="submission-date-list"> {{ object.pub_date }}</div>
+                    <div itemscope itemtype="http://schema.org/Person">
+                    <h3 itemprop="author" class="author"> {{ object.authors }}</h3>
+                    </div>
+                </div>
+                <div class="two columns">&nbsp;</div>
+            </div>
+            <div class="row" style="margin-bottom:10px">
+                <div class="four columns">&nbsp;</div>
+                <div class="eight columns">
+                    <h2 class="abstract"> {{ object.abstract }}</h2>
+                </div>
+                <div class="four columns">&nbsp;</div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="container container-list">
+            <div class="row">
+                <div class="two columns">&nbsp;</div>
+                <div class="twelve columns">
+                    <h1 class="title" style="margin-top: 3rem">There are no posts</h1>
+                </div>
+                <div class="two columns">&nbsp;</div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Pages -->
+sdfasdfasfdsadfaasdf
+
+
+
+{% endblock %}
