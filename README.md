@@ -49,9 +49,9 @@ In a browser put the link: [http://localhost:8000/admin/](http://localhost:8000/
 The panel will ask you to put username and password. Once you are in django dashboard you can start to add content to
 your blog.
 
-When you are in localhost you have to set DEBUG = True in sciblog/settings.py. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
+When you are in localhost you have to set `DEBUG = True` in `sciblog/settings.py`. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
 
-To work with disqus comments you have to get your DISQUS_API_KEY and DISQUS_WEBSITE_SHORTNAME. They can be obtained https://disqus.com/api/applications/ 
+To work with disqus comments you have to get your `DISQUS_API_KEY` and `DISQUS_WEBSITE_SHORTNAME`. They can be obtained https://disqus.com/api/applications/ 
 
 Set up the project in a Ubuntu VPS server
 ==================================================
@@ -97,10 +97,21 @@ In Flat pages press add. In url put `/about/` (don't forget / in both sides). In
 Notes to manage the blog in the production environment
 ==================================================
 
-When you are in production you have to set DEBUG = False in `sciblog/settings.py`.
+When you are in production you have to set `DEBUG = False` in `sciblog/settings.py`.
 
 Also the first time you enter in your admin console (http://miguelgfierro.com/admin/) you have to go to sites and EDIT the default site, which is example.com. Change it for the name of your site without `http://` (my case would be miguelgfierro.com).
 This will set the first entry in the database to your site, which is related to the variable SITE_ID = 1 in `sciblog/settings.py`. You can see the number of the site in http://miguelgfierro.com/admin/sites/site/1/. If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable SITE_ID. In my experience it is better if you don't touch anything :-)
+
+Managing mobile view
+==================================================
+In order to debug with a mobile phone first you need to set `DEBUG = True` in `sciblog/settings.py`. Then you have to run the django server in the computer's external IP. To do that:
+
+	$ python manage.py runserver 0.0.0.0:8000
+	 
+Then you need to know the IP of your computer. In Linux and Mac the command is `ifconfig`, in Windows is `ipconfig`. Then, to access your computer's server from a mobile phone, you have to open a browser in the phone and put the IP you just get. Let's assume the IP in my computer is 192.168.1.5, then you put in your mobile browser:
+	 
+	$ http://192.168.1.5:8000 
+
 
 Speed up page with Cloudflare (optional)
 ==================================================
