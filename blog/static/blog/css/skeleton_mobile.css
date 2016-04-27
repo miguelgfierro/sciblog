@@ -38,8 +38,8 @@
     margin: 0!important
 }
 
-.container .one.column {
-    width: 4.1666%;
+.container .columns.one {
+    width: 6.25%;
 }
 
 .container .columns.two {
