@@ -338,10 +338,8 @@ p.wrap {
   position: relative;
   width: 100%;
   background: #000 none repeat scroll 0% 0%;
-  min-width: 960px;
 }
 .navigation-bar-container{
-  width:960px;
   height: 46px;
   text-align: center;
   margin: 0px auto;
@@ -349,49 +347,15 @@ p.wrap {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size:16px;
   text-align: center;
-}
-.navigation-bar-home{
   background-image: url("../img/hoap_front_small.png");
   display:block;
   background-position: left top;
   background-repeat: no-repeat;
+}
+.navigation-bar-home{
   float:left;
   margin-bottom: 5px;
   height: 46px;
-}
-.navigation-bar-home-text{
-  float:left;
-  width: 50px;
-  padding-top: 11px;
-  padding-left: 65px;
-  padding-bottom: 10px;
-}
-a.navigation-bar-home-text{
-  color:#FFF;
-  text-decoration:none;
-}
-a:hover.navigation-bar-home-text{
-  border-bottom: 5px solid #FFF;
-}
-.navigation-bar-item{
-  height: 46px;
-  width: auto;
-  position:relative;
-  float:left;
-}
-.navigation-bar-item-text{
-  float:left;
-  padding-top: 11px;
-  padding-left: 25px;
-  padding-bottom: 10px;
-  padding-right: 23px;
-}
-a.navigation-bar-item-text{
-  color:#FFF;
-  text-decoration:none;
-}
-a:hover.navigation-bar-item-text{
-  border-bottom: 5px solid #FFF;
 }
 .navigation-bar-search{
   float: left;
@@ -403,6 +367,7 @@ float:left;
   margin-top: 7px;
   margin-bottom: 0px;
   padding-bottom: 5px;
+  width: 100%;
 }
 button.navigation-bar-search-icon{
   background-image: url("../img/icon_search.png");
@@ -461,4 +426,70 @@ blockquote {
   font-size: 16px;
 }
 
+header {
+	background: #fff;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
 
+
+
+nav {
+	float: right;
+	padding: 4px;
+}
+
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #000 url(../img/menu-icon.png) center;
+}
+
+a:hover#menu-icon {
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+}
+
+
+@media only screen and (max-width : 640px) {
+	header {
+		position: absolute;
+	}
+	#menu-icon {
+		display:inline-block;
+	}
+	nav ul, nav:active ul {
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	nav:hover ul {
+		display: block;
+	}
+}

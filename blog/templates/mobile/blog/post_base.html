@@ -63,34 +63,29 @@
 
 
 </head>
-<body>
+
 
 <!-- Navigation bar -->
-<!--<div class="navigation-bar">
-  <div class="navigation-bar-container">
-    <div class="navigation-bar-home">
-      <a class="navigation-bar-home-text" href="/">Home</a>
-    </div>
-    <div class="navigation-bar-item">
-      {% for aboutp in about_pages %}
-        <a class="navigation-bar-item-text" href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a>
-      {% endfor%}
-    </div>
-    <form action="/search" method="GET" class="navigation-bar-search">
-      <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
-      <button type="submit" class="navigation-bar-search-icon"></button>
-    </form>
-    <div class="navigation-bar-social">
-      <a class="nav-rss-icon" href="{% rss_url %}" title="RSS"></a>
-      <a class="nav-linkedin-icon" href="{% linkedin_url %}" title="Linkedin"></a>
-      <a class="nav-twitter-icon" href="{% twitter_url %}" title="Twitter"></a>
-    </div>
-    <div class="navigation-bar-item float-right">
-      <a class="navigation-bar-item-text"  href="https://feedburner.google.com/fb/a/mailverify?uri=miguelgfierro&amp;loc=en_US"  target="_blank">Subscribe</a>
-    </div>
-  </div>
-</div>-->
 
+<header>
+<div class="navigation-bar">
+  <div class="navigation-bar-container">
+    <nav>
+      <a href="#" id="menu-icon"></a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a></li>
+        <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=miguelgfierro&amp;loc=en_US">Subscribe</a></li>
+        <form action="/search" method="GET" class="navigation-bar-search">
+          <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
+          <button type="submit" class="navigation-bar-search-icon"></button>
+        </form>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+</header>
   {% block content %}
 
   {% endblock %}
