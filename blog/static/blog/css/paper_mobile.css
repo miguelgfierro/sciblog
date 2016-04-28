@@ -252,7 +252,7 @@ p.wrap {
 }
 .container-footer{
   position: relative;
-  width: 960px;
+  width: 100%;
   text-align: center;
   background: #FAFAFA none repeat scroll 0% 0%;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);

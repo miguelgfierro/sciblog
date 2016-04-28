@@ -49,8 +49,24 @@
     {% endif %}
 
     <!-- Pages -->
-sdfasdfasfdsadfaasdf
-
+      <div class="footer container-footer">
+        <div class="pager">
+        {% if page_obj.has_previous %}
+            <a href="/{{ page_obj.previous_page_number }}">«</a>
+        {% endif %}
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        {% if page_obj.has_next %}
+            <a href="/{{ page_obj.next_page_number }}">»</a>
+        {% endif %}
+          <hr>
+        </div>
+        <a href="{% twitter_url %}">Twitter</a> •
+        <a href="{% linkedin_url %}">Linkedin</a> •
+        <a href="{% rss_url %}">RSS</a>
+      <br>
+      Designed by Miguel González-Fierro -
+      <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
+    </div>
 
 
 {% endblock %}
