@@ -383,28 +383,6 @@ button.navigation-bar-search-icon{
   top:0px;
   position: absolute;
 }
-.navigation-bar-social{
-  position:relative;
-  float:right;
-}
-.nav-twitter-icon, .nav-linkedin-icon, .nav-rss-icon{
-  float:right;
-  margin-left: 4px;
-  display: block;
-  margin-top: 7px;
-  height: 32px;
-  width: 32px;
-}
-.nav-twitter-icon{
-  margin-left:0;
-  background: url(../img/sprites_social_square.png) 0 0;
-}
-.nav-linkedin-icon{
-  background: url(../img/sprites_social_square.png) -32px 0;
-}
-.nav-rss-icon{
-  background: url(../img/sprites_social_square.png) -64px 0;
-}
 .float-right{
   float:right;
 }
@@ -425,71 +403,62 @@ blockquote {
   font-family: LatexItalic;
   font-size: 16px;
 }
-
 header {
-	background: #fff;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
-
-
-
 nav {
-	float: right;
-	padding: 4px;
+  float: right;
+  padding: 4px;
 }
-
 #menu-icon {
-	display: hidden;
-	width: 40px;
-	height: 40px;
-	background: #000 url(../img/menu-icon.png) center;
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #000 url(../img/menu-icon.png) center;
 }
-
 a:hover#menu-icon {
-	background-color: #444;
-	border-radius: 4px 4px 0 0;
+  background-color: #444;
+  border-radius: 4px 4px 0 0;
 }
-
 ul {
-	list-style: none;
+  list-style: none;
 }
-
 li {
-	display: inline-block;
-	float: left;
-	padding: 10px
+  display: inline-block;
+  float: left;
+  padding: 10px
 }
-
-
 @media only screen and (max-width : 640px) {
-	header {
-		position: absolute;
-	}
-	#menu-icon {
-		display:inline-block;
-	}
-	nav ul, nav:active ul {
-		display: none;
-		position: absolute;
-		padding: 20px;
-		background: #fff;
-		border: 5px solid #444;
-		right: 20px;
-		top: 60px;
-		width: 50%;
-		border-radius: 4px 0 4px 4px;
-	}
-	nav li {
-		text-align: center;
-		width: 100%;
-		padding: 10px 0;
-		margin: 0;
-	}
-	nav:hover ul {
-		display: block;
-	}
+  header {
+    position: absolute;
+  }
+  #menu-icon {
+    display:inline-block;
+  }
+  nav ul, nav:active ul {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background: #fff;
+    border: 5px solid #444;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 4px 0 4px 4px;
+  }
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+  nav:hover ul {
+    display: block;
+  }
 }
+
