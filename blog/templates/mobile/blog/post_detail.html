@@ -134,24 +134,21 @@ FB.ui({
 
 
 
-<!-- disqus comments
+<!-- disqus comments -->
 <div class="container-comments">
     <div class="row-comments">
         {% disqus_show_comments %}
     </div>
-</div>-->
+</div>
 
-<!-- footer
+<!-- footer-->
 <div class="footer container-footer" style="padding: 2rem 0rem 0.5rem;">
         <a href="{% twitter_url %}">Twitter</a> •
         <a href="{% linkedin_url %}">Linkedin</a> •
-        <a href="{% rss_url %}">RSS</a> •
-        {% for aboutp in about_pages %}
-          <a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a>
-        {% endfor%}
+        <a href="{% rss_url %}">RSS</a>
       <br>
-      Proudly designed by Miguel González-Fierro and his robot -
+      Designed by Miguel González-Fierro -
       <a style="padding:0px;" href="https://github.com/hoaphumanoid/sciblog">Github</a>
-</div>-->
+</div>
 
 {% endblock %}

@@ -229,7 +229,7 @@ p.wrap {
 }
 .container-comments{
   position: relative;
-  width: 960px;
+  width: 100%;
   height: auto;
   text-align: center;
   background: #FAFAFA none repeat scroll 0% 0%;
