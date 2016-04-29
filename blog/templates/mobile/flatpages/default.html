@@ -1,0 +1,40 @@
+{% extends "blog/post_base.html" %}
+{% load staticfiles %}
+{% load current_site %}
+
+{% block title %}
+    {{ flatpage.title }}
+{% endblock %}
+
+{% block headers %}
+    <!-- meta tags -->
+    <meta name="description" content="About Miguel González-Fierro: activities, research, education and contact.">
+    <meta name="author" content="Miguel González-Fierro">
+    <link rel="canonical" href="{% http_or_https %}{% current_site %}{{ flatpage.url }}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="three columns">&nbsp;</div>
+        <div class="ten columns">
+            <h1 class="title" style="padding-bottom:1rem;padding-top:8rem;"> {{ flatpage.title }}</h1>
+            <div class="image">
+                <img src="{% static 'blog/img/author.png' %}"  width="200" height="220" alt="{{ flatpage.title }}">
+                <div class="image-caption">This is the face of {{ flatpage.title }}. <br>He also has a body, although it is
+                    not pictured here.</div>
+            </div>
+        </div>
+        <div class="three columns">&nbsp;</div>
+    </div>
+
+    <div class="row">
+        <div class="two columns">&nbsp;</div>
+        {{ flatpage.content }}
+        <div class="two columns">&nbsp;</div>
+    </div>
+</div>
+
+{% endblock %}

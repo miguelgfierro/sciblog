@@ -70,7 +70,9 @@
       <a href="#" id="menu-icon"></a>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a></li>
+        {% for aboutp in about_pages %}
+          <li><a href="{{ aboutp.url }}">About</a></li>
+        {% endfor%}
         <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=miguelgfierro&amp;loc=en_US">Subscribe</a></li>
         <form action="/search" method="GET" class="navigation-bar-search">
           <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
