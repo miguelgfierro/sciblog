@@ -1,7 +1,9 @@
 from django.contrib import admin
-from blog.models import Post, RichTextFlatPage
+from blog.models import Post
 from django.contrib.flatpages.admin import FlatpageForm, FlatPageAdmin
 from django.contrib.flatpages.models import FlatPage
+from django import forms
+from libs.ckeditor.widgets import CKEditorWidget
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -24,15 +26,16 @@ class PostAdmin(admin.ModelAdmin):
 
 
 class ExtendedFlatPageForm(FlatpageForm):
+    locals()['content'] = forms.CharField(widget=CKEditorWidget(), required=False, label=(u'Content'))
     class Meta:
-        model = RichTextFlatPage
+        model = FlatPage
 
 class ExtendedFlatPageAdmin(FlatPageAdmin):
     form = ExtendedFlatPageForm
     fieldsets = (
-        (None, {'fields': ('url', 'title', 'content_rich', 'sites', )}),
+        (None, {'fields': ('url', 'title', 'content', 'sites', )}),
     )
 
 admin.site.unregister(FlatPage)
-admin.site.register(RichTextFlatPage, ExtendedFlatPageAdmin)
+admin.site.register(FlatPage, ExtendedFlatPageAdmin)
 admin.site.register(Post,PostAdmin)
