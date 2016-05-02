@@ -1,5 +1,7 @@
 from django.contrib import admin
-from blog.models import Post
+from blog.models import Post, RichTextFlatPage
+from django.contrib.flatpages.admin import FlatpageForm, FlatPageAdmin
+from django.contrib.flatpages.models import FlatPage
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -21,4 +23,16 @@ class PostAdmin(admin.ModelAdmin):
         obj.save()
 
 
+class ExtendedFlatPageForm(FlatpageForm):
+    class Meta:
+        model = RichTextFlatPage
+
+class ExtendedFlatPageAdmin(FlatPageAdmin):
+    form = ExtendedFlatPageForm
+    fieldsets = (
+        (None, {'fields': ('url', 'title', 'content_rich', 'sites', )}),
+    )
+
+admin.site.unregister(FlatPage)
+admin.site.register(RichTextFlatPage, ExtendedFlatPageAdmin)
 admin.site.register(Post,PostAdmin)

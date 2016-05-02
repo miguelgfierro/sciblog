@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.template.defaultfilters import slugify
 from django.contrib.sites.models import Site
 from libs.ckeditor_uploader.fields import RichTextUploadingField
+from django.contrib.flatpages.models import FlatPage
 
 class Post(models.Model):
     title = models.CharField(max_length=67, unique=True)
@@ -35,3 +36,6 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-pub_date"]
+
+class RichTextFlatPage(FlatPage):
+    content_rich = RichTextUploadingField(blank=True, null=True)
