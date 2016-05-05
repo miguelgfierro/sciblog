@@ -16,25 +16,90 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="three columns">&nbsp;</div>
-        <div class="ten columns">
-            <h1 class="title" style="padding-bottom:1rem;padding-top:8rem;"> {{ flatpage.title }}</h1>
-            <div class="image">
-                <img src="{% static 'blog/img/author.png' %}"  width="200" height="220" alt="{{ flatpage.title }}">
-                <div class="image-caption">This is the face of {{ flatpage.title }}. <br>He also has a body, although it is
-                    not pictured here.</div>
-            </div>
-        </div>
-        <div class="three columns">&nbsp;</div>
-    </div>
+<!-- Page columnizer -->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+	<script src="{% static 'blog/js/jquery.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'blog/js/jquery.columnizer.min.js' %}" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function(){
+			var content_height;
+			var page = 1;
+			function buildNewsletter(){
+			    var content_lenght = $('#blogContent').contents().length
+				if($('#blogContent').contents().length > 0){
+				    console.log("$('#blogContent').contents().length = ", content_lenght)
+                    if(page == 1){
+                        content_height = 650;
+					    $page = $(".page_title:first").clone().addClass("texto").css("display", "block");
+					}
+					else{
+					    content_height = 1150;
+					    $page = $(".page_template:first").clone().addClass("texto").css("display", "block");
+					}
+					$("body").append($page);
+					page++;
+					// here is the columnizer magic
+					$('#blogContent').columnize({
+						columns: 2,
+						target: ".texto:last .content",
+						overflow: {
+							height: content_height,
+							id: "#blogContent",
+							doneFunc: function(){
+								console.log("done with page",page-1);
+								buildNewsletter();
+							}
+						}
+					});
+				}
+				else{
+				    console.log("$('#blogContent').contents().length <= 0");
+				    $("body").append($(".container-comments"));
+				    $("body").append($(".footer"));
+				    console.log("Page building finished");
+				}
+			}
+			buildNewsletter();
+		});
+	</script>
 
-    <div class="row">
-        <div class="two columns">&nbsp;</div>
-        {{ flatpage.content }}
-        <div class="two columns">&nbsp;</div>
+
+<!-- Page building -->
+<div class="page_title">
+    <div class="container">
+        <div class="row">
+            <div class="three columns">&nbsp;</div>
+            <div class="ten columns">
+                <h1 class="title" style="padding-bottom:1rem;padding-top:8rem;"> {{ flatpage.title }}</h1>
+                <div class="image">
+                    <img src="{% static 'blog/img/author.png' %}"  width="200" height="220" alt="{{ flatpage.title }}">
+                    <div class="image-caption">This is the face of {{ flatpage.title }}. <br>He also has a body, although it is
+                        not pictured here.  </div>
+                </div>
+            </div>
+            <div class="three columns">&nbsp;</div>
+        </div>
+
+        <div class="row">
+            <div class="two columns">&nbsp;</div>
+            <div class="twelve columns content"></div>
+            <div class="two columns">&nbsp;</div>
+        </div>
     </div>
+</div>
+
+<div class="page_template">
+    <div class="container">
+        <div class="row">
+            <div class="two columns">&nbsp;</div>
+            <div class="twelve columns content"></div>
+            <div class="two columns">&nbsp;</div>
+        </div>
+    </div>
+</div>
+
+<div id="blogContent" style="display: none">
+        {{ flatpage.content }}
 </div>
 
 {% endblock %}
