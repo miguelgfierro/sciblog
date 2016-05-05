@@ -1,6 +1,9 @@
+/**
+  * Original skeleton css file
+  */
 .container {
     position: relative;
-    width: 100%;
+    width: 960px;
     margin: 0 auto;
     padding: 0
 }
@@ -38,68 +41,144 @@
     margin: 0!important
 }
 
-.container .columns.one {
-    width: 6.25%;
+.container .one.column {
+    width: 40px
 }
 
 .container .columns.two {
-    width: 12.5%;
+    width: 120px
 }
 
 .container .columns.three {
-    width: 18.75%;
+    width: 180px
 }
 
 .container .columns.four {
-    width: 25%;
+    width: 240px
 }
 
 .container .columns.five {
-    width: 31.25%;
+    width: 300px
 }
 
 .container .columns.six {
-    width: 37.5%;
+    width: 360px
 }
 
 .container .columns.seven {
-    width: 43.75%;
+    width: 420px
 }
 
 .container .columns.eight {
-    width: 50%;
+    width: 480px
 }
 
 .container .columns.nine {
-    width: 56.25%;
+    width: 540px
 }
 
 .container .columns.ten {
-    width: 62.5;
+    width: 600px
 }
 
 .container .columns.eleven {
-    width: 68.75%;
+    width: 660px
 }
 
 .container .columns.twelve {
-    width: 75%;
+    width: 720px
 }
 
 .container .columns.thirteen {
-    width: 81.25%;
+    width: 780px
 }
 
 .container .columns.fourteen {
-    width: 87.5%;
+    width: 840px
 }
 
 .container .columns.fifteen {
-    width: 93.75%;
+    width: 900px
 }
 
 .container .columns.sixteen {
-    width: 100%;
+    width: 960px
+}
+
+.container .columns.twenty {
+    width: 1200px
+}
+
+.container .columns.twentyfour {
+    width: 1420px
+}
+
+.container .one-third.column {
+    width: 300px
+}
+
+.container .two-thirds.column {
+    width: 620px
+}
+
+.container .offset-by-one {
+    padding-left: 60px
+}
+
+.container .offset-by-two {
+    padding-left: 120px
+}
+
+.container .offset-by-three {
+    padding-left: 180px
+}
+
+.container .offset-by-four {
+    padding-left: 240px
+}
+
+.container .offset-by-five {
+    padding-left: 300px
+}
+
+.container .offset-by-six {
+    padding-left: 360px
+}
+
+.container .offset-by-seven {
+    padding-left: 420px
+}
+
+.container .offset-by-eight {
+    padding-left: 480px
+}
+
+.container .offset-by-nine {
+    padding-left: 540px
+}
+
+.container .offset-by-ten {
+    padding-left: 600px
+}
+
+.container .offset-by-eleven {
+    padding-left: 660px
+}
+
+.container .offset-by-twelve {
+    padding-left: 720px
+}
+
+.container .offset-by-thirteen {
+    padding-left: 780px
+}
+
+.container .offset-by-fourteen {
+    padding-left: 840px
+}
+
+.container .offset-by-fifteen {
+    padding-left: 900px
 }
 
 .container:after {

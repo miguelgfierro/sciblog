@@ -5,13 +5,6 @@
     padding: 0
 }
 
-.container.plusfour {
-    width: 1200px
-}
-
-.container.pluseight {
-    width: 1440px
-}
 
 .column,
 .columns {
@@ -102,81 +95,6 @@
     width: 960px
 }
 
-.container .columns.twenty {
-    width: 1200px
-}
-
-.container .columns.twentyfour {
-    width: 1420px
-}
-
-.container .one-third.column {
-    width: 300px
-}
-
-.container .two-thirds.column {
-    width: 620px
-}
-
-.container .offset-by-one {
-    padding-left: 60px
-}
-
-.container .offset-by-two {
-    padding-left: 120px
-}
-
-.container .offset-by-three {
-    padding-left: 180px
-}
-
-.container .offset-by-four {
-    padding-left: 240px
-}
-
-.container .offset-by-five {
-    padding-left: 300px
-}
-
-.container .offset-by-six {
-    padding-left: 360px
-}
-
-.container .offset-by-seven {
-    padding-left: 420px
-}
-
-.container .offset-by-eight {
-    padding-left: 480px
-}
-
-.container .offset-by-nine {
-    padding-left: 540px
-}
-
-.container .offset-by-ten {
-    padding-left: 600px
-}
-
-.container .offset-by-eleven {
-    padding-left: 660px
-}
-
-.container .offset-by-twelve {
-    padding-left: 720px
-}
-
-.container .offset-by-thirteen {
-    padding-left: 780px
-}
-
-.container .offset-by-fourteen {
-    padding-left: 840px
-}
-
-.container .offset-by-fifteen {
-    padding-left: 900px
-}
 
 .container:after {
     content: "\0020";
