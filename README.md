@@ -72,7 +72,7 @@ Set the correct permissions:
 	$ chown www-data:www-data /var/www/sciblog/db.sqlite3
 	$ chown www-data:www-data /var/www/sciblog/img	
 
-Configure apache (in sciblog.conf change miguelgfierro.com for your url):
+Configure apache (in sciblog.conf change example.com for your url):
 
 	$ cp sciblog.conf /etc/apache2/sites-available/
 	$ a2ensite sciblog.conf
