@@ -1,12 +1,9 @@
 .container {
     position: relative;
-    width: 960px;
     margin: 0 auto;
     padding: 0
 }
 
-
-.column,
 .columns {
     float: left;
     display: inline;
@@ -16,83 +13,80 @@
     margin-bottom: 20px
 }
 
-.column.alpha,
 .columns.alpha {
     margin-left: 0!important
 }
 
-.column.omega,
 .columns.omega {
     margin-right: 0!important
 }
 
-.column.alpha.omega,
 .columns.alpha.omega {
     margin: 0!important
 }
 
-.container .one.column {
-    width: 40px
+.container .columns.one {
+    width: 6.25%;
 }
 
 .container .columns.two {
-    width: 120px
+    width: 12.5%;
 }
 
 .container .columns.three {
-    width: 180px
+    width: 18.75%;
 }
 
 .container .columns.four {
-    width: 240px
+    width: 25%;
 }
 
 .container .columns.five {
-    width: 300px
+    width: 31.25%;
 }
 
 .container .columns.six {
-    width: 360px
+    width: 37.5%;
 }
 
 .container .columns.seven {
-    width: 420px
+    width: 43.75%;
 }
 
 .container .columns.eight {
-    width: 480px
+    width: 50%;
 }
 
 .container .columns.nine {
-    width: 540px
+    width: 56.25%;
 }
 
 .container .columns.ten {
-    width: 600px
+    width: 62.5%;
 }
 
 .container .columns.eleven {
-    width: 660px
+    width: 68.75%;
 }
 
 .container .columns.twelve {
-    width: 720px
+    width: 75%;
 }
 
 .container .columns.thirteen {
-    width: 780px
+    width: 81.25%;
 }
 
 .container .columns.fourteen {
-    width: 840px
+    width: 87.5%;
 }
 
 .container .columns.fifteen {
-    width: 900px
+    width: 93.75%;
 }
 
 .container .columns.sixteen {
-    width: 960px
+    width: 100%;
 }
 
 
