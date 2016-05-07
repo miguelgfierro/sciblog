@@ -29,6 +29,7 @@ class ExtendedFlatPageForm(FlatpageForm):
     locals()['content'] = forms.CharField(widget=CKEditorWidget(), required=False, label=(u'Content'))
     class Meta:
         model = FlatPage
+        fields = "__all__"
 
 class ExtendedFlatPageAdmin(FlatPageAdmin):
     form = ExtendedFlatPageForm
