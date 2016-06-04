@@ -47,7 +47,7 @@ In another terminal you have to run django development server:
 	
 In a browser put the link: [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
-The panel will ask you to put username and password. Once you are in django dashboard you can start to add content to
+The panel will ask you to add username and password. Once you are in django dashboard you can start to add content to
 your blog.
 
 When you are in localhost you have to set `DEBUG = True` in `sciblog/settings.py`. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
