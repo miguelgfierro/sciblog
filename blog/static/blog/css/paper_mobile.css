@@ -348,21 +348,17 @@ p.wrap {
 }
 .navigation-bar-container{
   height: 46px;
-  text-align: center;
   margin: 0px auto;
+}
+.navigation-bar-home{
+  float:left;
+  height: 46px;
+  width:56px;
   overflow: hidden;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size:16px;
-  text-align: center;
   background-image: url("../img/hoap_front_small.png");
   display:block;
   background-position: left top;
   background-repeat: no-repeat;
-}
-.navigation-bar-home{
-  float:left;
-  margin-bottom: 5px;
-  height: 46px;
 }
 .navigation-bar-search{
   float: left;
