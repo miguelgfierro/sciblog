@@ -14,7 +14,7 @@ Blog developed in django with the same appearance of a research paper written in
 * Easy writing with Ckeditor
 * Responsive for mobile
 * (Optional) Web optimization with CloudFlare
-* (Optional) Instalation of free SSL certificate
+* (Optional) Installation of free SSL certificate
 
 Example of sciblog: http://miguelgfierro.com
 
@@ -24,9 +24,9 @@ Installation
 We need to install several libraries. In Linux the commands are:
 
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
-	$ pip install django 
+	$ pip install -r requirements.txt 
 
-NOTE: django version must be 1.7 or 1.8. 
+NOTE: django version must be 1.7. 
 
 Set up the project in localhost
 ==================================================
