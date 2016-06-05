@@ -248,8 +248,8 @@ p.wrap {
 }
 .row-comments{
   margin-bottom: 20px;
-  padding-left:8rem;
-  padding-right:8rem;
+  padding-left:2rem;
+  padding-right:1rem;
 }
 .container-footer{
   position: relative;
@@ -262,10 +262,8 @@ p.wrap {
   margin-bottom: 0rem;
   margin-left: auto;
   padding-top: 2rem;
-  padding-right: 0rem;
   padding-bottom: 3rem;
-  padding-left: 0rem;
-  font-size: 14px;
+  font-size: 12px;
 }
 .container-footer a, a:visited{
   text-decoration:none;
