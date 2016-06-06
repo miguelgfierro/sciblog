@@ -17,13 +17,11 @@
 {% block content %}
 
 
-
-
 <!-- Page building -->
 <div class="container">
     <div class="row">
-        <div class="three columns">&nbsp;</div>
-        <div class="ten columns">
+        <div class="two columns">&nbsp;</div>
+        <div class="twelve columns">
             <h1 class="title" style="padding-bottom:1rem;padding-top:8rem;"> {{ flatpage.title }}</h1>
             <div class="image">
                 <img src="{% static 'blog/img/author.png' %}"  width="200" height="220" alt="{{ flatpage.title }}">
@@ -31,21 +29,16 @@
                     not pictured here.  </div>
             </div>
         </div>
-        <div class="three columns">&nbsp;</div>
+        <div class="two columns">&nbsp;</div>
     </div>
 
     <div class="row">
-        <div class="two columns">&nbsp;</div>
-        <div class="twelve columns ">
+        <div class="one columns">&nbsp;</div>
+        <div class="fourteen columns ">
             {{ flatpage.content }}
         </div>
-        <div class="two columns">&nbsp;</div>
+        <div class="one columns">&nbsp;</div>
     </div>
 </div>
-
-
-
-
-
 
 {% endblock %}
