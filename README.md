@@ -33,6 +33,7 @@ Set up the project in localhost
 The first step is to generate the database. In the projects folder:
   
 	$ python manage.py syncdb  
+	
 Django will ask you to create a superuser. You have to put the username and password. The email is optional. 
 This will generate a file called `db.sqlite3` which is the database where all the blog content is stored.
 
