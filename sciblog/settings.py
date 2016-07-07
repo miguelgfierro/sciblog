@@ -21,7 +21,6 @@ SECRET_KEY = '7@ug(w91q62^z^vf3fcs$95+@&18m8vj#+of03q5#058axfd_8'
 
 # Set DEBUG = False in production. Set DEBUG = True in localhost development
 DEBUG = False
-
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','www.miguelgfierro.com','miguelgfierro.com']
