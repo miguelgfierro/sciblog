@@ -132,6 +132,7 @@ h4{
   margin-bottom: 0.5rem;
   font-family: LatexBold;
   padding: 0 1rem;
+  text-align: left;
 }
 /*.subsection{*/
 h5{
@@ -141,6 +142,7 @@ h5{
   margin-bottom: 0.5rem;
   font-family: LatexBold;
   padding: 0 1rem;
+  text-align: left;
 }
 /*.subsubsection{*/
 h6{
@@ -149,6 +151,7 @@ h6{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 0 1rem;
+  text-align: left;
 }
 .image{
   text-align: center;
