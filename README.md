@@ -145,7 +145,3 @@ When the certificate expires, you just need to renew it. This task can be automa
 
 NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
  
-Additional comments
-==================================================
-
-If you want to thank me, please do it. You can write a poem emphasizing my wonderful qualities or get a tattoo with my amazing face (here you will find my [face](http://miguelgfierro.com/about/)). I also accept cash. You can send an email to my personal assistant hoaphumanoid@gmail.com. 
