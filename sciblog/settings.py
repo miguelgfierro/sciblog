@@ -8,20 +8,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 import os
+from sciblog.private import SECRETKEY
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7@ug(w91q62^z^vf3fcs$95+@&18m8vj#+of03q5#058axfd_8'
+SECRET_KEY = SECRETKEY
 
 # Set DEBUG = False in production. Set DEBUG = True in localhost development
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','www.miguelgfierro.com','miguelgfierro.com']
 
@@ -42,7 +40,6 @@ INSTALLED_APPS = (
     'libs.ckeditor', # for managing text,images and formulas
     'libs.ckeditor_uploader',
 )
-
 SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
