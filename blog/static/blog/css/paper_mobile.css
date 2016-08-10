@@ -162,9 +162,12 @@ h6{
 }
 ul{
   font-size: 16px;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   margin: 10px 0;
-  text-indent: 0px;
+}
+ul li:before{
+  content:'• ';
+  margin-left:-1rem;
 }
 ol{
   font-size: 14px;
