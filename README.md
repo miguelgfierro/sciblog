@@ -61,7 +61,7 @@ To work with disqus comments you have to get your `DISQUS_API_KEY` and `DISQUS_W
 Set up the project in a Ubuntu VPS server
 ==================================================
 
-First make sure that you have installed git, apache2 and libapache2-mod-wsgi as explained before. Also, change the key in `private.py`.
+First make sure that you have installed `git`, `apache2` and `libapache2-mod-wsgi` as explained before. Also, change the key in `private.py`.
 
 	$ cd /var/www
 	$ git clone https://github.com/hoaphumanoid/sciblog.git
