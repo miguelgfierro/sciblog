@@ -23,6 +23,7 @@ Installation
 
 We need to install several libraries. In Linux the commands are:
 
+	$ git clone https://github.com/hoaphumanoid/sciblog.git
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
 	$ pip install -r requirements.txt 
 
@@ -32,6 +33,8 @@ Set up the project in localhost
 ==================================================
 The first step is to generate the database. In the projects folder:
   
+  	$ cd sciblog
+	$ cp sciblog/private.template.py sciblog/private.py
 	$ python manage.py syncdb  
 	
 Django will ask you to create a superuser. You have to put the username and password. The email is optional. 
@@ -42,6 +45,8 @@ After that you have to make what is called a migration, to create the tables in 
 	$ python manage.py makemigrations
 	$ python manage.py migrate
 
+When you are in localhost you have to set `DEBUG = True` in `sciblog/private.py`. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
+
 In another terminal you have to run django development server:
 
 	$ python manage.py runserver  
@@ -50,8 +55,6 @@ In a browser put the link: [http://localhost:8000/admin/](http://localhost:8000/
 
 The panel will ask you to add username and password. Once you are in django dashboard you can start to add content to
 your blog.
-
-When you are in localhost you have to set `DEBUG = True` in `sciblog/settings.py`. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
 
 To work with disqus comments you have to get your `DISQUS_API_KEY` and `DISQUS_WEBSITE_SHORTNAME`. They can be obtained https://disqus.com/api/applications/ 
 
