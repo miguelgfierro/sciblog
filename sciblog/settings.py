@@ -8,7 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 import os
-from sciblog.private import SECRETKEY
+from sciblog.private import SECRETKEY, DEBUG_FLAG
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -19,7 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = SECRETKEY
 
 # Set DEBUG = False in production. Set DEBUG = True in localhost development
-DEBUG = False
+# This flag is set in an external file private.py
+DEBUG = DEBUG_FLAG
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','www.miguelgfierro.com','miguelgfierro.com']
 
