@@ -92,7 +92,7 @@ Add your first content to the blog
 
 The first step is to configure the site. Also the first time you enter in your admin console [http://localhost:8000/admin/](http://localhost:8000/admin/),  you have to go to sites and edit the default site, which is `example.com`. Change it for `localhost:8000`, if you are in development or to the name of your site without `http://` (my case would be miguelgfierro.com).
 
-This will set the first entry in the database to your site, which is related to the variable `SITE_ID = 1` in `sciblog/settings.py`. You can see the number of the site in http://localhost:8000/admin/sites/site/1/. If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable `SITE_ID`. In my experience it is better if you don't touch anything :-)
+This will set the first entry in the database to your site, which is related to the variable `SITE_ID = 1` in `sciblog/settings.py`. You can see the number of the site in [http://localhost:8000/admin/sites/site/1/](http://localhost:8000/admin/sites/site/1/). If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable `SITE_ID`. In my experience it is better if you don't touch anything :-)
 
 Press add in Post to add your first post. You can add different sections, images and formulas. If you use a formula please select the flag `Post with Latex formula`. This will load the js necessary to render the Latex code. If the flag is not activated then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
 
