@@ -78,7 +78,6 @@ class CKEditorWidget(forms.Textarea):
 
         # Try to get valid config from settings.
         configs = getattr(settings, 'CKEDITOR_CONFIGS', None)
-        print 'PRINT configs:',configs
         if configs:
             if isinstance(configs, dict):
                 # Make sure the config_name exists.
@@ -99,20 +98,12 @@ class CKEditorWidget(forms.Textarea):
                 raise ImproperlyConfigured('CKEDITOR_CONFIGS setting must be a\
                         dictionary type.')
 
-        print ''
-        print '---------------'
-        print ''
-        print 'PRINT  self.config:', self.config
-
         extra_plugins = extra_plugins or []
-        print 'extra_plugins',extra_plugins
 
         if extra_plugins:
             self.config['extraPlugins'] = ','.join(extra_plugins)
 
         self.external_plugin_resources = external_plugin_resources or []
-        print 'external_plugin_resources',external_plugin_resources
-
 
     def render(self, name, value, attrs=None):
         if value is None:
