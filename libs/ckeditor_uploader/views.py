@@ -20,7 +20,7 @@ from django.utils.html import escape
 def get_upload_filename(upload_name, user):
     # If CKEDITOR_RESTRICT_BY_USER is True upload file to user specific path.
     if getattr(settings, 'CKEDITOR_RESTRICT_BY_USER', False):
-        user_path = user.username
+        user_path = user.get_username()
     else:
         user_path = ''
 
@@ -96,7 +96,7 @@ def get_image_files(user=None, path=''):
 
     restrict = getattr(settings, 'CKEDITOR_RESTRICT_BY_USER', False)
     if user and not user.is_superuser and restrict:
-        user_path = user.username
+        user_path = user.get_username()
     else:
         user_path = ''
 
@@ -158,7 +158,6 @@ def is_image(path):
 
 
 def browse(request):
-    
     files = get_files_browse_urls(request.user)
     if request.method == 'POST':
         form = SearchForm(request.POST)
@@ -172,7 +171,7 @@ def browse(request):
     dir_list = sorted(set(os.path.dirname(f['src']) for f in files), reverse=True)
 
     # Ensures there are no objects created from Thumbs.db files - ran across this problem while developing on Windows
-    if os.name == 'nt': 
+    if os.name == 'nt':
         files = [f for f in files if os.path.basename(f['src']) != 'Thumbs.db']
 
     context = RequestContext(request, {
