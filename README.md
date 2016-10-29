@@ -129,7 +129,7 @@ You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and 
 Secure page with SSL certificate (optional)
 ==================================================
 
-You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). Google prioritizes pages with SSL security, so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in settings.py. 
+You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). Google prioritizes pages with [SSL security](http://googlewebmastercentral.blogspot.be/2014/08/https-as-ranking-signal.html), so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in settings.py. 
 
 The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/howitworks/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com. 
 
