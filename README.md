@@ -131,20 +131,24 @@ Secure page with SSL certificate (optional)
 
 You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). Google prioritizes pages with [SSL security](http://googlewebmastercentral.blogspot.be/2014/08/https-as-ranking-signal.html), so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in settings.py. 
 
-The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/howitworks/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com. 
+The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/getting-started/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com. 
 
-	$ git clone https://github.com/letsencrypt/letsencrypt
-	$ cd letsencrypt
-	$ ./letsencrypt-auto --help
-	$ ./letsencrypt-auto --apache
-    $ a2enmod ssl
-    $ service apache2 restart
+	$ wget https://dl.eff.org/certbot-auto
+	$ chmod a+x certbot-auto
+	$ ./certbot-auto --apache --email your_email@example.com
+	$ a2enmod ssl
+	$ service apache2 restart
     
-When the certificate expires, you just need to renew it. This task can be automated as Let's Encript explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task. To renew the certificate:
+When the certificate expires, you just need to renew it. 
     
-    $ ./letsencrypt-auto renew
-    $ service apache2 restart
+	$ ./certbot-auto renew --quiet --no-self-upgrade
+	$ service apache2 restart
+	
+This task can be automated as Let's Encript explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task. To do it you just have to modify the file `cron_ssl_renew` with the correct path and execute:
 
+	$ crontab cron_ssl_renew
+
+This file executes every 8h. You can see that the CRON task is correcly set up typing `crontab -l`.
 
 NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
  
