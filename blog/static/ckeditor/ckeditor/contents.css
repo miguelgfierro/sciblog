@@ -66,8 +66,15 @@ ol,ul,dl
 
 h1,h2,h3,h4,h5,h6
 {
-	font-weight: normal;
+	font-size:16px;
 	line-height: 1.2;
+}
+
+h5{
+	font-size:14px;
+}
+h6{
+	font-size:12px;
 }
 
 hr
