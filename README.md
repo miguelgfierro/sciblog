@@ -16,7 +16,7 @@ Blog developed in django with the same appearance of a research paper written in
 * (Optional) Web optimization with CloudFlare
 * (Optional) Installation of free SSL certificate
 
-Example of sciblog: http://miguelgfierro.com
+Example of sciblog: [http://miguelgfierro.com](http://miguelgfierro.com)
 
 Installation
 ==================
