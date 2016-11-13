@@ -23,7 +23,7 @@ Installation
 
 We need to install several libraries. In Linux the commands are:
 
-	$ git clone https://github.com/hoaphumanoid/sciblog.git
+	$ git clone https://github.com/miguelgfierro/sciblog.git
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
 	$ pip install -r requirements.txt 
 
@@ -64,7 +64,7 @@ Set up the project in a Ubuntu VPS server
 First make sure that you have installed `git`, `apache2` and `libapache2-mod-wsgi` as explained before. Also, change the key in `private.py`.
 
 	$ cd /var/www
-	$ git clone https://github.com/hoaphumanoid/sciblog.git
+	$ git clone https://github.com/miguelgfierro/sciblog.git
 	$ cd sciblog
 	$ cp sciblog/private.template.py sciblog/private.py
 	$ python manage.py syncdb
