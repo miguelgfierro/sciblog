@@ -93,7 +93,7 @@ Add your first content to the blog
 The first step is to configure the site. Also the first time you enter in your admin console [http://localhost:8000/admin/](http://localhost:8000/admin/),  you have to go to sites and edit the default site, which is `example.com`. Change it for `localhost:8000`, if you are in development or to the name of your site without `http://` (my case would be miguelgfierro.com).
 
 This will set the first entry in the database to your site, which is related to the variable `SITE_ID = 1` in `sciblog/settings.py`. You can see the number of the site in [http://localhost:8000/admin/sites/site/1/](http://localhost:8000/admin/sites/site/1/). If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable `SITE_ID`. In my experience it is better if you don't touch anything :-)
-
+A
 Press add in Post to add your first post. You can add different sections, images and formulas. For images the recommended width is `300px`. If you use a formula please select the flag `Post with Latex formula`. This will load the js necessary to render the Latex code. If the flag is not activated then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
 
 You will see that your blog is working properly going to the url: [http://localhost:8000](http://localhost:8000) (in production you'll have to add something like http://miguelgfierro.com).
@@ -103,7 +103,7 @@ Create the about page
 ==================================================
 
 Go to the admin console and add your first flat page. A flat page is a static html code. 
-
+ 
 In Flat pages press add. In url put `/about/` (don't forget / in both sides). In title put your name, in sites put your site and in content put whatever you want. 
 
 
@@ -148,7 +148,7 @@ This task can be automated as Let's Encript explains in their [web](https://lets
 
 	$ crontab cron_ssl_renew
 
-This file executes every 8h. You can see that the CRON task is correcly set up typing `crontab -l`.
+This file executes every 8h. You can see that the CRON task is correcly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
 
 NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
  
