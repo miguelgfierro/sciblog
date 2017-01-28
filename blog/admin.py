@@ -7,15 +7,15 @@ from libs.ckeditor.widgets import CKEditorWidget
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               	{'fields': ['title']}),
-        ('Description',			{'fields':['meta_description']}),
-        ('Keywords', 			{'fields':['keywords']}),
-        ('Author(s)', 			{'fields':['authors']}),
-        ('Date information', 	{'fields': ['pub_date']}),
-        ('Abstract',			{'fields': ['abstract']}),
-        ('Site', 				{'fields': ['site']}),
-        ('Post with formulas',	{'fields': ['has_latex_formula']}),#if true, mathjax.js is included in template (better for SEO)
-        ('Content',     		{'fields': ['content']}),
+        (None,               	    {'fields': ['title']}),
+        ('Description',			    {'fields':['meta_description']}),
+        ('Keywords (lowercase)',    {'fields':['keywords']}),
+        ('Author(s)', 			    {'fields':['authors']}),
+        ('Date information', 	    {'fields': ['pub_date']}),
+        ('Abstract',			    {'fields': ['abstract']}),
+        ('Site', 				    {'fields': ['site']}),
+        ('Post with formulas',	    {'fields': ['has_latex_formula']}),#if true, mathjax.js is included in template (better for SEO)
+        ('Content',     		    {'fields': ['content']}),
     ]
     list_display = ('title', 'pub_date', 'was_published_recently')
     list_filter = ['pub_date']
