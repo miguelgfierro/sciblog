@@ -5,7 +5,10 @@ from django.template.defaultfilters import slugify
 from django.contrib.sites.models import Site
 from libs.ckeditor_uploader.fields import RichTextUploadingField
 
+
 class Post(models.Model):
+    """Post class to generate blog posts."""
+    
     title = models.CharField(max_length=67, unique=True)
     slug = models.SlugField(max_length=100, unique=True, blank=True,editable=False)
     meta_description = models.CharField('Meta description for SEO', max_length=155)#description for SEO purposes
@@ -31,6 +34,7 @@ class Post(models.Model):
 
     def save(self):
         self.slug = slugify(self.title)
+        self.keywords = self.keywords.lower()
         super(Post,self).save()
 
     class Meta:
