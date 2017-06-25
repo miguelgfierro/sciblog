@@ -161,7 +161,7 @@ img{
   text-align: center;
   max-width: 110%; /*equal to 350px*/
   height: auto;
-  margin-left: -0.5rem;
+  margin: 0 auto;
 }
 .image .image-caption{
   font-size: 14px;
