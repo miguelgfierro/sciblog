@@ -27,7 +27,7 @@ We need to install several libraries. In Linux the commands are:
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
 	$ pip install -r requirements.txt 
 
-NOTE: django version must be 1.7. 
+NOTE: Django version must be 1.7 and Python has to be version 2.7.
 
 Set up the project in localhost
 ==================================================
