@@ -31,21 +31,20 @@ NOTE: Django version must be 1.7 and Python has to be version 2.7.
 
 Set up the project in localhost
 ==================================================
-The first step is to generate the database. In the projects folder:
+The first step is to generate the database. In the project folder:
   
-  	$ cd sciblog
 	$ cp sciblog/private.template.py sciblog/private.py
 	$ python manage.py syncdb  
 	
-Django will ask you to create a superuser. You have to put the username and password. The email is optional. 
-This will generate a file called `db.sqlite3` which is the database where all the blog content is stored.
+When you are in localhost you have to set `DEBUG = True` in `sciblog/private.py`. You can set it to `False` but you won't see the images the user uploaded through the admin dashboard. In production, this is handled by apache. You should also change `SECRETKEY`.
 
-After that you have to make what is called a migration, to create the tables in your database. To do that:
+Django will ask you to create a superuser. You have to put the username and password. The email is optional. This will generate a file called `db.sqlite3` which is the database where all the blog content is stored.
+
+After that, you have to make a migration, to create the tables in your database. To do that:
 	
 	$ python manage.py makemigrations
 	$ python manage.py migrate
 
-When you are in localhost you have to set `DEBUG = True` in `sciblog/private.py`. You can set it to False but you won't see the images the user uploaded through the admin dashboard. In production this is handled by apache.
 
 In another terminal you have to run django development server:
 
@@ -53,8 +52,7 @@ In another terminal you have to run django development server:
 	
 In a browser put the link: [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
-The panel will ask you to add username and password. Once you are in django dashboard you can start to add content to
-your blog.
+The panel will ask you to add username and password. Once you are in Django dashboard you can start adding content to your blog.
 
 To work with disqus comments you have to get your `DISQUS_API_KEY` and `DISQUS_WEBSITE_SHORTNAME`. They can be obtained https://disqus.com/api/applications/ 
 
@@ -85,16 +83,16 @@ Configure apache (in sciblog.conf change example.com for your url):
 	$ a2enmod expires
 	$ service apache2 restart
 
-When you are in production you have to set `DEBUG = False` in `sciblog/private.py`.
+When you are in production you have to set `DEBUG_FLAG = False` in `sciblog/private.py`.
 	
 Add your first content to the blog
 ==================================================
 
-The first step is to configure the site. Also the first time you enter in your admin console [http://localhost:8000/admin/](http://localhost:8000/admin/),  you have to go to sites and edit the default site, which is `example.com`. Change it for `localhost:8000`, if you are in development or to the name of your site without `http://` (my case would be miguelgfierro.com).
+The first step is to configure the site. Also, the first time you enter in your admin console [http://localhost:8000/admin/](http://localhost:8000/admin/), you have to go to sites and edit the default site, which is `example.com`. Change it for `localhost:8000`, if you are in development or to the name of your site without `http://` (my case would be miguelgfierro.com).
 
-This will set the first entry in the database to your site, which is related to the variable `SITE_ID = 1` in `sciblog/settings.py`. You can see the number of the site in [http://localhost:8000/admin/sites/site/1/](http://localhost:8000/admin/sites/site/1/). If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable `SITE_ID`. In my experience it is better if you don't touch anything :-)
-A
-Press add in Post to add your first post. You can add different sections, images and formulas. For images the recommended width is `300px`. If you use a formula please select the flag `Post with Latex formula`. This will load the js necessary to render the Latex code. If the flag is not activated then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
+This will set the first entry in the database to your site, which is related to the variable `SITE_ID = 1` in `sciblog/settings.py`. You can see the number of the site in [http://localhost:8000/admin/sites/site/1/](http://localhost:8000/admin/sites/site/1/). If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable `SITE_ID`. In my experience, it is better if you don't touch anything :-)
+
+Press add in Post to add your first post. You can add different sections, images and formulas. For images the recommended width is `300px`. If you use a formula please select the flag `Post with Latex formula`. This will load the necessary js module to render the Latex code. If the flag is not activated, then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
 
 You will see that your blog is working properly going to the url: [http://localhost:8000](http://localhost:8000) (in production you'll have to add something like http://miguelgfierro.com).
 
