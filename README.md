@@ -19,7 +19,8 @@ Blog developed in django with the same appearance of a research paper written in
 Example of sciblog: [http://miguelgfierro.com](http://miguelgfierro.com)
 
 <p align="center">
-	<img src="img/blog_view.png" alt="blog view" width="60%"/>
+	<img src="img/blog_view.png" alt="blog view" width="45%"/>
+	<img src="img/blog_view2.png" alt="blog view" width="45%"/>
 </p>
 
 
