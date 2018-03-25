@@ -1,3 +1,8 @@
+[![Issues](https://img.shields.io/github/issues/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/pulls)
+[![Tag](https://img.shields.io/github/tag/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/tags)
+
+
 Sciblog: A blog with the appearance of a scientific paper.
 ==================
 
@@ -17,6 +22,12 @@ Blog developed in django with the same appearance of a research paper written in
 * (Optional) Installation of free SSL certificate
 
 Example of sciblog: [http://miguelgfierro.com](http://miguelgfierro.com)
+
+<p align="center">
+	<img src="img/blog_view.png" alt="blog view" width="45%"/>
+	<img src="img/blog_view2.png" alt="blog view" width="45%"/>
+</p>
+
 
 Installation
 ==================
