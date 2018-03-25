@@ -1,6 +1,7 @@
 [![Issues](https://img.shields.io/github/issues/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/pulls)
-[![Tag](https://img.shields.io/github/tag/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/tags)
+[![Latest release](https://img.shields.io/github/release/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/releases)
+[![Commits since latest release](https://img.shields.io/github/commits-since/miguelgfierro/sciblog/latest.svg)](https://github.com/miguelgfierro/sciblog/releases)
 
 
 Sciblog: A blog with the appearance of a scientific paper.
