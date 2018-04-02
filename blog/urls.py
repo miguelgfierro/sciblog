@@ -7,12 +7,18 @@ from django.http import HttpResponse
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemap import PostSitemap, FlatpageSitemap
 from blog.views import PostsFeed, getSearchResults
+from django.contrib.sites.models import Site
+
 
 # Define sitemaps
 sitemaps = {
     'posts': PostSitemap,
     'pages': FlatpageSitemap
 }
+
+# Define robots.txt content
+current_site = Site.objects.get_current()
+robots_content = "User-agent: *\nDisallow: /admin/\nSitemap: https://{}/sitemap.xml".format(current_site.domain)
 
 urlpatterns = patterns('',
     # Index
@@ -24,7 +30,7 @@ urlpatterns = patterns('',
     # Search posts
     url(r'^search', getSearchResults, name='search'),
     #robots.txt
-    url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /admin/", content_type="text/plain")),
+    url(r'^robots.txt$', lambda r: HttpResponse(robots_content, content_type="text/plain")),
     #sitemap
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
 )
