@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, url
-from django.contrib import admin
 from blog.models import Post
 from django.views.generic import ListView, DetailView
 from django.conf import settings
