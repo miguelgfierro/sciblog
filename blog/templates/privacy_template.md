@@ -79,6 +79,53 @@ Users can find further detailed information about such purposes of processing an
 
 Personal Data is collected for the following purposes and using the following services:
 
+### Data transfer outside the EU
+
+The Owner is allowed to transfer Personal Data collected within the EU to third countries (i.e. any country not part of the EU) only pursuant to a specific legal basis. Any such Data transfer is based on one of the legal bases described below.
+Users can inquire with the Owner to learn which legal basis applies to which specific service.
+Data transfer abroad based on consent (this Application)
+
+If this is the legal basis, Personal Data of Users shall be transferred from the EU to third countries only if the User has explicitly consented to such transfer, after having been informed of the possible risks due to the absence of an adequacy decision and appropriate safeguards.
+In such cases, the Owner shall inform Users appropriately and collect their explicit consent via this Application.
+
+Personal Data collected: various types of Data.
+
+#### Data transfer abroad based on standard contractual clauses (this Application)
+
+If this is the legal basis, the transfer of Personal Data from the EU to third countries is carried out by the Owner according to “standard contractual clauses” provided by the European Commission.
+This means that Data recipients have committed to process Personal Data in compliance with the data protection standards set forth by EU data protection legislation. For further information, Users are requested to contact the Owner through the contact details provided in the present document.
+
+Personal Data collected: various types of Data.
+
+
+#### Data transfer from the EU and/or Switzerland to the U.S based on Privacy Shield (this Application)
+
+If this is the legal basis, the transfer of Personal Data from the EU or Switzerland to the US is carried out according to the EU - U.S. and Swiss - U.S. Privacy Shield.
+In particular, Personal Data is transferred to services that self-certify under the Privacy Shield framework and therefore guarantee an adequate level of protection of such transferred Data. All services are listed within the relevant section of this document and those that adhere to Privacy Shield can be singled out by checking their privacy policy and possibly also by specifically checking for Privacy Shield adherence in the official Privacy Shield List. Privacy Shield also specifically guarantees rights to Users which can be found in its most current form on the website run by the US Department of Commerce.
+Personal Data may be transferred from within the EU or Switzerland to the U.S. to services that are not, or not anymore, part of Privacy Shield, only based on other valid legal grounds. Users can ask the Owner to learn about such legal grounds.
+
+Personal Data collected: various types of Data.
+
+
+#### Data transfer to countries that guarantee European standards (this Application)
+
+If this is the legal basis, the transfer of Personal Data from the EU to third countries is carried out according to an adequacy decision of the European Commission.
+The European Commission adopts adequacy decisions for specific countries whenever it considers that country to possess and provide Personal Data protection standards comparable to those set forth by EU data protection legislation. Users can find an updated list of all adequacy decisions issued on the European Commission's website.
+
+Personal Data collected: various types of Data.
+
+#### Other legal basis for Data transfer abroad (this Application)
+
+If no other legal basis applies, Personal Data shall be transferred from the EU to third countries only if at least one of the following conditions is met:
+
+    - the transfer is necessary for the performance of a contract between the User and the Owner or of pre-contractual measures taken at the User’s request;
+    - the transfer is necessary for the conclusion or performance of a contract concluded in the interest of the User between - the Owner and another natural or legal person;
+    - the transfer is necessary for important reasons of public interest;
+    - the transfer is necessary for establishment, exercise or defence of legal claims;
+    - the transfer is necessary in order to protect the vital interests of the data subject or of other persons, where the data subject is physically or legally incapable of giving consent. In such cases, the Owner shall inform the User about the legal bases the transfer is based on via this Application.
+
+Personal Data collected: various types of Data. 
+
 
 ### Google Analytics (Google Inc.)
 
