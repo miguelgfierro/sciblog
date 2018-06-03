@@ -10,7 +10,7 @@
 {% set_disqus_developer 1 %}
 
 {% block title %}
-        {{ object.title }}
+    {{ object.title }}
 {% endblock %}
 
 {% block headers %}
@@ -206,7 +206,10 @@ FB.ui({
         <a href="{% linkedin_url %}">Linkedin</a> •
         <a href="{% rss_url %}">RSS</a> •
         {% for aboutp in about_pages %}
-          <a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a>
+          <a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a> •
+        {% endfor%}
+        {% for privacyp in privacy_pages %}
+          <a href="{% http_or_https %}{% current_site %}{{ privacyp.url }}">Privacy</a>
         {% endfor%}
       <br>
       Proudly designed by Miguel González-Fierro and his robot -

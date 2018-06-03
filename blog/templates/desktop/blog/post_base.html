@@ -19,6 +19,7 @@
   {% load current_site %}
   {% load flatpages %}
   {% get_flatpages '/about/' as about_pages %} <!-- gets about page, it returns a list so we need to iterate -->
+  {% get_flatpages '/privacy/' as privacy_pages %}
   {% load social %}
   {% load analytics %}
 
