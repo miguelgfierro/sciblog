@@ -124,6 +124,97 @@ Personal Data collected: Cookies and various types of Data as specified in the p
 Place of processing: United States – Privacy Policy (https://www.cloudflare.com/security-policy/).
 
 
+### Displaying content from external platforms
+
+This type of service allows you to view content hosted on external platforms directly from the pages of this Application and interact with them.
+This type of service might still collect web traffic data for the pages where the service is installed, even when Users do not use it.
+
+#### YouTube video widget (Google Inc.)
+
+YouTube is a video content visualization service provided by Google Inc. that allows this Application to incorporate content of this kind on its pages.
+
+Personal Data collected: Cookies and Usage Data.
+
+Place of processing: United States – Privacy Policy (https://www.google.com/intl/en/policies/privacy/). Privacy Shield participant.
+
+### Interaction with external social networks and platforms
+
+This type of service allows interaction with social networks or other external platforms directly from the pages of this Application.
+The interaction and information obtained through this Application are always subject to the User’s privacy settings for each social network.
+This type of service might still collect traffic data for the pages where the service is installed, even when Users do not use it.
+
+#### Facebook Like button and social widgets (Facebook, Inc.)
+
+The Facebook Like button and social widgets are services allowing interaction with the Facebook social network provided by Facebook, Inc.
+
+Personal Data collected: Cookies and Usage Data.
+
+Place of processing: United States – Privacy Policy (https://www.facebook.com/privacy/explanation). Privacy Shield participant.
+
+### Google+ +1 button and social widgets (Google Inc.)
+
+The Google+ +1 button and social widgets are services allowing interaction with the Google+ social network provided by Google Inc.
+
+Personal Data collected: Cookies and Usage Data.
+
+Place of processing: United States – Privacy Policy (https://www.google.com/intl/policies/privacy/). Privacy Shield participant.
+
+
+### Twitter Tweet button and social widgets (Twitter, Inc.)
+
+The Twitter Tweet button and social widgets are services allowing interaction with the Twitter social network provided by Twitter, Inc.
+
+Personal Data collected: Cookies and Usage Data.
+
+Place of processing: United States – Privacy Policy (https://twitter.com/privacy). Privacy Shield participant.
+
+
+### LinkedIn button and social widgets (LinkedIn Corporation)
+
+The LinkedIn button and social widgets are services allowing interaction with the LinkedIn social network provided by LinkedIn Corporation.
+
+Personal Data collected: Cookies and Usage Data.
+
+Place of processing: United States – Privacy Policy (https://www.linkedin.com/legal/privacy-policy). Privacy Shield participant. 
+
+### WhatsApp button and social widgets (Facebook, Inc.)
+
+The WhatsApp button and social widgets are services allowing interaction with the WhatsApp social network provided by Facebook, Inc.
+
+Personal Data collected: Cookies and Usage Data.
+
+Place of processing: United States – Privacy Policy (https://www.whatsapp.com/legal/). Privacy Shield participant. 
+
+
+
+## Further information about Personal Data
+
+### Analysis and predictions based on the User’s Data (“profiling”)
+
+The Owner may use the Personal and Usage Data collected through this Application to create or update User profiles. This type of Data processing allows the Owner to evaluate User choices, preferences and behaviour for the purposes outlined in the respective section of this document.
+User profiles can also be created through the use of automated tools like algorithms, which can also be provided by third parties. To find out more, about the profiling activities performed, Users can check the relevant sections of this document.
+The User always has a right to object to this kind of profiling activity. To find out more about the User's rights and how to exercise them, the User is invited to consult the section of this document outlining the rights of the User.
+
+### Automated decision-making
+
+Automated decision-making means that a decision which is likely to have legal effects or similarly significant effects on the User, is taken solely by technological means, without any human intervention. This Application may use the User's Personal Data to make decisions entirely or partially based on automated processes according to the purposes outlined in this document. This Application adopts automated decision-making processes as far as necessary to enter into or perform a contract between User and Owner, or on the basis of the User’s explicit consent, where such consent is required by the law.
+Automated decisions are made by technological means – mostly based on algorithms subject to predefined criteria – which may also be provided by third parties.
+The rationale behind the automated decision making is:
+
+    - to enable or otherwise improve the decision-making process;
+    - to grant Users fair and unbiased treatment based on consistent and uniform criteria;
+    - to reduce the potential harm derived from human error, personal bias and the like which may potentially lead to discrimination or imbalance in the treatment of individuals etc.;
+    - to reduce the risk of User's failure to meet their obligation under a contract. To find out more about the purposes, the third-party services, if any, and any specific rationale for automated decisions used within this Application, Users can check the relevant sections in this document.
+
+#### Consequences of automated decision-making processes for Users and rights of Users subjected to it
+
+As a consequence, Users subject to such processing, are entitled to exercise specific rights aimed at preventing or otherwise limiting the potential effects of the automated decisions taken.
+In particular, Users have the right to:
+
+    - obtain an explanation about any decision taken as a result of automated decision-making and express their point of view regarding this decision;
+    - challenge a decision by asking the Owner to reconsider it or take a new decision on a different basis;
+    - request and obtain from the Owner human intervention on such processing. To learn more about the User’s rights and the means to exercise them, the User is invited to consult the section of this document relating to the rights of the User.
+
 
 ## The rights of Users
 
