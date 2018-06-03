@@ -36,11 +36,11 @@ The Data processing is carried out using computers and/or IT enabled tools, foll
 
 The Owner may process Personal Data relating to Users if one of the following applies:
 
-    Users have given their consent for one or more specific purposes. Note: Under some legislations the Owner may be allowed to process Personal Data until the User objects to such processing (“opt-out”), without having to rely on consent or any other of the following legal bases. This, however, does not apply, whenever the processing of Personal Data is subject to European data protection law;
-    provision of Data is necessary for the performance of an agreement with the User and/or for any pre-contractual obligations thereof;
-    processing is necessary for compliance with a legal obligation to which the Owner is subject;
-    processing is related to a task that is carried out in the public interest or in the exercise of official authority vested in the Owner;
-    processing is necessary for the purposes of the legitimate interests pursued by the Owner or by a third party.
+- Users have given their consent for one or more specific purposes. Note: Under some legislations the Owner may be allowed to process Personal Data until the User objects to such processing (“opt-out”), without having to rely on consent or any other of the following legal bases. This, however, does not apply, whenever the processing of Personal Data is subject to European data protection law;
+- provision of Data is necessary for the performance of an agreement with the User and/or for any pre-contractual obligations thereof;
+- processing is necessary for compliance with a legal obligation to which the Owner is subject;
+- processing is related to a task that is carried out in the public interest or in the exercise of official authority vested in the Owner;
+- processing is necessary for the purposes of the legitimate interests pursued by the Owner or by a third party.
 
 In any case, the Owner will gladly help to clarify the specific legal basis that applies to the processing, and in particular whether the provision of Personal Data is a statutory or contractual requirement, or a requirement necessary to enter into a contract.
 
@@ -62,8 +62,8 @@ Personal Data shall be processed and stored for as long as required by the purpo
 
 Therefore:
 
-    - Personal Data collected for purposes related to the performance of a contract between the Owner and the User shall be retained until such contract has been fully performed.
-    - Personal Data collected for the purposes of the Owner’s legitimate interests shall be retained as long as needed to fulfill such purposes. Users may find specific information regarding the legitimate interests pursued by the Owner within the relevant sections of this document or by contacting the Owner.
+- Personal Data collected for purposes related to the performance of a contract between the Owner and the User shall be retained until such contract has been fully performed.
+- Personal Data collected for the purposes of the Owner’s legitimate interests shall be retained as long as needed to fulfill such purposes. Users may find specific information regarding the legitimate interests pursued by the Owner within the relevant sections of this document or by contacting the Owner.
 
 The Owner may be allowed to retain Personal Data for a longer period whenever the User has given consent to such processing, as long as such consent is not withdrawn. Furthermore, the Owner may be obliged to retain Personal Data for a longer period whenever required to do so for the performance of a legal obligation or upon order of an authority.
 
@@ -118,11 +118,11 @@ Personal Data collected: various types of Data.
 
 If no other legal basis applies, Personal Data shall be transferred from the EU to third countries only if at least one of the following conditions is met:
 
-    - the transfer is necessary for the performance of a contract between the User and the Owner or of pre-contractual measures taken at the User’s request;
-    - the transfer is necessary for the conclusion or performance of a contract concluded in the interest of the User between - the Owner and another natural or legal person;
-    - the transfer is necessary for important reasons of public interest;
-    - the transfer is necessary for establishment, exercise or defence of legal claims;
-    - the transfer is necessary in order to protect the vital interests of the data subject or of other persons, where the data subject is physically or legally incapable of giving consent. In such cases, the Owner shall inform the User about the legal bases the transfer is based on via this Application.
+- the transfer is necessary for the performance of a contract between the User and the Owner or of pre-contractual measures taken at the User’s request;
+- the transfer is necessary for the conclusion or performance of a contract concluded in the interest of the User between - the Owner and another natural or legal person;
+- the transfer is necessary for important reasons of public interest;
+- the transfer is necessary for establishment, exercise or defence of legal claims;
+- the transfer is necessary in order to protect the vital interests of the data subject or of other persons, where the data subject is physically or legally incapable of giving consent. In such cases, the Owner shall inform the User about the legal bases the transfer is based on via this Application.
 
 Personal Data collected: various types of Data. 
 
@@ -259,19 +259,19 @@ Automated decision-making means that a decision which is likely to have legal ef
 Automated decisions are made by technological means – mostly based on algorithms subject to predefined criteria – which may also be provided by third parties.
 The rationale behind the automated decision making is:
 
-    - to enable or otherwise improve the decision-making process;
-    - to grant Users fair and unbiased treatment based on consistent and uniform criteria;
-    - to reduce the potential harm derived from human error, personal bias and the like which may potentially lead to discrimination or imbalance in the treatment of individuals etc.;
-    - to reduce the risk of User's failure to meet their obligation under a contract. To find out more about the purposes, the third-party services, if any, and any specific rationale for automated decisions used within this Application, Users can check the relevant sections in this document.
+- to enable or otherwise improve the decision-making process;
+- to grant Users fair and unbiased treatment based on consistent and uniform criteria;
+- to reduce the potential harm derived from human error, personal bias and the like which may potentially lead to discrimination or imbalance in the treatment of individuals etc.;
+- to reduce the risk of User's failure to meet their obligation under a contract. To find out more about the purposes, the third-party services, if any, and any specific rationale for automated decisions used within this Application, Users can check the relevant sections in this document.
 
 #### Consequences of automated decision-making processes for Users and rights of Users subjected to it
 
 As a consequence, Users subject to such processing, are entitled to exercise specific rights aimed at preventing or otherwise limiting the potential effects of the automated decisions taken.
 In particular, Users have the right to:
 
-    - obtain an explanation about any decision taken as a result of automated decision-making and express their point of view regarding this decision;
-    - challenge a decision by asking the Owner to reconsider it or take a new decision on a different basis;
-    - request and obtain from the Owner human intervention on such processing. To learn more about the User’s rights and the means to exercise them, the User is invited to consult the section of this document relating to the rights of the User.
+- obtain an explanation about any decision taken as a result of automated decision-making and express their point of view regarding this decision;
+- challenge a decision by asking the Owner to reconsider it or take a new decision on a different basis;
+- request and obtain from the Owner human intervention on such processing. To learn more about the User’s rights and the means to exercise them, the User is invited to consult the section of this document relating to the rights of the User.
 
 
 ## The rights of Users
@@ -280,14 +280,14 @@ Users may exercise certain rights regarding their Data processed by the Owner.
 
 In particular, Users have the right to do the following:
 
-    - Withdraw their consent at any time. Users have the right to withdraw consent where they have previously given their consent to the processing of their Personal Data.
-    - Object to processing of their Data. Users have the right to object to the processing of their Data if the processing is carried out on a legal basis other than consent. Further details are provided in the dedicated section below.
-    - Access their Data. Users have the right to learn if Data is being processed by the Owner, obtain disclosure regarding certain aspects of the processing and obtain a copy of the Data undergoing processing.
-    - Verify and seek rectification. Users have the right to verify the accuracy of their Data and ask for it to be updated or corrected.
-    - Restrict the processing of their Data. Users have the right, under certain circumstances, to restrict the processing of their Data. In this case, the Owner will not process their Data for any purpose other than storing it.
-    - Have their Personal Data deleted or otherwise removed. Users have the right, under certain circumstances, to obtain the erasure of their Data from the Owner.
-    - Receive their Data and have it transferred to another controller. Users have the right to receive their Data in a structured, commonly used and machine readable format and, if technically feasible, to have it transmitted to another controller without any hindrance. This provision is applicable provided that the Data is processed by automated means and that the processing is based on the User's consent, on a contract which the User is part of or on pre-contractual obligations thereof.
-    - Lodge a complaint. Users have the right to bring a claim before their competent data protection authority.
+- Withdraw their consent at any time. Users have the right to withdraw consent where they have previously given their consent to the processing of their Personal Data.
+- Object to processing of their Data. Users have the right to object to the processing of their Data if the processing is carried out on a legal basis other than consent. Further details are provided in the dedicated section below.
+- Access their Data. Users have the right to learn if Data is being processed by the Owner, obtain disclosure regarding certain aspects of the processing and obtain a copy of the Data undergoing processing.
+- Verify and seek rectification. Users have the right to verify the accuracy of their Data and ask for it to be updated or corrected.
+- Restrict the processing of their Data. Users have the right, under certain circumstances, to restrict the processing of their Data. In this case, the Owner will not process their Data for any purpose other than storing it.
+- Have their Personal Data deleted or otherwise removed. Users have the right, under certain circumstances, to obtain the erasure of their Data from the Owner.
+- Receive their Data and have it transferred to another controller. Users have the right to receive their Data in a structured, commonly used and machine readable format and, if technically feasible, to have it transmitted to another controller without any hindrance. This provision is applicable provided that the Data is processed by automated means and that the processing is based on the User's consent, on a contract which the User is part of or on pre-contractual obligations thereof.
+- Lodge a complaint. Users have the right to bring a claim before their competent data protection authority.
 
 ### Details about the right to object to processing
 
@@ -377,4 +377,4 @@ This privacy statement has been prepared based on provisions of multiple legisla
 
 This privacy policy relates solely to this Application, if not stated otherwise within this document.
 
-Latest update: June 03, 2018 
+*Latest update: June 03, 2018*
