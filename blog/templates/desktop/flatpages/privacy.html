@@ -1,7 +1,7 @@
 {% extends "blog/post_base.html" %} {% load staticfiles %} {% load current_site %} {% block title %} {{ flatpage.title }}
 {% endblock %} {% block headers %}
 <!-- meta tags -->
-<meta name="description" content="Flat page">
+<meta name="description" content="Privacy Policy of sciblog">
 <meta name="author" content="Miguel González-Fierro">
 <link rel="canonical" href="{% http_or_https %}{% current_site %}{{ flatpage.url }}"> {% endblock %} {% block content %}
 
@@ -18,7 +18,7 @@
 			if ($('#blogContent').contents().length > 0) {
 				console.log("$('#blogContent').contents().length = ", content_lenght)
 				if (page == 1) {
-					content_height = 650;
+					content_height = 930;
 					$page = $(".page_title:first").clone().addClass("texto").css("display", "block");
 				}
 				else {
@@ -29,7 +29,7 @@
 				page++;
 				// here is the columnizer magic
 				$('#blogContent').columnize({
-					columns: 2,
+					columns: 1,
 					target: ".texto:last .content",
 					overflow: {
 						height: content_height,
@@ -63,7 +63,6 @@
 			</div>
 			<div class="three columns">&nbsp;</div>
 		</div>
-
 		<div class="row">
 			<div class="two columns">&nbsp;</div>
 			<div class="twelve columns content"></div>
