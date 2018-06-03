@@ -62,8 +62,8 @@ Personal Data shall be processed and stored for as long as required by the purpo
 
 Therefore:
 
-    Personal Data collected for purposes related to the performance of a contract between the Owner and the User shall be retained until such contract has been fully performed.
-    Personal Data collected for the purposes of the Owner’s legitimate interests shall be retained as long as needed to fulfill such purposes. Users may find specific information regarding the legitimate interests pursued by the Owner within the relevant sections of this document or by contacting the Owner.
+    - Personal Data collected for purposes related to the performance of a contract between the Owner and the User shall be retained until such contract has been fully performed.
+    - Personal Data collected for the purposes of the Owner’s legitimate interests shall be retained as long as needed to fulfill such purposes. Users may find specific information regarding the legitimate interests pursued by the Owner within the relevant sections of this document or by contacting the Owner.
 
 The Owner may be allowed to retain Personal Data for a longer period whenever the User has given consent to such processing, as long as such consent is not withdrawn. Furthermore, the Owner may be obliged to retain Personal Data for a longer period whenever required to do so for the performance of a legal obligation or upon order of an authority.
 
@@ -198,7 +198,7 @@ Personal Data collected: Cookies and Usage Data.
 
 Place of processing: United States – Privacy Policy (https://www.facebook.com/privacy/explanation). Privacy Shield participant.
 
-### Google+ +1 button and social widgets (Google Inc.)
+#### Google+ +1 button and social widgets (Google Inc.)
 
 The Google+ +1 button and social widgets are services allowing interaction with the Google+ social network provided by Google Inc.
 
@@ -207,7 +207,7 @@ Personal Data collected: Cookies and Usage Data.
 Place of processing: United States – Privacy Policy (https://www.google.com/intl/policies/privacy/). Privacy Shield participant.
 
 
-### Twitter Tweet button and social widgets (Twitter, Inc.)
+#### Twitter Tweet button and social widgets (Twitter, Inc.)
 
 The Twitter Tweet button and social widgets are services allowing interaction with the Twitter social network provided by Twitter, Inc.
 
@@ -216,7 +216,7 @@ Personal Data collected: Cookies and Usage Data.
 Place of processing: United States – Privacy Policy (https://twitter.com/privacy). Privacy Shield participant.
 
 
-### LinkedIn button and social widgets (LinkedIn Corporation)
+#### LinkedIn button and social widgets (LinkedIn Corporation)
 
 The LinkedIn button and social widgets are services allowing interaction with the LinkedIn social network provided by LinkedIn Corporation.
 
@@ -224,7 +224,7 @@ Personal Data collected: Cookies and Usage Data.
 
 Place of processing: United States – Privacy Policy (https://www.linkedin.com/legal/privacy-policy). Privacy Shield participant. 
 
-### WhatsApp button and social widgets (Facebook, Inc.)
+#### WhatsApp button and social widgets (Facebook, Inc.)
 
 The WhatsApp button and social widgets are services allowing interaction with the WhatsApp social network provided by Facebook, Inc.
 
@@ -232,6 +232,17 @@ Personal Data collected: Cookies and Usage Data.
 
 Place of processing: United States – Privacy Policy (https://www.whatsapp.com/legal/). Privacy Shield participant. 
 
+### RSS feed management
+
+This type of service allows this Application to manage RSS feeds and the distribution of their content. Depending on the characteristics of the service used, these services may be used to insert ads within the content and to gather statistics data from them.
+
+#### Feedburner (Google Inc.)
+
+Feedburner is a service to manage RSS feeds provided by Google Inc. It allows the collection of statistics on what content is consumed.
+
+Personal Data collected: Usage Data.
+
+Place of processing: US – Privacy Policy (Feedburner is a service to manage RSS feeds provided by Google Inc.).
 
 
 ## Further information about Personal Data
@@ -269,14 +280,14 @@ Users may exercise certain rights regarding their Data processed by the Owner.
 
 In particular, Users have the right to do the following:
 
-    Withdraw their consent at any time. Users have the right to withdraw consent where they have previously given their consent to the processing of their Personal Data.
-    Object to processing of their Data. Users have the right to object to the processing of their Data if the processing is carried out on a legal basis other than consent. Further details are provided in the dedicated section below.
-    Access their Data. Users have the right to learn if Data is being processed by the Owner, obtain disclosure regarding certain aspects of the processing and obtain a copy of the Data undergoing processing.
-    Verify and seek rectification. Users have the right to verify the accuracy of their Data and ask for it to be updated or corrected.
-    Restrict the processing of their Data. Users have the right, under certain circumstances, to restrict the processing of their Data. In this case, the Owner will not process their Data for any purpose other than storing it.
-    Have their Personal Data deleted or otherwise removed. Users have the right, under certain circumstances, to obtain the erasure of their Data from the Owner.
-    Receive their Data and have it transferred to another controller. Users have the right to receive their Data in a structured, commonly used and machine readable format and, if technically feasible, to have it transmitted to another controller without any hindrance. This provision is applicable provided that the Data is processed by automated means and that the processing is based on the User's consent, on a contract which the User is part of or on pre-contractual obligations thereof.
-    Lodge a complaint. Users have the right to bring a claim before their competent data protection authority.
+    - Withdraw their consent at any time. Users have the right to withdraw consent where they have previously given their consent to the processing of their Personal Data.
+    - Object to processing of their Data. Users have the right to object to the processing of their Data if the processing is carried out on a legal basis other than consent. Further details are provided in the dedicated section below.
+    - Access their Data. Users have the right to learn if Data is being processed by the Owner, obtain disclosure regarding certain aspects of the processing and obtain a copy of the Data undergoing processing.
+    - Verify and seek rectification. Users have the right to verify the accuracy of their Data and ask for it to be updated or corrected.
+    - Restrict the processing of their Data. Users have the right, under certain circumstances, to restrict the processing of their Data. In this case, the Owner will not process their Data for any purpose other than storing it.
+    - Have their Personal Data deleted or otherwise removed. Users have the right, under certain circumstances, to obtain the erasure of their Data from the Owner.
+    - Receive their Data and have it transferred to another controller. Users have the right to receive their Data in a structured, commonly used and machine readable format and, if technically feasible, to have it transmitted to another controller without any hindrance. This provision is applicable provided that the Data is processed by automated means and that the processing is based on the User's consent, on a contract which the User is part of or on pre-contractual obligations thereof.
+    - Lodge a complaint. Users have the right to bring a claim before their competent data protection authority.
 
 ### Details about the right to object to processing
 
