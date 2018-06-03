@@ -378,3 +378,6 @@ This privacy statement has been prepared based on provisions of multiple legisla
 This privacy policy relates solely to this Application, if not stated otherwise within this document.
 
 *Latest update: June 03, 2018*
+
+For extending this policy, you can take a look at [iubenda](https://www.iubenda.com).
+

@@ -18,7 +18,7 @@
 			if ($('#blogContent').contents().length > 0) {
 				console.log("$('#blogContent').contents().length = ", content_lenght)
 				if (page == 1) {
-					content_height = 650;
+					content_height = 930;
 					$page = $(".page_title:first").clone().addClass("texto").css("display", "block");
 				}
 				else {
@@ -29,7 +29,7 @@
 				page++;
 				// here is the columnizer magic
 				$('#blogContent').columnize({
-					columns: 2,
+					columns: 1,
 					target: ".texto:last .content",
 					overflow: {
 						height: content_height,
