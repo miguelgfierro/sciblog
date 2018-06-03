@@ -8,16 +8,17 @@ from libs.ckeditor_uploader.fields import RichTextUploadingField
 
 class Post(models.Model):
     """Post class to generate blog posts."""
-    
     title = models.CharField(max_length=67, unique=True)
-    slug = models.SlugField(max_length=100, unique=True, blank=True,editable=False)
-    meta_description = models.CharField('Meta description for SEO', max_length=155)#description for SEO purposes
-    abstract = models.TextField('Abstract (300-500 characters)',max_length=500)
+    slug = models.SlugField(max_length=100, unique=True, blank=True, editable=False)
+    # description for SEO purposes
+    meta_description = models.CharField('Meta description for SEO', max_length=155)
+    abstract = models.TextField('Abstract (300-500 characters)', max_length=500)
     pub_date = models.DateField('Date published')
     keywords = models.CharField(max_length=100, blank=True)
     authors = models.CharField(max_length=100)
     site = models.ForeignKey(Site, blank=True, null=True)
-    has_latex_formula = models.BooleanField('Post with LATEX formula?',default=False)#if true, mathjax.js is included in template (better for SEO)
+    # if has_latex_formula=true, mathjax.js is included in template (better for SEO)
+    has_latex_formula = models.BooleanField('Post with LATEX formula?', default=False)
     content = RichTextUploadingField(blank=True, null=True)
 
     def __unicode__(self):
@@ -35,7 +36,7 @@ class Post(models.Model):
     def save(self):
         self.slug = slugify(self.title)
         self.keywords = self.keywords.lower()
-        super(Post,self).save()
+        super(Post, self).save()
 
     class Meta:
         ordering = ["-pub_date"]

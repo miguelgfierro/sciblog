@@ -2,6 +2,7 @@ from django.contrib.sitemaps import Sitemap
 from django.contrib.flatpages.models import FlatPage
 from blog.models import Post
 
+
 class PostSitemap(Sitemap):
     changefreq = "always"
     priority = 0.5

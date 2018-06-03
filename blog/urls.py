@@ -22,9 +22,9 @@ robots_content = "User-agent: *\nDisallow: /admin/\nSitemap: https://{}/sitemap.
 
 urlpatterns = patterns('',
     # Index
-    url(r'^(?P<page>\d+)?/?$', ListView.as_view(model=Post,paginate_by=5,),name='index'),
+    url(r'^(?P<page>\d+)?/?$', ListView.as_view(model=Post, paginate_by=5,), name='index'),
     # Individual posts
-    url(r'^blog/(?P<pub_date__year>\d{4})/(?P<slug>[a-zA-Z0-9-]+)/?$', DetailView.as_view(model=Post,),name='post'),
+    url(r'^blog/(?P<pub_date__year>\d{4})/(?P<slug>[a-zA-Z0-9-]+)/?$', DetailView.as_view(model=Post,), name='post'),
     # Post RSS feed
     url(r'^feed/posts/$', PostsFeed()),
     # Search posts
@@ -32,7 +32,7 @@ urlpatterns = patterns('',
     #robots.txt
     url(r'^robots.txt$', lambda r: HttpResponse(robots_content, content_type="text/plain")),
     #sitemap
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 )
 # add flat pages
 urlpatterns += patterns('django.contrib.flatpages.views',
