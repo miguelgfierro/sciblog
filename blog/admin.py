@@ -29,7 +29,7 @@ class PostAdmin(admin.ModelAdmin):
 
 class ExtendedFlatPageForm(FlatpageForm):
     locals()['content'] = forms.CharField(widget=CKEditorWidget(), required=False, label=(u'Content'))
-    
+
     class Meta:
         model = FlatPage
         fields = "__all__"

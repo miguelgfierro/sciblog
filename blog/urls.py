@@ -24,7 +24,7 @@ urlpatterns = patterns('',
     # Index
     url(r'^(?P<page>\d+)?/?$', ListView.as_view(model=Post, paginate_by=5,), name='index'),
     # Individual posts
-    url(r'^blog/(?P<pub_date__year>\d{4})/(?P<slug>[a-zA-Z0-9-]+)/?$', DetailView.as_view(model=Post,), 
+    url(r'^blog/(?P<pub_date__year>\d{4})/(?P<slug>[a-zA-Z0-9-]+)/?$', DetailView.as_view(model=Post,),
     name='post'),
     # Post RSS feed
     url(r'^feed/posts/$', PostsFeed()),
