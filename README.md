@@ -21,6 +21,8 @@ Blog developed in django with the same appearance of a research paper written in
 * Responsive for mobile
 * (Optional) Web optimization with CloudFlare
 * (Optional) Installation of free SSL certificate
+* (Optional) Privacy policy compliant with GDPR 
+
 
 Example of sciblog: [http://miguelgfierro.com](http://miguelgfierro.com)
 
@@ -111,13 +113,16 @@ Press add in Post to add your first post. You can add different sections, images
 You will see that your blog is working properly going to the url: [http://localhost:8000](http://localhost:8000) (in production you'll have to add something like http://miguelgfierro.com).
 
 
-Create the about page
+Create flat pages: generic page, about page and privacy page
 ==================================================
 
 Go to the admin console and add your first flat page. A flat page is a static html code. 
- 
-In Flat pages press add. In url put `/about/` (don't forget / in both sides). In title put your name, in sites put your site and in content put whatever you want. 
 
+In Flat pages press add. In url put `/about/` (don't forget / in both sides). In title put your name, in sites put your site, in content put whatever you want and finally in template name put `flatpages/about.html`. 
+
+You can also create a privacy policy flat page. Go to the admin console, add a new flat page and in the url put `/privacy/`. I created a policy that is compliant with GDPR and that contains the typical systems and services of a normal personal blog: Google Analytics, cookies, RSS, etc. The text that I use can be found [here](blog/templates/privacy_template.md). You can adapt your policy to your specific blog.
+
+In case you want to add more flat pages, there is a generic html template that you can customize by modifying the file [default.html](blog/templates/desktop/flatpages/default.html).
 
 Managing mobile view
 ==================================================
