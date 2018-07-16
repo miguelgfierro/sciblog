@@ -411,7 +411,7 @@ a:hover.navigation-bar-item-text{
   position: relative;
 }
 input.navigation-bar-search-input{
-float:left;
+  float:left;
   background-color: rgba(255, 255, 255, 0.9);
   margin-top: 7px;
   margin-bottom: 0px;
@@ -473,5 +473,10 @@ blockquote {
   font-family: LatexItalic;
   font-size: 16px;
 }
-
+code {
+  font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 10px;
+  padding: 0 1rem;
+  margin: 10px 0;
+}
 

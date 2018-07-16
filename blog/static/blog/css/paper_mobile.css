@@ -476,4 +476,7 @@ li {
     display: block;
   }
 }
-
+code {
+  font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 10px;
+}
