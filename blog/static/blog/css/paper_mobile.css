@@ -83,16 +83,16 @@ h1.title{
   margin: 1rem 0 0.5rem 0.5rem;
 }
 h1.title a,a:visited{
-  text-decoration:none;
-  color:#000;
+  text-decoration: none;
+  color: #000;
 }
 h1.title a:hover{
-  text-decoration:underline;
+  text-decoration: underline;
 }
 h2.keywords{
   text-align: justify;
   font-size: 14px;
-  margin-bottom:0.5rem;
+  margin-bottom: 0.5rem;
 }
 h2.keywords:before{
   content: "Keywords: ";
@@ -101,7 +101,7 @@ h2.keywords:before{
 h3.abstract{
   text-align: justify;
   font-size: 14px;
-  margin-bottom:0.5rem;
+  margin-bottom: 0.5rem;
 }
 h3.abstract:before{
   content: "Abstract— ";
@@ -166,7 +166,7 @@ img{
 }
 .image .image-caption{
   font-size: 14px;
-  margin-bottom:0.5rem;
+  margin-bottom: 0.5rem;
 }
 ul{
   font-size: 16px;
@@ -174,20 +174,20 @@ ul{
   margin: 10px 0;
 }
 ul li:before{
-  content:'• ';
-  margin-left:-1rem;
+  content: '• ';
+  margin-left: -1rem;
 }
 ol{
   font-size: 14px;
   padding-left: 1rem;
   text-indent: 0px;
   text-align: justify;
-  counter-reset:li; /* Initiate a counter */
-  list-style:none; /* Disable the normal item numbering */
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /* Disable the normal item numbering */
 }
 ol li:before{
-  content:'['counter(li)'] '; /* Use the counter as content */
-  counter-increment:li; /* Increment the counter by 1 */
+  content: '['counter(li)'] '; /* Use the counter as content */
+  counter-increment: li; /* Increment the counter by 1 */
 }
 /* ************************************************************************** */
 /* Blog styles*/
@@ -233,7 +233,7 @@ p.wrap {
 .container{
   width: 100%;
   text-align: justify;
-  padding-top:4rem;
+  padding-top: 4rem;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .container-list{
@@ -262,8 +262,8 @@ p.wrap {
 }
 .row-comments{
   margin-bottom: 20px;
-  padding-left:2rem;
-  padding-right:1rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
 }
 .container-footer{
   position: relative;
@@ -280,7 +280,7 @@ p.wrap {
   font-size: 12px;
 }
 .container-footer a, a:visited{
-  text-decoration:none;
+  text-decoration: none;
   padding: 0rem 2rem;
 }
 .wrapper {
@@ -304,13 +304,13 @@ p.wrap {
   margin: 1rem auto;
 }
 .social-icons{
-  margin-top:5rem;
-  margin-left:1.8rem;
+  margin-top: 5rem;
+  margin-left: 1.8rem;
   overflow: hidden;
 }
 .social-icons-fb, .social-icons-tw, .social-icons-gp, .social-icons-lk, .social-icons-email, .social-icons-whatsapp{
   display: block;
-  float:left;
+  float: left;
   margin-right:4px;
   height: 32px;
   width: 32px;
@@ -363,12 +363,12 @@ p.wrap {
   margin: 0px auto;
 }
 .navigation-bar-home{
-  float:left;
+  float: left;
   height: 46px;
-  width:56px;
+  width: 56px;
   overflow: hidden;
   background-image: url("../img/hoap_front_small.png");
-  display:block;
+  display: block;
   background-position: left top;
   background-repeat: no-repeat;
 }
@@ -377,7 +377,7 @@ p.wrap {
   position: relative;
 }
 input.navigation-bar-search-input{
-float:left;
+  float: left;
   background-color: rgba(255, 255, 255, 0.9);
   margin-top: 7px;
   margin-bottom: 0px;
@@ -388,9 +388,9 @@ button.navigation-bar-search-icon{
   background-image: url("../img/icon_search.png");
   background-position: right top;
   background-repeat: no-repeat;
-  border:none;
-  background-color:inherit;
-  cursor:pointer;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
   width: 30px;
   height: 30px;
   margin-top: 8px;
@@ -399,10 +399,10 @@ button.navigation-bar-search-icon{
   position: absolute;
 }
 .float-right{
-  float:right;
+  float: right;
 }
 .float-left{
-  float-left;
+  float: left;
 }
 .page_title{
   display: none;
@@ -479,4 +479,6 @@ li {
 code {
   font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
   font-size: 10px;
+  padding: 0 1rem;
+  margin: 10px 0;
 }
