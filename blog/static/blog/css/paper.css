@@ -476,7 +476,11 @@ blockquote {
 code {
   font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
   font-size: 10px;
-  padding: 0 1rem;
-  margin: 10px 0;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: block;
+  background: #e9e8ed none repeat scroll 0% 0%;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
 }
 
