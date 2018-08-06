@@ -1,2 +1,1 @@
-0 */8 * * *  /bin/bash -c '/path/to/certbot-auto renew --quiet --keep-until-expiring --no-self-upgrade &>> cron.log'
-
+7 7 */3 * * /bin/date && /usr/bin/python cron_ssl_renew.py >> cron.log 2>&1
