@@ -1,6 +1,8 @@
 import requests
 import json
-from sciblog.private import CLOUDFLARE_ZONEID, CLOUDFLARE_APIKEY
+import subprocess
+from sciblog.private import (CLOUDFLARE_ZONEID, CLOUDFLARE_APIKEY,
+                             CERTBOT_AUTO_PATH)
 from sciblog.settings import EMAIL_ADDRESS
 
 
@@ -15,7 +17,14 @@ ENDPOINT = 'https://api.cloudflare.com/client/v4/zones/' + CLOUDFLARE_ZONEID
 
 
 def pause_cloudflare():
-    data = {'paused': 'true'}
+    """Pause cloudflare. From documentation:
+    $ curl -X PATCH "https://api.cloudflare.com/client/v4/zones/0000ZONEID0000" \
+           -H "X-Auth-Email: user@example.com" \
+           -H "X-Auth-Key: 0000APIKEY0000" \
+           -H "Content-Type: application/json" \
+           --data '{"paused": true}'
+    """
+    data = {'paused': True}
     res = requests.patch(ENDPOINT,
                          data=json.dumps(data), headers=HEADERS)
     if res.ok:
@@ -26,7 +35,14 @@ def pause_cloudflare():
 
 
 def resume_cloudflare():
-    data = {'paused': 'false'}
+    """Resume cloudflare. From documentation:
+    $ curl -X PATCH "https://api.cloudflare.com/client/v4/zones/0000ZONEID0000" \
+           -H "X-Auth-Email: user@example.com" \
+           -H "X-Auth-Key: 0000APIKEY0000" \
+           -H "Content-Type: application/json" \
+           --data '{"paused": false}'
+    """
+    data = {'paused': False}
     res = requests.patch(ENDPOINT,
                          data=json.dumps(data), headers=HEADERS)
     if res.ok:
@@ -34,6 +50,7 @@ def resume_cloudflare():
     else:
         print("ERROR when resuming Cloudflare")
         print(res.json())
+
 
 
 # pause_cloudflare()

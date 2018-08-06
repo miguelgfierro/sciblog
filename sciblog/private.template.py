@@ -7,3 +7,7 @@ DEBUG_FLAG = False
 # The API Key can be accessed in the profile https://dash.cloudflare.com/profile
 CLOUDFLARE_ZONEID = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 CLOUDFLARE_APIKEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+
+# Let's Encript certbot path
+# $ wget https://dl.eff.org/certbot-auto
+CERTBOT_AUTO_PATH = '/path/to/certbot-auto'
