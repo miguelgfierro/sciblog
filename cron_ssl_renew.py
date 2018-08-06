@@ -1,6 +1,10 @@
+import sys
 import requests
 import json
-import subprocess
+if sys.version_info[0] < 3:
+    import subprocess32 as subprocess
+else:
+    import subprocess
 from sciblog.private import (CLOUDFLARE_ZONEID, CLOUDFLARE_APIKEY,
                              CERTBOT_AUTO_PATH)
 from sciblog.settings import EMAIL_ADDRESS
