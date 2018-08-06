@@ -22,7 +22,8 @@ SECRET_KEY = SECRETKEY
 # This flag is set in an external file private.py
 DEBUG = DEBUG_FLAG
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','www.miguelgfierro.com','miguelgfierro.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost',
+                 'www.miguelgfierro.com', 'miguelgfierro.com']
 
 # Application definition
 INSTALLED_APPS = (
@@ -37,8 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.syndication',
     'django.contrib.sitemaps',
-    'libs.django-disqus.disqus', # for comments
-    'libs.ckeditor', # for managing text,images and formulas
+    'libs.django-disqus.disqus',  # for comments
+    'libs.ckeditor',  # for managing text,images and formulas
     'libs.ckeditor_uploader',
 )
 SITE_ID = 1
@@ -63,8 +64,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
 )
 
-#list of IPs able to see the toolbar
-INTERNAL_IPS=('127.0.0.1','localhost',)
+# list of IPs able to see the toolbar
+INTERNAL_IPS = ('127.0.0.1', 'localhost',)
 
 ROOT_URLCONF = 'sciblog.urls'
 
@@ -83,13 +84,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = False
 
 
@@ -106,7 +103,7 @@ MEDIA_URL = '/img/'
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'blog','static'),
+    os.path.join(BASE_DIR, 'blog', 'static'),
 )
 
 # Template directory
@@ -127,11 +124,12 @@ DISQUS_API_KEY = 'a4b0vyjnp1sE5hYt8GP7blDgoe1Y0ohfY4gNoWh8JpZCSyGvVN41JOrhpPgREW
 DISQUS_WEBSITE_SHORTNAME = 'miguelgfierro'
 
 # Http protocol with (https://) or without SSL (http://)
-# NOTE: You need to have a SSL certificate installed before setting this flag to True
+# NOTE: You need to have a SSL certificate installed before setting this flag
+# to True
 HTTPS = True
 
 # Social Networks
-FACEBOOK_ID = '556883141128364' #for Facebook tracking
+FACEBOOK_ID = '556883141128364'  # for Facebook tracking
 FACEBOOK_URL = ''
 TWITTER_URL = 'https://twitter.com/miguelgfierro'
 TWITTER_HANDLE = 'miguelgfierro'
@@ -140,6 +138,8 @@ GOOGLE_PLUS_URL = 'https://plus.google.com/+MiguelGonzalezFierro'
 PINTEREST_URL = ''
 INSTAGRAM_URL = ''
 RSS_URL = 'http://feeds.feedburner.com/miguelgfierro'
+GITHUB_URL = 'https://github.com/miguelgfierro'
+EMAIL_ADDRESS = 'hoaphumanoid@gmail.com'
 
 # Google Analytics
 GA_TRACKING_ID = 'UA-70996723-1'

@@ -12,38 +12,57 @@ register = template.Library()
     <a href="{% facebook_url %}">Link to Facebook</a>
 """
 
+
 @register.simple_tag
 def facebook_id():
     return scisettings.FACEBOOK_ID
+
 
 @register.simple_tag
 def facebook_url():
     return scisettings.FACEBOOK_URL
 
+
 @register.simple_tag
 def twitter_url():
     return scisettings.TWITTER_URL
+
 
 @register.simple_tag
 def twitter_handle():
     return scisettings.TWITTER_HANDLE
 
+
 @register.simple_tag
 def linkedin_url():
     return scisettings.LINKEDIN_URL
+
 
 @register.simple_tag
 def google_plus_url():
     return scisettings.GOOGLE_PLUS_URL
 
+
 @register.simple_tag
 def pinterest_url():
     return scisettings.PINTEREST_URL
+
 
 @register.simple_tag
 def instagram_url():
     return scisettings.INSTAGRAM_URL
 
+
 @register.simple_tag
 def rss_url():
     return scisettings.RSS_URL
+
+
+@register.simple_tag
+def github_url():
+    return scisettings.GITHUB_URL
+
+
+@register.simple_tag
+def email_address():
+    return scisettings.EMAIL_ADDRESS
