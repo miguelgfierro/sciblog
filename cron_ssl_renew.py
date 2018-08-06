@@ -63,6 +63,7 @@ def renew_ssl_certificate():
         print(e)
 
 
-# pause_cloudflare()
-# resume_cloudflare()
-renew_ssl_certificate()
+if __name__ == "__main__":
+    # pause_cloudflare()
+    # resume_cloudflare()
+    renew_ssl_certificate()
