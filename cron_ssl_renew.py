@@ -16,8 +16,8 @@ ENDPOINT = 'https://api.cloudflare.com/client/v4/zones/' + CLOUDFLARE_ZONEID
 
 def pause_cloudflare():
     data = {'paused': 'true'}
-    res = requests.post(ENDPOINT,
-                        data=json.dumps(data), headers=HEADERS)
+    res = requests.patch(ENDPOINT,
+                         data=json.dumps(data), headers=HEADERS)
     if res.ok:
         print("Cloudflare paused")
     else:
@@ -27,8 +27,8 @@ def pause_cloudflare():
 
 def resume_cloudflare():
     data = {'paused': 'false'}
-    res = requests.post(ENDPOINT,
-                        data=json.dumps(data), headers=HEADERS)
+    res = requests.patch(ENDPOINT,
+                         data=json.dumps(data), headers=HEADERS)
     if res.ok:
         print("Cloudflare resumed")
     else:
@@ -36,4 +36,5 @@ def resume_cloudflare():
         print(res.json())
 
 
-pause_cloudflare()
+# pause_cloudflare()
+resume_cloudflare()
