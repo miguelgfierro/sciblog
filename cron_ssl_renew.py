@@ -61,13 +61,13 @@ def renew_ssl_certificate():
         command = [CERTBOT_AUTO_PATH, "renew", "--quiet",
                    "--keep-until-expiring", "--no-self-upgrade"]
         out_str = subprocess.run(command, stdout=subprocess.PIPE).stdout
-        out_list = out_str.decode("utf-8").replace('\r', '').split('\n')
-        print(out_list)
+        out_str = out_str.decode("utf-8").replace('\r', '')
+        print(out_str)
     except Exception as e:
         print(e)
 
 
 if __name__ == "__main__":
-    # pause_cloudflare()
-    # resume_cloudflare()
+    pause_cloudflare()
     renew_ssl_certificate()
+    resume_cloudflare()
