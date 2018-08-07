@@ -3,8 +3,8 @@
 [![Commits since latest release](https://img.shields.io/github/commits-since/miguelgfierro/sciblog/latest.svg)](https://github.com/miguelgfierro/sciblog/releases)
 
 
-Sciblog: A blog with the appearance of a scientific paper.
-==================
+# Sciblog: A blog with the appearance of a scientific paper.
+
 
 Blog developed in django with the same appearance of a research paper written in [Latex](https://en.wikipedia.org/wiki/LaTeX).
 
@@ -31,8 +31,8 @@ Example of sciblog: [http://miguelgfierro.com](http://miguelgfierro.com)
 </p>
 
 
-Installation
-==================
+## Installation
+
 
 We need to install several libraries. In Linux the commands are:
 
@@ -42,8 +42,8 @@ We need to install several libraries. In Linux the commands are:
 
 NOTE: Django version must be 1.7 and Python has to be version 2.7.
 
-Set up the project in localhost
-==================================================
+## Set up the project in localhost
+
 The first step is to generate the database. In the project folder:
   
 	$ cp sciblog/private.template.py sciblog/private.py
@@ -71,8 +71,7 @@ To work with disqus comments you have to get your `DISQUS_API_KEY` and `DISQUS_W
 
 NOTE: As of March 2017, [Disqus shows ads](https://kinsta.com/blog/disqus-ads/) by default. However, ads can be disabled if you run a [small and non-commercial site](https://blog.disqus.com/advertising-will-remain-optional-for-over-95-of-sites-on-disqus).   
 
-Set up the project in a Ubuntu VPS server
-==================================================
+## Set up the project in a Ubuntu VPS server
 
 First make sure that you have installed `git`, `apache2` and `libapache2-mod-wsgi` as explained before. Also, change the key in `private.py`.
 
@@ -100,8 +99,8 @@ Configure apache (in sciblog.conf change example.com for your url):
 
 When you are in production you have to set `DEBUG_FLAG = False` in `sciblog/private.py`.
 	
-Add your first content to the blog
-==================================================
+## Add your first content to the blog
+
 
 The first step is to configure the site. Also, the first time you enter in your admin console [http://localhost:8000/admin/](http://localhost:8000/admin/), you have to go to sites and edit the default site, which is `example.com`. Change it for `localhost:8000`, if you are in development or to the name of your site without `http://` (my case would be miguelgfierro.com).
 
@@ -112,8 +111,7 @@ Press add in Post to add your first post. You can add different sections, images
 You will see that your blog is working properly going to the url: [http://localhost:8000](http://localhost:8000) (in production you'll have to add something like http://miguelgfierro.com).
 
 
-Create flat pages: generic page, about page and privacy page
-==================================================
+## Create flat pages: generic page, about page and privacy page
 
 Go to the admin console and add your first flat page. A flat page is a static html code. 
 
@@ -123,8 +121,8 @@ You can also create a privacy policy flat page. Go to the admin console, add a n
 
 In case you want to add more flat pages, there is a generic html template that you can customize by modifying the file [default.html](blog/templates/desktop/flatpages/default.html).
 
-Managing mobile view
-==================================================
+## Managing mobile view
+
 In order to debug with a mobile phone first you need to set `DEBUG = True` in `sciblog/settings.py`. Then you have to run the django server in the computer's external IP. To do that:
 
 	$ python manage.py runserver 0.0.0.0:8000
@@ -134,16 +132,15 @@ Then you need to know the IP of your computer. In Linux and Mac the command is `
 	http://192.168.1.5:8000 
 
 
-Speed up page with Cloudflare (optional)
-==================================================
+## Speed up page with Cloudflare (optional)
+
 
 You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. This is how my web looks like in terms of speed using [gtmetrix](https://gtmetrix.com):
 
 ![Speed rank](img/pagespeed1.png "Performance scores")
 ![Speed stats](img/pagespeed2.png "Page details")
  
-Secure page with SSL certificate (optional)
-==================================================
+## Secure page with SSL certificate (optional)
 
 You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). Google prioritizes pages with [SSL security](http://googlewebmastercentral.blogspot.be/2014/08/https-as-ranking-signal.html), so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in settings.py. 
 
@@ -159,12 +156,18 @@ When the certificate expires, you just need to renew it.
     
 	$ ./certbot-auto renew --quiet --no-self-upgrade
 	$ service apache2 restart
-	
-This task can be automated as Let's Encript explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task. To do it you just have to modify the file `cron_ssl_renew` with the correct path and execute:
+
+NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
+
+### Automatize renewal of Let's Encrypt certificate
+
+This task can be automated as Let's Encrypt explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task. 
+
+I created a [python script](cron_ssl_renew.py) that allows one to automatize the SSL certificate renewal. To do it you just have to add the file `cron_ssl_renew` to crontab:
 
 	$ crontab cron_ssl_renew
 
-This file executes every 8h. You can see that the CRON task is correcly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
+This files executes every 3 days at 7.07am. You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
 
-NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
+
  
