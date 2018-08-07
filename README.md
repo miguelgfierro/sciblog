@@ -167,7 +167,7 @@ I created a [python script](cron_ssl_renew.py) that allows one to automatize the
 
 	$ crontab cron_ssl_renew
 
-This files executes every 3 days at 7.07am. You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
+This files executes every 5 days at 7.07am. You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
 
 
  
