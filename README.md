@@ -171,8 +171,14 @@ This files executes every 5 days at 7.07am. You can see that the CRON task is co
 
 ## SEO tricks
 
+This blog is automatically optimized for [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization), however, you can improve your visibility with these tricks:
+
 * Always use https instead of http.
 * Add your sitemap to [Google](https://www.google.com/webmasters/tools), [Bing](https://www.bing.com/webmaster/home/mysites) and [Yandex](https://webmaster.yandex.com/). For Baidu, it is difficult to index your site, in [this url](http://ping.baidu.com/ping.html) you can add your blog.
 * Check the speed of your page with tools like [gtmetrix](https://gtmetrix.com).
 * Promote your posts in webs like [Hacker News](https://news.ycombinator.com/newest), [reddit](http://reddit.com/), [Linkedin](http://linkedin.com/), [Facebook](http://facebook.com/) or [Twitter](http://twitter.com/).
+* Analyze your site on [Google Analytics](https://analytics.google.com/analytics/web).
+* Always use images in your posts, research shows that you will get [more views](https://www.b2bmarketing.net/en-gb/resources/news/research-news-articles-images-get-94-more-views-those-without).
+* Engage with top influencers in your niche. You can feature other bloggers in your site and ask them to share or ask them to repost your content.
+* Analyze your web with SEO checkers like [woorank](https://www.woorank.com/).
  
