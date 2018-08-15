@@ -173,5 +173,6 @@ This files executes every 5 days at 7.07am. You can see that the CRON task is co
 
 * Always use https instead of http.
 * Add your sitemap to [Google](https://www.google.com/webmasters/tools), [Bing](https://www.bing.com/webmaster/home/mysites) and [Yandex](https://webmaster.yandex.com/). For Baidu, it is difficult to index your site, in [this url](http://ping.baidu.com/ping.html) you can add your blog.
-
+* Check the speed of your page with tools like [gtmetrix](https://gtmetrix.com).
+* Promote your posts in webs like [Hacker News](https://news.ycombinator.com/newest), [reddit](http://reddit.com/), [Linkedin](http://linkedin.com/), [Facebook](http://facebook.com/) or [Twitter](http://twitter.com/).
  
