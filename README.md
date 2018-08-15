@@ -169,5 +169,9 @@ I created a [python script](cron_ssl_renew.py) that allows one to automatize the
 
 This files executes every 5 days at 7.07am. You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
 
+## SEO tricks
+
+* Always use https instead of http.
+* Add your sitemap to [Google](https://www.google.com/webmasters/tools), [Bing](https://www.bing.com/webmaster/home/mysites) and [Yandex](https://webmaster.yandex.com/).
 
  
