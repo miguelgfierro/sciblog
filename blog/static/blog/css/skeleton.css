@@ -13,18 +13,6 @@
     margin-bottom: 20px
 }
 
-.columns.alpha {
-    margin-left: 0!important
-}
-
-.columns.omega {
-    margin-right: 0!important
-}
-
-.columns.alpha.omega {
-    margin: 0!important
-}
-
 .container .columns.one {
     width: 6.25%;
 }
