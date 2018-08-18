@@ -8,6 +8,7 @@
 <![endif]-->
 
 <html lang="en">
+
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
@@ -15,38 +16,34 @@
   <title>{% block title %} {% endblock %}</title>
 
   <!-- Load template tags -->
-  {% load staticfiles %}
-  {% load current_site %}
-  {% load flatpages %}
-  {% get_flatpages '/about/' as about_pages %} <!-- gets about page, it returns a list so we need to iterate -->
-  {% load social %}
-  {% load analytics %}
+  {% load staticfiles %} {% load current_site %} {% load flatpages %} {% get_flatpages '/about/' as about_pages %}
+  <!-- gets about page, it returns a list so we need to iterate -->
+  {% load social %} {% load analytics %}
 
   <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
-  <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}" >
+  <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}">
   <link rel="apple-touch-icon" sizes="72x72" href="{% static 'blog/img/apple-touch-icon-72x72.png' %}">
   <link rel="apple-touch-icon" sizes="114x114" href="{% static 'blog/img/apple-touch-icon-114x114.png' %}">
 
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.min.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper_mobile.min.css' %}">
-  <link rel="publisher" href="{% google_plus_url %}" />
-
-
-  {% block headers %}
+  <link rel="publisher" href="{% google_plus_url %}" /> {% block headers %}
   <!-- Add headers in the child templates -->
   {% endblock %}
 
-  <!-- scripts Google Analytics (do not track localhost when debugging) -->
+  <!-- scripts Google Analytics:
+    - using ga-lite: smaller, cacheable subset of Google Analytics JS client
+    - do not track localhost when debugging -->
   {% if not debug %}
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', '{% ga_tracking_id %}', 'auto');
-    ga('send', 'pageview');
-  </script>
-  {% endif %}
+    (function (e, t, n, i, s, a, c) {
+      e[n] = e[n] || function () { (e[n].q = e[n].q || []).push(arguments) }
+        ; a = t.createElement(i); c = t.getElementsByTagName(i)[0]; a.async = true; a.src = s
+        ; c.parentNode.insertBefore(a, c)
+    })(window, document, "galite", "script", "https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+    galite('create', '{% ga_tracking_id %}', 'auto');
+    galite('send', 'pageview');
+  </script> {% endif %}
 
   <!-- SEO: add link to social networks -->
   <script type="application/ld+json">
@@ -66,29 +63,34 @@
 
 <!-- Navigation bar -->
 <header>
-<div class="navigation-bar">
-  <div class="navigation-bar-container">
-    <a class="navigation-bar-home" href="/"></a>
-    <nav>
-      <a href="#" id="menu-icon"></a>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {% for aboutp in about_pages %}
-          <li><a href="{{ aboutp.url }}">About</a></li>
-        {% endfor%}
-        <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=miguelgfierro&amp;loc=en_US">Subscribe</a></li>
-        <form action="/search" method="GET" class="navigation-bar-search">
-          <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
-          <button type="submit" class="navigation-bar-search-icon"></button>
-        </form>
-      </ul>
-    </nav>
+  <div class="navigation-bar">
+    <div class="navigation-bar-container">
+      <a class="navigation-bar-home" href="/"></a>
+      <nav>
+        <a href="#" id="menu-icon"></a>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          {% for aboutp in about_pages %}
+          <li>
+            <a href="{{ aboutp.url }}">About</a>
+          </li>
+          {% endfor%}
+          <li>
+            <a href="https://feedburner.google.com/fb/a/mailverify?uri=miguelgfierro&amp;loc=en_US">Subscribe</a>
+          </li>
+          <form action="/search" method="GET" class="navigation-bar-search">
+            <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
+            <button type="submit" class="navigation-bar-search-icon"></button>
+          </form>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 
 </header>
-  {% block content %}
-
-  {% endblock %}
+{% block content %} {% endblock %}
 </body>
+
 </html>
