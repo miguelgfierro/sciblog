@@ -448,12 +448,6 @@ button.navigation-bar-search-icon{
 .nav-rss-icon{
   background: url(../img/sprites_social_square.png) -64px 0;
 }
-.float-right{
-  float: right;
-}
-.float-left{
-  float: left;
-}
 .page_title{
   display: none;
 }

@@ -393,12 +393,6 @@ button.navigation-bar-search-icon{
   top:0px;
   position: absolute;
 }
-.float-right{
-  float: right;
-}
-.float-left{
-  float: left;
-}
 .page_title{
   display: none;
 }
