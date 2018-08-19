@@ -6,7 +6,7 @@ if sys.version_info[0] < 3:
 else:
     import subprocess
 from sciblog.private import (CLOUDFLARE_ZONEID, CLOUDFLARE_APIKEY,
-                             CERTBOT_AUTO_PATH)
+                             CERTBOT_AUTO_PATH, CLOUDFLARE_FLAG)
 from sciblog.settings import EMAIL_ADDRESS
 
 
@@ -70,7 +70,9 @@ def renew_ssl_certificate():
 
 
 if __name__ == "__main__":
-    pause_cloudflare()
+    if CLOUDFLARE_FLAG:
+        pause_cloudflare()
     renew_ssl_certificate()
-    resume_cloudflare()
+    if CLOUDFLARE_FLAG:
+        resume_cloudflare()
     print("Process finished\n")
