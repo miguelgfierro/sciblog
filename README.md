@@ -154,11 +154,12 @@ When the certificate expires, you just need to renew it.
 
 This task can be automated as Let's Encrypt explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task. 
 
-I created a [python script](cron_ssl_renew.py) that allows one to automatize the SSL certificate renewal. To do it you just have to add the file `cron_ssl_renew` to crontab:
+I created a python script called [cron_ssl_renew.py](cron_ssl_renew.py) that allows one to automatize the SSL certificate renewal. To do it you just have to add the file `cron_ssl_renew` to crontab:
 
 	$ crontab cron_ssl_renew
 
 This files executes every 5 days at 7.07am. You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
+
 
 ## Speed up page with Cloudflare (optional)
 
@@ -167,7 +168,9 @@ You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and 
 ![Speed rank](img/pagespeed1.png "Performance scores")
 ![Speed stats](img/pagespeed2.png "Page details")
 
-NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
+Don't forget to set the cloudflare flag in `sciblog/private.py`.
+
+NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict. This process is automated in the script [cron_ssl_renew.py](cron_ssl_renew.py).
 
 
 ## SEO tricks
