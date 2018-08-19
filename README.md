@@ -163,12 +163,12 @@ This files executes every 5 days at 7.07am. You can see that the CRON task is co
 
 ## Speed up page with Cloudflare (optional)
 
-You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. This is how my web looks like in terms of speed using [gtmetrix](https://gtmetrix.com):
+You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. This is how my web looks like in terms of speed using [GTmetrix](https://gtmetrix.com):
 
 ![Speed rank](img/pagespeed1.png "Performance scores")
 ![Speed stats](img/pagespeed2.png "Page details")
 
-Don't forget to set the cloudflare flag in `sciblog/private.py`.
+Don't forget to set the Cloudflare flag in `sciblog/private.py`.
 
 NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict. This process is automated in the script [cron_ssl_renew.py](cron_ssl_renew.py).
 
@@ -179,10 +179,10 @@ This blog is automatically optimized for [SEO](https://en.wikipedia.org/wiki/Sea
 
 * Always use https instead of http.
 * Add your sitemap to [Google](https://www.google.com/webmasters/tools), [Bing](https://www.bing.com/webmaster/home/mysites) and [Yandex](https://webmaster.yandex.com/). For Baidu, it is difficult to index your site, in [this url](http://ping.baidu.com/ping.html) you can add your blog.
-* Check the speed of your page with tools like [gtmetrix](https://gtmetrix.com), [pingdom](https://tools.pingdom.com/) or [Google page speed](http://developers.google.com/speed/pagespeed/insights/).
-* Promote your posts in sites like [Hacker News](https://news.ycombinator.com/newest), [reddit](http://reddit.com/), [Linkedin](http://linkedin.com/), [Facebook](http://facebook.com/) or [Twitter](http://twitter.com/).
+* Check the speed of your page with tools like [GTmetrix](https://gtmetrix.com), [Pingdom](https://tools.pingdom.com/) or [Google page speed](http://developers.google.com/speed/pagespeed/insights/).
+* Promote your posts in sites like [Hacker News](https://news.ycombinator.com/newest), [Reddit](http://reddit.com/), [Linkedin](http://linkedin.com/), [Facebook](http://facebook.com/) or [Twitter](http://twitter.com/).
 * Analyze your site on [Google Analytics](https://analytics.google.com/analytics/web).
 * Always use images in your posts, research shows that you will get [more views](https://www.b2bmarketing.net/en-gb/resources/news/research-news-articles-images-get-94-more-views-those-without).
 * Engage with top influencers in your niche. You can feature other bloggers in your site and ask them to share or ask them to repost your content.
-* Analyze your web with SEO checkers like [woorank](https://www.woorank.com/) or [semrush](https://www.semrush.com/).
+* Analyze your web with SEO checkers like [Woorank](https://www.woorank.com/) or [Semrush](https://www.semrush.com/).
  
