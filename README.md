@@ -95,6 +95,8 @@ Configure apache (in sciblog.conf change example.com for your url):
 	$ a2ensite sciblog.conf
 	$ a2enmod rewrite
 	$ a2enmod expires
+	$ a2enmod headers
+	$ a2enmod deflate
 	$ service apache2 restart
 
 When you are in production you have to set `DEBUG_FLAG = False` in `sciblog/private.py`.
