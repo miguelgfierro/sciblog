@@ -131,14 +131,6 @@ Then you need to know the IP of your computer. In Linux and Mac the command is `
 	 
 	http://192.168.1.5:8000 
 
-
-## Speed up page with Cloudflare (optional)
-
-
-You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. This is how my web looks like in terms of speed using [gtmetrix](https://gtmetrix.com):
-
-![Speed rank](img/pagespeed1.png "Performance scores")
-![Speed stats](img/pagespeed2.png "Page details")
  
 ## Secure page with SSL certificate (optional)
 
@@ -157,7 +149,6 @@ When the certificate expires, you just need to renew it.
 	$ ./certbot-auto renew --quiet --no-self-upgrade
 	$ service apache2 restart
 
-NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
 
 ### Automatize renewal of Let's Encrypt certificate
 
@@ -168,6 +159,16 @@ I created a [python script](cron_ssl_renew.py) that allows one to automatize the
 	$ crontab cron_ssl_renew
 
 This files executes every 5 days at 7.07am. You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
+
+## Speed up page with Cloudflare (optional)
+
+You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. This is how my web looks like in terms of speed using [gtmetrix](https://gtmetrix.com):
+
+![Speed rank](img/pagespeed1.png "Performance scores")
+![Speed stats](img/pagespeed2.png "Page details")
+
+NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict.
+
 
 ## SEO tricks
 

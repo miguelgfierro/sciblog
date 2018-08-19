@@ -1,5 +1,9 @@
+# Private template script
+# To enable this script just rename it to private.py
+# $ cp sciblog/private.template.py sciblog/private.py
+
 # Django settings
-SECRETKEY = '7@ug(w91q62^z^vf3fcs$95+@&18m8vj#+of03q5#058axfd_8'
+SECRETKEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 DEBUG_FLAG = False
 
 # Cloudflare settings (optional)
