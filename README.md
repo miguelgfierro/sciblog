@@ -165,12 +165,7 @@ This files executes every 5 days at 7.07am. You can see that the CRON task is co
 
 ## Speed up page with Cloudflare (optional)
 
-You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. This is how my web looks like in terms of speed using [GTmetrix](https://gtmetrix.com):
-
-![Speed rank](img/pagespeed1.png "Performance scores")
-![Speed stats](img/pagespeed2.png "Page details")
-
-Don't forget to set the Cloudflare flag in `sciblog/private.py`.
+You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. Don't forget to set the Cloudflare flag in `sciblog/private.py`.
 
 NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict. This process is automated in the script [cron_ssl_renew.py](cron_ssl_renew.py).
 
@@ -188,3 +183,7 @@ This blog is automatically optimized for [SEO](https://en.wikipedia.org/wiki/Sea
 * Engage with top influencers in your niche. You can feature other bloggers in your site and ask them to share or ask them to repost your content.
 * Analyze your web with SEO checkers like [Woorank](https://www.woorank.com/) or [Semrush](https://www.semrush.com/).
  
+This is how my web looks like in terms of speed using [GTmetrix](https://gtmetrix.com):
+
+![Speed rank](img/pagespeed1.png "Performance scores")
+![Speed stats](img/pagespeed2.png "Page details")
