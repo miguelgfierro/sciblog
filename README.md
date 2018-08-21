@@ -186,6 +186,5 @@ This blog is automatically optimized for [SEO](https://en.wikipedia.org/wiki/Sea
 This is how my web looks like in terms of speed using [GTmetrix](https://gtmetrix.com):
 
 <p align="center">
-	<img src="img/pagespeed1.png" alt="Performance scores" width="45%"/>
-	<img src="img/pagespeed2.png" alt="Page details" width="45%"/>
+	<img src="img/pagespeed.png" alt="Performance scores" width="90%"/>
 </p>
