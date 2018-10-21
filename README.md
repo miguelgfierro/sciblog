@@ -93,6 +93,7 @@ Configure apache (in sciblog.conf change example.com for your url):
 
 	$ cp sciblog.conf /etc/apache2/sites-available/
 	$ a2ensite sciblog.conf
+	$ a2enmod wsgi
 	$ a2enmod rewrite
 	$ a2enmod expires
 	$ a2enmod headers
