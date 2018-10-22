@@ -157,11 +157,11 @@ When the certificate expires, you just need to renew it.
 
 This task can be automated as Let's Encrypt explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task. 
 
-I created a python script called [cron_ssl_renew.py](cron_ssl_renew.py) that allows one to automatize the SSL certificate renewal. To do it you just have to add the file `cron_ssl_renew` to crontab:
+I created a python script called [cron_ssl_renew.py](cron_ssl_renew.py) that allows one to automatize the SSL certificate renewal. To do it, you just have to execute the python script through crontab. Edit crontab with `crontab -e` and add:
 
-	$ crontab cron_ssl_renew
+	7 7 */5 * * (/bin/date && /usr/bin/python /var/www/sciblog/cron_ssl_renew.py) >> cron.log 2>&1
 
-This files executes every 5 days at 7.07am. You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
+This files executes every 5 days at 7.07am (you can see the explanation [here](https://crontab.guru/#7_7_*/5_*_*)). You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
 
 
 ## Speed up page with Cloudflare (optional)
