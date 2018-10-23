@@ -1,5 +1,5 @@
 Django==1.7.10
-markdown2==2.3.5
+markdown2==2.3.6
 Pillow==4.2.1
 requests==2.19.1
 subprocess32==3.5.2
