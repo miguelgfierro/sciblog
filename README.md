@@ -152,6 +152,7 @@ When the certificate expires, you just need to renew it.
 	$ ./certbot-auto renew --quiet --no-self-upgrade
 	$ service apache2 restart
 
+Once the SSL certificate is installed, you can check the security of your page using [this web](https://www.ssllabs.com/ssltest/index.html).
 
 ### Automatize renewal of Let's Encrypt certificate
 
