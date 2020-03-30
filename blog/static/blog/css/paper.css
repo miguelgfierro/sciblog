@@ -370,9 +370,9 @@ p.wrap {
 .navigation-bar-home-text{
   float: left;
   width: 50px;
-  padding-top: 11px;
+  padding-top: 13px;
   padding-left: 65px;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 }
 a.navigation-bar-home-text{
   color: #FFF;
@@ -389,9 +389,9 @@ a:hover.navigation-bar-home-text{
 }
 .navigation-bar-item-text{
   float: left;
-  padding-top: 11px;
+  padding-top: 13px;
   padding-left: 25px;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   padding-right: 23px;
 }
 a.navigation-bar-item-text{
