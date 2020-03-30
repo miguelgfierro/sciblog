@@ -25,7 +25,7 @@ Blog developed in django with the same appearance of a research paper written in
 * (Optional) Privacy policy compliant with GDPR 
 
 
-Example of sciblog: [http://miguelgfierro.com](http://miguelgfierro.com)
+Example of sciblog: [https://miguelgfierro.com](https://miguelgfierro.com)
 
 <p align="center">
 	<img src="img/blog_view.png" alt="blog view" width="45%"/>
