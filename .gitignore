@@ -12,3 +12,9 @@ img/19*/
 img/upload/
 sciblog/private.py
 resources/
+.well-known/
+backup/
+bibtex/
+docs/
+static/
+staticfiles/
