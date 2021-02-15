@@ -21,7 +21,7 @@ Blog developed in django with the same appearance of a research paper written in
 * Responsive for mobile
 * (Optional) Web optimization with CloudFlare
 * (Optional) Installation of free SSL certificate
-* (Optional) Privacy policy compliant with GDPR 
+* (Optional) Privacy policy compliant with GDPR
 
 Example of sciblog: [https://miguelgfierro.com](https://miguelgfierro.com)
 
