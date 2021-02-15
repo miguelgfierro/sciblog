@@ -39,6 +39,11 @@ def linkedin_url():
 
 
 @register.simple_tag
+def linkedin_partner_id():
+    return scisettings.LINKEDIN_PARTNER_ID
+
+
+@register.simple_tag
 def google_plus_url():
     return scisettings.GOOGLE_PLUS_URL
 
@@ -66,3 +71,8 @@ def github_url():
 @register.simple_tag
 def email_address():
     return scisettings.EMAIL_ADDRESS
+
+
+@register.simple_tag
+def youtube_url():
+    return scisettings.YOUTUBE_URL

@@ -10,35 +10,37 @@
 {% set_disqus_developer 1 %}
 
 {% block title %}
-    {{ object.title }}
+{{ object.title }}
 {% endblock %}
 
 {% block headers %}
-    <!-- meta tags -->
-    <meta name="description" content="{{ object.meta_description }}">
-    <meta name="author" content="{{ object.authors }}">
-    <link rel="canonical" href="{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}">
+<!-- meta tags -->
+<meta name="description" content="{{ object.meta_description }}">
+<meta name="author" content="{{ object.authors }}">
+<link rel="canonical" href="{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}">
 
-    <!-- Open tag for Facebook. Add here your app_id -->
-    <meta property="fb:app_id"              content="{% facebook_id %}"/>
-    <meta property="og:url"                 content="{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}" />
-    <meta property="og:type"                content="article" />
-    <meta property="og:title"               content="{{ object.title }}" />
-    <meta property="og:description"         content="{{ object.abstract }}" />
-    <meta property="og:image"               content="{% http_or_https %}{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
+<!-- Open tag for Facebook. Add here your app_id -->
+<meta property="fb:app_id" content="{% facebook_id %}" />
+<meta property="og:url" content="{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ object.title }}" />
+<meta property="og:description" content="{{ object.abstract }}" />
+<meta property="og:image" content="{% http_or_https %}{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
 
-    <!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
-    {% if object.has_latex_formula %}
-        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-	    <script data-cfasync="false"  src="{% static 'blog/js/MathJax/MathJax.js' %}?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>
-        <script data-cfasync="false" >
-            MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-                messageStyle: "none"
-            });
-        </script>
-    {% endif %}
+<!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
+{% if object.has_latex_formula %}
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script data-cfasync="false" src="{% static 'blog/js/MathJax/MathJax.js' %}?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script>
+<script data-cfasync="false">
+    MathJax.Hub.Config({
+        "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX", "TeX"], linebreaks: { automatic: true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+        TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+{% endif %}
 
 {% endblock %}
 
@@ -47,136 +49,138 @@
 
 <!--Facebook share dialog script -->
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '{% facebook_id %}',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-FB.ui({
-  method: 'share_open_graph',
-  action_type: 'og.likes',
-  action_properties: JSON.stringify({
-      object:'{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}',
-  })
-}, function(response){});
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '{% facebook_id %}',
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.likes',
+        action_properties: JSON.stringify({
+            object: '{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}',
+        })
+    }, function (response) { });
 </script>
 
 
 <!-- Page columnizer -->
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
-	<script src="{% static 'blog/js/jquery.min.js' %}" type="text/javascript"></script>
-	<script src="{% static 'blog/js/jquery.columnizer.min.js' %}" type="text/javascript" charset="utf-8"></script>
-	<script>
-		$(function(){
-			var content_height;
-			var page = 1;
-			function buildNewsletter(){
-			    var content_lenght = $('#blogContent').contents().length
-				if($('#blogContent').contents().length > 0){
-				    console.log("$('#blogContent').contents().length = ", content_lenght)
-                    if(page == 1){
-                        content_height = 650;
-					    $page = $(".page_title:first").clone().addClass("texto").css("display", "block");
-					}
-					else{
-					    content_height = 1150;
-					    $page = $(".page_template:first").clone().addClass("texto").css("display", "block");
-					}
-					$("body").append($page);
-					page++;
-					// here is the columnizer magic
-					$('#blogContent').columnize({
-						columns: 2,
-						target: ".texto:last .content",
-						overflow: {
-							height: content_height,
-							id: "#blogContent",
-							doneFunc: function(){
-								console.log("done with page",page-1);
-								buildNewsletter();
-							}
-						}
-					});
-				}
-				else{
-				    console.log("$('#blogContent').contents().length <= 0");
-				    $("body").append($(".container-comments"));
-				    $("body").append($(".footer"));
-				    console.log("Page building finished");
-				}
-			}
-			buildNewsletter();
-		});
-	</script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+<script src="{% static 'blog/js/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'blog/js/jquery.columnizer.min.js' %}" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(function () {
+        var content_height;
+        var page = 1;
+        function buildNewsletter() {
+            var content_lenght = $('#blogContent').contents().length
+            if ($('#blogContent').contents().length > 0) {
+                console.log("$('#blogContent').contents().length = ", content_lenght)
+                if (page == 1) {
+                    content_height = 650;
+                    $page = $(".page_title:first").clone().addClass("texto").css("display", "block");
+                }
+                else {
+                    content_height = 1150;
+                    $page = $(".page_template:first").clone().addClass("texto").css("display", "block");
+                }
+                $("body").append($page);
+                page++;
+                // here is the columnizer magic
+                $('#blogContent').columnize({
+                    columns: 2,
+                    target: ".texto:last .content",
+                    overflow: {
+                        height: content_height,
+                        id: "#blogContent",
+                        doneFunc: function () {
+                            console.log("done with page", page - 1);
+                            buildNewsletter();
+                        }
+                    }
+                });
+            }
+            else {
+                console.log("$('#blogContent').contents().length <= 0");
+                $("body").append($(".container-comments"));
+                $("body").append($(".footer"));
+                console.log("Page building finished");
+            }
+        }
+        buildNewsletter();
+    });
+</script>
 
 <!-- Page building -->
 <div class="page_title">
-<div class="container" itemscope itemtype="http://schema.org/Article">
-    <!-- Social buttons -->
-    <div class="row">
-        <div class="six columns">&nbsp;</div>
-        <div class="four columns">
-            <div class="social-icons">
-                <a class="social-icons-fb"  href="https://www.facebook.com/dialog/share?app_id={% facebook_id %}&display=popup&href={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
-                <a class="social-icons-tw"  href="https://twitter.com/intent/tweet?text={{ object.title }}&url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&via={% twitter_handle %}">
-                </a>
-                <a class="social-icons-gp"  href="https://plus.google.com/share?url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
-                <a class="social-icons-lk"  href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
-                </a>
-                <a class="social-icons-email"  href="mailto:?subject={{ object.title }}&body=Check out this article I read on Sciblog: {% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}">
-                </a>
+    <div class="container" itemscope itemtype="http://schema.org/Article">
+        <!-- Social buttons -->
+        <div class="row">
+            <div class="six columns">&nbsp;</div>
+            <div class="four columns">
+                <div class="social-icons">
+                    <a class="social-icons-fb"
+                        href="https://www.facebook.com/dialog/share?app_id={% facebook_id %}&display=popup&href={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}{{ object.get_absolute_url }}">
+                    </a>
+                    <a class="social-icons-tw"
+                        href="https://twitter.com/intent/tweet?text={{ object.title }}&url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&via={% twitter_handle %}">
+                    </a>
+                    <a class="social-icons-lk"
+                        href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
+                    </a>
+                    <a class="social-icons-email"
+                        href="mailto:?subject={{ object.title }}&body=Check out this article I read on Sciblog: {% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}">
+                    </a>
+                </div>
             </div>
+            <div class="six columns">&nbsp;</div>
         </div>
-        <div class="six columns">&nbsp;</div>
-    </div>
 
-    <div class="row">
-        <div class="three columns">&nbsp;</div>
-        <div class="ten columns">
-            <h1 itemprop="name" class="title"> {{ object.title }}</h1>
-            <div itemscope itemtype="http://schema.org/Person">
-            <div itemprop="author" class="author"> {{ object.authors }}</div>
+        <div class="row">
+            <div class="three columns">&nbsp;</div>
+            <div class="ten columns">
+                <h1 itemprop="name" class="title"> {{ object.title }}</h1>
+                <div itemscope itemtype="http://schema.org/Person">
+                    <div itemprop="author" class="author"> {{ object.authors }}</div>
+                </div>
+                <div class="submission-date"> {{ object.pub_date }}</div>
             </div>
-            <div class="submission-date"> {{ object.pub_date }}</div>
+            <div class="three columns">&nbsp;</div>
         </div>
-        <div class="three columns">&nbsp;</div>
-    </div>
 
-    <div class="row" style="margin-bottom:10px">
-        <div class="four columns">&nbsp;</div>
-        <div class="eight columns">
-            <h3 class="abstract"> {{ object.abstract }}</h3>
+        <div class="row" style="margin-bottom:10px">
+            <div class="four columns">&nbsp;</div>
+            <div class="eight columns">
+                <h3 class="abstract"> {{ object.abstract }}</h3>
+            </div>
+            <div class="four columns">&nbsp;</div>
         </div>
-        <div class="four columns">&nbsp;</div>
-    </div>
 
-    {% if object.keywords %}
-    <div class="row" style="margin-bottom:10px">
-        <div class="four columns">&nbsp;</div>
-        <div class="eight columns">
-            <h2 class="keywords">{{ object.keywords }}</h2>
+        {% if object.keywords %}
+        <div class="row" style="margin-bottom:10px">
+            <div class="four columns">&nbsp;</div>
+            <div class="eight columns">
+                <h2 class="keywords">{{ object.keywords }}</h2>
+            </div>
+            <div class="four columns">&nbsp;</div>
         </div>
-        <div class="four columns">&nbsp;</div>
-    </div>
-    {% endif %}
+        {% endif %}
 
-    <div class="row">
-        <div class="two columns">&nbsp;</div>
-        <div class="twelve columns content"></div>
-        <div class="two columns">&nbsp;</div>
+        <div class="row">
+            <div class="two columns">&nbsp;</div>
+            <div class="twelve columns content"></div>
+            <div class="two columns">&nbsp;</div>
+        </div>
     </div>
-</div>
 </div>
 
 <div class="page_template">
@@ -190,7 +194,7 @@ FB.ui({
 </div>
 
 <div id="blogContent" style="display: none">
-        {{ object.content|safe }}
+    {{ object.content|safe }}
 </div>
 
 <!-- disqus comments -->
@@ -202,18 +206,18 @@ FB.ui({
 
 <!-- footer -->
 <div class="footer container-footer" style="padding: 2rem 0rem 0.5rem;">
-        <a href="{% twitter_url %}">Twitter</a> •
-        <a href="{% linkedin_url %}">Linkedin</a> •
-        <a href="{% rss_url %}">RSS</a> •
-        {% for aboutp in about_pages %}
-          <a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a> •
-        {% endfor%}
-        {% for privacyp in privacy_pages %}
-          <a href="{% http_or_https %}{% current_site %}{{ privacyp.url }}">Privacy</a>
-        {% endfor%}
-      <br>
-      Proudly designed by Miguel González-Fierro and his robot -
-      <a style="padding:0px;" href="https://github.com/miguelgfierro/sciblog">Github</a>
+    <a href="{% twitter_url %}">Twitter</a> •
+    <a href="{% linkedin_url %}">Linkedin</a> •
+    <a href="{% rss_url %}">RSS</a> •
+    {% for aboutp in about_pages %}
+    <a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}">About</a> •
+    {% endfor%}
+    {% for privacyp in privacy_pages %}
+    <a href="{% http_or_https %}{% current_site %}{{ privacyp.url }}">Privacy</a>
+    {% endfor%}
+    <br>
+    Proudly designed by Miguel González-Fierro and his robot -
+    <a style="padding:0px;" href="https://github.com/miguelgfierro/sciblog">Github</a>
 </div>
 
 {% endblock %}
