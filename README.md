@@ -109,10 +109,9 @@ Press add in Post to add your first post. You can add different sections, images
 
 You will see that your blog is working properly going to the url: [http://localhost:8000](http://localhost:8000) (in production you'll have to add something like http://miguelgfierro.com).
 
-
 ## Create flat pages: generic page, about page and privacy page
 
-Go to the admin console and add your first flat page. A flat page is a static html code. 
+Go to the admin console and add your first flat page. A flat page is a static html code.
 
 In Flat pages press add. In url put `/about/` (don't forget / in both sides). In title put your name, in sites put your site, in content put whatever you want and finally in template name put `flatpages/about.html`.
 
@@ -132,9 +131,9 @@ Then you need to know the IP of your computer. In Linux and Mac the command is `
 
 ## Secure page with SSL certificate (optional)
 
-You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). Google prioritizes pages with [SSL security](http://googlewebmastercentral.blogspot.be/2014/08/https-as-ranking-signal.html), so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in settings.py. 
+You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). Google prioritizes pages with [SSL security](http://googlewebmastercentral.blogspot.be/2014/08/https-as-ranking-signal.html), so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in settings.py.
 
-The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/getting-started/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com. 
+The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/getting-started/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com.
 
 	$ wget https://dl.eff.org/certbot-auto
 	$ chmod a+x certbot-auto
