@@ -135,8 +135,8 @@ You can install a free SSL certificate with [Let's Encript](https://letsencrypt.
 
 The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/getting-started/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com.
 
-	$ wget https://dl.eff.org/certbot-auto
-	$ chmod a+x certbot-auto
+	$ sudo snap install --classic certbot
+	$ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 	$ ./certbot-auto --apache --email your_email@example.com
 	$ a2enmod ssl
 	$ service apache2 restart
