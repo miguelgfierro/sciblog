@@ -140,16 +140,16 @@ In order to activate the SSL, make sure you assign your domain to the IP of the 
 
 The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/getting-started/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com.
 
-	$ sudo snap install --classic certbot
-	$ sudo ln -s /snap/bin/certbot /usr/bin/certbot
-	$ sudo certbot --apache --email your_email@example.com
-	$ sudo a2enmod ssl
-	$ sudo service apache2 restart
+	$ snap install --classic certbot
+	$ ln -s /snap/bin/certbot /usr/bin/certbot
+	$ certbot --apache --email your_email@example.com
+	$ a2enmod ssl
+	$ service apache2 restart
 
 When the certificate expires, you just need to renew it. 
 
-	$ sudo certbot renew --quiet --no-self-upgrade
-	$ sudo service apache2 restart
+	$ certbot renew --quiet --no-self-upgrade
+	$ service apache2 restart
 
 Once the SSL certificate is installed, you can check the security of your page using [this web](https://www.ssllabs.com/ssltest/index.html).
 
