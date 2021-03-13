@@ -35,7 +35,7 @@ Example of sciblog: [https://miguelgfierro.com](https://miguelgfierro.com)
 We need to install several libraries. In Linux the commands are:
 
 	$ git clone https://github.com/miguelgfierro/sciblog.git
-	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi
+	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi build-essential
 	$ pip install -r requirements.txt 
 
 NOTE: Django version must be 1.7 and Python has to be version 2.7.
