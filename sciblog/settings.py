@@ -8,7 +8,23 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 import os
+import socket
 from sciblog.private import SECRETKEY, DEBUG_FLAG, DISQUS_KEY
+
+# Get IP
+def get_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        # doesn't even have to be reachable
+        s.connect(('10.255.255.255', 1))
+        ip = s.getsockname()[0]
+    except Exception:
+        ip = '127.0.0.1'
+    finally:
+        s.close()
+    return ip
+CURRENT_IP = get_ip()
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -22,8 +38,12 @@ SECRET_KEY = SECRETKEY
 # This flag is set in an external file private.py
 DEBUG = DEBUG_FLAG
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost',
-                 'www.miguelgfierro.com', 'miguelgfierro.com']
+ALLOWED_HOSTS = ['127.0.0.1', 
+                 'localhost',
+                 'www.miguelgfierro.com', 
+                 'miguelgfierro.com',
+                 CURRENT_IP,
+]
 
 # Application definition
 INSTALLED_APPS = (
