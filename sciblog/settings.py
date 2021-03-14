@@ -8,7 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 import os
-from sciblog.private import SECRETKEY, DEBUG_FLAG
+from sciblog.private import SECRETKEY, DEBUG_FLAG, DISQUS_KEY
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -117,10 +117,33 @@ DESKTOP_TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'blog', 'templates', 'desktop'),
 )
 
+# Logging
+# https://docs.djangoproject.com/en/1.8/topics/logging/
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'django.log'),
+            'maxBytes': 1024*1024*15, # 15MB
+            'backupCount': 10,
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
 
 # Disqus configuration (for managing comments)
 # To install disqus http://django-disqus.readthedocs.org/en/latest/index.html
-DISQUS_API_KEY = 'a4b0vyjnp1sE5hYt8GP7blDgoe1Y0ohfY4gNoWh8JpZCSyGvVN41JOrhpPgREWeZ'
+DISQUS_API_KEY = DISQUS_KEY
 DISQUS_WEBSITE_SHORTNAME = 'miguelgfierro'
 
 # Http protocol with (https://) or without SSL (http://)
