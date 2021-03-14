@@ -18,3 +18,5 @@ bibtex/
 docs/
 static/
 staticfiles/
+django.log
+
