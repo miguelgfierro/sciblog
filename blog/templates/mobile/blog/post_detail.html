@@ -20,12 +20,13 @@
 <link rel="canonical" href="{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}">
 
 <!-- Open tag for Facebook. Add here your app_id -->
-<meta property="fb:app_id" content="{% facebook_id %}" />
 <meta property="og:url" content="{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ object.title }}" />
 <meta property="og:description" content="{{ object.abstract }}" />
 <meta property="og:image" content="{% http_or_https %}{% current_site %}{% static 'blog/img/hoaphumanoid.png' %}" />
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
 {% if object.has_latex_formula %}
