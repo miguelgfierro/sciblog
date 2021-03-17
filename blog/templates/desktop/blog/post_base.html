@@ -20,10 +20,14 @@
   <!-- gets about page, it returns a list so we need to iterate -->
   {% get_flatpages '/privacy/' as privacy_pages %} {% load social %} {% load analytics %}
 
-  <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
   <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}">
   <link rel="apple-touch-icon" sizes="72x72" href="{% static 'blog/img/apple-touch-icon-72x72.png' %}">
   <link rel="apple-touch-icon" sizes="114x114" href="{% static 'blog/img/apple-touch-icon-114x114.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'blog/img/favicon-180x180.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'blog/img/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'blog/img/favicon.ico' %}">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/img/favicon.ico' %}">
+  <meta name="msapplication-TileImage" content="{% static 'blog/img/favicon-150x150.png' %}">
 
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.min.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.min.css' %}">
