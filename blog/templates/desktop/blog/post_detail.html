@@ -48,31 +48,6 @@
 
 {% block content %}
 
-<!--Facebook share dialog script -->
-<script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '{% facebook_id %}',
-            xfbml: true,
-            version: 'v2.5'
-        });
-    };
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    FB.ui({
-        method: 'share_open_graph',
-        action_type: 'og.likes',
-        action_properties: JSON.stringify({
-            object: '{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}',
-        })
-    }, function (response) { });
-</script>
-
 
 <!-- Page columnizer -->
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
@@ -130,7 +105,7 @@
             <div class="four columns">
                 <div class="social-icons">
                     <a class="social-icons-fb" target="_blank"
-                        href="https://www.facebook.com/dialog/share?app_id={% facebook_id %}&display=popup&href={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}{{ object.get_absolute_url }}">
+                        href="https://www.facebook.com/sharer/sharer.php?u={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&amp;src=sdkpreparse">
                     </a>
                     <a class="social-icons-tw" target="_blank"
                         href="https://twitter.com/intent/tweet?text={{ object.title }}&url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&via={% twitter_handle %}">
@@ -220,5 +195,13 @@
     Designed by Miguel González-Fierro -
     <a style="padding:0px;" href="https://github.com/miguelgfierro/sciblog">Github</a>
 </div>
+
+<!-- FB share button -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
+    nonce="lNrh4WqA">
+    </script>
+
+
 
 {% endblock %}
