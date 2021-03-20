@@ -28,6 +28,29 @@
 <meta property="og:image:type" content="image/jpeg">
 <meta name="twitter:card" content="summary_large_image">
 
+<!-- SEO: add link to social networks -->
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Blog",
+      "headline": "{{ object.title }}",
+      "url" : "{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}",
+      "image": "{% http_or_https %}{% current_site %}/static/blog/img/hoaphumanoid.png",
+      "inLanguage": "en-US",
+	  "isFamilyFriendly": "true",
+      "sameAs" : [
+        "{% twitter_url %}",
+        "{% linkedin_url %}",
+        "{% github_url %}"
+      ],
+      "creator": {
+        "@type": "Person",
+        "name": "Miguel González-Fierro",
+        "url": "{% http_or_https %}{% current_site %}"
+    },
+    }
+</script>
+
 <!-- Script MathJax to add latex code to the page (only loaded if there are latex formulas) -->
 {% if object.has_latex_formula %}
 <!--<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->

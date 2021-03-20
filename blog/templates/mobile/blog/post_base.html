@@ -46,22 +46,6 @@
     galite('send', 'pageview');
   </script> {% endif %}
 
-  <!-- SEO: add link to social networks -->
-  <script type="application/ld+json">
-  {
-    "@context" : "http://schema.org",
-    "@type" : "Blog",
-    "name" : "miguelgfierro",
-    "url" : "{% http_or_https %}{% current_site %}",
-    "logo": "{% http_or_https %}{% current_site %}/static/blog/img/hoaphumanoid.png",
-    "sameAs" : [
-      "{% twitter_url %}",
-      "{% linkedin_url %}",
-      "{% github_url %}"
-    ]
-  }
-  </script>
-
   <!-- Facebook Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
