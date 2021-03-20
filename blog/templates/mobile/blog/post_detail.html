@@ -80,19 +80,19 @@
         <div class="two columns">&nbsp;</div>
         <div class="twelve columns">
             <div class="social-icons">
-                <a class="social-icons-fb"
+                <a class="social-icons-fb" target="_blank"
                     href="https://www.facebook.com/dialog/share?app_id={% facebook_id %}&display=popup&href={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&redirect_uri=http://{{ object.site }}{{ object.get_absolute_url }}">
                 </a>
-                <a class="social-icons-tw"
+                <a class="social-icons-tw" target="_blank"
                     href="https://twitter.com/intent/tweet?text={{ object.title }}&url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&via={% twitter_handle %}">
                 </a>
-                <a class="social-icons-lk"
+                <a class="social-icons-lk" target="_blank"
                     href="https://www.linkedin.com/shareArticle?mini=true&text={{ object.title }}&url={% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}&summary={{ object.abstract }}">
                 </a>
-                <a class="social-icons-email"
+                <a class="social-icons-email" target="_blank"
                     href="mailto:?subject={{ object.title }}&body=Check out this article I read on Sciblog: {% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}">
                 </a>
-                <a class="social-icons-whatsapp"
+                <a class="social-icons-whatsapp" target="_blank"
                     href="whatsapp://send?text={{ object.title }} {% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}"
                     data-action="share/whatsapp/share">
                 </a>
