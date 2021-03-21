@@ -23,9 +23,7 @@ Sciblog - A blog designed like a scientific paper
             <h1 class="title" style="margin-top: 3rem"><a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
             </h1>
             <div class="submission-date-list"> {{ object.pub_date }}</div>
-            <div itemscope itemtype="http://schema.org/Person">
-                <h3 itemprop="author" class="author"> {{ object.authors }}</h3>
-            </div>
+            <h3 class="author"> {{ object.authors }}</h3>
         </div>
         <div class="two columns">&nbsp;</div>
     </div>

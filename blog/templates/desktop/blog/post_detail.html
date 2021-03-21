@@ -146,7 +146,7 @@
 
 <!-- Page building -->
 <div class="page_title">
-    <div class="container" itemscope itemtype="http://schema.org/Article">
+    <div class="container">
         <!-- Social buttons -->
         <div class="row">
             <div class="six columns">&nbsp;</div>
@@ -172,10 +172,8 @@
         <div class="row">
             <div class="three columns">&nbsp;</div>
             <div class="ten columns">
-                <h1 itemprop="name" class="title"> {{ object.title }}</h1>
-                <div itemscope itemtype="http://schema.org/Person">
-                    <div itemprop="author" class="author"> {{ object.authors }}</div>
-                </div>
+                <h1 class="title"> {{ object.title }}</h1>
+                <div class="author"> {{ object.authors }}</div>
                 <div class="submission-date"> {{ object.pub_date }}</div>
             </div>
             <div class="three columns">&nbsp;</div>
