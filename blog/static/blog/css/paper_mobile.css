@@ -300,8 +300,9 @@ p.wrap {
 }
 .social-icons{
   margin-top: 5rem;
-  margin-left: 1.8rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .social-icons-fb, .social-icons-tw, .social-icons-gp, .social-icons-lk, .social-icons-email, .social-icons-whatsapp{
   display: block;

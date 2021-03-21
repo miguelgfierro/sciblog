@@ -1,10 +1,23 @@
-{% extends "blog/post_base.html" %} {% load staticfiles %} {% load current_site %} {% block title %} {{ flatpage.title }}
-{% endblock %} {% block headers %}
+{% extends "blog/post_base.html" %}
+{% load staticfiles %}
+{% load current_site %}
+{% block title %}
+{{ flatpage.title }}
+{% endblock %}
+{% block headers %}
 <!-- meta tags -->
 <meta name="description" content="About Miguel González-Fierro: activities, research, education and contact.">
 <meta name="author" content="Miguel González-Fierro">
 <link rel="canonical" href="{% http_or_https %}{% current_site %}{{ flatpage.url }}"> {% endblock %} {% block content %}
 
+<!-- Open tag -->
+<meta property="og:url" content="{% http_or_https %}{% current_site %}{{ flatpage.url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ flatpage.title }}" />
+<meta property="og:description" content="About Miguel González-Fierro: activities, research, education and contact." />
+<meta property="og:image" content="{% http_or_https %}{% current_site %}{% static 'blog/img/author.png' %}" />
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- Page building -->
 <div class="container">
@@ -13,8 +26,8 @@
         <div class="twelve columns">
             <h1 class="title" style="padding-bottom:1rem;padding-top:8rem;"> {{ flatpage.title }}</h1>
             <div class="image">
-                <img src="{% static 'blog/img/author.png' %}" width="200" height="220" alt="{{ flatpage.title }}">
-                <div class="image-caption">This is {{ flatpage.title }}. </div>
+                <img src="{% static 'blog/img/author.png' %}" width="200" height="200" alt="{{ flatpage.title }}">
+                <!--<div class="image-caption">This is {{ flatpage.title }}. </div>-->
             </div>
         </div>
         <div class="two columns">&nbsp;</div>

@@ -20,10 +20,14 @@
   <!-- gets about page, it returns a list so we need to iterate -->
   {% get_flatpages '/privacy/' as privacy_pages %} {% load social %} {% load analytics %}
 
-  <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
   <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}">
   <link rel="apple-touch-icon" sizes="72x72" href="{% static 'blog/img/apple-touch-icon-72x72.png' %}">
   <link rel="apple-touch-icon" sizes="114x114" href="{% static 'blog/img/apple-touch-icon-114x114.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'blog/img/favicon-180x180.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'blog/img/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'blog/img/favicon.ico' %}">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/img/favicon.ico' %}">
+  <meta name="msapplication-TileImage" content="{% static 'blog/img/favicon-150x150.png' %}">
 
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.min.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.min.css' %}">
@@ -46,20 +50,27 @@
     galite('send', 'pageview');
   </script> {% endif %}
 
-  <!-- SEO: add link to social networks -->
-  <script type="application/ld+json">
-  {
-    "@context" : "http://schema.org",
-    "@type" : "Blog",
-    "name" : "miguelgfierro",
-    "url" : "{% http_or_https %}{% current_site %}",
-    "logo": "{% http_or_https %}{% current_site %}/static/blog/img/hoaphumanoid.png",
-    "sameAs" : [
-      "{% twitter_url %}",
-      "{% linkedin_url %}"
-    ]
-  }
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2573724289540878');
+    fbq('track', 'PageView');
   </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2573724289540878&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 
 
 </head>

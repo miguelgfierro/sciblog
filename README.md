@@ -38,7 +38,7 @@ We need to install several libraries. In Linux the commands are:
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi build-essential
 	$ pip install -r requirements.txt 
 
-NOTE: Django version must be 1.7 and Python has to be version 2.7.
+NOTE: Django version must be 1.8 and Python has to be version 2.7.
 
 ## Set up the project in localhost
 
@@ -131,19 +131,24 @@ Then you need to know the IP of your computer. In Linux and Mac the command is `
 
 ## Secure page with SSL certificate (optional)
 
-You can install a free SSL certificate with [Let's Encript](https://letsencrypt.org/). Google prioritizes pages with [SSL security](http://googlewebmastercentral.blogspot.be/2014/08/https-as-ranking-signal.html), so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in settings.py.
+You can install a free SSL certificate with [Let's Encrypt](https://letsencrypt.org/). Google prioritizes pages with [SSL security](http://googlewebmastercentral.blogspot.be/2014/08/https-as-ranking-signal.html), so https has became a key element for SEO. The first step is to set to True the flag `HTTPS` in `settings.py`.
+
+In order to activate the SSL, make sure you assign your domain to the IP of the VPS. For that, go to your DNS configuration and add an A entry with:
+* Domain: example.com
+* Type: A
+* Target: <YOUR_IP>
 
 The basic installation in an apache server is very straightforward, as it is explained [here](https://letsencrypt.org/getting-started/). In the file sciblog.conf you have the configuration to activate the SSL. Furthermore, it allows to redirect http://example.com, https://example.com, http://www.example.com to https://example.com.
 
-	$ wget https://dl.eff.org/certbot-auto
-	$ chmod a+x certbot-auto
-	$ ./certbot-auto --apache --email your_email@example.com
+	$ snap install --classic certbot
+	$ ln -s /snap/bin/certbot /usr/bin/certbot
+	$ certbot --apache --email your_email@example.com
 	$ a2enmod ssl
 	$ service apache2 restart
 
 When the certificate expires, you just need to renew it. 
 
-	$ ./certbot-auto renew --quiet --no-self-upgrade
+	$ certbot renew --quiet --no-self-upgrade
 	$ service apache2 restart
 
 Once the SSL certificate is installed, you can check the security of your page using [this web](https://www.ssllabs.com/ssltest/index.html).

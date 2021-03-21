@@ -15,5 +15,10 @@ CLOUDFLARE_ZONEID = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 CLOUDFLARE_APIKEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Let's Encript certbot path (optional)
-# $ wget https://dl.eff.org/certbot-auto
-CERTBOT_AUTO_PATH = '/path/to/certbot-auto'
+# https://letsencrypt.org/
+CERTBOT_AUTO_PATH = '/path/to/certbot'
+
+# Disqus API key
+DISQUS_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXX'
+
+
