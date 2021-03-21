@@ -57,13 +57,20 @@
         ]
       },
        "publisher": {
-        "@type": "Person",
+        "@type": "Organization",
         "name": "Miguel González-Fierro",
+        "url": "{% http_or_https %}{% current_site %}",
         "sameAs": [
             "{% twitter_url %}",
             "{% linkedin_url %}",
             "{% github_url %}" 
         ]
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{% http_or_https %}{% current_site %}/static/blog/img/favicon-180x180.png",
+          "width": 180,
+          "height": 180
+        }
       },
       "description": "{{ object.abstract }}"
     }
