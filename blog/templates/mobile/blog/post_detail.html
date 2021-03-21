@@ -32,22 +32,40 @@
 <script type="application/ld+json">
     {
       "@context" : "http://schema.org",
-      "@type" : "Blog",
+      "@type" : "Article",
       "headline": "{{ object.title }}",
-      "url" : "{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}",
-      "image": "{% http_or_https %}{% current_site %}/static/blog/img/hoaphumanoid.png",
+      "datePublished": "{{ object.pub_date }}",
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"{% http_or_https %}{{ object.site }}{{ object.get_absolute_url }}"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "{% http_or_https %}{% current_site %}/static/blog/img/hoaphumanoid.png",
+        "height": 460,
+        "width": 460
+      },
       "inLanguage": "en-US",
 	  "isFamilyFriendly": "true",
-      "sameAs" : [
-        "{% twitter_url %}",
-        "{% linkedin_url %}",
-        "{% github_url %}"
-      ],
-      "creator": {
+      "author": {
         "@type": "Person",
         "name": "Miguel González-Fierro",
-        "url": "{% http_or_https %}{% current_site %}"
-      }
+        "sameAs": [
+            "{% twitter_url %}",
+            "{% linkedin_url %}",
+            "{% github_url %}" 
+        ]
+      },
+       "publisher": {
+        "@type": "Person",
+        "name": "Miguel González-Fierro",
+        "sameAs": [
+            "{% twitter_url %}",
+            "{% linkedin_url %}",
+            "{% github_url %}" 
+        ]
+      },
+      "description": "{{ object.abstract }}"
     }
 </script>
 
