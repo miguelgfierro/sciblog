@@ -14,14 +14,17 @@ Sciblog - A blog designed like a scientific paper
 {% endblock %}
 
 {% block content %}
+<h1 style="display: none;">Sciblog - A blog designed like a scientific paper</h1>
+
 {% if object_list %}
 {% for object in object_list %}
 <div class="container container-list">
     <div class="row">
         <div class="one columns">&nbsp;</div>
         <div class="fourteen columns">
-            <h1 class="title" style="margin-top: 3rem"><a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
-            </h1>
+            <h2 class="title-detail" style="margin-top: 3rem">
+                <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+            </h2>
             <div class="submission-date-list"> {{ object.pub_date }}</div>
             <h3 class="author"> {{ object.authors }}</h3>
         </div>
