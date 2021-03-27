@@ -20,8 +20,9 @@ Sciblog - A blog designed like a scientific paper
     <div class="row">
         <div class="two columns">&nbsp;</div>
         <div class="twelve columns">
-            <h1 class="title" style="margin-top: 3rem"><a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
-            </h1>
+            <h2 class="title-detail" style="margin-top: 3rem">
+                <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+            </h2>
             <div class="submission-date-list"> {{ object.pub_date }}</div>
             <h3 class="author"> {{ object.authors }}</h3>
         </div>
