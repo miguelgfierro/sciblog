@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6{
   font-size: 100%;
   line-height: inherit;
 }
-h1.title{
+h1.title,h2.title-detail{
   text-transform: capitalize;
   font-variant: small-caps;
   font-size: 35px;
@@ -87,6 +87,13 @@ h1.title a,a:visited{
   color: #000;
 }
 h1.title a:hover{
+  text-decoration: underline;
+}
+h2.title-detail a,a:visited{
+  text-decoration: none;
+  color: #000;
+}
+h2.title-detail a:hover{
   text-decoration: underline;
 }
 h2.keywords{
