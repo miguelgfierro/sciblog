@@ -1,5 +1,5 @@
 """
-WSGI config for sciPost project.
+WSGI config for sciblog project.
 
 It exposes the WSGI callable as a module-level variable named `application`.
 
