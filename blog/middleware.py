@@ -25,7 +25,7 @@ class MobileTemplatesMiddleware(object):
             v = reg_v.search(user_agent[0:4])
             if b or v:
                 is_mobile = True
-
+        print "is_mobile? =", is_mobile
         if is_mobile:
             settings.TEMPLATE_DIRS = (
                 settings.MOBILE_TEMPLATE_DIRS + self.ORIG_TEMPLATE_DIRS
