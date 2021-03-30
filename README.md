@@ -38,7 +38,7 @@ We need to install several libraries. In Linux the commands are:
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi build-essential
 	$ pip install -r requirements.txt 
 
-NOTE: Django version must be 1.8 and Python has to be version 2.7.
+*NOTE: Django version must be 1.8, apache at least 2.4.23 and Python has to be version 2.7.*
 
 ## Set up the project in localhost
 
@@ -95,7 +95,8 @@ Configure apache (in sciblog.conf change example.com for your url):
 	$ a2enmod expires
 	$ a2enmod headers
 	$ a2enmod deflate
-	$ service apache2 restart
+	$ a2enmod http2
+	$ systemctl restart apache2
 
 When you are in production you have to set `DEBUG_FLAG = False` in `sciblog/private.py`.
 
@@ -144,12 +145,12 @@ The basic installation in an apache server is very straightforward, as it is exp
 	$ ln -s /snap/bin/certbot /usr/bin/certbot
 	$ certbot --apache --email your_email@example.com
 	$ a2enmod ssl
-	$ service apache2 restart
+	$ systemctl restart apache2
 
 When the certificate expires, you just need to renew it. 
 
 	$ certbot renew --quiet --no-self-upgrade
-	$ service apache2 restart
+	$ systemctl restart apache2
 
 Once the SSL certificate is installed, you can check the security of your page using [this web](https://www.ssllabs.com/ssltest/index.html).
 
@@ -175,7 +176,7 @@ This blog is automatically optimized for [SEO](https://en.wikipedia.org/wiki/Sea
 
 * Always use https instead of http.
 * Add your sitemap to [Google](https://www.google.com/webmasters/tools), [Bing](https://www.bing.com/webmaster/home/mysites) and [Yandex](https://webmaster.yandex.com/). For Baidu, it is difficult to index your site, in [this url](http://ping.baidu.com/ping.html) you can add your blog.
-* Check the speed of your page with tools like [GTmetrix](https://gtmetrix.com), [Pingdom](https://tools.pingdom.com/) or [Google page speed](http://developers.google.com/speed/pagespeed/insights/).
+* Check the speed of your page with tools like [GTmetrix](https://gtmetrix.com), [Pingdom](https://tools.pingdom.com/), [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) or [Google page speed](http://developers.google.com/speed/pagespeed/insights/).
 * Promote your posts in sites like [Hacker News](https://news.ycombinator.com/newest), [Reddit](http://reddit.com/), [Linkedin](http://linkedin.com/), [Facebook](http://facebook.com/) or [Twitter](http://twitter.com/).
 * Analyze your site on [Google Analytics](https://analytics.google.com/analytics/web).
 * Always use images in your posts, research shows that you will get [more views](https://www.b2bmarketing.net/en-gb/resources/news/research-news-articles-images-get-94-more-views-those-without).
