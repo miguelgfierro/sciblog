@@ -38,7 +38,7 @@ We need to install several libraries. In Linux the commands are:
 	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi build-essential
 	$ pip install -r requirements.txt 
 
-NOTE: Django version must be 1.8 and Python has to be version 2.7.
+*NOTE: Django version must be 1.8, apache at least 2.4.23 and Python has to be version 2.7.*
 
 ## Set up the project in localhost
 
@@ -95,7 +95,8 @@ Configure apache (in sciblog.conf change example.com for your url):
 	$ a2enmod expires
 	$ a2enmod headers
 	$ a2enmod deflate
-	$ service apache2 restart
+	$ a2enmod http2
+	$ systemctl restart apache2
 
 When you are in production you have to set `DEBUG_FLAG = False` in `sciblog/private.py`.
 
@@ -144,12 +145,12 @@ The basic installation in an apache server is very straightforward, as it is exp
 	$ ln -s /snap/bin/certbot /usr/bin/certbot
 	$ certbot --apache --email your_email@example.com
 	$ a2enmod ssl
-	$ service apache2 restart
+	$ systemctl restart apache2
 
 When the certificate expires, you just need to renew it. 
 
 	$ certbot renew --quiet --no-self-upgrade
-	$ service apache2 restart
+	$ systemctl restart apache2
 
 Once the SSL certificate is installed, you can check the security of your page using [this web](https://www.ssllabs.com/ssltest/index.html).
 
