@@ -79,13 +79,43 @@ MIDDLEWARE_CLASSES = (
     "blog.middleware.MobileTemplatesMiddleware",
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-)
+# Template directory
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates"),)
+MOBILE_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "mobile")
+DESKTOP_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "desktop")
+CURRENT_TEMPLATE = DESKTOP_TEMPLATE_DIRS
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [
+            # insert your TEMPLATE_DIRS here
+            # CURRENT_TEMPLATE,
+            # MOBILE_TEMPLATE_DIRS,
+            DESKTOP_TEMPLATE_DIRS,
+        ],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.template.context_processors.static",
+            ],
+        },
+    },
+]
+
+
+# TEMPLATE_CONTEXT_PROCESSORS = (
+#     "django.contrib.auth.context_processors.auth",
+#     "django.core.context_processors.debug",
+#     "django.core.context_processors.i18n",
+#     "django.core.context_processors.media",
+#     "django.core.context_processors.static",
+# )
 
 # list of IPs able to see the toolbar
 INTERNAL_IPS = (
@@ -129,11 +159,6 @@ MEDIA_URL = "/img/"
 STATIC_ROOT = "staticfiles"
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "blog", "static"),)
-
-# Template directory
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates"),)
-MOBILE_TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates", "mobile"),)
-DESKTOP_TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates", "desktop"),)
 
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/

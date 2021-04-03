@@ -27,11 +27,11 @@ class MobileTemplatesMiddleware(object):
                 is_mobile = True
         print "is_mobile? =", is_mobile
         if is_mobile:
-            settings.TEMPLATE_DIRS = (
-                settings.MOBILE_TEMPLATE_DIRS + self.ORIG_TEMPLATE_DIRS
-            )
+            # settings.CURRENT_TEMPLATE = settings.MOBILE_TEMPLATE_DIRS
+            settings.TEMPLATES[0]["DIRS"] = settings.MOBILE_TEMPLATE_DIRS
+            # pass
         else:
-            settings.TEMPLATE_DIRS = (
-                settings.DESKTOP_TEMPLATE_DIRS + self.ORIG_TEMPLATE_DIRS
-            )
-
+            # settings.CURRENT_TEMPLATE = settings.DESKTOP_TEMPLATE_DIRS
+            settings.TEMPLATES[0]["DIRS"] = settings.DESKTOP_TEMPLATE_DIRS
+            # pass
+        print settings.TEMPLATES
