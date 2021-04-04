@@ -11,8 +11,33 @@ from django.shortcuts import render_to_response
 from django.template.loader import get_template
 from django.template.base import TemplateDoesNotExist
 from django.conf import settings
+from django.views.generic import ListView
 
 from blog.models import Post
+
+
+def _get_desktop_or_mobile_template(request):
+    # Get template view from middleware depending on whether it is desktop or mobile
+    try:
+        template = os.path.join(request.template_prefix, "blog", "post_list.html")
+        get_template(template)
+    except TemplateDoesNotExist:
+        template = os.path.join(
+            settings.DESKTOP_TEMPLATE_PREFIX, "blog", "post_list.html"
+        )
+    print "template view: ", template
+    return template
+
+
+class IndexListView(ListView):
+    model = Post
+    paginate_by = 5
+    template_name = _get_desktop_or_mobile_template(self.request)
+
+def index_list_view(request):
+    object_list = Post.objects.all()
+    template_name = _get_desktop_or_mobile_template(request)
+    return render(request, template_name, {'object_list': **object_list**})
 
 
 class PostsFeed(Feed):
@@ -60,19 +85,9 @@ def getSearchResults(request):
     except EmptyPage:
         returned_page = pages.page(pages.num_pages)
 
-    # Get template view from middleware depending on whether it is desktop or mobile
-    try:
-        template = os.path.join(request.template_prefix, "blog", "post_list.html")
-        get_template(template)
-    except TemplateDoesNotExist:
-        template = os.path.join(
-            settings.DESKTOP_TEMPLATE_PREFIX, "blog", "post_list.html"
-        )
-    print "template view: ", template
-
     # Display the search results
     return render_to_response(
-        template,
+        _get_desktop_or_mobile_template(request),
         {
             "page_obj": returned_page,
             "object_list": returned_page.object_list,

@@ -93,7 +93,7 @@ TEMPLATES = [
             # insert your TEMPLATE_DIRS here
             # TEMPLATE_DIRS,
             # CURRENT_TEMPLATE,
-            # MOBILE_TEMPLATE_DIRS,
+            MOBILE_TEMPLATE_DIRS,
             DESKTOP_TEMPLATE_DIRS,
         ],
         "APP_DIRS": True,

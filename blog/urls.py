@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 from django.http import HttpResponse
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemap import PostSitemap, FlatpageSitemap
-from blog.views import PostsFeed, getSearchResults
+from blog.views import PostsFeed, getSearchResults, IndexListView
 from django.contrib.sites.models import Site
 
 
@@ -24,7 +24,8 @@ urlpatterns = patterns(
     # Index
     url(
         r"^(?P<page>\d+)?/?$",
-        ListView.as_view(model=Post, paginate_by=5,),
+        # ListView.as_view(model=Post, paginate_by=5,),
+        IndexListView.as_view(),
         name="index",
     ),
     # Individual posts
