@@ -1,12 +1,18 @@
-from django.contrib.syndication.views import Feed
-from blog.models import Post
-from django.utils.safestring import mark_safe
-from django.utils.encoding import force_str
+import os
 import markdown2
 import datetime
+
+from django.contrib.syndication.views import Feed
+from django.utils.safestring import mark_safe
+from django.utils.encoding import force_str
 from django.core.paginator import Paginator, EmptyPage
 from django.db.models import Q
 from django.shortcuts import render_to_response
+from django.template.loader import get_template
+from django.template.base import TemplateDoesNotExist
+from django.conf import settings
+
+from blog.models import Post
 
 
 class PostsFeed(Feed):
@@ -54,9 +60,19 @@ def getSearchResults(request):
     except EmptyPage:
         returned_page = pages.page(pages.num_pages)
 
+    # Get template view from middleware depending on whether it is desktop or mobile
+    try:
+        template = os.path.join(request.template_prefix, "blog", "post_list.html")
+        get_template(template)
+    except TemplateDoesNotExist:
+        template = os.path.join(
+            settings.DESKTOP_TEMPLATE_PREFIX, "blog", "post_list.html"
+        )
+    print "template view: ", template
+
     # Display the search results
     return render_to_response(
-        "blog/post_list.html",
+        template,
         {
             "page_obj": returned_page,
             "object_list": returned_page.object_list,

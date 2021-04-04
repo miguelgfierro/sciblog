@@ -80,15 +80,18 @@ MIDDLEWARE_CLASSES = (
 )
 
 # Template directory
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates"),)
+# TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates"),)
 MOBILE_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "mobile")
 DESKTOP_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "desktop")
+MOBILE_TEMPLATE_PREFIX = "mobile"
+DESKTOP_TEMPLATE_PREFIX = "desktop"
 CURRENT_TEMPLATE = DESKTOP_TEMPLATE_DIRS
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             # insert your TEMPLATE_DIRS here
+            # TEMPLATE_DIRS,
             # CURRENT_TEMPLATE,
             # MOBILE_TEMPLATE_DIRS,
             DESKTOP_TEMPLATE_DIRS,
