@@ -1,6 +1,6 @@
+import re
 from django.conf import settings
 
-import re
 
 reg_b = re.compile(
     r"(android|bb\\d+|meego).+mobile|avantgo|bada\\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\\.(browser|link)|vodafone|wap|windows ce|xda|xiino",
@@ -15,8 +15,6 @@ reg_v = re.compile(
 class MobileTemplatesMiddleware(object):
     """Determines which set of templates to use for a mobile site"""
 
-    ORIG_TEMPLATE_DIRS = settings.TEMPLATE_DIRS
-
     def process_request(self, request):
         is_mobile = False
         if request.META.has_key("HTTP_USER_AGENT"):
@@ -25,7 +23,7 @@ class MobileTemplatesMiddleware(object):
             v = reg_v.search(user_agent[0:4])
             if b or v:
                 is_mobile = True
-        # print "is_mobile? =", is_mobile
+
         if is_mobile:
             request.template_prefix = settings.MOBILE_TEMPLATE_PREFIX
         else:

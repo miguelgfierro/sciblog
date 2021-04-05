@@ -24,6 +24,7 @@ robots_content = "User-agent: *\nDisallow: /admin/\nSitemap: https://{}/sitemap.
     current_site.domain
 )
 
+# Define pages
 urlpatterns = patterns(
     "",
     # Index
@@ -51,13 +52,15 @@ urlpatterns = patterns(
         name="django.contrib.sitemaps.views.sitemap",
     ),
 )
-# add flat pages
+
+# Add flat pages
 urlpatterns += patterns(
     "django.contrib.flatpages.views",
     url(r"^about/$", responsive_flatpage, {"url": "/about/"}, name="about"),
     url(r"^privacy/$", responsive_flatpage, {"url": "/privacy/"}, name="privacy"),
 )
 
+# Debug
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

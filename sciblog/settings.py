@@ -11,8 +11,13 @@ import os
 import socket
 from sciblog.private import SECRETKEY, DEBUG_FLAG, DISQUS_KEY
 
-# Get IP
+
 def get_ip():
+    """Returns the current IP
+
+    Returns:
+        str: IP
+    """
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         # doesn't even have to be reachable
