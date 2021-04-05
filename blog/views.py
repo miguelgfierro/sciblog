@@ -2,6 +2,7 @@ import os
 import markdown2
 import datetime
 
+from django.conf import settings
 from django.utils.safestring import mark_safe
 from django.utils.encoding import force_str
 from django.core.paginator import Paginator, EmptyPage
@@ -9,7 +10,6 @@ from django.db.models import Q
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template.loader import get_template
 from django.template.base import TemplateDoesNotExist
-from django.conf import settings
 from django.views.generic import ListView, DetailView
 from django.contrib.syndication.views import Feed
 from django.contrib.sites.shortcuts import get_current_site
@@ -117,6 +117,11 @@ def responsive_flatpage(request, url):
     """Custom flatpage that changes the template based on middleware depending on 
     whether it is desktop or mobile.
     Based of https://github.com/django/django/blob/stable/1.8.x/django/contrib/flatpages/views.py
+
+    Args:
+        request (obj): Request object
+        url (str): URL of flat page, for example: /about/
+
     """
     if not url.startswith("/"):
         url = "/" + url
@@ -124,7 +129,7 @@ def responsive_flatpage(request, url):
     try:
         f = get_object_or_404(FlatPage, url=url, sites=site_id)
     except Http404:
-        if not url.endswith("/") and settings.APPEND_SLASH:
+        if not url.endswith("/"):
             url += "/"
             f = get_object_or_404(FlatPage, url=url, sites=site_id)
             return HttpResponsePermanentRedirect("%s/" % request.path)

@@ -1,10 +1,10 @@
-from django.conf.urls import patterns, url
 from blog.models import Post
-from django.views.generic import DetailView
 from django.conf import settings
+from django.conf.urls import patterns, url
 from django.conf.urls.static import static
 from django.http import HttpResponse
 from django.contrib.sitemaps.views import sitemap
+from django.contrib.sites.models import Site
 from blog.sitemap import PostSitemap, FlatpageSitemap
 from blog.views import (
     PostsFeed,
@@ -13,7 +13,6 @@ from blog.views import (
     PostDetailView,
     responsive_flatpage,
 )
-from django.contrib.sites.models import Site
 
 
 # Define sitemaps
