@@ -26,6 +26,7 @@ urlpatterns = patterns(
     # Individual posts
     url(
         r"^blog/(?P<pub_date__year>\d{4})/(?P<slug>[a-zA-Z0-9-]+)/?$",
+        # DetailView.as_view(model=Post,),
         PostDetailView.as_view(),
         name="post",
     ),
