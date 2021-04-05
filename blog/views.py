@@ -16,8 +16,15 @@ from django.views.generic import ListView
 from blog.models import Post
 
 
-def _get_desktop_or_mobile_template(request):
-    # Get template view from middleware depending on whether it is desktop or mobile
+def get_desktop_or_mobile_template(request):
+    """Get template view from middleware depending on whether it is desktop or mobile
+
+    Args:
+        request (obj): Request object
+
+    Returns:
+        str: Path to template
+    """
     try:
         template = os.path.join(request.template_prefix, "blog", "post_list.html")
         get_template(template)
@@ -25,7 +32,7 @@ def _get_desktop_or_mobile_template(request):
         template = os.path.join(
             settings.DESKTOP_TEMPLATE_PREFIX, "blog", "post_list.html"
         )
-    print "template view: ", template
+    # print "template view: ", template
     return template
 
 
@@ -34,7 +41,7 @@ class IndexListView(ListView):
     paginate_by = 5
 
     def get_template_names(self, *args, **kwargs):
-        return _get_desktop_or_mobile_template(self.request)
+        return get_desktop_or_mobile_template(self.request)
 
 
 class PostsFeed(Feed):
@@ -61,8 +68,11 @@ class PostsFeed(Feed):
 
 
 def getSearchResults(request):
-    """
-    Search for a post by title or abstract. To search http://example.com/search?q=title
+    """Search for a post by title or abstract. To search http://example.com/search?q=title
+
+    Args:
+        request (obj): Request object
+
     """
     # Get the query data
     query = request.GET.get("q", "")
@@ -84,7 +94,7 @@ def getSearchResults(request):
 
     # Display the search results
     return render_to_response(
-        _get_desktop_or_mobile_template(request),
+        get_desktop_or_mobile_template(request),
         {
             "page_obj": returned_page,
             "object_list": returned_page.object_list,
