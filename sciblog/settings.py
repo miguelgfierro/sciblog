@@ -11,8 +11,13 @@ import os
 import socket
 from sciblog.private import SECRETKEY, DEBUG_FLAG, DISQUS_KEY
 
-# Get IP
+
 def get_ip():
+    """Returns the current IP
+
+    Returns:
+        str: IP
+    """
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         # doesn't even have to be reachable
@@ -79,13 +84,29 @@ MIDDLEWARE_CLASSES = (
     "blog.middleware.MobileTemplatesMiddleware",
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-)
+# Template directory
+MOBILE_TEMPLATE_PREFIX = "mobile"
+DESKTOP_TEMPLATE_PREFIX = "desktop"
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [
+            # insert your TEMPLATE_DIRS here (templates are defined at runtime)
+        ],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.template.context_processors.static",
+            ],
+        },
+    },
+]
+
 
 # list of IPs able to see the toolbar
 INTERNAL_IPS = (
@@ -130,11 +151,6 @@ STATIC_ROOT = "staticfiles"
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "blog", "static"),)
 
-# Template directory
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates"),)
-MOBILE_TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates", "mobile"),)
-DESKTOP_TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates", "desktop"),)
-
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
 LOGGING = {
@@ -172,7 +188,6 @@ TWITTER_URL = "https://twitter.com/miguelgfierro"
 TWITTER_HANDLE = "miguelgfierro"
 LINKEDIN_URL = "https://linkedin.com/in/miguelgfierro/"
 LINKEDIN_PARTNER_ID = "3247881"  # for Linkedin Insight Tag
-GOOGLE_PLUS_URL = ""
 PINTEREST_URL = ""
 INSTAGRAM_URL = ""
 YOUTUBE_URL = ""
