@@ -44,11 +44,6 @@ def linkedin_partner_id():
 
 
 @register.simple_tag
-def google_plus_url():
-    return scisettings.GOOGLE_PLUS_URL
-
-
-@register.simple_tag
 def pinterest_url():
     return scisettings.PINTEREST_URL
 

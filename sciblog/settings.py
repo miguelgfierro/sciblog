@@ -183,7 +183,6 @@ TWITTER_URL = "https://twitter.com/miguelgfierro"
 TWITTER_HANDLE = "miguelgfierro"
 LINKEDIN_URL = "https://linkedin.com/in/miguelgfierro/"
 LINKEDIN_PARTNER_ID = "3247881"  # for Linkedin Insight Tag
-GOOGLE_PLUS_URL = ""
 PINTEREST_URL = ""
 INSTAGRAM_URL = ""
 YOUTUBE_URL = ""
