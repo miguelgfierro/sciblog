@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 from django.http import HttpResponse
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemap import PostSitemap, FlatpageSitemap
-from blog.views import PostsFeed, getSearchResults, IndexListView
+from blog.views import PostsFeed, getSearchResults, IndexListView, PostDetailView
 from django.contrib.sites.models import Site
 
 
@@ -26,7 +26,7 @@ urlpatterns = patterns(
     # Individual posts
     url(
         r"^blog/(?P<pub_date__year>\d{4})/(?P<slug>[a-zA-Z0-9-]+)/?$",
-        DetailView.as_view(model=Post,),
+        PostDetailView.as_view(),
         name="post",
     ),
     # Post RSS feed

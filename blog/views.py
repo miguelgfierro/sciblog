@@ -11,7 +11,7 @@ from django.shortcuts import render_to_response
 from django.template.loader import get_template
 from django.template.base import TemplateDoesNotExist
 from django.conf import settings
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from blog.models import Post
 
@@ -39,6 +39,13 @@ def get_desktop_or_mobile_template(request):
 class IndexListView(ListView):
     model = Post
     paginate_by = 5
+
+    def get_template_names(self, *args, **kwargs):
+        return get_desktop_or_mobile_template(self.request)
+
+
+class PostDetailView(DetailView):
+    model = Post
 
     def get_template_names(self, *args, **kwargs):
         return get_desktop_or_mobile_template(self.request)
