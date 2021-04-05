@@ -171,7 +171,7 @@ I created a python script called [cron_ssl_renew.py](cron_ssl_renew.py) that all
 
 	7 7 */5 * * (/bin/date && /usr/bin/python /var/www/sciblog/cron_ssl_renew.py) >> cron.log 2>&1
 
-This files executes every 5 days at 7.07am (you can see the explanation [here](https://crontab.guru/#7_7_*/5_*_*)). You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot-auto" /var/log/syslog`.
+This files executes every 5 days at 7.07am (you can see the explanation [here](https://crontab.guru/#7_7_*/5_*_*)). You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot" /var/log/syslog`.
 
 ## Speed up page with Cloudflare (optional)
 
