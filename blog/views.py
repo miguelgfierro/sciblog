@@ -77,7 +77,7 @@ class PostsFeed(Feed):
         return datetime.datetime.combine(item.pub_date, datetime.time())
 
 
-def getSearchResults(request):
+def get_search_results(request):
     """Search for a post by title or abstract. To search http://example.com/search?q=title
 
     Args:

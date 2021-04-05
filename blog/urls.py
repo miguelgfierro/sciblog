@@ -8,7 +8,7 @@ from django.contrib.sitemaps.views import sitemap
 from blog.sitemap import PostSitemap, FlatpageSitemap
 from blog.views import (
     PostsFeed,
-    getSearchResults,
+    get_search_results,
     IndexListView,
     PostDetailView,
     responsive_flatpage,
@@ -38,7 +38,7 @@ urlpatterns = patterns(
     # Post RSS feed
     url(r"^feed/posts/$", PostsFeed()),
     # Search posts
-    url(r"^search", getSearchResults, name="search"),
+    url(r"^search", get_search_results, name="search"),
     # robots.txt
     url(
         r"^robots.txt$",
