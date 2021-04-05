@@ -1,5 +1,10 @@
-{% extends "blog/post_base.html" %} {% load staticfiles %} {% load current_site %} {% block title %} {{ flatpage.title }}
-{% endblock %} {% block headers %}
+{% extends "desktop/blog/post_base.html" %}
+{% load staticfiles %}
+{% load current_site %}
+{% block title %}
+{{ flatpage.title }}
+{% endblock %}
+{% block headers %}
 <!-- meta tags -->
 <meta name="description" content="Flat page">
 <meta name="author" content="Miguel González-Fierro">

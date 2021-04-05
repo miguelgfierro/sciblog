@@ -80,13 +80,8 @@ MIDDLEWARE_CLASSES = (
 )
 
 # Template directory
-# TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates"),)
-BASE_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates")
-MOBILE_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "mobile")
-DESKTOP_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "desktop")
 MOBILE_TEMPLATE_PREFIX = "mobile"
 DESKTOP_TEMPLATE_PREFIX = "desktop"
-CURRENT_TEMPLATE = DESKTOP_TEMPLATE_DIRS
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -96,8 +91,7 @@ TEMPLATES = [
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
-                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
-                # list if you haven't customized them:
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here
                 "django.contrib.auth.context_processors.auth",
                 "django.template.context_processors.debug",
                 "django.template.context_processors.i18n",
