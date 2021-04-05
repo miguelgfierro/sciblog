@@ -81,6 +81,7 @@ MIDDLEWARE_CLASSES = (
 
 # Template directory
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR, "blog", "templates"),)
+BASE_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates")
 MOBILE_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "mobile")
 DESKTOP_TEMPLATE_DIRS = os.path.join(BASE_DIR, "blog", "templates", "desktop")
 MOBILE_TEMPLATE_PREFIX = "mobile"
@@ -90,11 +91,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            # insert your TEMPLATE_DIRS here
-            # TEMPLATE_DIRS,
-            # CURRENT_TEMPLATE,
-            MOBILE_TEMPLATE_DIRS,
-            DESKTOP_TEMPLATE_DIRS,
+            # insert your TEMPLATE_DIRS here (templates are defined at runtime)
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -111,14 +108,6 @@ TEMPLATES = [
     },
 ]
 
-
-# TEMPLATE_CONTEXT_PROCESSORS = (
-#     "django.contrib.auth.context_processors.auth",
-#     "django.core.context_processors.debug",
-#     "django.core.context_processors.i18n",
-#     "django.core.context_processors.media",
-#     "django.core.context_processors.static",
-# )
 
 # list of IPs able to see the toolbar
 INTERNAL_IPS = (

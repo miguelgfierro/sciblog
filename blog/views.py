@@ -32,12 +32,9 @@ def _get_desktop_or_mobile_template(request):
 class IndexListView(ListView):
     model = Post
     paginate_by = 5
-    template_name = _get_desktop_or_mobile_template(self.request)
 
-def index_list_view(request):
-    object_list = Post.objects.all()
-    template_name = _get_desktop_or_mobile_template(request)
-    return render(request, template_name, {'object_list': **object_list**})
+    def get_template_names(self, *args, **kwargs):
+        return _get_desktop_or_mobile_template(self.request)
 
 
 class PostsFeed(Feed):
