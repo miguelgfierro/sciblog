@@ -165,11 +165,9 @@ Once the SSL certificate is installed, you can check the security of your page u
 
 ### Automatize renewal of Let's Encrypt certificate
 
-This task can be automated as Let's Encrypt explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task.
+This task can be automated as Let's Encrypt explains in their [web](https://letsencrypt.org/getting-started/) or you can use a CRON task. Edit crontab with `crontab -e` and add:
 
-I created a python script called [cron_ssl_renew.py](cron_ssl_renew.py) that allows one to automatize the SSL certificate renewal. To do it, you just have to execute the python script through crontab. Edit crontab with `crontab -e` and add:
-
-	7 7 */5 * * (/bin/date && /usr/bin/python /var/www/sciblog/cron_ssl_renew.py) >> cron.log 2>&1
+	7 7 */5 * * (/bin/date && certbot renew --quiet --keep-until-expiring --no-self-upgrade) >> cron.log 2>&1
 
 This files executes every 5 days at 7.07am (you can see the explanation [here](https://crontab.guru/#7_7_*/5_*_*)). You can see that the CRON task is correctly set up typing `crontab -l`. Also, to make sure that the CRON job has run, you can type `grep "certbot" /var/log/syslog`.
 
@@ -177,7 +175,9 @@ This files executes every 5 days at 7.07am (you can see the explanation [here](h
 
 You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and protect it. You just need to change the DNS. Don't forget to set the Cloudflare flag in `sciblog/private.py`.
 
-NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict. This process is automated in the script [cron_ssl_renew.py](cron_ssl_renew.py).
+NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict. This process is automated in the script [cron_ssl_renew.py](cron_ssl_renew.py). To activate this, edit crontab with `crontab -e` and add:
+
+	7 7 */5 * * (/bin/date && /usr/bin/python /var/www/sciblog/cron_ssl_renew.py) >> cron.log 2>&1
 
 ## SEO tricks
 
