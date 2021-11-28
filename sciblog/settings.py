@@ -191,7 +191,7 @@ LINKEDIN_PARTNER_ID = "3247881"  # for Linkedin Insight Tag
 PINTEREST_URL = ""
 INSTAGRAM_URL = ""
 YOUTUBE_URL = ""
-RSS_URL = "http://feeds.feedburner.com/miguelgfierro"
+RSS_URL = "https://feeds.feedburner.com/miguelgfierro"
 GITHUB_URL = "https://github.com/miguelgfierro"
 EMAIL_ADDRESS = "hoaphumanoid@gmail.com"
 
