@@ -9,11 +9,11 @@
 
 # Sciblog: A blog with the appearance of a scientific paper
 
-Blog developed in Django with the same appearance of a research paper written in [Latex](https://en.wikipedia.org/wiki/LaTeX).
+Blog developed in Django with the same appearance of a research paper written in [LaTeX](https://en.wikipedia.org/wiki/LaTeX).
 
-* CSS and Latex fonts integrated
+* CSS and LaTeX fonts integrated
 * Posts are presented in two columns like a paper
-* Formulas can be added with Latex notation
+* Formulas can be added with LaTeX notation
 * Share in social networks
 * RSS feed
 * Post search
