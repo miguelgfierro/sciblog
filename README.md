@@ -9,7 +9,7 @@
 
 # Sciblog: A blog with the appearance of a scientific paper
 
-Blog developed in django with the same appearance of a research paper written in [Latex](https://en.wikipedia.org/wiki/LaTeX).
+Blog developed in Django with the same appearance of a research paper written in [Latex](https://en.wikipedia.org/wiki/LaTeX).
 
 * CSS and Latex fonts integrated
 * Posts are presented in two columns like a paper
@@ -58,7 +58,7 @@ After that, you have to make a migration, to create the tables in your database.
 	$ python manage.py makemigrations
 	$ python manage.py migrate
 
-In another terminal you have to run django development server:
+In another terminal you have to run Django development server:
 
 	$ python manage.py runserver  
 
