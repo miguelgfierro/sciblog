@@ -32,19 +32,18 @@
   <!-- Add headers in the child templates -->
   {% endblock %}
 
-  <!-- scripts Google Analytics:
-    - using ga-lite: smaller, cacheable subset of Google Analytics JS client
-    - do not track localhost when debugging -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Do not track localhost when debugging -->
   {% if not debug %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={% ga_tracking_id %}"></script>
   <script>
-    (function (e, t, n, i, s, a, c) {
-      e[n] = e[n] || function () { (e[n].q = e[n].q || []).push(arguments) }
-        ; a = t.createElement(i); c = t.getElementsByTagName(i)[0]; a.async = true; a.src = s
-        ; c.parentNode.insertBefore(a, c)
-    })(window, document, "galite", "script", "https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
-    galite('create', '{% ga_tracking_id %}', 'auto');
-    galite('send', 'pageview');
-  </script> {% endif %}
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{% ga_tracking_id %}');
+  </script>
+  {% endif %}
+  <!-- End Google Analytics Code -->
 
   <!-- Facebook Pixel Code -->
   <script>
