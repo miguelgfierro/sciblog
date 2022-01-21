@@ -15,7 +15,6 @@ register = template.Library()
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', '{% ga_tracking_id %}');
     </script>
 """
