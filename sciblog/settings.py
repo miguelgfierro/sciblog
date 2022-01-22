@@ -7,6 +7,7 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
+
 import os
 import socket
 from sciblog.private import SECRETKEY, DEBUG_FLAG, DISQUS_KEY
@@ -29,9 +30,7 @@ def get_ip():
         s.close()
     return ip
 
-
 CURRENT_IP = get_ip()
-
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -107,17 +106,15 @@ TEMPLATES = [
     },
 ]
 
-
 # list of IPs able to see the toolbar
 INTERNAL_IPS = (
     "127.0.0.1",
     "localhost",
 )
 
+# URLs and WSGI
 ROOT_URLCONF = "sciblog.urls"
-
 WSGI_APPLICATION = "sciblog.wsgi.application"
-
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -135,7 +132,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_L10N = True
 USE_TZ = False
-
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -161,7 +157,7 @@ LOGGING = {
             "level": "DEBUG",
             "class": "logging.handlers.RotatingFileHandler",
             "filename": os.path.join(BASE_DIR, "django.log"),
-            "maxBytes": 1024 * 1024 * 15,  # 15MB
+            "maxBytes": 15728640, # 1024*1024*15 = 15MB
             "backupCount": 10,
         },
     },
@@ -170,19 +166,21 @@ LOGGING = {
     },
 }
 
-
-# Disqus configuration (for managing comments)
-# To install disqus http://django-disqus.readthedocs.org/en/latest/index.html
-DISQUS_API_KEY = DISQUS_KEY
-DISQUS_WEBSITE_SHORTNAME = "miguelgfierro"
-
 # Http protocol with (https://) or without SSL (http://)
 # NOTE: You need to have a SSL certificate installed before setting this flag
 # to True
 HTTPS = True
 
+# Ckeditor
+CKEDITOR_UPLOAD_PATH = "upload/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+# ---------------- IMPORTANT NOTE ----------------
+# CHANGE THE FOLLOWING SETTINGS WITH YOUR OWN DATA
+# ------------------------------------------------
+
 # Social Networks
-FACEBOOK_ID = "556883141128364"  # for Facebook tracking
+FACEBOOK_PIXEL = "2573724289540878"  # for Facebook tracking
 FACEBOOK_URL = ""
 TWITTER_URL = "https://twitter.com/miguelgfierro"
 TWITTER_HANDLE = "miguelgfierro"
@@ -198,6 +196,7 @@ EMAIL_ADDRESS = "hoaphumanoid@gmail.com"
 # Google Analytics
 GA_TRACKING_ID = "G-9H7EZQ2W60"
 
-# Ckeditor
-CKEDITOR_UPLOAD_PATH = "upload/"
-CKEDITOR_IMAGE_BACKEND = "pillow"
+# Disqus configuration (for managing comments)
+# To install disqus http://django-disqus.readthedocs.org/en/latest/index.html
+DISQUS_API_KEY = DISQUS_KEY
+DISQUS_WEBSITE_SHORTNAME = "miguelgfierro"

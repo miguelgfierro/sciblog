@@ -4,15 +4,80 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>500 server error</title>
+
+    <!-- Load template tags -->
+    {% load staticfiles %} {% load social %} {% load analytics %}
+
+    <!-- Do not track localhost when debugging -->
+    {% if not debug %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={% ga_tracking_id %}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{% ga_tracking_id %}');
+    </script>
+    <!-- End Google Analytics Code -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '{% facebook_pixel %}');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id={% facebook_pixel %}&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    {% endif %}
 </head>
 
 <body>
     <center>
         {% load staticfiles %}
         <h1>Noooo, the server is down (error 500)</h1>
-        <h2>Contact <a href="mailto:hoaphumanoid@gmail.com">support</a> to see what is happening </h2>
+        <h2>Contact <a href="mailto:{% email_address %}">support</a> to see what is happening </h2>
         <img src="{% static 'blog/img/hoap_flying.png' %}" width="600px">
     </center>
+
+    <!-- Do not track localhost when debugging -->
+    {% if not debug %}
+
+    <!-- Linkedin Insight Tag -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "{% linkedin_partner_id %}";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function () {
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript"; b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })();
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+            src="https://px.ads.linkedin.com/collect/?pid={% linkedin_partner_id %}&fmt=gif" />
+    </noscript>
+
+    {% endif %}
 </body>
 
 </html>
