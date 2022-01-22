@@ -14,8 +14,8 @@ register = template.Library()
 
 
 @register.simple_tag
-def facebook_id():
-    return scisettings.FACEBOOK_ID
+def facebook_pixel():
+    return scisettings.FACEBOOK_PIXEL
 
 
 @register.simple_tag

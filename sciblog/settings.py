@@ -157,7 +157,7 @@ LOGGING = {
             "level": "DEBUG",
             "class": "logging.handlers.RotatingFileHandler",
             "filename": os.path.join(BASE_DIR, "django.log"),
-            "maxBytes": 1024 * 1024 * 15,  # 15MB
+            "maxBytes": 15728640, # 1024*1024*15 = 15MB
             "backupCount": 10,
         },
     },
@@ -180,7 +180,7 @@ CKEDITOR_IMAGE_BACKEND = "pillow"
 # ------------------------------------------------
 
 # Social Networks
-FACEBOOK_ID = "556883141128364"  # for Facebook tracking
+FACEBOOK_PIXEL = "2573724289540878"  # for Facebook tracking
 FACEBOOK_URL = ""
 TWITTER_URL = "https://twitter.com/miguelgfierro"
 TWITTER_HANDLE = "miguelgfierro"
