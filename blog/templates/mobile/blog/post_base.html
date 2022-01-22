@@ -32,9 +32,10 @@
   <!-- Add headers in the child templates -->
   {% endblock %}
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- Do not track localhost when debugging -->
   {% if not debug %}
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={% ga_tracking_id %}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,7 +43,6 @@
     gtag('js', new Date());
     gtag('config', '{% ga_tracking_id %}');
   </script>
-  {% endif %}
   <!-- End Google Analytics Code -->
 
   <!-- Facebook Pixel Code -->
@@ -66,6 +66,8 @@
       src="https://www.facebook.com/tr?id={% facebook_pixel %}&ev=PageView&noscript=1" />
   </noscript>
   <!-- End Facebook Pixel Code -->
+
+  {% endif %}
 
 </head>
 
@@ -101,6 +103,9 @@
 
 {% block content %} {% endblock %}
 
+<!-- Do not track localhost when debugging -->
+{% if not debug %}
+
 <!-- Linkedin Insight Tag -->
 <script type="text/javascript">
   _linkedin_partner_id = "{% linkedin_partner_id %}";
@@ -120,6 +125,9 @@
   <img height="1" width="1" style="display:none;" alt=""
     src="https://px.ads.linkedin.com/collect/?pid={% linkedin_partner_id %}&fmt=gif" />
 </noscript>
+
+{% endif %}
+
 </body>
 
 </html>
