@@ -191,7 +191,7 @@ INSTAGRAM_URL = ""
 YOUTUBE_URL = ""
 RSS_URL = "https://feeds.feedburner.com/miguelgfierro"
 GITHUB_URL = "https://github.com/miguelgfierro"
-EMAIL_ADDRESS = "hoaphumanoid@gmail.com"
+EMAIL_ADDRESS = "info@miguelgfierro.com"
 
 # Google Analytics
 GA_TRACKING_ID = "G-9H7EZQ2W60"
