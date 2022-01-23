@@ -8,7 +8,7 @@ This Application collects some Personal Data from its Users.
 
 Miguel Gonzalez-Fierro
 
-Owner contact email: hoaphumanoid@gmail.com
+Owner contact email: info@miguelgfierro.com
 
 
 ## Types of Data collected
