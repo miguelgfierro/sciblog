@@ -58,7 +58,7 @@ Sciblog - A blog designed like a scientific paper
 
         <!-- Append the page if there is a search -->
         {% if search %}
-        <a href="?{{ search }}&page={{ page_obj.previous_page_number }}">»</a>
+        <a href="?q={{ search }}&page={{ page_obj.previous_page_number }}">»</a>
         {% else %}
         <a href="?page={{ page_obj.previous_page_number }}">»</a>
         {% endif %}
@@ -71,7 +71,7 @@ Sciblog - A blog designed like a scientific paper
 
         <!-- Append the page if there is a search -->
         {% if search %}
-        <a href="?{{ search }}&page={{ page_obj.next_page_number }}">»</a>
+        <a href="?q={{ search }}&page={{ page_obj.next_page_number }}">»</a>
         {% else %}
         <a href="?page={{ page_obj.next_page_number }}">»</a>
         {% endif %}
