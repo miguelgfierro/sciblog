@@ -55,11 +55,27 @@ Sciblog - A blog designed like a scientific paper
 <div class="footer container-footer">
     <div class="pager">
         {% if page_obj.has_previous %}
-        <a href="/{{ page_obj.previous_page_number }}">«</a>
+
+        <!-- Append the page to the search -->
+        {% if search %}
+        <a href="?{{ search }}&page={{ page_obj.previous_page_number }}">»</a>
+        {% else %}
+        <a href="?page={{ page_obj.previous_page_number }}">»</a>
         {% endif %}
+
+        {% endif %}
+
         Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+
         {% if page_obj.has_next %}
-        <a href="/{{ page_obj.next_page_number }}">»</a>
+
+        <!-- Append the page to the search -->
+        {% if search %}
+        <a href="?{{ search }}&page={{ page_obj.next_page_number }}">»</a>
+        {% else %}
+        <a href="?page={{ page_obj.next_page_number }}">»</a>
+        {% endif %}
+
         {% endif %}
         <hr>
     </div>
