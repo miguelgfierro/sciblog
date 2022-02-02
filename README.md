@@ -108,7 +108,7 @@ The first step is to configure the site. Also, the first time you enter in your 
 
 This will set the first entry in the database to your site, which is related to the variable `SITE_ID = 1` in `sciblog/settings.py`. You can see the number of the site in [http://localhost:8000/admin/sites/site/1/](http://localhost:8000/admin/sites/site/1/). If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable `SITE_ID`. In my experience, it is better if you don't touch anything :-)
 
-Press add in Post to add your first post. You can add different sections, images and formulas. For images the recommended width is `300px`. If you use a formula please select the flag `Post with Latex formula`. This will load the necessary js module to render the Latex code. If the flag is not activated, then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
+Press add in Post to add your first post. You can add different sections, images and formulas. For images the recommended width is `300px`. If you use a formula please select the flag `Post with LaTeX formula`. This will load the necessary js module to render the LaTeX code. If the flag is not activated, then the js is not added to the template (we don't want extra page load if we are not using formulas, right?).
 
 You will see that your blog is working properly going to the url: [http://localhost:8000](http://localhost:8000) (in production you'll have to add something like http://miguelgfierro.com).
 

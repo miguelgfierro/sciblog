@@ -1,4 +1,4 @@
-__title__ = "Sciblog - A blog designed like a scientific Latex paper"
+__title__ = "Sciblog - A blog designed like a scientific LaTeX paper"
 __version__ = "2.13"
 __author__ = "Miguel Gonzalez-Fierro"
 __license__ = "BSD License"

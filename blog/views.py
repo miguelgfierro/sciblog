@@ -55,8 +55,8 @@ class PostDetailView(DetailView):
 
 
 class PostsFeed(Feed):
-    title = "Sciblog - A blog designed like a scientific Latex paper"
-    description = "Sciblog - A blog designed like a scientific Latex paper. Posts are about business, startups, science, artificial intelligence and machine learning."
+    title = "Sciblog - A blog designed like a scientific LaTeX paper"
+    description = "Sciblog - A blog designed like a scientific LaTeX paper. Posts are about business, startups, science, artificial intelligence and machine learning."
     link = "/"
 
     def items(self):
