@@ -56,7 +56,7 @@ Sciblog - A blog designed like a scientific paper
     <div class="pager">
         {% if page_obj.has_previous %}
 
-        <!-- Append the page to the search -->
+        <!-- Append the page if there is a search -->
         {% if search %}
         <a href="?{{ search }}&page={{ page_obj.previous_page_number }}">»</a>
         {% else %}
@@ -69,7 +69,7 @@ Sciblog - A blog designed like a scientific paper
 
         {% if page_obj.has_next %}
 
-        <!-- Append the page to the search -->
+        <!-- Append the page if there is a search -->
         {% if search %}
         <a href="?{{ search }}&page={{ page_obj.next_page_number }}">»</a>
         {% else %}
