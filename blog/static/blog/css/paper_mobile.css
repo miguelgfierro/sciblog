@@ -3,7 +3,7 @@
 * paper.css
 *
 * This css can be use to give your webpage the appearance of a scientific paper
-* written in Latex.
+* written in LaTeX.
 *
 * Copyright (c) 2015-present, Miguel Gonzalez-Fierro
 * Twitter: @miguelgfierro
@@ -65,7 +65,7 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
   background: #FFF none repeat scroll 0% 0%;
 }
 /* ************************************************************************** */
-/* Classes from Latex */
+/* Classes from LaTeX */
 h1,h2,h3,h4,h5,h6{
   font-family: Latex, Georgia, serif;
   margin: 0;
