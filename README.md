@@ -37,10 +37,10 @@ Example of sciblog: [https://miguelgfierro.com](https://miguelgfierro.com)
 We need to install several libraries. In Linux the commands are:
 
 	$ git clone https://github.com/miguelgfierro/sciblog.git
-	$ apt-get install -y python-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi build-essential
+	$ apt-get install -y python3.5-dev libpq-dev python-pip git apache2 libapache2-mod-wsgi build-essential
 	$ pip install -r requirements.txt 
 
-*NOTE: Django version must be 1.8, Apache at least 2.4.23 and Python 2.7.*
+*NOTE: Django version must be 1.8, Apache at least 2.4.23 and Python 3.5.*
 
 ## Set up the project in localhost
 
