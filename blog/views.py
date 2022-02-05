@@ -40,6 +40,8 @@ def get_desktop_or_mobile_template(request, path, page):
 
 
 class IndexListView(ListView):
+    """List view for the blog index page."""
+
     model = Post
     paginate_by = 5
 
@@ -48,6 +50,8 @@ class IndexListView(ListView):
 
 
 class PostDetailView(DetailView):
+    """Detail view for the blog post."""
+
     model = Post
 
     def get_template_names(self, *args, **kwargs):
@@ -55,6 +59,8 @@ class PostDetailView(DetailView):
 
 
 class PostsFeed(Feed):
+    """Feed for posts."""
+
     title = "Sciblog - A blog designed like a scientific LaTeX paper"
     description = "Sciblog - A blog designed like a scientific LaTeX paper. Posts are about business, startups, science, artificial intelligence and machine learning."
     link = "/"
@@ -81,8 +87,10 @@ def get_search_results(request):
     """Search for a post by title or abstract. To search http://example.com/search?q=title
 
     Args:
-        request (obj): Request object
+        request (obj): Request object.
 
+    Returns:
+        obj: Response object.
     """
     # Get the query data
     query = request.GET.get("q", "")
@@ -119,9 +127,11 @@ def responsive_flatpage(request, url):
     Based of https://github.com/django/django/blob/stable/1.8.x/django/contrib/flatpages/views.py
 
     Args:
-        request (obj): Request object
-        url (str): URL of flat page, for example: /about/
-
+        request (obj): Request object.
+        url (str): URL of flat page, for example: /about/.
+    
+    Returns:
+        obj: Response object
     """
     if not url.startswith("/"):
         url = "/" + url

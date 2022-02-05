@@ -1,7 +1,10 @@
 from django import template
+
 import sciblog.settings as scisettings
 
+
 register = template.Library()
+
 
 """
     Returns data from social networks defined in settings.py
