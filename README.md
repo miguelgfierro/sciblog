@@ -92,7 +92,7 @@ Set the correct permissions:
 	$ chown www-data:www-data /var/www/sciblog/db.sqlite3
 	$ chown www-data:www-data /var/www/sciblog/img
 
-Update the Apache configuration file [sciblog.conf](`sciblog.conf`): 
+Update the Apache configuration file [sciblog.conf](sciblog.conf): 
 
 * Change `example.com` with your url.
 * Make sure that the python path in `WSGIDaemonProcess` points to the correct path.
