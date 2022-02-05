@@ -18,7 +18,7 @@ Blog developed in Django with the same appearance of a research paper written in
 * RSS feed
 * Post search
 * Blog optimized for SEO
-* Comments with disqus
+* Comments with Disqus
 * Easy writing with Ckeditor
 * Responsive for mobile
 * (Optional) Web optimization with CloudFlare
@@ -114,7 +114,7 @@ When you are in production you have to set `DEBUG_FLAG = False` in `sciblog/priv
 
 ## Add your first content to the blog
 
-The first step is to configure the site. Also, the first time you enter in your admin console [http://localhost:8000/admin/](http://localhost:8000/admin/), you have to go to sites and edit the default site, which is `example.com`. Change it for `localhost:8000`, if you are in development or to the name of your site without `http://` (my case would be miguelgfierro.com).
+The first step is to configure the site. Also, the first time you enter in your admin console [http://localhost:8000/admin/](http://localhost:8000/admin/), you have to go to sites and edit the default site, which is `example.com`. Change it for `localhost:8000`, if you are in development or to the name of your site without `http://` (my case would be `miguelgfierro.com`).
 
 This will set the first entry in the database to your site, which is related to the variable `SITE_ID = 1` in `sciblog/settings.py`. You can see the number of the site in [http://localhost:8000/admin/sites/site/1/](http://localhost:8000/admin/sites/site/1/). If you add another site, then it will have a different number in the database, so for everything to work you have to change the variable `SITE_ID`. In my experience, it is better if you don't touch anything :-)
 
@@ -138,7 +138,7 @@ In order to debug with a mobile phone first you need to set `DEBUG = True` in `s
 
 	$ python manage.py runserver 0.0.0.0:8000
 
-Then you need to know the IP of your computer. In Linux and Mac the command is `ifconfig`, in Windows is `ipconfig`. Then, to access your computer's server from a mobile phone, you have to open a browser in the phone and put the IP you just get. Let's assume the IP in my computer is 192.168.1.5, then you put in your mobile browser:
+Then you need to know the IP of your computer. In Linux and Mac the command is `ifconfig`, in Windows is `ipconfig`. Then, to access your computer's server from a mobile phone, you have to open a browser in the phone and put the IP you just get. Let's assume the IP in my computer is `192.168.1.5`, then you put in your mobile browser:
 
 	http://192.168.1.5:8000 
 
