@@ -70,7 +70,7 @@ In a browser put the link: [http://localhost:8000/admin/](http://localhost:8000/
 
 The panel will ask you to add username and password. Once you are in Django dashboard you can start adding content to your blog.
 
-To work with disqus comments you have to get your `DISQUS_API_KEY` and `DISQUS_WEBSITE_SHORTNAME`. They can be obtained at https://disqus.com/api/applications/.
+To work with Disqus comments you have to get your `DISQUS_API_KEY` and `DISQUS_WEBSITE_SHORTNAME`. They can be obtained at https://disqus.com/api/applications/.
 
 *NOTE: As of March 2017, [Disqus shows ads](https://kinsta.com/blog/disqus-ads/) by default. However, ads can be disabled if you run a [small and non-commercial site](https://blog.disqus.com/advertising-will-remain-optional-for-over-95-of-sites-on-disqus).*
 
@@ -92,7 +92,13 @@ Set the correct permissions:
 	$ chown www-data:www-data /var/www/sciblog/db.sqlite3
 	$ chown www-data:www-data /var/www/sciblog/img
 
-Configure apache (in sciblog.conf change example.com for your url):
+Update the Apache configuration file [sciblog.conf](`sciblog.conf`): 
+
+* Change `example.com` with your url.
+* Make sure that the python path in `WSGIDaemonProcess` points to the correct path.
+* Make sure all the other paths are correct.
+
+Configure apache:
 
 	$ cp sciblog.conf /etc/apache2/sites-available/
 	$ a2ensite sciblog.conf
