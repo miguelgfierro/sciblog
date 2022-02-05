@@ -17,7 +17,7 @@ class MobileTemplatesMiddleware(object):
 
     def process_request(self, request):
         is_mobile = False
-        if request.META.has_key("HTTP_USER_AGENT"):
+        if "HTTP_USER_AGENT" in request.META.keys():
             user_agent = request.META["HTTP_USER_AGENT"]
             b = reg_b.search(user_agent)
             v = reg_v.search(user_agent[0:4])
