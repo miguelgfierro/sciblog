@@ -36,9 +36,13 @@ Example of sciblog: [https://miguelgfierro.com](https://miguelgfierro.com)
 
 We need to install several libraries. In Linux the commands are:
 
+	$ apt-get install -y libpq-dev git apache2 libapache2-mod-wsgi build-essential
+	$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+	$ sh Miniconda3-latest-Linux-x86_64.sh
+	$ conda create -n py35 python=3.5
 	$ git clone https://github.com/miguelgfierro/sciblog.git
-	$ apt-get install -y python3.5-dev libpq-dev python3-pip git apache2 libapache2-mod-wsgi build-essential
-	$ python3.5 -m pip install -r requirements.txt 
+	$ cd sciblog
+	$ pip install -r requirements.txt 
 
 *NOTE: Django version must be 1.8, Apache at least 2.4.23 and Python 3.5.*
 
