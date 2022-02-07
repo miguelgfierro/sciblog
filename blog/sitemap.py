@@ -26,5 +26,3 @@ class FlatpageSitemap(Sitemap):
     def items(self):
         return FlatPage.objects.all()
 
-    # def lastmod(self, obj):
-    #     return obj.pub_date
