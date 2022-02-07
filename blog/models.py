@@ -39,8 +39,6 @@ class Post(models.Model):
         Returns:
             bool: True if the post was published recently, False otherwise.
         """
-        now = timezone.now()
-        return now - datetime.timedelta(days=1) <= self.pub_date <= now
         return self.pub_date >= timezone.now().date() - datetime.timedelta(days=7)
 
     was_published_recently.admin_order_field = "pub_date"
