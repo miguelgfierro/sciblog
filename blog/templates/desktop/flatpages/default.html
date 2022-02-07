@@ -4,11 +4,15 @@
 {% block title %}
 {{ flatpage.title }}
 {% endblock %}
+
 {% block headers %}
 <!-- meta tags -->
 <meta name="description" content="Flat page">
 <meta name="author" content="Miguel González-Fierro">
-<link rel="canonical" href="{% http_or_https %}{% current_site %}{{ flatpage.url }}"> {% endblock %} {% block content %}
+<link rel="canonical" href="{% http_or_https %}{% current_site %}{{ flatpage.url }}">
+{% endblock %}
+
+{% block content %}
 
 <!-- Page columnizer -->
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
