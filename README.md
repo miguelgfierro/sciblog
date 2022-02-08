@@ -21,6 +21,7 @@ Blog developed in Django with the same appearance of a research paper written in
 * Comments with Disqus
 * Easy writing with Ckeditor
 * Responsive for mobile
+* GDPR compliant
 * (Optional) Web optimization with CloudFlare
 * (Optional) Installation of free SSL certificate
 * (Optional) Privacy policy compliant with GDPR
