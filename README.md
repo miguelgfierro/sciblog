@@ -19,12 +19,12 @@ Blog developed in Django with the same appearance of a research paper written in
 * Post search
 * Blog optimized for SEO
 * Comments with Disqus
-* Easy writing with Ckeditor
+* Easy writing with CKEditor
 * Responsive for mobile
-* GDPR compliant
-* (Optional) Web optimization with CloudFlare
-* (Optional) Installation of free SSL certificate
+* GDPR compliant cookie notice
 * (Optional) Privacy policy compliant with GDPR
+* (Optional) Installation of free SSL certificate
+* (Optional) Web optimization with CloudFlare
 
 Example of sciblog: [https://miguelgfierro.com](https://miguelgfierro.com)
 
