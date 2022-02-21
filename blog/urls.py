@@ -59,6 +59,7 @@ urlpatterns += patterns(
     "django.contrib.flatpages.views",
     url(r"^about/$", responsive_flatpage, {"url": "/about/"}, name="about"),
     url(r"^privacy/$", responsive_flatpage, {"url": "/privacy/"}, name="privacy"),
+    url(r"^quiz/$", responsive_flatpage, {"url": "/quiz/"}, name="quiz"),
 )
 
 # Debug
