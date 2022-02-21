@@ -131,7 +131,9 @@ In Flat pages press add. In url put `/about/` (don't forget / in both sides). In
 
 You can also create a privacy policy flat page. Go to the admin console, add a new flat page and in the url put `/privacy/`. I created a policy that is compliant with GDPR and that contains the typical systems and services of a normal personal blog: Google Analytics, cookies, RSS, etc. The text that I use can be found [here](blog/templates/privacy_template.md). You can adapt your policy to your specific blog.
 
-In case you want to add more flat pages, there is a generic html template that you can customize by modifying the file [default.html](blog/templates/desktop/flatpages/default.html).
+In case you want to add more flat pages, there is a generic html template that you can customize by modifying the file [default.html](blog/templates/desktop/flatpages/default.html). 
+
+In addition, for every new page that you want to add, you'll need to modify the url template in [urls.py](blog/urls.py).
 
 ## Managing mobile view
 

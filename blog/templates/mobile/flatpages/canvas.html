@@ -1,0 +1,38 @@
+{% extends "desktop/blog/post_base.html" %}
+{% load staticfiles %}
+{% load current_site %}
+{% block title %}
+{{ flatpage.title }}
+{% endblock %}
+
+{% block headers %}
+<!-- meta tags -->
+<meta name="description" content="Flat page">
+<meta name="author" content="Miguel González-Fierro">
+<link rel="canonical" href="{% http_or_https %}{% current_site %}{{ flatpage.url }}">
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Page building -->
+<div class="page_title" style="display:block;">
+	<div class="container" style="height: 100%;">
+		<div class="row">
+			<div class="three columns">&nbsp;</div>
+			<div class="ten columns">
+				<h1 class="title" style="padding-bottom:1rem;padding-top:3rem;"> {{ flatpage.title }}</h1>
+			</div>
+			<div class="three columns">&nbsp;</div>
+		</div>
+
+		<div class="row">
+			<div class="two columns">&nbsp;</div>
+			<div class="twelve columns">{{ flatpage.content }}</div>
+			<div class="two columns">&nbsp;</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
