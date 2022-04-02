@@ -1,8 +1,6 @@
 [![Issues](https://img.shields.io/github/issues/miguelgfierro/sciblog.svg)](https://github.com/miguelgfierro/sciblog/issues)
 [![Latest release](https://img.shields.io/github/release/miguelgfierro/sciblog.svg?color=success)](https://github.com/miguelgfierro/sciblog/releases)
 [![Commits since latest release](https://img.shields.io/github/commits-since/miguelgfierro/sciblog/latest.svg?color=success)](https://github.com/miguelgfierro/sciblog/releases)
-[![Lines of code](https://tokei.rs/b1/github/miguelgfierro/sciblog)](https://github.com/miguelgfierro/sciblog/graphs/contributors)
-[![Files](https://tokei.rs/b1/github/miguelgfierro/sciblog?category=files)](https://github.com/miguelgfierro/sciblog/graphs/contributors)
 
 [![Linkedin](https://img.shields.io/badge/Linkedin-Follow%20Miguel-blue?logo=linkedin)](https://www.linkedin.com/in/miguelgfierro/)
 [![Blog](https://img.shields.io/badge/Blog-Visit%20miguelgfierro.com-blue.svg)](https://miguelgfierro.com?utm_source=github.com&utm_medium=profile&utm_campaign=sciblog)
