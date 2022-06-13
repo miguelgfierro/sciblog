@@ -27,7 +27,7 @@ def ga_tracking_id():
 @register.simple_tag
 def sumo_tracking_id():
     """
-    Returns data from Sumo defined in settings.py
+    Returns data from Sumo defined in settings.py. Site: https://sumo.com/
 
     To load in the template:
     {% load analytics %}
