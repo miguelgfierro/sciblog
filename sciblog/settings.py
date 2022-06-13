@@ -30,6 +30,7 @@ def get_ip():
         s.close()
     return ip
 
+
 CURRENT_IP = get_ip()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -157,12 +158,16 @@ LOGGING = {
             "level": "DEBUG",
             "class": "logging.handlers.RotatingFileHandler",
             "filename": os.path.join(BASE_DIR, "django.log"),
-            "maxBytes": 15728640, # 1024*1024*15 = 15MB
+            "maxBytes": 15728640,  # 1024*1024*15 = 15MB
             "backupCount": 10,
         },
     },
     "loggers": {
-        "django.request": {"handlers": ["file"], "level": "DEBUG", "propagate": True,},
+        "django.request": {
+            "handlers": ["file"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
     },
 }
 
@@ -193,8 +198,9 @@ RSS_URL = "https://feeds.feedburner.com/miguelgfierro"
 GITHUB_URL = "https://github.com/miguelgfierro"
 EMAIL_ADDRESS = "info@miguelgfierro.com"
 
-# Google Analytics
+# Analytics
 GA_TRACKING_ID = "G-9H7EZQ2W60"
+SUMO_TRACKING_ID = "5cd0eb3143eb820adf613815a4b48868f63a1cdf71544bc0ec7062de9ac0e747"
 
 # Disqus configuration (for managing comments)
 # To install disqus http://django-disqus.readthedocs.org/en/latest/index.html
