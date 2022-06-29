@@ -200,7 +200,6 @@ EMAIL_ADDRESS = "info@miguelgfierro.com"
 
 # Analytics
 GA_TRACKING_ID = "G-9H7EZQ2W60"
-SUMO_TRACKING_ID = "5cd0eb3143eb820adf613815a4b48868f63a1cdf71544bc0ec7062de9ac0e747"
 
 # Disqus configuration (for managing comments)
 # To install disqus http://django-disqus.readthedocs.org/en/latest/index.html

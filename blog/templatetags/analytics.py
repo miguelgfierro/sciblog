@@ -22,25 +22,3 @@ def ga_tracking_id():
     </script>
     """
     return scisettings.GA_TRACKING_ID
-
-
-@register.simple_tag
-def sumo_tracking_id():
-    """
-    Returns data from Sumo defined in settings.py. Site: https://sumo.com/
-
-    To load in the template:
-    {% load analytics %}
-    ...
-    <!-- SUMO Opt-in technology -->
-    <script async>
-        (function (s, u, m, o, j, v) {
-        j = u.createElement(m); v = u.getElementsByTagName(m)[0];
-        j.async = 1;
-        j.src = o;
-        j.dataset.sumoSiteId = '{% sumo_tracking_id %}';
-        v.parentNode.insertBefore(j, v)
-        })(window, document, 'script', '//load.sumo.com/');
-    </script>
-    """
-    return scisettings.SUMO_TRACKING_ID
