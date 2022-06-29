@@ -140,17 +140,6 @@
     src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=en&theme=minimal&customize=1&tracking=1&always=1&showPolicyLink=1&remember=180&privacyPage=%2Fprivacy%2F">
     </script>
 
-  <!-- SUMO Opt-in technology -->
-  <script async>
-    (function (s, u, m, o, j, v) {
-      j = u.createElement(m); v = u.getElementsByTagName(m)[0];
-      j.async = 1;
-      j.src = o;
-      j.dataset.sumoSiteId = '{% sumo_tracking_id %}';
-      v.parentNode.insertBefore(j, v)
-    })(window, document, 'script', '//load.sumo.com/');
-  </script>
-
 </body>
 
 </html>
