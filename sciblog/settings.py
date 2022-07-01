@@ -195,6 +195,7 @@ PINTEREST_URL = ""
 INSTAGRAM_URL = ""
 YOUTUBE_URL = ""
 RSS_URL = "https://feeds.feedburner.com/miguelgfierro"
+NEWSLETTER_URL = "https://miguelgfierro.com/sendy/subscription?f=22QIIP0tF8Bx5qYtjCFQa5NDaXYeyG8FyFs40uOzc7LGvlTMGG3Dx2fOogECvG2rMYrUAi3UPtV8927JF18Qhw892A"
 GITHUB_URL = "https://github.com/miguelgfierro"
 EMAIL_ADDRESS = "info@miguelgfierro.com"
 
