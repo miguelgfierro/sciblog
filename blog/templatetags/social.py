@@ -74,3 +74,8 @@ def email_address():
 @register.simple_tag
 def youtube_url():
     return scisettings.YOUTUBE_URL
+
+
+@register.simple_tag
+def newsletter_url():
+    return scisettings.NEWSLETTER_URL
