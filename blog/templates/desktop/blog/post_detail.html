@@ -229,7 +229,7 @@
 <!-- footer -->
 <div class="footer container-footer" style="padding: 2rem 0rem 0.5rem;">
     <a href="{% twitter_url %}" target="_blank">Twitter</a> •
-    <a href="{% linkedin_url %}" target="_blank">Linkedin</a> •
+    <a href="{% linkedin_url %}" target="_blank">LinkedIn</a> •
     <a href="{% rss_url %}" target="_blank">RSS</a> •
     {% for aboutp in about_pages %}
     <a href="{% http_or_https %}{% current_site %}{{ aboutp.url }}" target="_blank">About</a> •
@@ -247,7 +247,5 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
     nonce="lNrh4WqA">
     </script>
-
-
 
 {% endblock %}

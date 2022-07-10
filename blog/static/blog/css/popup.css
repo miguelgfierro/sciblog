@@ -12,14 +12,16 @@
     --font-plain: 'IBM Plex Sans', sans-serif;
     --font-special: 'Fredoka One', sans-serif;
     box-sizing: border-box;
-    line-height: 1.4;
+    /*line-height: 1.4;*/
 }
 
+/*
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
+*/
 
 .rainbow {
     width: 100%;
