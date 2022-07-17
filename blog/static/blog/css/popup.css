@@ -1,4 +1,6 @@
 /* Attribution: https://codepen.io/ahmadnasr/pen/BaNQweQ */
+
+/* Form */
 :root {
     --color-first: #65587f;
     --color-second: #f18867;
@@ -12,16 +14,7 @@
     --font-plain: 'IBM Plex Sans', sans-serif;
     --font-special: 'Fredoka One', sans-serif;
     box-sizing: border-box;
-    /*line-height: 1.4;*/
 }
-
-/*
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-*/
 
 .rainbow {
     width: 100%;
@@ -154,13 +147,6 @@ h3 {
     text-align: center;
 }
 
-#modal-content {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 .close-button {
     transition: all 0.5s ease;
     position: absolute;
@@ -179,4 +165,388 @@ h3 {
     background-color: #af1c59;
     color: #fff;
     border: 2px solid #fff;
+}
+
+/* Handpicked CSS from <link rel='stylesheet' href='https://taniarascia.github.io/primitive/css/main.css'> */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+
+/**
+ * Buttons
+ */
+.button,
+a.button,
+button,
+[type=submit],
+[type=reset],
+[type=button] {
+    -webkit-appearance: none;
+    display: inline-block;
+    border: 1px solid #0366ee;
+    border-radius: 4px;
+    background: #0366ee;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    text-transform: none;
+    padding: 0.75rem 1.25rem;
+    margin: 0 0 0.5rem 0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.button:hover,
+a.button:hover,
+button:hover,
+[type=submit]:hover,
+[type=reset]:hover,
+[type=button]:hover {
+    border: 1px solid #0250bc;
+    background: #0250bc;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.button:focus,
+.button:active,
+a.button:focus,
+a.button:active,
+button:focus,
+button:active,
+[type=submit]:focus,
+[type=submit]:active,
+[type=reset]:focus,
+[type=reset]:active,
+[type=button]:focus,
+[type=button]:active {
+    border: 1px solid #0250bc;
+    background: #0250bc;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.button::-moz-focus-inner,
+a.button::-moz-focus-inner,
+button::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=button]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.accent-button,
+a.accent-button {
+    color: #ffffff;
+    border: 1px solid #29de7d;
+    background: #29de7d;
+}
+
+.accent-button:hover,
+.accent-button:focus,
+.accent-button:active,
+a.accent-button:hover,
+a.accent-button:focus,
+a.accent-button:active {
+    color: #ffffff;
+    border: 1px solid #1cb864;
+    background: #1cb864;
+}
+
+.muted-button,
+a.muted-button {
+    background: transparent;
+    border: 1px solid #cdcdcd;
+    color: #4e4e4e;
+}
+
+.muted-button:hover,
+.muted-button:focus,
+.muted-button:active,
+a.muted-button:hover,
+a.muted-button:focus,
+a.muted-button:active {
+    color: #4e4e4e;
+    border: 1px solid #818181;
+    background: transparent;
+}
+
+.round-button,
+a.round-button {
+    border-radius: 40px;
+}
+
+.square-button,
+a.square-button {
+    border-radius: 0;
+}
+
+.full-button,
+a.full-button {
+    display: block;
+    width: 100%;
+}
+
+/* Pop up */
+/*
+#modal-content {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+*/
+
+.pop-up {
+    display: none;
+    position: fixed;
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.blur-in {
+    -webkit-animation: blur 2s forwards;
+    -moz-animation: blur 2s forwards;
+    -o-animation: blur 2s forwards;
+    animation: blur 2s forwards;
+}
+
+.blur-out {
+    -webkit-animation: blur-out 2s forwards;
+    -moz-animation: blur-out 2s forwards;
+    -o-animation: blur-out 2s forwards;
+    animation: blur-out 2s forwards;
+}
+
+@-webkit-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-moz-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-o-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-webkit-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-moz-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-o-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
 }

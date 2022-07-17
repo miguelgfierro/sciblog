@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.min.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.min.css' %}">
   <!-- FIXME: merge with popup.css -->
-  <link rel='stylesheet' href='https://taniarascia.github.io/primitive/css/main.css'>
+  <!--<link rel='stylesheet' href='https://taniarascia.github.io/primitive/css/main.css'>-->
   <link rel="stylesheet" href="{% static 'blog/css/popup.css' %}">
 
   {% block headers %}
@@ -107,7 +107,7 @@
   </div>
 
   <!-- Pop-up form for email marketing with Sendy https://sendy.co/ -->
-  <div id="modal-content">
+  <div class="pop-up">
     <div class="c-subscribe-box u-align-center">
       <div class="rainbow"><span></span><span></span></div>
       <div class="c-subscribe-box__wrapper">
@@ -143,11 +143,11 @@
   </div>
   <!-- Pop-up -->
 
+  <div id="overlay" class="cover">
+    {% block content %}
 
-  {% block content %}
-
-  {% endblock %}
-
+    {% endblock %}
+  </div>
 
   <!-- Do not track localhost when debugging -->
   {% if not debug %}
