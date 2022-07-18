@@ -180,6 +180,20 @@ h3 {
     align-items: center;
 }
 
+.pop-up-input {
+    display: block;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 0.75rem !important;
+    outline: none;
+    background: transparent;
+    margin-bottom: 0.5rem !important;
+    font-size: 1rem !important;
+    width: calc(100% - var(--border-width) - 16px) !important;
+    max-width: 100%;
+    line-height: 1;
+}
+
 .cover {
     height: 100%;
     width: 100%;
