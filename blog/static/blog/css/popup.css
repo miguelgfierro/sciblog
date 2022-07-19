@@ -116,6 +116,20 @@
     }
 }
 
+.full-button {
+    display: block;
+    width: 100%;
+    border: 1px solid #0366ee;
+    border-radius: 4px;
+    text-transform: none;
+    padding: 0.75rem 1.25rem;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+}
+
 [type=submit] {
     margin-bottom: 0;
     font-family: var(--font-special);
@@ -160,6 +174,12 @@ h3 {
     -webkit-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
     box-shadow: -3px 1px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
 }
 
 .close-button:hover {
