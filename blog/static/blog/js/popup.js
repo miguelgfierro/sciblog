@@ -1,6 +1,6 @@
 var lastFocus;
 var delay = 3000; // Pop up delay in seconds
-var cookieExpires = 1; // Expiration of cookie in days
+var cookieExpires = 0; // Expiration of cookie in days
 var popupShown = Cookies.get('popUpSciblog');
 
 if (!!popupShown) {
