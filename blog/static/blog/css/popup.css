@@ -1,11 +1,11 @@
-/* Attribution: https://codepen.io/ahmadnasr/pen/BaNQweQ */
+/* Based on: https://codepen.io/ahmadnasr/pen/BaNQweQ */
 
 /* Form */
 :root {
-    --color-first: #65587f;
-    --color-second: #f18867;
-    --color-third: #e85f99;
-    --color-forth: #50bda1;
+    --color-first: #053673;
+    --color-second: #539CF4;
+    --color-third: #0A72F2;
+    --color-forth: #022BDB;
     --block-width: 450px;
     --block-height: 600px;
     --border-width: 0.625rem;
@@ -97,7 +97,7 @@
 .c-form--accent input:active,
 .c-form--accent input:focus {
     border-color: var(--color-third);
-    box-shadow: 0 0 0 3px rgba(232, 94, 152, 0.25);
+    box-shadow: 0 0 0 3px #539CF4;
 }
 
 .c-form--accent [type=submit] {
@@ -165,7 +165,7 @@ h3 {
 .close-button {
     transition: all 0.5s ease;
     position: absolute;
-    background-color: #e85f99;
+    background-color: #0A72F2;
     padding: 3px 3px;
     margin-left: -10px;
     margin-top: -9px;
@@ -183,7 +183,7 @@ h3 {
 }
 
 .close-button:hover {
-    background-color: #af1c59;
+    background-color: #053673;
     color: #fff;
     border: 2px solid #fff;
 }
