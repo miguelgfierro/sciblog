@@ -17,7 +17,7 @@
 
   <!-- Load template tags -->
   {% load staticfiles %} {% load current_site %} {% load flatpages %} {% get_flatpages '/about/' as about_pages %}
-  <!-- gets about page, it returns a list so we need to iterate -->
+  <!-- Gets about page, it returns a list so we need to iterate -->
   {% get_flatpages '/privacy/' as privacy_pages %} {% load social %} {% load analytics %}
 
   <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}">
@@ -29,6 +29,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/img/favicon.ico' %}">
   <meta name="msapplication-TileImage" content="{% static 'blog/img/favicon-150x150.png' %}">
 
+  <link rel="stylesheet" href="{% static 'blog/css/popup.min.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.min.css' %}">
   <link rel="stylesheet" href="{% static 'blog/css/paper.min.css' %}">
 
@@ -44,8 +45,8 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', '{% ga_tracking_id %}');
+    gtag("js", new Date());
+    gtag("config", "{% ga_tracking_id %}");
   </script>
   <!-- End Google Analytics Code -->
 
@@ -56,14 +57,14 @@
         n.callMethod ?
           n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0";
       n.queue = []; t = b.createElement(e); t.async = !0;
       t.src = v; s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '{% facebook_pixel %}');
-    fbq('track', 'PageView');
+    }(window, document, "script",
+      "https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", "{% facebook_pixel %}");
+    fbq("track", "PageView");
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
@@ -103,10 +104,51 @@
     </div>
   </div>
 
-  {% block content %}
+  <!-- Pop-up form for email marketing with Sendy https://sendy.co/ (Optional)-->
+  <div class="pop-up">
+    <div class="c-subscribe-box u-align-center">
+      <div class="rainbow"><span></span><span></span></div>
+      <div class="c-subscribe-box__wrapper">
+        <h3 class="c-subscribe-box__title">10 ideas for starting your ML portfolio</h3>
+        <p class="c-subscribe-box__desc">
+          What you get: <br>
+          - 10 ideas for machine learning projects. <br>
+          - Free datasets to use for your projects. <br>
+          - Examples of libraries and algorithms for each case.
+        </p>
+        <form action="https://miguelgfierro.com/sendy/subscribe" method="POST" accept-charset="utf-8"
+          class="c-form c-form--accent c-subscribe-box__form">
+          <input type="text" name="FirstName" id="FirstName" class="u-align-center pop-up-input"
+            placeholder="First Name" />
+          <input type="text" name="LastName" id="LastName" class="u-align-center pop-up-input"
+            placeholder="Last Name" />
+          <input type="email" name="email" id="email" class="u-align-center pop-up-input" placeholder="Email" />
+          <input type="text" name="Linkedin" id="Linkedin" class="u-align-center pop-up-input" placeholder="LinkedIn" />
+          <input type="checkbox" name="gdpr" id="gdpr" />
+          <span class="c-subscribe-box__desc"><strong>Marketing permission</strong>:
+            I give my consent to Miguel González-Fierro to be in touch with me via email using the
+            information I have provided in this form for the purpose of news, updates and marketing.
+          </span>
+          <br /><br />
+          <div style="display:none;">
+            <label for="hp">HP</label><br />
+            <input type="text" name="hp" id="hp" />
+          </div>
+          <input type="hidden" name="list" value="4XSoMExXeByg763RkCORqN7g" />
+          <input type="hidden" name="subform" value="yes" />
+          <input type="submit" name="submit" id="submit" class="full-button" placeholder="Send it to Me Now" />
+        </form>
+        <button class="close-button">&#10006;</button>
+      </div>
+    </div>
+  </div>
+  <!-- Pop-up -->
 
-  {% endblock %}
+  <div id="overlay" class="cover">
+    {% block content %}
 
+    {% endblock %}
+  </div>
 
   <!-- Do not track localhost when debugging -->
   {% if not debug %}
@@ -137,6 +179,10 @@
   <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=en&theme=minimal&customize=1&tracking=1&always=1&showPolicyLink=1&remember=180&privacyPage=%2Fprivacy%2F">
     </script>
+
+  <!-- Pop-up form for email marketing with Sendy https://sendy.co/ -->
+  <script src="{% static 'blog/js/jquery.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'blog/js/popup.min.js' %}" type="text/javascript"></script>
 
 </body>
 

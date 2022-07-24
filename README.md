@@ -23,6 +23,7 @@ Blog developed in Django with the same appearance of a research paper written in
 * (Optional) Privacy policy compliant with GDPR
 * (Optional) Installation of free SSL certificate
 * (Optional) Web optimization with CloudFlare
+* (Optional) Email marketing with Sendy
 
 Example of sciblog: [https://miguelgfierro.com](https://miguelgfierro.com)
 
@@ -191,6 +192,12 @@ You can use [Cloudflare](https://www.cloudflare.com/) to speed up your page and 
 NOTE: if you decide to set the SSL certificate along with Cloudflare, it is better to pause Cloudflare while installing the SSL certificate to check that it is working correctly in your server. Later, you can resume CloudFlare and go to Crypto and set SSL to full strict. This process is automated in the script [cron_ssl_renew.py](cron_ssl_renew.py). To activate this, edit crontab with `crontab -e` and add:
 
 	7 7 */5 * * (/bin/date && /usr/bin/python /var/www/sciblog/cron_ssl_renew.py) >> cron.log 2>&1
+
+## Email marketing with Sendy
+
+[Sendy](https://sendy.co/) is an email marketing platform that enables to manage email lists and create marketing campaigns. It relies on Amazon Simple Email Service (SES) for sending the meails and it consists of a dashboard to manage your contacts and campaigns. [Amazon SES](https://aws.amazon.com/ses/) is an email service that allows to send email campaigns very cheaply, you can send around 10.000 emails for $1. 
+
+If you want to enable this feature, all the code can be found in the [base template](blog/templates/desktop/blog/post_base.html). It consists of a html entry, a css and a javascript function.
 
 ## SEO tricks
 
