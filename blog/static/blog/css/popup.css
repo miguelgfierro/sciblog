@@ -217,7 +217,7 @@ h3 {
 .cover {
     height: 100%;
     width: 100%;
-    position: absolute;
+    /*position: absolute;*/
     z-index: 1;
 }
 
