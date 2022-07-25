@@ -29,9 +29,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/img/favicon.ico' %}">
   <meta name="msapplication-TileImage" content="{% static 'blog/img/favicon-150x150.png' %}">
 
-  <link rel="stylesheet" href="{% static 'blog/css/popup.css' %}">
+  <!--<link rel="stylesheet" href="{% static 'blog/css/popup.css' %}">-->
   <link rel="stylesheet" href="{% static 'blog/css/skeleton.min.css' %}">
-  <link rel="stylesheet" href="{% static 'blog/css/paper.min.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/paper.css' %}">
 
   {% block headers %}
   <!-- Add headers in the child templates -->
@@ -104,7 +104,7 @@
     </div>
   </div>
 
-  <!-- Pop-up form for email marketing with Sendy https://sendy.co/ (Optional)-->
+  <!-- Pop-up form for email marketing with Sendy https://sendy.co/ (Optional) 
   <div class="pop-up">
     <div class="c-subscribe-box u-align-center">
       <div class="rainbow"><span></span><span></span></div>
@@ -141,14 +141,14 @@
         <button class="close-button">&#10006;</button>
       </div>
     </div>
-  </div>
+  </div>-->
   <!-- Pop-up -->
 
-  <div id="overlay" class="cover">
-    {% block content %}
+  <!--<div id="overlay" class="cover">-->
+  {% block content %}
 
-    {% endblock %}
-  </div>
+  {% endblock %}
+  <!--</div>-->
 
   <!-- Do not track localhost when debugging -->
   {% if not debug %}

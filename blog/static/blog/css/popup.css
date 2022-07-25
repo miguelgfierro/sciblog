@@ -193,11 +193,13 @@ h3 {
     display: none;
     position: fixed;
     margin: 5% auto;
-    left: 0;
-    right: 0;
     z-index: 2;
     justify-content: center;
     align-items: center;
+    /*left: 0;
+    right: 0;*/
+    top: 10%;
+    left: 40%;
 }
 
 .pop-up-input {

@@ -91,11 +91,11 @@
 </script>
 {% endif %}
 
+<!-- End block headers -->
 {% endblock %}
 
 
 {% block content %}
-
 
 <!-- Page columnizer -->
 <script src="{% static 'blog/js/jquery.min.js' %}" type="text/javascript"></script>
@@ -134,6 +134,8 @@
             }
             else {
                 console.log("$('#blogContent').contents().length <= 0");
+                //$("body").append($(".container-comments").css("display", "block"));
+                //$("body").append($(".footer").css("display", "block"));
                 $("body").append($(".container-comments"));
                 $("body").append($(".footer"));
                 console.log("Page building finished");
@@ -247,4 +249,5 @@
     nonce="lNrh4WqA">
     </script>
 
+<!-- End block content -->
 {% endblock %}
