@@ -196,10 +196,10 @@ h3 {
     z-index: 2;
     justify-content: center;
     align-items: center;
-    /*left: 0;
-    right: 0;*/
-    top: 10%;
-    left: 40%;
+    left: 0;
+    right: 0;
+    /*top: 10%;
+    left: 40%;*/
 }
 
 .pop-up-input {
@@ -219,7 +219,7 @@ h3 {
 .cover {
     height: 100%;
     width: 100%;
-    /*position: absolute;*/
+    position: absolute;
     z-index: 1;
 }
 
