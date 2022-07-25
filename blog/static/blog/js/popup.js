@@ -29,7 +29,7 @@ function eraseCookie(name) {
 var lastFocus;
 var delay = 3000; // Pop up delay in seconds
 var cookieExpires = 20; // Expiration of cookie in days
-var cookieName = "popUpSciblog";
+var cookieName = "pop_up_sciblog";
 var popupShown = readCookie(cookieName);
 
 if (popupShown == null) {
@@ -40,7 +40,7 @@ if (popupShown == null) {
         $('#overlay').addClass('blur-in');
         $('.pop-up').fadeIn(1000).css("display", "flex");
         var date = new Date();
-        createCookie(cookieName, date.toGMTString(), 1)
+        createCookie(cookieName, date.toGMTString(), cookieExpires)
     }, delay);
 } else {
     console.log("Cookie found: " + popupShown + " no pop up shown")

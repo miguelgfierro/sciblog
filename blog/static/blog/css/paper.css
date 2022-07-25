@@ -19,21 +19,105 @@
   font-family: Latex;
   src: url(../font/cmunrm.woff);
 }
+
 @font-face {
   font-family: LatexBold;
   src: url(../font/cmunbx.woff);
 }
+
 @font-face {
   font-family: LatexItalic;
   src: url(../font/cmunti.woff);
 }
+
 @font-face {
   font-family: LatexBoldItalic;
   src: url(../font/cmunbi.woff);
 }
+
 /* ************************************************************************** */
 /* Initial styles*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0px;
   padding: 0px;
   border: 0px none;
@@ -41,22 +125,30 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline;
 }
+
 body {
   background: #dcdbe0;
   color: #100;
   font-family: Latex, Georgia, serif, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial;
 }
-a, a:visited {
+
+a,
+a:visited {
   color: #333;
   text-decoration: underline;
   outline: 0px none;
 }
-input[type="text"], input[type="password"], input[type="email"], textarea, select {
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
   border: 1px solid #CCC;
   padding: 6px 4px;
   outline: medium none;
   border-radius: 2px;
-  font: 13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #777;
   margin: 0px 0px 20px;
   width: 210px;
@@ -64,9 +156,15 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
   display: block;
   background: #FFF none repeat scroll 0% 0%;
 }
+
 /* ************************************************************************** */
 /* Classes from Latex */
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Latex, Georgia, serif;
   margin: 0;
   padding: 0;
@@ -74,7 +172,9 @@ h1,h2,h3,h4,h5,h6{
   font-size: 100%;
   line-height: inherit;
 }
-h1.title,h2.title-detail{
+
+h1.title,
+h2.title-detail {
   text-transform: capitalize;
   font-variant: small-caps;
   font-size: 35px;
@@ -82,57 +182,72 @@ h1.title,h2.title-detail{
   text-align: center;
   margin: 1rem 0 0.5rem 0.5rem;
 }
-h1.title a,a:visited{
+
+h1.title a,
+a:visited {
   text-decoration: none;
   color: #000;
 }
-h1.title a:hover{
+
+h1.title a:hover {
   text-decoration: underline;
 }
-h2.title-detail a,a:visited{
+
+h2.title-detail a,
+a:visited {
   text-decoration: none;
   color: #000;
 }
-h2.title-detail a:hover{
+
+h2.title-detail a:hover {
   text-decoration: underline;
 }
-h2.keywords{
+
+h2.keywords {
   text-align: justify;
   font-size: 14px;
   margin-bottom: 0.5rem;
 }
-h2.keywords:before{
+
+h2.keywords:before {
   content: "Keywords: ";
   font-family: LatexItalic;
 }
-h3.abstract{
+
+h3.abstract {
   text-align: justify;
   font-size: 14px;
   margin-bottom: 0.5rem;
 }
-h3.abstract:before{
+
+h3.abstract:before {
   content: "Abstract— ";
   font-family: LatexBoldItalic;
 }
-.author{
+
+.author {
   font-size: 16px;
   line-height: 21px;
   text-align: center;
   margin-bottom: 0.5rem;
 }
-.submission-date{
+
+.submission-date {
   font-size: 14px;
   text-align: center;
 }
-.submission-date:before{
+
+.submission-date:before {
   content: "Submission date: ";
 }
-.submission-date-list{
+
+.submission-date-list {
   font-size: 14px;
   text-align: center;
 }
+
 /*section*/
-h4{
+h4 {
   font-size: 21px;
   line-height: 30px;
   margin-top: 1rem;
@@ -141,8 +256,9 @@ h4{
   padding: 0 1rem;
   text-align: left;
 }
+
 /*subsection*/
-h5{
+h5 {
   font-size: 18px;
   line-height: 24px;
   margin-top: 0.5rem;
@@ -151,8 +267,9 @@ h5{
   padding: 0 1rem;
   text-align: left;
 }
+
 /*subsubsection*/
-h6{
+h6 {
   font-size: 16px;
   line-height: 21px;
   margin-top: 0.5rem;
@@ -161,88 +278,113 @@ h6{
   padding: 0 1rem;
   text-align: left;
 }
-.image{
+
+.image {
   text-align: center;
 }
-img{
+
+img {
   display: block;
   text-align: center;
-  max-width: 110%; /*equal to 350px*/
+  max-width: 110%;
+  /*equal to 350px*/
   height: auto;
   margin: 0 auto;
 }
-.image .image-caption{
+
+.image .image-caption {
   font-size: 14px;
   margin-bottom: 0.5rem;
 }
-ul{
+
+ul {
   font-size: 16px;
   padding-left: 2rem;
   margin: 10px 0;
   text-indent: 0px;
 }
-ol{
+
+ol {
   font-size: 14px;
   padding-left: 1rem;
   text-indent: 0px;
   text-align: justify;
-  counter-reset:li; /* Initiate a counter */
-  list-style: none; /* Disable the normal item numbering */
+  counter-reset: li;
+  /* Initiate a counter */
+  list-style: none;
+  /* Disable the normal item numbering */
 }
-ol li:before{
-  content: '['counter(li)'] '; /* Use the counter as content */
-  counter-increment: li; /* Increment the counter by 1 */
+
+ol li:before {
+  content: '[' counter(li)'] ';
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
 }
+
 /* ************************************************************************** */
 /* Blog styles*/
-i,em{
+i,
+em {
   font-family: LatexItalic;
 }
-bi{
+
+bi {
   font-family: LatexBoldItalic;
 }
-strong{
+
+strong {
   font-family: LatexBold;
 }
+
 p {
   hyphens: auto;
   font-size: 16px;
   padding: 0 1rem;
   margin: 10px 0;
 }
+
 p.item {
   padding-left: 2rem;
   text-indent: 0px;
 }
+
 p.item:before {
   content: '•';
   font-size: 14px;
   position: relative;
   bottom: 2px;
 }
+
 p.wrap:before {
   content: '';
 }
+
 p.wrap {
   text-indent: 0px;
 }
-.no-margin-top{
+
+.no-margin-top {
   margin-top: 0;
 }
-.container{
+
+.container {
   text-align: justify;
   height: 1133px;
   width: 960px;
   padding-top: 4rem;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.container-list{
+
+.container-list {
   margin: 2rem auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: auto;
 }
-.container-comments{
+
+.container-comments {
+  /*display: none;*/
   position: relative;
   width: 960px;
   height: auto;
@@ -260,12 +402,14 @@ p.wrap {
   font-size: 14px;
   font-family: Latex, Georgia, serif;
 }
-.row-comments{
+
+.row-comments {
   margin-bottom: 20px;
   padding-left: 8rem;
   padding-right: 8rem;
 }
-.container-footer{
+
+.container-footer {
   position: relative;
   width: 960px;
   text-align: center;
@@ -281,23 +425,34 @@ p.wrap {
   padding-left: 0rem;
   font-size: 14px;
 }
-.container-footer a, a:visited{
-  text-decoration:none;
+
+.container-footer a,
+a:visited {
+  text-decoration: none;
   padding: 0rem 2rem;
 }
+
 .wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto -4rem;
 }
-.footer, .push {
+
+.footer {
+  height: 4rem;
+  /*display: none;*/
+}
+
+.push {
   height: 4rem;
 }
-.pager{
+
+.pager {
   font-size: 18px;
 }
-.pager hr{
+
+.pager hr {
   width: 80%;
   border: 0;
   height: 1px;
@@ -305,68 +460,87 @@ p.wrap {
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
   margin: 1rem auto;
 }
-.social-icons{
+
+.social-icons {
   margin-top: 5rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
-.social-icons-fb, .social-icons-tw, .social-icons-gp, .social-icons-lk, .social-icons-email{
+
+.social-icons-fb,
+.social-icons-tw,
+.social-icons-gp,
+.social-icons-lk,
+.social-icons-email {
   display: block;
   float: left;
   margin-right: 4px;
   height: 32px;
   width: 32px;
 }
-.social-icons-fb{
+
+.social-icons-fb {
   background: url(../img/sprites_social_circle.png) 0 0;
   margin-left: 4px;
 }
-.social-icons-fb:hover{
+
+.social-icons-fb:hover {
   background: url(../img/sprites_social_circle.png) 0 -32px;
 }
-.social-icons-tw{
+
+.social-icons-tw {
   background: url(../img/sprites_social_circle.png) -32px 0;
 }
-.social-icons-tw:hover{
+
+.social-icons-tw:hover {
   background: url(../img/sprites_social_circle.png) -32px -32px;
 }
-.social-icons-gp{
+
+.social-icons-gp {
   background: url(../img/sprites_social_circle.png) -64px 0;
 }
-.social-icons-gp:hover{
+
+.social-icons-gp:hover {
   background: url(../img/sprites_social_circle.png) -64px -32px;
 }
-.social-icons-lk{
+
+.social-icons-lk {
   background: url(../img/sprites_social_circle.png) -96px 0;
 }
-.social-icons-lk:hover{
+
+.social-icons-lk:hover {
   background: url(../img/sprites_social_circle.png) -96px -32px;
 }
-.social-icons-email{
+
+.social-icons-email {
   background: url(../img/sprites_social_circle.png) -128px 0;
 }
-.social-icons-email:hover{
+
+.social-icons-email:hover {
   background: url(../img/sprites_social_circle.png) -128px -32px;
 }
-.navigation-bar{
+
+.navigation-bar {
   height: 46px;
   position: relative;
   width: 100%;
   background: #000 none repeat scroll 0% 0%;
   min-width: 960px;
 }
-.navigation-bar-container{
+
+.navigation-bar-container {
   width: 960px;
   height: 46px;
   text-align: center;
   margin: 0px auto;
   overflow: hidden;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   text-align: center;
 }
-.navigation-bar-home{
+
+.navigation-bar-home {
   background-image: url("../img/hoap_front_small.png");
   display: block;
   background-position: left top;
@@ -375,7 +549,8 @@ p.wrap {
   margin-bottom: 5px;
   height: 46px;
 }
-.navigation-bar-home-text{
+
+.navigation-bar-home-text {
   float: left;
   width: 50px;
   padding-top: 13px;
@@ -383,45 +558,54 @@ p.wrap {
   padding-right: 20px;
   padding-bottom: 10px;
 }
-a.navigation-bar-home-text{
+
+a.navigation-bar-home-text {
   color: #FFF;
   text-decoration: none;
 }
-a:hover.navigation-bar-home-text{
+
+a:hover.navigation-bar-home-text {
   border-bottom: 5px solid #FFF;
 }
-.navigation-bar-item{
+
+.navigation-bar-item {
   height: 46px;
   width: auto;
   position: relative;
   float: left;
 }
-.navigation-bar-item-text{
+
+.navigation-bar-item-text {
   float: left;
   padding-top: 13px;
   padding-left: 25px;
   padding-bottom: 10px;
   padding-right: 23px;
 }
-a.navigation-bar-item-text{
+
+a.navigation-bar-item-text {
   color: #FFF;
   text-decoration: none;
 }
-a:hover.navigation-bar-item-text{
+
+a:hover.navigation-bar-item-text {
   border-bottom: 5px solid #FFF;
 }
-.navigation-bar-search{
+
+.navigation-bar-search {
   float: left;
   position: relative;
 }
-input.navigation-bar-search-input{
+
+input.navigation-bar-search-input {
   float: left;
   background-color: rgba(255, 255, 255, 0.9);
   margin-top: 7px;
   margin-bottom: 0px;
   padding-bottom: 5px;
 }
-button.navigation-bar-search-icon{
+
+button.navigation-bar-search-icon {
   background-image: url("../img/icon_search.png");
   background-position: right top;
   background-repeat: no-repeat;
@@ -435,11 +619,15 @@ button.navigation-bar-search-icon{
   top: 0px;
   position: absolute;
 }
-.navigation-bar-social{
+
+.navigation-bar-social {
   position: relative;
   float: right;
 }
-.nav-twitter-icon, .nav-linkedin-icon, .nav-rss-icon{
+
+.nav-twitter-icon,
+.nav-linkedin-icon,
+.nav-rss-icon {
   float: right;
   margin-left: 4px;
   display: block;
@@ -447,22 +635,28 @@ button.navigation-bar-search-icon{
   height: 32px;
   width: 32px;
 }
-.nav-twitter-icon{
-  margin-left:0;
+
+.nav-twitter-icon {
+  margin-left: 0;
   background: url(../img/sprites_social_square.png) 0 0;
 }
-.nav-linkedin-icon{
+
+.nav-linkedin-icon {
   background: url(../img/sprites_social_square.png) -32px 0;
 }
-.nav-rss-icon{
+
+.nav-rss-icon {
   background: url(../img/sprites_social_square.png) -64px 0;
 }
-.page_title{
+
+.page_title {
   display: none;
 }
-.page_template{
+
+.page_template {
   display: none;
 }
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -471,6 +665,7 @@ blockquote {
   font-family: LatexItalic;
   font-size: 16px;
 }
+
 code {
   font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
   font-size: 10px;
@@ -481,4 +676,3 @@ code {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
   line-height: 1.5;
 }
-

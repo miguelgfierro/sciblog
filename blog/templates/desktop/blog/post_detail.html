@@ -91,14 +91,13 @@
 </script>
 {% endif %}
 
+<!-- End block headers -->
 {% endblock %}
 
 
 {% block content %}
 
-
 <!-- Page columnizer -->
-<script src="{% static 'blog/js/jquery.min.js' %}" type="text/javascript"></script>
 <script src="{% static 'blog/js/jquery.columnizer.min.js' %}" type="text/javascript" charset="utf-8"></script>
 <script>
     $(function () {
@@ -118,7 +117,7 @@
                 }
                 $("body").append($page);
                 page++;
-                // here is the columnizer magic
+                // Here is the columnizer magic
                 $('#blogContent').columnize({
                     columns: 2,
                     target: ".texto:last .content",
@@ -247,4 +246,5 @@
     nonce="lNrh4WqA">
     </script>
 
+<!-- End block content -->
 {% endblock %}
