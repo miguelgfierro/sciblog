@@ -200,7 +200,7 @@ GITHUB_URL = "https://github.com/miguelgfierro"
 EMAIL_ADDRESS = "info@miguelgfierro.com"
 
 # Analytics
-GA_TRACKING_ID = "G-9H7EZQ2W60"
+GA_TRACKING_ID = "GTM-T8DSN55"
 
 # Disqus configuration (for managing comments)
 # To install disqus http://django-disqus.readthedocs.org/en/latest/index.html
