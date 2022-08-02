@@ -20,6 +20,7 @@ Blog developed in Django with the same appearance of a research paper written in
 * Easy writing with CKEditor
 * Responsive for mobile
 * GDPR compliant cookie notice
+* Tracking with Google Tag Manager
 * (Optional) Privacy policy compliant with GDPR
 * (Optional) Installation of free SSL certificate
 * (Optional) Web optimization with CloudFlare
