@@ -205,7 +205,7 @@ If you want to enable this feature, all the code can be found in the [base templ
 This blog is automatically optimized for [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization), however, you can improve your visibility with these tricks:
 
 * Always use https instead of http.
-* Add your sitemap to [Google](https://www.google.com/webmasters/tools), [Bing](https://www.bing.com/webmaster/home/mysites) and [Yandex](https://webmaster.yandex.com/). For Baidu, it is difficult to index your site, in [this url](http://ping.baidu.com/ping.html) you can add your blog.
+* Add your sitemap to [Google](https://www.google.com/webmasters/tools), [Bing](https://www.bing.com/webmaster/home/mysites) and [Yandex](https://webmaster.yandex.com/).
 * Check the speed of your page with tools like [GTmetrix](https://gtmetrix.com), [Pingdom](https://tools.pingdom.com/), [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) or [Google page speed](http://developers.google.com/speed/pagespeed/insights/).
 * Promote your posts in sites like [Hacker News](https://news.ycombinator.com/newest), [Reddit](http://reddit.com/), [Linkedin](http://linkedin.com/), [Facebook](http://facebook.com/) or [Twitter](http://twitter.com/).
 * Analyze your site on [Google Analytics](https://analytics.google.com/analytics/web).
