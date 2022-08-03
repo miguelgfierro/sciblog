@@ -50,8 +50,15 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={% ga_tracking_id %}" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <center>
-        {% load staticfiles %}
         <h1>Noooo, the server is down (error 500)</h1>
         <h2>Contact <a href="mailto:{% email_address %}">support</a> to see what is happening </h2>
         <img src="{% static 'blog/img/hoap_flying.png' %}" width="600px">
