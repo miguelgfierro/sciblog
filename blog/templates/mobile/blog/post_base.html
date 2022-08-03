@@ -75,68 +75,77 @@
 </head>
 
 <body>
-<!-- Navigation bar -->
-<header>
-  <div class="navigation-bar">
-    <div class="navigation-bar-container">
-      <a class="navigation-bar-home" href="/"></a>
-      <nav>
-        <a href="#" id="menu-icon"></a>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          {% for aboutp in about_pages %}
-          <li>
-            <a href="{{ aboutp.url }}">About</a>
-          </li>
-          {% endfor%}
-          <li>
-            <a href="{% newsletter_url %}">Subscribe</a>
-          </li>
-          <form action="/search" method="GET" class="navigation-bar-search">
-            <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
-            <button type="submit" class="navigation-bar-search-icon"></button>
-          </form>
-        </ul>
-      </nav>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id={% ga_tracking_id %}" height="0" width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation bar -->
+  <header>
+    <div class="navigation-bar">
+      <div class="navigation-bar-container">
+        <a class="navigation-bar-home" href="/"></a>
+        <nav>
+          <a href="#" id="menu-icon"></a>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            {% for aboutp in about_pages %}
+            <li>
+              <a href="{{ aboutp.url }}">About</a>
+            </li>
+            {% endfor%}
+            <li>
+              <a href="{% newsletter_url %}">Subscribe</a>
+            </li>
+            <form action="/search" method="GET" class="navigation-bar-search">
+              <input class="navigation-bar-search-input" type="text" placeholder="Search..." name="q">
+              <button type="submit" class="navigation-bar-search-icon"></button>
+            </form>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
 
-</header>
+  </header>
 
-{% block content %}
+  {% block content %}
 
-{% endblock %}
+  {% endblock %}
 
-<!-- Do not track localhost when debugging -->
-{% if not debug %}
+  <!-- Do not track localhost when debugging -->
+  {% if not debug %}
 
-<!-- Linkedin Insight Tag -->
-<script type="text/javascript">
-  _linkedin_partner_id = "{% linkedin_partner_id %}";
-  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-</script>
-<script type="text/javascript">
-  (function () {
-    var s = document.getElementsByTagName("script")[0];
-    var b = document.createElement("script");
-    b.type = "text/javascript"; b.async = true;
-    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-    s.parentNode.insertBefore(b, s);
-  })();
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none;" alt=""
-    src="https://px.ads.linkedin.com/collect/?pid={% linkedin_partner_id %}&fmt=gif" />
-</noscript>
+  <!-- Linkedin Insight Tag -->
+  <script type="text/javascript">
+    _linkedin_partner_id = "{% linkedin_partner_id %}";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function () {
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })();
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://px.ads.linkedin.com/collect/?pid={% linkedin_partner_id %}&fmt=gif" />
+  </noscript>
 
-{% endif %}
+  {% endif %}
 
-<!-- Cookie notice GDPR based of https://cookie-bar.eu/-->
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=en&theme=minimal&customize=1&tracking=1&always=1&showPolicyLink=1&remember=180&privacyPage=%2Fprivacy%2F"></script>
+  <!-- Cookie notice GDPR based of https://cookie-bar.eu/-->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=en&theme=minimal&customize=1&tracking=1&always=1&showPolicyLink=1&remember=180&privacyPage=%2Fprivacy%2F"></script>
 
 </body>
 
