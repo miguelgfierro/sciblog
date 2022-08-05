@@ -124,6 +124,7 @@ def get_search_results(request):
 def responsive_flatpage(request, url):
     """Custom flatpage that changes the template based on middleware depending on 
     whether it is desktop or mobile.
+    
     Based of https://github.com/django/django/blob/stable/1.8.x/django/contrib/flatpages/views.py
 
     Args:
