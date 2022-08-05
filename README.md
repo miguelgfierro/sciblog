@@ -133,7 +133,7 @@ You can also create a privacy policy flat page. Go to the admin console, add a n
 
 In case you want to add more flat pages, there is a generic html template that you can customize by modifying the file [default.html](blog/templates/desktop/flatpages/default.html). 
 
-In addition, for every new page that you want to add, you'll need to modify the url template in [urls.py](blog/urls.py).
+In addition, **for every new page that you want to add, you'll need to modify the url template in [urls.py](blog/urls.py)**.
 
 ## Managing mobile view
 
