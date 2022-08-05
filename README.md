@@ -133,7 +133,7 @@ You can also create a privacy policy flat page. Go to the admin console, add a n
 
 In case you want to add more flat pages, there is a generic html template that you can customize by modifying the file [default.html](blog/templates/desktop/flatpages/default.html). 
 
-In addition, for every new page that you want to add, you'll need to modify the url template in [urls.py](blog/urls.py).
+In addition, **for every new page that you want to add, you'll need to modify the url template in [urls.py](blog/urls.py)**.
 
 ## Managing mobile view
 
@@ -198,7 +198,9 @@ NOTE: if you decide to set the SSL certificate along with Cloudflare, it is bett
 
 [Sendy](https://sendy.co/) is an email marketing platform that enables to manage email lists and create marketing campaigns. It relies on Amazon Simple Email Service (SES) for sending the meails and it consists of a dashboard to manage your contacts and campaigns. [Amazon SES](https://aws.amazon.com/ses/) is an email service that allows to send email campaigns very cheaply, you can send around 10.000 emails for $1. 
 
-If you want to enable this feature, all the code can be found in the [base template](blog/templates/desktop/blog/post_base.html). It consists of a html entry, a css and a javascript function.
+If you want to enable this feature, all the code can be found in the [base template](blog/templates/desktop/blog/post_base.html). It consists of a html entry, a css and a javascript function. 
+
+Also, it would be good to create a thank-you flat page to track the conversion with Google Analytics. Remember that for creating a flat page you need to modify the url template in [urls.py](blog/urls.py).
 
 ## SEO tricks
 

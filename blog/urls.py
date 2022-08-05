@@ -60,6 +60,8 @@ urlpatterns += patterns(
     url(r"^about/$", responsive_flatpage, {"url": "/about/"}, name="about"),
     url(r"^privacy/$", responsive_flatpage, {"url": "/privacy/"}, name="privacy"),
     url(r"^quiz/$", responsive_flatpage, {"url": "/quiz/"}, name="quiz"),
+    url(r"^thank-you-optin/$", responsive_flatpage, {"url": "/thank-you-optin/"}, name="thank-you-optin"),
+    url(r"^thank-you-newsletter/$", responsive_flatpage, {"url": "/thank-you-newsletter/"}, name="thank-you-newsletter"),
 )
 
 # Debug
