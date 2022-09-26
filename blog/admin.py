@@ -14,11 +14,15 @@ class PostAdmin(admin.ModelAdmin):
         ("Description", {"fields": ["meta_description"]}),
         ("Keywords (lowercase)", {"fields": ["keywords"]}),
         ("Author(s)", {"fields": ["authors"]}),
+        ("YouTube video ID", {"fields": ["youtube_video_id"]}),
         ("Date information", {"fields": ["pub_date"]}),
         ("Abstract", {"fields": ["abstract"]}),
         ("Site", {"fields": ["site"]}),
         # Activate the formulas, if true mathjax.js is included in template (better for SEO)
-        ("Post with formulas", {"fields": ["has_latex_formula"]},),
+        (
+            "Post with formulas",
+            {"fields": ["has_latex_formula"]},
+        ),
         ("Content", {"fields": ["content"]}),
     ]
     list_display = ("title", "pub_date", "was_published_recently")
@@ -29,12 +33,11 @@ class PostAdmin(admin.ModelAdmin):
         obj.author = request.user
         obj.save()
 
-
 class ExtendedFlatPageForm(FlatpageForm):
     """Extended FlatPageForm. It adds the CKEditor widget."""
 
     locals()["content"] = forms.CharField(
-        widget=CKEditorWidget(), required=False, label=(u"Content")
+        widget=CKEditorWidget(), required=False, label=("Content")
     )
 
     class Meta:
@@ -47,7 +50,18 @@ class ExtendedFlatPageAdmin(FlatPageAdmin):
 
     form = ExtendedFlatPageForm
     fieldsets = (
-        (None, {"fields": ("url", "title", "content", "sites", "template_name",)}),
+        (
+            None,
+            {
+                "fields": (
+                    "url",
+                    "title",
+                    "content",
+                    "sites",
+                    "template_name",
+                )
+            },
+        ),
     )
 
 

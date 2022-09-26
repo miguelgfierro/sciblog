@@ -195,6 +195,16 @@
         </div>
         {% endif %}
 
+        {% if object.youtube_video_id %}
+        <div class="row">
+            <div class="two columns">&nbsp;</div>
+            <div class="twelve columns">
+                <div id="vsl-youtube"></div>
+            </div>
+            <div class="two columns">&nbsp;</div>
+        </div>
+        {% endif %}
+
         <div class="row">
             <div class="two columns">&nbsp;</div>
             <div class="twelve columns content"></div>
@@ -244,7 +254,25 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
     nonce="lNrh4WqA">
-    </script>
+</script>
+
+{% if object.youtube_video_id %}
+<!-- YouTube video embed-->
+<!--<script src="{% static 'blog/js/jquery-2.2.1.js' %}"></script>-->
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            $('#vsl-youtube').prettyEmbed({
+                videoID: '{{ object.youtube_video_id }}',
+                useFitVids: false,
+                playerControls: false,
+                playerInfo: false
+            });
+        });
+    })(jQuery);
+</script>
+<script src="{% static 'blog/js/pretty-embed.js' %}"></script>
+{% endif %}
 
 <!-- End block content -->
 {% endblock %}
