@@ -19,4 +19,4 @@ docs/
 static/
 staticfiles/
 django.log
-
+*.old

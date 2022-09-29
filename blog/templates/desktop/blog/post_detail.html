@@ -199,7 +199,7 @@
         <div class="row">
             <div class="two columns">&nbsp;</div>
             <div class="twelve columns">
-                <div id="vsl-youtube"></div>
+                <div id="pretty-youtube"></div>
             </div>
             <div class="two columns">&nbsp;</div>
         </div>
@@ -258,15 +258,16 @@
 
 {% if object.youtube_video_id %}
 <!-- YouTube video embed-->
-<!--<script src="{% static 'blog/js/jquery-2.2.1.js' %}"></script>-->
 <script>
     (function ($) {
         $(document).ready(function () {
-            $('#vsl-youtube').prettyEmbed({
+            $('#pretty-youtube').prettyEmbed({
                 videoID: '{{ object.youtube_video_id }}',
                 useFitVids: false,
                 playerControls: false,
-                playerInfo: false
+                playerInfo: false,
+                //previewSize: 'hd', 
+                customPreviewImage: 'https://img.youtube.com/vi/{{ object.youtube_video_id }}/maxresdefault.jpg',
             });
         });
     })(jQuery);
