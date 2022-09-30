@@ -103,12 +103,18 @@
     $(function () {
         var content_height;
         var page = 1;
+        var video = "{{ object.youtube_video_id }}"
         function buildNewsletter() {
             var content_lenght = $('#blogContent').contents().length
             if ($('#blogContent').contents().length > 0) {
                 console.log("$('#blogContent').contents().length = ", content_lenght)
                 if (page == 1) {
-                    content_height = 650;
+                    if (video){
+                        content_height = 400;
+                    }
+                    else{
+                        content_height = 650;
+                    }
                     $page = $(".page_title:first").clone().addClass("texto").css("display", "block");
                 }
                 else {
