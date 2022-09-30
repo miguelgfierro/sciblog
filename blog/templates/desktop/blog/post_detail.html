@@ -202,15 +202,6 @@
         {% endif %}
 
         {% if object.youtube_video_id %}
-        <!-- YouTube video pretty embed-->
-        <!-- <div class="row">
-            <div class="two columns">&nbsp;</div>
-            <div class="twelve columns">
-                <div id="pretty-youtube"></div>
-            </div>
-            <div class="two columns">&nbsp;</div>
-        </div> -->
-
         <div class="row">
             <div class="two columns">&nbsp;</div>
             <div class="twelve columns">
@@ -274,26 +265,6 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
     nonce="lNrh4WqA">
 </script>
-
-{% if object.youtube_video_id %}
-<!-- YouTube video pretty embed-->
-<!-- <script>
-    (function ($) {
-        $(document).ready(function () {
-            $('#pretty-youtube').prettyEmbed({
-                videoID: '{{ object.youtube_video_id }}',
-                useFitVids: false,
-                playerControls: false,
-                playerInfo: false,
-                //previewSize: 'hd', 
-                // customPreviewImage: 'https://img.youtube.com/vi/{{ object.youtube_video_id }}/maxresdefault.jpg',
-                customPreviewImage: 'https://img.youtube.com/vi/{{ object.youtube_video_id }}/0.jpg',
-            });
-        });
-    })(jQuery);
-</script>
-<script src="{% static 'blog/js/pretty-embed.js' %}"></script> -->
-{% endif %}
 
 <!-- End block content -->
 {% endblock %}
