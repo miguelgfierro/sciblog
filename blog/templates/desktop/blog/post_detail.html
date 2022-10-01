@@ -103,12 +103,18 @@
     $(function () {
         var content_height;
         var page = 1;
+        var video = "{{ object.youtube_video_id }}"
         function buildNewsletter() {
             var content_lenght = $('#blogContent').contents().length
             if ($('#blogContent').contents().length > 0) {
                 console.log("$('#blogContent').contents().length = ", content_lenght)
                 if (page == 1) {
-                    content_height = 650;
+                    if (video){
+                        content_height = 400;
+                    }
+                    else{
+                        content_height = 650;
+                    }
                     $page = $(".page_title:first").clone().addClass("texto").css("display", "block");
                 }
                 else {
@@ -195,6 +201,20 @@
         </div>
         {% endif %}
 
+        {% if object.youtube_video_id %}
+        <div class="row">
+            <div class="two columns">&nbsp;</div>
+            <div class="twelve columns">
+                <iframe width="720" height="360" src="https://www.youtube.com/embed/{{ object.youtube_video_id }}?controls=1" 
+                    title="{{ object.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="two columns">&nbsp;</div>
+        </div>
+
+        {% endif %}
+
         <div class="row">
             <div class="two columns">&nbsp;</div>
             <div class="twelve columns content"></div>
@@ -244,7 +264,7 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
     nonce="lNrh4WqA">
-    </script>
+</script>
 
 <!-- End block content -->
 {% endblock %}

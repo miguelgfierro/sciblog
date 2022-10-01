@@ -17,7 +17,13 @@ class Post(models.Model):
     pub_date = models.DateField("Date published")
     keywords = models.CharField(max_length=100, blank=True)
     authors = models.CharField(max_length=100)
-    site = models.ForeignKey(Site, blank=True, null=True)
+    youtube_video_id = models.CharField(
+        "YouTube video ID (optional)",
+        max_length=100,
+        blank=True,
+        help_text="Note: if the YouTube url is https://www.youtube.com/watch?v=fbu2cYW08HQ, the ID is fbu2cYW08HQ"
+    )
+    site = models.ForeignKey(Site)
     # If has_latex_formula=true, mathjax.js is included in template (better for SEO)
     has_latex_formula = models.BooleanField("Post with LATEX formula?", default=False)
     content = RichTextUploadingField(blank=True, null=True)
@@ -27,7 +33,7 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         """Returns the url for the current post.
-        
+
         Returns:
             str: The url for the current post.
         """
@@ -52,4 +58,3 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-pub_date"]
-

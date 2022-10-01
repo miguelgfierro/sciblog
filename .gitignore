@@ -16,7 +16,8 @@ resources/
 backup/
 bibtex/
 docs/
-static/
+static/admin/
+static/ckeditor/
 staticfiles/
 django.log
-
+*.old
