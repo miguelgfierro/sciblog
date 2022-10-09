@@ -109,10 +109,10 @@
             if ($('#blogContent').contents().length > 0) {
                 console.log("$('#blogContent').contents().length = ", content_lenght)
                 if (page == 1) {
-                    if (video){
-                        content_height = 350;
+                    if (video) {
+                        content_height = 300;
                     }
-                    else{
+                    else {
                         content_height = 650;
                     }
                     $page = $(".page_title:first").clone().addClass("texto").css("display", "block");
@@ -205,8 +205,10 @@
         <div class="row">
             <div class="two columns">&nbsp;</div>
             <div class="twelve columns">
-                <iframe width="720" height="360" src="https://www.youtube.com/embed/{{ object.youtube_video_id }}?controls=1" 
-                    title="{{ object.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe width="720" height="360"
+                    src="https://www.youtube.com/embed/{{ object.youtube_video_id }}?controls=1"
+                    title="{{ object.title }}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
             </div>
@@ -264,7 +266,7 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
     nonce="lNrh4WqA">
-</script>
+    </script>
 
 <!-- End block content -->
 {% endblock %}
