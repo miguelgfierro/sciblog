@@ -189,7 +189,7 @@ FACEBOOK_PIXEL = "2573724289540878"  # for Facebook tracking
 FACEBOOK_URL = ""
 TWITTER_URL = "https://twitter.com/miguelgfierro"
 TWITTER_HANDLE = "miguelgfierro"
-LINKEDIN_URL = "https://linkedin.com/in/miguelgfierro/"
+LINKEDIN_URL = "https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=miguelgfierro"
 LINKEDIN_PARTNER_ID = "3247881"  # for Linkedin Insight Tag
 PINTEREST_URL = ""
 INSTAGRAM_URL = ""
