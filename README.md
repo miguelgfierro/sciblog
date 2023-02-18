@@ -2,7 +2,7 @@
 [![Latest release](https://img.shields.io/github/release/miguelgfierro/sciblog.svg?color=success)](https://github.com/miguelgfierro/sciblog/releases)
 [![Commits since latest release](https://img.shields.io/github/commits-since/miguelgfierro/sciblog/latest.svg?color=success)](https://github.com/miguelgfierro/sciblog/releases)
 
-[![Linkedin](https://img.shields.io/badge/Linkedin-Follow%20Miguel-blue?logo=linkedin)](https://www.linkedin.com/in/miguelgfierro/)
+[![Linkedin](https://img.shields.io/badge/Linkedin-Follow%20Miguel-blue?logo=linkedin)](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=miguelgfierro)
 [![Blog](https://img.shields.io/badge/Blog-Visit%20miguelgfierro.com-blue.svg)](https://miguelgfierro.com?utm_source=github&utm_medium=profile&utm_campaign=sciblog)
 
 # Sciblog: A blog with the appearance of a scientific paper
