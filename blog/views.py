@@ -43,7 +43,7 @@ class IndexListView(ListView):
     """List view for the blog index page."""
 
     model = Post
-    paginate_by = 5
+    paginate_by = settings.POSTS_PER_PAGE
 
     def get_template_names(self, *args, **kwargs):
         return get_desktop_or_mobile_template(self.request, "blog", "post_list.html")
@@ -102,7 +102,7 @@ def get_search_results(request):
     )
 
     # Add pagination
-    pages = Paginator(results, 5)
+    pages = Paginator(results, settings.POSTS_PER_PAGE)
 
     # Get specified page
     try:

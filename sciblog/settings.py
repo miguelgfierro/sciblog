@@ -148,6 +148,9 @@ STATIC_ROOT = "staticfiles"
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "blog", "static"),)
 
+# Number of posts per page
+POSTS_PER_PAGE = 10
+
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
 LOGGING = {
