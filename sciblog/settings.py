@@ -188,8 +188,8 @@ CKEDITOR_IMAGE_BACKEND = "pillow"
 # ------------------------------------------------
 
 # Social Networks
-FACEBOOK_PIXEL = "2573724289540878"  # for Facebook tracking
 FACEBOOK_URL = ""
+FACEBOOK_PIXEL = "2573724289540878"  # for Facebook tracking
 TWITTER_URL = "https://twitter.com/miguelgfierro"
 TWITTER_HANDLE = "miguelgfierro"
 LINKEDIN_URL = "https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=miguelgfierro"
@@ -197,6 +197,8 @@ LINKEDIN_PARTNER_ID = "3247881"  # for Linkedin Insight Tag
 PINTEREST_URL = ""
 INSTAGRAM_URL = ""
 YOUTUBE_URL = ""
+TIKTOK_URL = ""
+TIKTOK_PIXEL = "IDCHF1HNRC77UAIJ1A1DB0"
 RSS_URL = "https://feeds.feedburner.com/miguelgfierro"
 NEWSLETTER_URL = "https://miguelgfierro.com/sendy/subscription?f=22QIIP0tF8Bx5qYtjCFQa5NDaXYeyG8FyFs40uOzc7LGvlTMGG3Dx2fOogECvG2rMYrUAi3UPtV8927JF18Qhw892A"
 GITHUB_URL = "https://github.com/miguelgfierro"
